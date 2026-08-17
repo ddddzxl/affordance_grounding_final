@@ -1,0 +1,8 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "low",
+ "kind": "expected_ap_tradeoff",
+ "solver": "frontier-llm, manual CoT"
+}

@@ -1,0 +1,135 @@
+{
+ "q": 376,
+ "visit": "467115",
+ "desc_id": "31d64faf-c787-438d-8c18-962af484d33c",
+ "text": "Plug the device in the socket to the right of the couch",
+ "parse": {
+  "text": "Plug the device in the socket to the right of the couch",
+  "target": {
+   "concept": "socket",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "socket",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "couch",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "right_of",
+    "a": "socket",
+    "b": "couch"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333308",
+  "fid": "28142.361",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "47333308",
+    "28142.361"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "socket",
+  "couch"
+ ],
+ "roles": {
+  "socket": "target",
+  "couch": "landmark"
+ },
+ "candidates": {
+  "socket": [
+   {
+    "x0": 1340,
+    "x1": 1409,
+    "y0": 1287,
+    "y1": 1366,
+    "cx": 1374.2,
+    "cy": 1327.2,
+    "npix": 4450,
+    "area_pct": 0.161,
+    "score": 0.881
+   }
+  ],
+  "couch": [
+   {
+    "x0": 0,
+    "x1": 664,
+    "y0": 506,
+    "y1": 1405,
+    "cx": 341.8,
+    "cy": 895.0,
+    "npix": 377830,
+    "area_pct": 13.666,
+    "score": 0.938
+   },
+   {
+    "x0": 0,
+    "x1": 348,
+    "y0": 788,
+    "y1": 1337,
+    "cx": 105.1,
+    "cy": 1017.2,
+    "npix": 86599,
+    "area_pct": 3.132,
+    "score": 0.166
+   }
+  ]
+ },
+ "mask_keys": {
+  "socket": [
+   "socket|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

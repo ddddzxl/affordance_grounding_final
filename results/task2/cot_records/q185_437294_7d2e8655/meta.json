@@ -1,0 +1,264 @@
+{
+ "q": 185,
+ "visit": "437294",
+ "desc_id": "7d2e8655-77ad-48b6-964f-b1e9d93caac1",
+ "text": "Open the right door of the closet near the window",
+ "parse": {
+  "text": "Open the right door of the closet near the window",
+  "target": {
+   "concept": "door handle",
+   "host": "closet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "closet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "closet door"
+   },
+   {
+    "rel": "near",
+    "a": "closet",
+    "b": "window"
+   }
+  ],
+  "select": [
+   {
+    "on": "closet door",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43649767",
+  "fid": "52372.053",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "43649767",
+    "52372.053"
+   ],
+   [
+    "43649763",
+    "52433.144"
+   ],
+   [
+    "43649763",
+    "52431.145"
+   ],
+   [
+    "43649762",
+    "52547.846"
+   ],
+   [
+    "43649767",
+    "52389.046"
+   ],
+   [
+    "43649767",
+    "52391.045"
+   ],
+   [
+    "43649762",
+    "52546.847"
+   ],
+   [
+    "43649767",
+    "52392.044"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 203,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "closet door",
+  "closet",
+  "window"
+ ],
+ "roles": {
+  "door handle": "target",
+  "closet door": "host",
+  "closet": "container",
+  "window": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1300,
+    "x1": 1326,
+    "y0": 595,
+    "y1": 679,
+    "cx": 1314.8,
+    "cy": 637.2,
+    "npix": 1779,
+    "area_pct": 0.064,
+    "score": 0.674
+   },
+   {
+    "x0": 1320,
+    "x1": 1339,
+    "y0": 595,
+    "y1": 679,
+    "cx": 1330.8,
+    "cy": 638.2,
+    "npix": 1428,
+    "area_pct": 0.052,
+    "score": 0.66
+   }
+  ],
+  "closet door": [
+   {
+    "x0": 1216,
+    "x1": 1312,
+    "y0": 0,
+    "y1": 1355,
+    "cx": 1266.3,
+    "cy": 667.7,
+    "npix": 93878,
+    "area_pct": 3.395,
+    "score": 0.903
+   },
+   {
+    "x0": 1306,
+    "x1": 1379,
+    "y0": 15,
+    "y1": 1224,
+    "cx": 1341.9,
+    "cy": 626.1,
+    "npix": 65802,
+    "area_pct": 2.38,
+    "score": 0.888
+   }
+  ],
+  "closet": [
+   {
+    "x0": 1043,
+    "x1": 1379,
+    "y0": 0,
+    "y1": 1387,
+    "cx": 1208.2,
+    "cy": 654.0,
+    "npix": 416876,
+    "area_pct": 15.078,
+    "score": 0.952
+   }
+  ],
+  "window": [
+   {
+    "x0": 1708,
+    "x1": 1919,
+    "y0": 110,
+    "y1": 923,
+    "cx": 1820.0,
+    "cy": 514.8,
+    "npix": 159194,
+    "area_pct": 5.758,
+    "score": 0.657
+   },
+   {
+    "x0": 426,
+    "x1": 512,
+    "y0": 247,
+    "y1": 394,
+    "cx": 466.1,
+    "cy": 320.1,
+    "npix": 9474,
+    "area_pct": 0.343,
+    "score": 0.159
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1"
+  ],
+  "closet door": [
+   "closet door|0",
+   "closet door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

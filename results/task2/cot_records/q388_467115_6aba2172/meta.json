@@ -1,0 +1,280 @@
+{
+ "q": 388,
+ "visit": "467115",
+ "desc_id": "6aba2172-98f0-41f4-b7b2-71c5031ea652",
+ "text": "Open the fridge",
+ "parse": {
+  "text": "Open the fridge",
+  "target": {
+   "concept": "fridge handle",
+   "host": "fridge"
+  },
+  "entities": [
+   {
+    "name": "fridge handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "fridge",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28221.562",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333310",
+    "28221.562"
+   ],
+   [
+    "47333308",
+    "28013.164"
+   ],
+   [
+    "47333308",
+    "28098.362"
+   ],
+   [
+    "47333319",
+    "28500.865"
+   ],
+   [
+    "47333308",
+    "28099.362"
+   ],
+   [
+    "47333319",
+    "28501.864"
+   ],
+   [
+    "47333310",
+    "28219.563"
+   ],
+   [
+    "47333319",
+    "28348.660"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "fridge handle",
+  "fridge"
+ ],
+ "roles": {
+  "fridge handle": "target",
+  "fridge": "host"
+ },
+ "candidates": {
+  "fridge handle": [
+   {
+    "x0": 750,
+    "x1": 774,
+    "y0": 960,
+    "y1": 1072,
+    "cx": 761.4,
+    "cy": 1018.1,
+    "npix": 2428,
+    "area_pct": 0.088,
+    "score": 0.629
+   },
+   {
+    "x0": 750,
+    "x1": 759,
+    "y0": 1081,
+    "y1": 1192,
+    "cx": 753.3,
+    "cy": 1127.7,
+    "npix": 745,
+    "area_pct": 0.027,
+    "score": 0.587
+   },
+   {
+    "x0": 760,
+    "x1": 774,
+    "y0": 1087,
+    "y1": 1181,
+    "cx": 768.7,
+    "cy": 1136.8,
+    "npix": 977,
+    "area_pct": 0.035,
+    "score": 0.516
+   },
+   {
+    "x0": 750,
+    "x1": 759,
+    "y0": 960,
+    "y1": 1192,
+    "cx": 753.8,
+    "cy": 1052.6,
+    "npix": 1507,
+    "area_pct": 0.055,
+    "score": 0.48
+   },
+   {
+    "x0": 968,
+    "x1": 989,
+    "y0": 1093,
+    "y1": 1206,
+    "cx": 979.4,
+    "cy": 1149.0,
+    "npix": 2174,
+    "area_pct": 0.079,
+    "score": 0.332
+   },
+   {
+    "x0": 890,
+    "x1": 1004,
+    "y0": 947,
+    "y1": 966,
+    "cx": 951.1,
+    "cy": 955.4,
+    "npix": 1966,
+    "area_pct": 0.071,
+    "score": 0.162
+   },
+   {
+    "x0": 980,
+    "x1": 994,
+    "y0": 1093,
+    "y1": 1206,
+    "cx": 987.4,
+    "cy": 1149.7,
+    "npix": 1226,
+    "area_pct": 0.044,
+    "score": 0.162
+   },
+   {
+    "x0": 910,
+    "x1": 989,
+    "y0": 1313,
+    "y1": 1346,
+    "cx": 948.2,
+    "cy": 1329.4,
+    "npix": 1633,
+    "area_pct": 0.059,
+    "score": 0.16
+   },
+   {
+    "x0": 830,
+    "x1": 944,
+    "y0": 1233,
+    "y1": 1266,
+    "cx": 888.5,
+    "cy": 1250.4,
+    "npix": 2405,
+    "area_pct": 0.087,
+    "score": 0.158
+   }
+  ],
+  "fridge": [
+   {
+    "x0": 585,
+    "x1": 894,
+    "y0": 854,
+    "y1": 1467,
+    "cx": 706.7,
+    "cy": 1084.9,
+    "npix": 116328,
+    "area_pct": 4.207,
+    "score": 0.957
+   },
+   {
+    "x0": 1005,
+    "x1": 1094,
+    "y0": 1320,
+    "y1": 1586,
+    "cx": 1046.7,
+    "cy": 1432.5,
+    "npix": 9688,
+    "area_pct": 0.35,
+    "score": 0.212
+   }
+  ]
+ },
+ "mask_keys": {
+  "fridge handle": [
+   "fridge handle|0",
+   "fridge handle|1",
+   "fridge handle|2",
+   "fridge handle|3",
+   "fridge handle|4",
+   "fridge handle|5",
+   "fridge handle|6",
+   "fridge handle|7",
+   "fridge handle|8"
+  ],
+  "fridge": [
+   "fridge|0",
+   "fridge|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1,
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(3)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

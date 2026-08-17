@@ -1,0 +1,227 @@
+{
+ "q": 175,
+ "visit": "437157",
+ "desc_id": "f5c001bd-cea3-4c14-827d-103c4c1ac01a",
+ "text": "Open the top drawer of the closet next to the nightstand",
+ "parse": {
+  "text": "Open the top drawer of the closet next to the nightstand",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "nightstand",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "drawer"
+   },
+   {
+    "rel": "next_to",
+    "a": "closet",
+    "b": "nightstand"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43649688",
+  "fid": "36012.073",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "43649688",
+    "36012.073"
+   ],
+   [
+    "43649692",
+    "36068.468"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.904,
+    "s3": 0.02,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 239,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "closet",
+  "nightstand"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "closet": "container",
+  "nightstand": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 497,
+    "x1": 519,
+    "y0": 1720,
+    "y1": 1746,
+    "cx": 509.1,
+    "cy": 1734.4,
+    "npix": 476,
+    "area_pct": 0.017,
+    "score": 0.821
+   },
+   {
+    "x0": 830,
+    "x1": 854,
+    "y0": 1728,
+    "y1": 1759,
+    "cx": 841.5,
+    "cy": 1743.8,
+    "npix": 576,
+    "area_pct": 0.021,
+    "score": 0.742
+   },
+   {
+    "x0": 845,
+    "x1": 884,
+    "y0": 1162,
+    "y1": 1186,
+    "cx": 864.8,
+    "cy": 1174.9,
+    "npix": 633,
+    "area_pct": 0.023,
+    "score": 0.73
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 385,
+    "x1": 631,
+    "y0": 1690,
+    "y1": 1792,
+    "cx": 505.7,
+    "cy": 1741.5,
+    "npix": 19026,
+    "area_pct": 0.688,
+    "score": 0.938
+   },
+   {
+    "x0": 824,
+    "x1": 1010,
+    "y0": 1652,
+    "y1": 1919,
+    "cx": 883.0,
+    "cy": 1803.0,
+    "npix": 21438,
+    "area_pct": 0.775,
+    "score": 0.256
+   }
+  ],
+  "closet": [
+   {
+    "x0": 742,
+    "x1": 1439,
+    "y0": 383,
+    "y1": 1919,
+    "cx": 1118.7,
+    "cy": 1162.3,
+    "npix": 967351,
+    "area_pct": 34.988,
+    "score": 0.9
+   }
+  ],
+  "nightstand": [
+   {
+    "x0": 305,
+    "x1": 699,
+    "y0": 1596,
+    "y1": 1919,
+    "cx": 506.5,
+    "cy": 1724.3,
+    "npix": 67035,
+    "area_pct": 2.425,
+    "score": 0.94
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

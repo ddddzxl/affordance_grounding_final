@@ -1,0 +1,360 @@
+{
+ "q": 387,
+ "visit": "467115",
+ "desc_id": "62e5927e-55d5-40a9-b2d9-9e879e93750b",
+ "text": "Open the cabinet door above the microwave",
+ "parse": {
+  "text": "Open the cabinet door above the microwave",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "microwave",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "above",
+    "a": "cabinet door",
+    "b": "microwave"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333319",
+  "fid": "28360.655",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333319",
+    "28360.655"
+   ],
+   [
+    "47333308",
+    "28020.161"
+   ],
+   [
+    "47333319",
+    "28354.658"
+   ],
+   [
+    "47333308",
+    "28021.160"
+   ],
+   [
+    "47333310",
+    "28241.654"
+   ],
+   [
+    "47333310",
+    "28243.653"
+   ],
+   [
+    "47333310",
+    "28308.760"
+   ],
+   [
+    "47333308",
+    "28032.156"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "cabinet",
+  "microwave"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "cabinet": "container",
+  "microwave": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 610,
+    "x1": 1040,
+    "y0": 1292,
+    "y1": 1402,
+    "cx": 830.5,
+    "cy": 1345.6,
+    "npix": 12707,
+    "area_pct": 0.46,
+    "score": 0.869
+   },
+   {
+    "x0": 0,
+    "x1": 74,
+    "y0": 1467,
+    "y1": 1519,
+    "cx": 32.3,
+    "cy": 1491.0,
+    "npix": 3132,
+    "area_pct": 0.113,
+    "score": 0.677
+   },
+   {
+    "x0": 0,
+    "x1": 89,
+    "y0": 1727,
+    "y1": 1799,
+    "cx": 40.8,
+    "cy": 1762.9,
+    "npix": 3807,
+    "area_pct": 0.138,
+    "score": 0.537
+   },
+   {
+    "x0": 459,
+    "x1": 479,
+    "y0": 1312,
+    "y1": 1372,
+    "cx": 469.2,
+    "cy": 1341.8,
+    "npix": 1167,
+    "area_pct": 0.042,
+    "score": 0.193
+   },
+   {
+    "x0": 45,
+    "x1": 59,
+    "y0": 513,
+    "y1": 559,
+    "cx": 51.9,
+    "cy": 537.2,
+    "npix": 588,
+    "area_pct": 0.021,
+    "score": 0.161
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 471,
+    "x1": 1358,
+    "y0": 735,
+    "y1": 1497,
+    "cx": 937.7,
+    "cy": 1076.0,
+    "npix": 556291,
+    "area_pct": 20.12,
+    "score": 0.977
+   },
+   {
+    "x0": 1330,
+    "x1": 1439,
+    "y0": 728,
+    "y1": 1529,
+    "cx": 1393.4,
+    "cy": 1150.9,
+    "npix": 72243,
+    "area_pct": 2.613,
+    "score": 0.801
+   },
+   {
+    "x0": 11,
+    "x1": 205,
+    "y0": 393,
+    "y1": 705,
+    "cx": 108.0,
+    "cy": 555.5,
+    "npix": 50682,
+    "area_pct": 1.833,
+    "score": 0.494
+   },
+   {
+    "x0": 0,
+    "x1": 124,
+    "y0": 1035,
+    "y1": 1912,
+    "cx": 53.7,
+    "cy": 1432.2,
+    "npix": 88668,
+    "area_pct": 3.207,
+    "score": 0.279
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 470,
+    "x1": 1359,
+    "y0": 734,
+    "y1": 1498,
+    "cx": 936.5,
+    "cy": 1079.7,
+    "npix": 566204,
+    "area_pct": 20.479,
+    "score": 0.951
+   },
+   {
+    "x0": 1330,
+    "x1": 1439,
+    "y0": 728,
+    "y1": 1529,
+    "cx": 1393.3,
+    "cy": 1150.7,
+    "npix": 72477,
+    "area_pct": 2.621,
+    "score": 0.79
+   },
+   {
+    "x0": 11,
+    "x1": 205,
+    "y0": 393,
+    "y1": 705,
+    "cx": 108.0,
+    "cy": 555.5,
+    "npix": 50874,
+    "area_pct": 1.84,
+    "score": 0.521
+   },
+   {
+    "x0": 37,
+    "x1": 1432,
+    "y0": 1549,
+    "y1": 1919,
+    "cx": 740.3,
+    "cy": 1790.8,
+    "npix": 156446,
+    "area_pct": 5.658,
+    "score": 0.184
+   },
+   {
+    "x0": 0,
+    "x1": 125,
+    "y0": 963,
+    "y1": 1915,
+    "cx": 54.1,
+    "cy": 1432.3,
+    "npix": 91212,
+    "area_pct": 3.299,
+    "score": 0.157
+   }
+  ],
+  "microwave": [
+   {
+    "x0": 376,
+    "x1": 1343,
+    "y0": 1615,
+    "y1": 1919,
+    "cx": 732.3,
+    "cy": 1791.3,
+    "npix": 153882,
+    "area_pct": 5.566,
+    "score": 0.617
+   },
+   {
+    "x0": 0,
+    "x1": 654,
+    "y0": 933,
+    "y1": 1919,
+    "cx": 260.5,
+    "cy": 1426.8,
+    "npix": 495707,
+    "area_pct": 17.929,
+    "score": 0.348
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1",
+   "cabinet door|2",
+   "cabinet door|3"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

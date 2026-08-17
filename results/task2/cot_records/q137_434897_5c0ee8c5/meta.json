@@ -1,0 +1,278 @@
+{
+ "q": 137,
+ "visit": "434897",
+ "desc_id": "5c0ee8c5-69f1-4608-9b2a-319682ae5e8e",
+ "text": "Close the bedroom door",
+ "parse": {
+  "text": "Close the bedroom door",
+  "target": {
+   "concept": "door handle",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'bedroom' is a room-level locator, not groundable",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899163",
+  "fid": "182721.131",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899163",
+    "182721.131"
+   ],
+   [
+    "42899163",
+    "182723.147"
+   ],
+   [
+    "42899165",
+    "182874.434"
+   ],
+   [
+    "42899165",
+    "182868.137"
+   ],
+   [
+    "42899165",
+    "182825.438"
+   ],
+   [
+    "42899165",
+    "182853.543"
+   ],
+   [
+    "42899165",
+    "182816.441"
+   ],
+   [
+    "42899163",
+    "182724.146"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 0.939,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.824,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.617,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.535,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 94,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "door"
+ ],
+ "roles": {
+  "door handle": "target",
+  "door": "host"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 695,
+    "x1": 779,
+    "y0": 727,
+    "y1": 746,
+    "cx": 736.7,
+    "cy": 737.9,
+    "npix": 1028,
+    "area_pct": 0.037,
+    "score": 0.806
+   },
+   {
+    "x0": 1400,
+    "x1": 1433,
+    "y0": 560,
+    "y1": 579,
+    "cx": 1416.9,
+    "cy": 569.5,
+    "npix": 548,
+    "area_pct": 0.02,
+    "score": 0.314
+   },
+   {
+    "x0": 1180,
+    "x1": 1219,
+    "y0": 887,
+    "y1": 919,
+    "cx": 1201.0,
+    "cy": 904.6,
+    "npix": 920,
+    "area_pct": 0.033,
+    "score": 0.263
+   },
+   {
+    "x0": 1165,
+    "x1": 1194,
+    "y0": 1133,
+    "y1": 1160,
+    "cx": 1179.5,
+    "cy": 1147.1,
+    "npix": 737,
+    "area_pct": 0.027,
+    "score": 0.244
+   },
+   {
+    "x0": 1175,
+    "x1": 1209,
+    "y0": 1002,
+    "y1": 1038,
+    "cx": 1190.9,
+    "cy": 1020.2,
+    "npix": 838,
+    "area_pct": 0.03,
+    "score": 0.237
+   },
+   {
+    "x0": 1042,
+    "x1": 1064,
+    "y0": 687,
+    "y1": 706,
+    "cx": 1053.4,
+    "cy": 695.8,
+    "npix": 367,
+    "area_pct": 0.013,
+    "score": 0.211
+   }
+  ],
+  "door": [
+   {
+    "x0": 507,
+    "x1": 784,
+    "y0": 247,
+    "y1": 1143,
+    "cx": 651.4,
+    "cy": 671.3,
+    "npix": 217952,
+    "area_pct": 7.883,
+    "score": 0.98
+   },
+   {
+    "x0": 1078,
+    "x1": 1433,
+    "y0": 180,
+    "y1": 847,
+    "cx": 1252.1,
+    "cy": 505.7,
+    "npix": 191533,
+    "area_pct": 6.928,
+    "score": 0.941
+   },
+   {
+    "x0": 846,
+    "x1": 1112,
+    "y0": 213,
+    "y1": 1166,
+    "cx": 970.6,
+    "cy": 665.8,
+    "npix": 198866,
+    "area_pct": 7.193,
+    "score": 0.866
+   },
+   {
+    "x0": 1372,
+    "x1": 1439,
+    "y0": 342,
+    "y1": 861,
+    "cx": 1415.8,
+    "cy": 666.1,
+    "npix": 20399,
+    "area_pct": 0.738,
+    "score": 0.74
+   },
+   {
+    "x0": 202,
+    "x1": 532,
+    "y0": 219,
+    "y1": 1163,
+    "cx": 374.1,
+    "cy": 672.1,
+    "npix": 241144,
+    "area_pct": 8.722,
+    "score": 0.15
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4",
+   "door handle|5"
+  ],
+  "door": [
+   "door|0",
+   "door|1",
+   "door|2",
+   "door|3",
+   "door|4"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 4,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

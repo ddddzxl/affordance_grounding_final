@@ -1,0 +1,241 @@
+{
+ "q": 330,
+ "visit": "466880",
+ "desc_id": "5cdd0cac-504e-45d2-9d2f-e225f3a70e6e",
+ "text": "Open the kitchen counter door with the paper towel holder on top",
+ "parse": {
+  "text": "Open the kitchen counter door with the paper towel holder on top",
+  "target": {
+   "concept": "door handle",
+   "host": "counter door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "counter door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "counter",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "paper towel holder",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "counter",
+    "b": "counter door"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "counter",
+    "b": "paper towel holder"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331711",
+  "fid": "11307.840",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L3",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331711",
+    "11307.840"
+   ],
+   [
+    "47331711",
+    "11254.729"
+   ],
+   [
+    "47331711",
+    "11252.729"
+   ],
+   [
+    "47331707",
+    "11137.826"
+   ],
+   [
+    "47331710",
+    "11215.228"
+   ],
+   [
+    "47331711",
+    "11313.838"
+   ],
+   [
+    "47331711",
+    "11248.731"
+   ],
+   [
+    "47331710",
+    "11217.227"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "counter door",
+  "counter",
+  "paper towel holder"
+ ],
+ "roles": {
+  "door handle": "target",
+  "counter door": "host",
+  "counter": "container",
+  "paper towel holder": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1373,
+    "x1": 1484,
+    "y0": 845,
+    "y1": 895,
+    "cx": 1428.7,
+    "cy": 871.6,
+    "npix": 4530,
+    "area_pct": 0.164,
+    "score": 0.754
+   },
+   {
+    "x0": 1913,
+    "x1": 1919,
+    "y0": 875,
+    "y1": 894,
+    "cx": 1916.1,
+    "cy": 884.5,
+    "npix": 132,
+    "area_pct": 0.005,
+    "score": 0.314
+   }
+  ],
+  "counter door": [],
+  "counter": [
+   {
+    "x0": 298,
+    "x1": 1605,
+    "y0": 493,
+    "y1": 1439,
+    "cx": 936.9,
+    "cy": 1039.1,
+    "npix": 872139,
+    "area_pct": 31.544,
+    "score": 0.828
+   },
+   {
+    "x0": 1218,
+    "x1": 1919,
+    "y0": 497,
+    "y1": 835,
+    "cx": 1499.8,
+    "cy": 733.9,
+    "npix": 60383,
+    "area_pct": 2.184,
+    "score": 0.781
+   },
+   {
+    "x0": 1206,
+    "x1": 1919,
+    "y0": 277,
+    "y1": 512,
+    "cx": 1568.1,
+    "cy": 438.8,
+    "npix": 46703,
+    "area_pct": 1.689,
+    "score": 0.234
+   }
+  ],
+  "paper towel holder": [
+   {
+    "x0": 660,
+    "x1": 806,
+    "y0": 139,
+    "y1": 594,
+    "cx": 732.9,
+    "cy": 365.4,
+    "npix": 54696,
+    "area_pct": 1.978,
+    "score": 0.329
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1"
+  ],
+  "counter door": []
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

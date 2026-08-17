@@ -1,0 +1,257 @@
+{
+ "q": 102,
+ "visit": "423452",
+ "desc_id": "9b3a2dbf-3c95-47df-8ec7-4092d58a96f3",
+ "text": "Turn on the TV using one of the remotes in front of the TV",
+ "parse": {
+  "text": "Turn on the TV using one of the remotes in front of the TV",
+  "target": {
+   "concept": "remote control",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "remote control",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "TV",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "in_front_of",
+    "a": "remote control",
+    "b": "TV"
+   }
+  ],
+  "select": [],
+  "residual": "'one of the remotes' - any instance is acceptable | independent check on the train split (val untouched): handheld-device GT median 478 points vs 87-108 for fixed-furniture handles, a factor of 4.4-5.5 -> the annotation covers the whole device",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897434",
+  "fid": "104280.445",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42897434",
+    "104280.445"
+   ],
+   [
+    "42897426",
+    "104116.746"
+   ],
+   [
+    "42897434",
+    "104288.441"
+   ],
+   [
+    "42897422",
+    "104003.143"
+   ],
+   [
+    "42897434",
+    "104289.441"
+   ],
+   [
+    "42897434",
+    "104287.442"
+   ],
+   [
+    "42897422",
+    "104064.235"
+   ],
+   [
+    "42897426",
+    "104117.746"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 309,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "remote control",
+  "TV"
+ ],
+ "roles": {
+  "remote control": "target",
+  "TV": "landmark"
+ },
+ "candidates": {
+  "remote control": [
+   {
+    "x0": 1200,
+    "x1": 1305,
+    "y0": 727,
+    "y1": 794,
+    "cx": 1253.7,
+    "cy": 761.6,
+    "npix": 2977,
+    "area_pct": 0.108,
+    "score": 0.926
+   },
+   {
+    "x0": 1267,
+    "x1": 1399,
+    "y0": 615,
+    "y1": 699,
+    "cx": 1335.1,
+    "cy": 655.2,
+    "npix": 4107,
+    "area_pct": 0.149,
+    "score": 0.889
+   },
+   {
+    "x0": 1365,
+    "x1": 1446,
+    "y0": 755,
+    "y1": 808,
+    "cx": 1404.6,
+    "cy": 781.8,
+    "npix": 1489,
+    "area_pct": 0.054,
+    "score": 0.238
+   },
+   {
+    "x0": 1907,
+    "x1": 1919,
+    "y0": 175,
+    "y1": 199,
+    "cx": 1914.5,
+    "cy": 187.6,
+    "npix": 228,
+    "area_pct": 0.008,
+    "score": 0.216
+   },
+   {
+    "x0": 1253,
+    "x1": 1372,
+    "y0": 828,
+    "y1": 1019,
+    "cx": 1313.4,
+    "cy": 922.2,
+    "npix": 14069,
+    "area_pct": 0.509,
+    "score": 0.201
+   },
+   {
+    "x0": 613,
+    "x1": 672,
+    "y0": 1420,
+    "y1": 1439,
+    "cx": 646.3,
+    "cy": 1432.1,
+    "npix": 737,
+    "area_pct": 0.027,
+    "score": 0.195
+   },
+   {
+    "x0": 1260,
+    "x1": 1359,
+    "y0": 680,
+    "y1": 739,
+    "cx": 1328.8,
+    "cy": 719.1,
+    "npix": 1359,
+    "area_pct": 0.049,
+    "score": 0.183
+   },
+   {
+    "x0": 1387,
+    "x1": 1533,
+    "y0": 695,
+    "y1": 771,
+    "cx": 1467.1,
+    "cy": 740.5,
+    "npix": 3648,
+    "area_pct": 0.132,
+    "score": 0.159
+   }
+  ],
+  "TV": [
+   {
+    "x0": 1109,
+    "x1": 1919,
+    "y0": 36,
+    "y1": 795,
+    "cx": 1536.2,
+    "cy": 386.2,
+    "npix": 411197,
+    "area_pct": 14.873,
+    "score": 0.978
+   }
+  ]
+ },
+ "mask_keys": {
+  "remote control": [
+   "remote control|0",
+   "remote control|1",
+   "remote control|2",
+   "remote control|3",
+   "remote control|4",
+   "remote control|5",
+   "remote control|6",
+   "remote control|7"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   4
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

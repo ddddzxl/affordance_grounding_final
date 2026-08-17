@@ -1,0 +1,252 @@
+{
+ "q": 385,
+ "visit": "467115",
+ "desc_id": "5ebfe643-bcff-4a9d-8549-2ee20be9adc9",
+ "text": "Unplug the table lamp on the side table next to the couch",
+ "parse": {
+  "text": "Unplug the table lamp on the side table next to the couch",
+  "target": {
+   "concept": "plug",
+   "host": "table lamp"
+  },
+  "entities": [
+   {
+    "name": "plug",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "table lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "side table",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "couch",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "table lamp",
+    "b": "side table"
+   },
+   {
+    "rel": "next_to",
+    "a": "side table",
+    "b": "couch"
+   }
+  ],
+  "select": [],
+  "residual": "the plug sits at the socket end, not on the lamp",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28170.966",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 3,
+  "topk": [
+   [
+    "47333310",
+    "28170.966"
+   ],
+   [
+    "47333319",
+    "28609.553"
+   ],
+   [
+    "47333310",
+    "28164.969"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "plug",
+  "table lamp",
+  "side table",
+  "couch"
+ ],
+ "roles": {
+  "plug": "target",
+  "table lamp": "host",
+  "side table": "container",
+  "couch": "landmark"
+ },
+ "candidates": {
+  "plug": [
+   {
+    "x0": 1130,
+    "x1": 1164,
+    "y0": 1027,
+    "y1": 1086,
+    "cx": 1148.5,
+    "cy": 1058.5,
+    "npix": 1669,
+    "area_pct": 0.06,
+    "score": 0.699
+   },
+   {
+    "x0": 1184,
+    "x1": 1232,
+    "y0": 1486,
+    "y1": 1512,
+    "cx": 1211.0,
+    "cy": 1497.2,
+    "npix": 911,
+    "area_pct": 0.033,
+    "score": 0.33
+   },
+   {
+    "x0": 1224,
+    "x1": 1256,
+    "y0": 1434,
+    "y1": 1552,
+    "cx": 1241.1,
+    "cy": 1490.7,
+    "npix": 2512,
+    "area_pct": 0.091,
+    "score": 0.215
+   }
+  ],
+  "table lamp": [
+   {
+    "x0": 1029,
+    "x1": 1194,
+    "y0": 398,
+    "y1": 725,
+    "cx": 1114.0,
+    "cy": 532.5,
+    "npix": 32607,
+    "area_pct": 1.179,
+    "score": 0.947
+   },
+   {
+    "x0": 0,
+    "x1": 58,
+    "y0": 0,
+    "y1": 21,
+    "cx": 27.6,
+    "cy": 8.9,
+    "npix": 1001,
+    "area_pct": 0.036,
+    "score": 0.256
+   }
+  ],
+  "side table": [
+   {
+    "x0": 654,
+    "x1": 1164,
+    "y0": 695,
+    "y1": 1343,
+    "cx": 884.9,
+    "cy": 992.9,
+    "npix": 109686,
+    "area_pct": 3.967,
+    "score": 0.507
+   },
+   {
+    "x0": 0,
+    "x1": 14,
+    "y0": 420,
+    "y1": 470,
+    "cx": 4.4,
+    "cy": 448.1,
+    "npix": 438,
+    "area_pct": 0.016,
+    "score": 0.269
+   }
+  ],
+  "couch": [
+   {
+    "x0": 689,
+    "x1": 1439,
+    "y0": 137,
+    "y1": 970,
+    "cx": 1152.6,
+    "cy": 462.3,
+    "npix": 323676,
+    "area_pct": 11.707,
+    "score": 0.901
+   },
+   {
+    "x0": 0,
+    "x1": 10,
+    "y0": 420,
+    "y1": 466,
+    "cx": 3.9,
+    "cy": 446.7,
+    "npix": 381,
+    "area_pct": 0.014,
+    "score": 0.315
+   }
+  ]
+ },
+ "mask_keys": {
+  "plug": [
+   "plug|0",
+   "plug|1",
+   "plug|2"
+  ],
+  "table lamp": [
+   "table lamp|0",
+   "table lamp|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

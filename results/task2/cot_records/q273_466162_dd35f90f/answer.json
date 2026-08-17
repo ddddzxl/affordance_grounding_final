@@ -1,0 +1,8 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "low",
+ "kind": "conflicting_select",
+ "solver": "frontier-llm, manual CoT"
+}

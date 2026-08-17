@@ -1,0 +1,276 @@
+{
+ "q": 239,
+ "visit": "466092",
+ "desc_id": "405cc503-b789-4636-bbf2-6ab863b06ca3",
+ "text": "Open the left cabinet door with the TV on top",
+ "parse": {
+  "text": "Open the left cabinet door with the TV on top",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "TV",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "TV"
+   }
+  ],
+  "select": [
+   {
+    "on": "cabinet door",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796562",
+  "fid": "15985.396",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44796562",
+    "15985.396"
+   ],
+   [
+    "44796568",
+    "16181.198"
+   ],
+   [
+    "44796562",
+    "15986.395"
+   ],
+   [
+    "44796562",
+    "16001.406"
+   ],
+   [
+    "44796568",
+    "16176.200"
+   ],
+   [
+    "44796562",
+    "15961.406"
+   ],
+   [
+    "44796562",
+    "15950.294"
+   ],
+   [
+    "44796562",
+    "15951.293"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "cabinet",
+  "TV"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "cabinet": "container",
+  "TV": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 827,
+    "x1": 866,
+    "y0": 825,
+    "y1": 864,
+    "cx": 845.7,
+    "cy": 845.5,
+    "npix": 1187,
+    "area_pct": 0.043,
+    "score": 0.438
+   },
+   {
+    "x0": 874,
+    "x1": 912,
+    "y0": 805,
+    "y1": 839,
+    "cx": 893.4,
+    "cy": 820.9,
+    "npix": 1012,
+    "area_pct": 0.037,
+    "score": 0.427
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 504,
+    "x1": 866,
+    "y0": 587,
+    "y1": 1210,
+    "cx": 689.2,
+    "cy": 883.2,
+    "npix": 171186,
+    "area_pct": 6.192,
+    "score": 0.955
+   },
+   {
+    "x0": 867,
+    "x1": 1088,
+    "y0": 519,
+    "y1": 1039,
+    "cx": 973.8,
+    "cy": 769.4,
+    "npix": 93918,
+    "area_pct": 3.397,
+    "score": 0.897
+   },
+   {
+    "x0": 0,
+    "x1": 463,
+    "y0": 5,
+    "y1": 1439,
+    "cx": 131.7,
+    "cy": 961.5,
+    "npix": 272501,
+    "area_pct": 9.856,
+    "score": 0.225
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 300,
+    "x1": 1150,
+    "y0": 400,
+    "y1": 1318,
+    "cx": 727.6,
+    "cy": 814.9,
+    "npix": 512018,
+    "area_pct": 18.519,
+    "score": 0.892
+   },
+   {
+    "x0": 0,
+    "x1": 460,
+    "y0": 5,
+    "y1": 1439,
+    "cx": 131.9,
+    "cy": 895.8,
+    "npix": 296552,
+    "area_pct": 10.726,
+    "score": 0.306
+   }
+  ],
+  "TV": [
+   {
+    "x0": 260,
+    "x1": 1034,
+    "y0": 0,
+    "y1": 529,
+    "cx": 646.0,
+    "cy": 233.7,
+    "npix": 347161,
+    "area_pct": 12.556,
+    "score": 0.967
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1",
+   "cabinet door|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

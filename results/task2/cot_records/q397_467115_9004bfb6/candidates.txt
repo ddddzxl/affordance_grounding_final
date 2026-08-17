@@ -1,0 +1,50 @@
+TASK: "Adjust the stovetop's heat"
+
+PARSE:
+  target concept = "stovetop knob"   <- the thing that must be output
+  host           = 'stovetop'   <- countable object the target sits on
+  entity  : 'stovetop knob'  role=target
+  entity  : 'stovetop'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  stovetop knob        0   375   429  1180  1234   403.1  1206.8   0.092  0.885
+  stovetop knob        1   565   629  1273  1338   597.6  1302.9   0.124  0.874
+  stovetop knob        2   500   559  1240  1299   528.7  1269.9   0.104  0.863
+  stovetop knob        3   435   493  1207  1266   462.9  1236.9   0.098  0.858
+  stovetop knob        4   270   334  1379  1446   301.9  1411.2   0.126  0.275
+  stovetop knob        5   405   424  1487  1519   415.7  1502.4   0.018  0.243
+  stovetop knob        6   440   459  1512  1539   450.3  1525.6   0.017   0.23
+  stovetop knob        7   425   444  1500  1526   434.4  1512.7   0.014  0.219
+  stovetop knob        8   460   479  1527  1546   469.5  1536.5   0.014  0.217
+  stovetop knob        9   370   394  1467  1492   383.0  1479.5   0.018  0.206
+  stovetop knob       10   530   588  1539  1619   557.8  1575.5   0.142  0.176
+  stovetop             0   156  1290   910  1535   729.1  1197.0  12.344   0.95
+
+
+
+
+
+CONTAINMENT (stovetop knob inside the FILLED mask of each stovetop):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  stovetop #0   x[ 156,1290] cx   729.1 cy  1197.0 w=1134 contains #0, #1, #2, #3
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "stovetop knob" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: stovetop knob #<id>[, #<id> ...]

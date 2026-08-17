@@ -1,0 +1,266 @@
+{
+ "q": 153,
+ "visit": "435324",
+ "desc_id": "df6ae11d-45b1-4f4f-af34-f15233ea7b92",
+ "text": "Close the bedroom door",
+ "parse": {
+  "text": "Close the bedroom door",
+  "target": {
+   "concept": "door handle",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'bedroom' is a room-level locator, not groundable",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899216",
+  "fid": "188223.411",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899216",
+    "188223.411"
+   ],
+   [
+    "42899220",
+    "188313.107"
+   ],
+   [
+    "42899216",
+    "188220.296"
+   ],
+   [
+    "42899221",
+    "188344.994"
+   ],
+   [
+    "42899216",
+    "188238.605"
+   ],
+   [
+    "42899220",
+    "188272.508"
+   ],
+   [
+    "42899221",
+    "188350.009"
+   ],
+   [
+    "42899221",
+    "188348.993"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.931,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.666,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.654,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 161,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "door"
+ ],
+ "roles": {
+  "door handle": "target",
+  "door": "host"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1307,
+    "x1": 1331,
+    "y0": 680,
+    "y1": 799,
+    "cx": 1319.4,
+    "cy": 740.1,
+    "npix": 1880,
+    "area_pct": 0.068,
+    "score": 0.744
+   },
+   {
+    "x0": 1480,
+    "x1": 1546,
+    "y0": 1390,
+    "y1": 1419,
+    "cx": 1514.8,
+    "cy": 1405.0,
+    "npix": 1225,
+    "area_pct": 0.044,
+    "score": 0.4
+   },
+   {
+    "x0": 767,
+    "x1": 806,
+    "y0": 1115,
+    "y1": 1159,
+    "cx": 784.8,
+    "cy": 1136.4,
+    "npix": 1300,
+    "area_pct": 0.047,
+    "score": 0.261
+   },
+   {
+    "x0": 995,
+    "x1": 1039,
+    "y0": 1050,
+    "y1": 1089,
+    "cx": 1017.7,
+    "cy": 1069.5,
+    "npix": 1295,
+    "area_pct": 0.047,
+    "score": 0.239
+   },
+   {
+    "x0": 993,
+    "x1": 1039,
+    "y0": 923,
+    "y1": 959,
+    "cx": 1016.4,
+    "cy": 940.9,
+    "npix": 1238,
+    "area_pct": 0.045,
+    "score": 0.238
+   },
+   {
+    "x0": 1000,
+    "x1": 1046,
+    "y0": 1190,
+    "y1": 1229,
+    "cx": 1023.1,
+    "cy": 1210.0,
+    "npix": 1537,
+    "area_pct": 0.056,
+    "score": 0.23
+   },
+   {
+    "x0": 1900,
+    "x1": 1919,
+    "y0": 954,
+    "y1": 974,
+    "cx": 1909.5,
+    "cy": 964.3,
+    "npix": 402,
+    "area_pct": 0.015,
+    "score": 0.226
+   },
+   {
+    "x0": 760,
+    "x1": 799,
+    "y0": 980,
+    "y1": 1014,
+    "cx": 781.1,
+    "cy": 998.5,
+    "npix": 1023,
+    "area_pct": 0.037,
+    "score": 0.225
+   },
+   {
+    "x0": 760,
+    "x1": 792,
+    "y0": 865,
+    "y1": 899,
+    "cx": 775.0,
+    "cy": 883.0,
+    "npix": 924,
+    "area_pct": 0.033,
+    "score": 0.217
+   }
+  ],
+  "door": [
+   {
+    "x0": 1302,
+    "x1": 1857,
+    "y0": 93,
+    "y1": 1382,
+    "cx": 1568.3,
+    "cy": 701.7,
+    "npix": 595181,
+    "area_pct": 21.527,
+    "score": 0.907
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4",
+   "door handle|5",
+   "door handle|6",
+   "door handle|7",
+   "door handle|8"
+  ],
+  "door": [
+   "door|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

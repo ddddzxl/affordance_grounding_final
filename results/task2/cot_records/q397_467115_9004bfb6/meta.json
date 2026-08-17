@@ -1,0 +1,293 @@
+{
+ "q": 397,
+ "visit": "467115",
+ "desc_id": "9004bfb6-bbb8-48d1-b8f7-71d3cc6b3c8c",
+ "text": "Adjust the stovetop's heat",
+ "parse": {
+  "text": "Adjust the stovetop's heat",
+  "target": {
+   "concept": "stovetop knob",
+   "host": "stovetop"
+  },
+  "entities": [
+   {
+    "name": "stovetop knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "stovetop",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28303.762",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333310",
+    "28303.762"
+   ],
+   [
+    "47333319",
+    "28385.662"
+   ],
+   [
+    "47333308",
+    "28037.154"
+   ],
+   [
+    "47333319",
+    "28374.666"
+   ],
+   [
+    "47333308",
+    "28033.156"
+   ],
+   [
+    "47333319",
+    "28381.664"
+   ],
+   [
+    "47333310",
+    "28301.763"
+   ],
+   [
+    "47333319",
+    "28382.663"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.776,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "stovetop knob",
+  "stovetop"
+ ],
+ "roles": {
+  "stovetop knob": "target",
+  "stovetop": "host"
+ },
+ "candidates": {
+  "stovetop knob": [
+   {
+    "x0": 375,
+    "x1": 429,
+    "y0": 1180,
+    "y1": 1234,
+    "cx": 403.1,
+    "cy": 1206.8,
+    "npix": 2540,
+    "area_pct": 0.092,
+    "score": 0.885
+   },
+   {
+    "x0": 565,
+    "x1": 629,
+    "y0": 1273,
+    "y1": 1338,
+    "cx": 597.6,
+    "cy": 1302.9,
+    "npix": 3419,
+    "area_pct": 0.124,
+    "score": 0.874
+   },
+   {
+    "x0": 500,
+    "x1": 559,
+    "y0": 1240,
+    "y1": 1299,
+    "cx": 528.7,
+    "cy": 1269.9,
+    "npix": 2878,
+    "area_pct": 0.104,
+    "score": 0.863
+   },
+   {
+    "x0": 435,
+    "x1": 493,
+    "y0": 1207,
+    "y1": 1266,
+    "cx": 462.9,
+    "cy": 1236.9,
+    "npix": 2697,
+    "area_pct": 0.098,
+    "score": 0.858
+   },
+   {
+    "x0": 270,
+    "x1": 334,
+    "y0": 1379,
+    "y1": 1446,
+    "cx": 301.9,
+    "cy": 1411.2,
+    "npix": 3483,
+    "area_pct": 0.126,
+    "score": 0.275
+   },
+   {
+    "x0": 405,
+    "x1": 424,
+    "y0": 1487,
+    "y1": 1519,
+    "cx": 415.7,
+    "cy": 1502.4,
+    "npix": 486,
+    "area_pct": 0.018,
+    "score": 0.243
+   },
+   {
+    "x0": 440,
+    "x1": 459,
+    "y0": 1512,
+    "y1": 1539,
+    "cx": 450.3,
+    "cy": 1525.6,
+    "npix": 460,
+    "area_pct": 0.017,
+    "score": 0.23
+   },
+   {
+    "x0": 425,
+    "x1": 444,
+    "y0": 1500,
+    "y1": 1526,
+    "cx": 434.4,
+    "cy": 1512.7,
+    "npix": 400,
+    "area_pct": 0.014,
+    "score": 0.219
+   },
+   {
+    "x0": 460,
+    "x1": 479,
+    "y0": 1527,
+    "y1": 1546,
+    "cx": 469.5,
+    "cy": 1536.5,
+    "npix": 384,
+    "area_pct": 0.014,
+    "score": 0.217
+   },
+   {
+    "x0": 370,
+    "x1": 394,
+    "y0": 1467,
+    "y1": 1492,
+    "cx": 383.0,
+    "cy": 1479.5,
+    "npix": 500,
+    "area_pct": 0.018,
+    "score": 0.206
+   },
+   {
+    "x0": 530,
+    "x1": 588,
+    "y0": 1539,
+    "y1": 1619,
+    "cx": 557.8,
+    "cy": 1575.5,
+    "npix": 3914,
+    "area_pct": 0.142,
+    "score": 0.176
+   }
+  ],
+  "stovetop": [
+   {
+    "x0": 156,
+    "x1": 1290,
+    "y0": 910,
+    "y1": 1535,
+    "cx": 729.1,
+    "cy": 1197.0,
+    "npix": 341299,
+    "area_pct": 12.344,
+    "score": 0.95
+   }
+  ]
+ },
+ "mask_keys": {
+  "stovetop knob": [
+   "stovetop knob|0",
+   "stovetop knob|1",
+   "stovetop knob|2",
+   "stovetop knob|3",
+   "stovetop knob|4",
+   "stovetop knob|5",
+   "stovetop knob|6",
+   "stovetop knob|7",
+   "stovetop knob|8",
+   "stovetop knob|9",
+   "stovetop knob|10"
+  ],
+  "stovetop": [
+   "stovetop|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(4)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

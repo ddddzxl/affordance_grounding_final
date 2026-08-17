@@ -1,0 +1,9 @@
+{
+ "final": [
+  8,
+  9
+ ],
+ "confidence": "high",
+ "kind": "vert+horiz",
+ "solver": "frontier-llm, manual CoT"
+}

@@ -1,0 +1,183 @@
+{
+ "q": 160,
+ "visit": "435357",
+ "desc_id": "7235969e-fcff-4145-93f4-4bbd52ca104e",
+ "text": "Adjust the intensity of the heater next to the blue couch",
+ "parse": {
+  "text": "Adjust the intensity of the heater next to the blue couch",
+  "target": {
+   "concept": "heater knob",
+   "host": "heater"
+  },
+  "entities": [
+   {
+    "name": "heater knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "heater",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "couch",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "heater",
+    "b": "couch"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899632",
+  "fid": "229995.176",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "42899632",
+    "229995.176"
+   ],
+   [
+    "42899624",
+    "230102.284"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 191,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "heater knob",
+  "heater",
+  "couch"
+ ],
+ "roles": {
+  "heater knob": "target",
+  "heater": "host",
+  "couch": "landmark"
+ },
+ "candidates": {
+  "heater knob": [
+   {
+    "x0": 390,
+    "x1": 468,
+    "y0": 1200,
+    "y1": 1319,
+    "cx": 428.4,
+    "cy": 1258.0,
+    "npix": 7293,
+    "area_pct": 0.264,
+    "score": 0.544
+   },
+   {
+    "x0": 419,
+    "x1": 439,
+    "y0": 1333,
+    "y1": 1352,
+    "cx": 429.3,
+    "cy": 1342.6,
+    "npix": 328,
+    "area_pct": 0.012,
+    "score": 0.262
+   }
+  ],
+  "heater": [
+   {
+    "x0": 381,
+    "x1": 544,
+    "y0": 1054,
+    "y1": 1432,
+    "cx": 457.7,
+    "cy": 1246.2,
+    "npix": 44347,
+    "area_pct": 1.604,
+    "score": 0.673
+   },
+   {
+    "x0": 0,
+    "x1": 353,
+    "y0": 8,
+    "y1": 612,
+    "cx": 264.0,
+    "cy": 470.3,
+    "npix": 36612,
+    "area_pct": 1.324,
+    "score": 0.168
+   }
+  ],
+  "couch": [
+   {
+    "x0": 547,
+    "x1": 1439,
+    "y0": 381,
+    "y1": 1738,
+    "cx": 1050.2,
+    "cy": 1069.2,
+    "npix": 949678,
+    "area_pct": 34.349,
+    "score": 0.861
+   }
+  ]
+ },
+ "mask_keys": {
+  "heater knob": [
+   "heater knob|0",
+   "heater knob|1"
+  ],
+  "heater": [
+   "heater|0",
+   "heater|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

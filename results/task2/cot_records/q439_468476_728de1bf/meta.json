@@ -1,0 +1,287 @@
+{
+ "q": 439,
+ "visit": "468476",
+ "desc_id": "728de1bf-4642-4f57-bb11-e10ad4bdf97a",
+ "text": "Open the middle window behind the blue armchair",
+ "parse": {
+  "text": "Open the middle window behind the blue armchair",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "armchair",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "behind",
+    "a": "window",
+    "b": "armchair"
+   }
+  ],
+  "select": [
+   {
+    "on": "window",
+    "axis": "horizontal",
+    "value": "middle",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45261682",
+  "fid": "3533.476",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "45261682",
+    "3533.476"
+   ],
+   [
+    "45261682",
+    "3532.476"
+   ],
+   [
+    "45261686",
+    "3756.267"
+   ],
+   [
+    "45261681",
+    "3600.065"
+   ],
+   [
+    "45261681",
+    "3599.065"
+   ],
+   [
+    "45261681",
+    "3598.066"
+   ],
+   [
+    "45261681",
+    "3597.066"
+   ],
+   [
+    "45261682",
+    "3528.478"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 0.945,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.926,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.925,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.912,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 222,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "armchair"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "armchair": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 820,
+    "x1": 855,
+    "y0": 953,
+    "y1": 966,
+    "cx": 835.2,
+    "cy": 960.2,
+    "npix": 399,
+    "area_pct": 0.014,
+    "score": 0.181
+   },
+   {
+    "x0": 435,
+    "x1": 454,
+    "y0": 1127,
+    "y1": 1142,
+    "cx": 443.3,
+    "cy": 1133.9,
+    "npix": 233,
+    "area_pct": 0.008,
+    "score": 0.177
+   },
+   {
+    "x0": 1039,
+    "x1": 1055,
+    "y0": 1160,
+    "y1": 1180,
+    "cx": 1046.5,
+    "cy": 1170.4,
+    "npix": 271,
+    "area_pct": 0.01,
+    "score": 0.176
+   },
+   {
+    "x0": 1035,
+    "x1": 1058,
+    "y0": 880,
+    "y1": 1031,
+    "cx": 1046.5,
+    "cy": 955.9,
+    "npix": 2476,
+    "area_pct": 0.09,
+    "score": 0.162
+   }
+  ],
+  "window": [
+   {
+    "x0": 299,
+    "x1": 545,
+    "y0": 660,
+    "y1": 1156,
+    "cx": 419.4,
+    "cy": 900.8,
+    "npix": 109845,
+    "area_pct": 3.973,
+    "score": 0.835
+   },
+   {
+    "x0": 964,
+    "x1": 1142,
+    "y0": 634,
+    "y1": 1205,
+    "cx": 1054.4,
+    "cy": 912.1,
+    "npix": 87470,
+    "area_pct": 3.164,
+    "score": 0.822
+   },
+   {
+    "x0": 632,
+    "x1": 884,
+    "y0": 676,
+    "y1": 1108,
+    "cx": 755.4,
+    "cy": 891.0,
+    "npix": 94140,
+    "area_pct": 3.405,
+    "score": 0.792
+   },
+   {
+    "x0": 725,
+    "x1": 833,
+    "y0": 673,
+    "y1": 710,
+    "cx": 779.8,
+    "cy": 691.8,
+    "npix": 3282,
+    "area_pct": 0.119,
+    "score": 0.758
+   }
+  ],
+  "armchair": [
+   {
+    "x0": 315,
+    "x1": 985,
+    "y0": 1149,
+    "y1": 1578,
+    "cx": 644.7,
+    "cy": 1381.7,
+    "npix": 163184,
+    "area_pct": 5.902,
+    "score": 0.731
+   },
+   {
+    "x0": 1187,
+    "x1": 1296,
+    "y0": 1353,
+    "y1": 1539,
+    "cx": 1233.0,
+    "cy": 1438.3,
+    "npix": 15192,
+    "area_pct": 0.549,
+    "score": 0.273
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2",
+   "window handle|3"
+  ],
+  "window": [
+   "window|0",
+   "window|1",
+   "window|2",
+   "window|3"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 2,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

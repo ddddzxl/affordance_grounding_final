@@ -1,0 +1,274 @@
+{
+ "q": 66,
+ "visit": "422842",
+ "desc_id": "77dcd360-da9c-423b-a1e1-00f887d8ca09",
+ "text": "Open the top right drawer of the white cabinet in front of the radiator",
+ "parse": {
+  "text": "Open the top right drawer of the white cabinet in front of the radiator",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "radiator",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "in_front_of",
+    "a": "cabinet",
+    "b": "radiator"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   },
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897547",
+  "fid": "473256.604",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 6,
+  "topk": [
+   [
+    "42897547",
+    "473256.604"
+   ],
+   [
+    "42897547",
+    "473188.815"
+   ],
+   [
+    "42897547",
+    "473181.818"
+   ],
+   [
+    "42897547",
+    "473217.104"
+   ],
+   [
+    "42897560",
+    "473393.614"
+   ],
+   [
+    "42897547",
+    "473215.904"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.783,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.05,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.05,
+    "s2": 0.823,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 236,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "radiator"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "radiator": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1210,
+    "x1": 1244,
+    "y0": 1533,
+    "y1": 1746,
+    "cx": 1225.1,
+    "cy": 1640.8,
+    "npix": 2795,
+    "area_pct": 0.101,
+    "score": 0.533
+   },
+   {
+    "x0": 1240,
+    "x1": 1274,
+    "y0": 1538,
+    "y1": 1752,
+    "cx": 1255.4,
+    "cy": 1648.7,
+    "npix": 2852,
+    "area_pct": 0.103,
+    "score": 0.519
+   },
+   {
+    "x0": 640,
+    "x1": 659,
+    "y0": 1888,
+    "y1": 1912,
+    "cx": 649.0,
+    "cy": 1900.9,
+    "npix": 394,
+    "area_pct": 0.014,
+    "score": 0.296
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 539,
+    "x1": 680,
+    "y0": 1847,
+    "y1": 1919,
+    "cx": 617.3,
+    "cy": 1889.3,
+    "npix": 8099,
+    "area_pct": 0.293,
+    "score": 0.26
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 931,
+    "x1": 1439,
+    "y0": 834,
+    "y1": 1919,
+    "cx": 1219.9,
+    "cy": 1350.7,
+    "npix": 445478,
+    "area_pct": 16.112,
+    "score": 0.849
+   },
+   {
+    "x0": 0,
+    "x1": 535,
+    "y0": 1607,
+    "y1": 1919,
+    "cx": 281.2,
+    "cy": 1777.9,
+    "npix": 113174,
+    "area_pct": 4.093,
+    "score": 0.384
+   },
+   {
+    "x0": 539,
+    "x1": 680,
+    "y0": 1845,
+    "y1": 1919,
+    "cx": 617.3,
+    "cy": 1888.7,
+    "npix": 8305,
+    "area_pct": 0.3,
+    "score": 0.363
+   }
+  ],
+  "radiator": [
+   {
+    "x0": 685,
+    "x1": 993,
+    "y0": 1726,
+    "y1": 1919,
+    "cx": 854.1,
+    "cy": 1846.0,
+    "npix": 19638,
+    "area_pct": 0.71,
+    "score": 0.834
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2"
+  ],
+  "drawer": [
+   "drawer|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

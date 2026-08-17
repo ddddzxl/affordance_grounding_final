@@ -1,0 +1,194 @@
+{
+ "q": 437,
+ "visit": "468476",
+ "desc_id": "5b916b6b-d173-488d-9654-0cef53a12930",
+ "text": "Unplug the power strip on the floor",
+ "parse": {
+  "text": "Unplug the power strip on the floor",
+  "target": {
+   "concept": "plug",
+   "host": "power strip"
+  },
+  "entities": [
+   {
+    "name": "plug",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "power strip",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'on the floor' — floor is not an instanceable object; the plug sits at the socket end",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45261686",
+  "fid": "3769.961",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "45261686",
+    "3769.961"
+   ],
+   [
+    "45261681",
+    "3632.668"
+   ],
+   [
+    "45261682",
+    "3582.672"
+   ],
+   [
+    "45261686",
+    "3770.961"
+   ],
+   [
+    "45261686",
+    "3819.474"
+   ],
+   [
+    "45261682",
+    "3546.471"
+   ],
+   [
+    "45261681",
+    "3634.667"
+   ],
+   [
+    "45261686",
+    "3823.472"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.777,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.621,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 222,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "plug",
+  "power strip"
+ ],
+ "roles": {
+  "plug": "target",
+  "power strip": "host"
+ },
+ "candidates": {
+  "plug": [
+   {
+    "x0": 419,
+    "x1": 474,
+    "y0": 1007,
+    "y1": 1152,
+    "cx": 440.9,
+    "cy": 1086.0,
+    "npix": 5115,
+    "area_pct": 0.185,
+    "score": 0.528
+   },
+   {
+    "x0": 450,
+    "x1": 479,
+    "y0": 1033,
+    "y1": 1092,
+    "cx": 465.2,
+    "cy": 1059.1,
+    "npix": 1336,
+    "area_pct": 0.048,
+    "score": 0.252
+   }
+  ],
+  "power strip": [
+   {
+    "x0": 420,
+    "x1": 574,
+    "y0": 1011,
+    "y1": 1726,
+    "cx": 494.1,
+    "cy": 1324.1,
+    "npix": 14621,
+    "area_pct": 0.529,
+    "score": 0.53
+   },
+   {
+    "x0": 450,
+    "x1": 759,
+    "y0": 628,
+    "y1": 1160,
+    "cx": 626.1,
+    "cy": 996.2,
+    "npix": 21353,
+    "area_pct": 0.772,
+    "score": 0.163
+   }
+  ]
+ },
+ "mask_keys": {
+  "plug": [
+   "plug|0",
+   "plug|1"
+  ],
+  "power strip": [
+   "power strip|0",
+   "power strip|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

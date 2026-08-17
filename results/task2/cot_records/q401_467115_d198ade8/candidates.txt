@@ -1,0 +1,63 @@
+TASK: "Select a microwave function"
+
+PARSE:
+  target concept = "microwave button"   <- the thing that must be output
+  host           = 'microwave'   <- countable object the target sits on
+  entity  : 'microwave button'  role=target
+  entity  : 'microwave'  role=host
+  residual: no disambiguating cue — any of the microwave controls is acceptable
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  microwave button     0   800   879   940  1011   835.6   970.8    0.15  0.707
+  microwave button     1   841   889   829   876   865.7   854.4   0.054  0.503
+  microwave button     2   800   884   873   938   836.5   911.0   0.127  0.491
+  microwave button     3   840   887   873   912   864.5   890.9   0.045   0.49
+  microwave button     4   804   844   800   834   823.4   817.4   0.045  0.471
+  microwave button     5   843   889   786   825   867.4   806.3   0.053  0.403
+  microwave button     6   805   844   841   892   825.0   867.5   0.059  0.376
+  microwave button     7   800   839   766   806   819.1   785.6   0.043  0.354
+  microwave button     8   842   889   805   846   866.9   824.6   0.051   0.33
+  microwave button     9   801   883   861   914   831.9   889.2   0.081  0.329
+  microwave button    10   840   889   797   832   864.7   815.5   0.043  0.328
+  microwave button    11   800   844   833   869   821.4   851.4   0.046  0.222
+  microwave button    12   800   844   813   858   822.7   833.2   0.053  0.221
+  microwave button    13   801   842   787   818   820.7   801.3   0.036  0.197
+  microwave button    14   867   894   753   790   881.0   771.3   0.027  0.191
+  microwave button    15   820   864   713   779   844.0   744.1   0.077  0.181
+  microwave button    16   799   884   907   980   844.6   930.6   0.095  0.179
+  microwave button    17   846   889   820   865   872.0   839.7   0.048  0.176
+  microwave button    18   795   839   847   893   817.7   872.8   0.059  0.175
+  microwave button    19   842   874   727   781   858.5   754.9   0.048  0.164
+  ... (1 more 'microwave button' with lower score omitted)
+  microwave            0   346  1268   406  1054   795.9   703.5  15.307  0.976
+  microwave            1   386  1187   863  1415   790.9  1092.4    6.26  0.176
+
+
+
+
+
+CONTAINMENT (microwave button inside the FILLED mask of each microwave):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  microwave #0   x[ 346,1268] cx   795.9 cy   703.5 w= 922 contains #0, #1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #17, #18, #19
+  microwave #1   x[ 386,1187] cx   790.9 cy  1092.4 w= 801 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "microwave button" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: microwave button #<id>[, #<id> ...]

@@ -1,0 +1,173 @@
+{
+ "q": 415,
+ "visit": "467139",
+ "desc_id": "eeb550dc-972c-4112-8341-d54a8d456814",
+ "text": "Control the temperature using the bathroom radiator dial",
+ "parse": {
+  "text": "Control the temperature using the bathroom radiator dial",
+  "target": {
+   "concept": "radiator knob",
+   "host": "radiator"
+  },
+  "entities": [
+   {
+    "name": "radiator knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "radiator",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'bathroom' is a room-level locator, not groundable",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333298",
+  "fid": "26596.943",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333298",
+    "26596.943"
+   ],
+   [
+    "47333298",
+    "26597.943"
+   ],
+   [
+    "47333298",
+    "26622.249"
+   ],
+   [
+    "47333293",
+    "26492.053"
+   ],
+   [
+    "47333292",
+    "26406.355"
+   ],
+   [
+    "47333298",
+    "26618.251"
+   ],
+   [
+    "47333293",
+    "26488.055"
+   ],
+   [
+    "47333292",
+    "26398.358"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 366,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "radiator knob",
+  "radiator"
+ ],
+ "roles": {
+  "radiator knob": "target",
+  "radiator": "host"
+ },
+ "candidates": {
+  "radiator knob": [
+   {
+    "x0": 1660,
+    "x1": 1759,
+    "y0": 255,
+    "y1": 319,
+    "cx": 1707.1,
+    "cy": 290.9,
+    "npix": 5112,
+    "area_pct": 0.185,
+    "score": 0.692
+   },
+   {
+    "x0": 1680,
+    "x1": 1764,
+    "y0": 95,
+    "y1": 139,
+    "cx": 1735.9,
+    "cy": 117.0,
+    "npix": 1906,
+    "area_pct": 0.069,
+    "score": 0.182
+   }
+  ],
+  "radiator": []
+ },
+ "mask_keys": {
+  "radiator knob": [
+   "radiator knob|0",
+   "radiator knob|1"
+  ],
+  "radiator": []
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "radiator dial",
+  "used": "radiator knob",
+  "probe_hits": 2,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "low",
+ "kind": "non_equivalent_targets",
+ "solver": "frontier-llm, manual CoT"
+}

@@ -1,0 +1,42 @@
+TASK: "Adjust the power of the humidifier"
+
+PARSE:
+  target concept = "humidifier knob"   <- the thing that must be output
+  host           = 'humidifier'   <- countable object the target sits on
+  entity  : 'humidifier knob'  role=target
+  entity  : 'humidifier'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  humidifier knob      0  1153  1212   725   779  1181.8   751.2   0.089  0.597
+  humidifier knob      1  1180  1266   915   979  1224.3   946.8   0.161  0.534
+  humidifier knob      2   727   772   959  1024   749.1   992.0   0.094   0.49
+  humidifier           0  1034  1272   465   808  1153.2   639.6   2.633  0.936
+
+
+
+
+
+CONTAINMENT (humidifier knob inside the FILLED mask of each humidifier):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  humidifier #0   x[1034,1272] cx  1153.2 cy   639.6 w= 238 contains #0
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "humidifier knob" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: humidifier knob #<id>[, #<id> ...]

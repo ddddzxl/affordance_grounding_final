@@ -1,0 +1,46 @@
+TASK: "Unplug the floor lamp next to the couch"
+
+PARSE:
+  target concept = "plug"   <- the thing that must be output
+  host           = 'floor lamp'   <- countable object the target sits on
+  entity  : 'plug'  role=target
+  entity  : 'floor lamp'  role=host
+  entity  : 'couch'  role=landmark
+  relation: next_to(a='floor lamp', b='couch')
+  residual: the plug sits at the socket end, not on the lamp
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  plug                 0   630   653  1337  1403   639.3  1367.1    0.04  0.446
+  plug                 1   631   654  1293  1346   644.3  1317.9   0.038  0.336
+  plug                 2   845   869   907   973   854.9   942.1   0.047  0.177
+  floor lamp           0   560  1085    59  1499   817.7   460.5  10.734  0.951
+  couch                0   975  1439   636  1726  1226.4  1222.9  10.289   0.79
+
+
+
+
+
+CONTAINMENT (plug inside the FILLED mask of each floor lamp):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  floor lamp #0   x[ 560,1085] cx   817.7 cy   460.5 w= 525 contains #2
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "plug" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: plug #<id>[, #<id> ...]

@@ -1,0 +1,229 @@
+{
+ "q": 2,
+ "visit": "421254",
+ "desc_id": "4668a5f5-0555-48c1-82c2-3ba60bbd4645",
+ "text": "Open the right window behind the shutters",
+ "parse": {
+  "text": "Open the right window behind the shutters",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "shutters",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "behind",
+    "a": "window",
+    "b": "shutters"
+   }
+  ],
+  "select": [
+   {
+    "on": "window",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42444758",
+  "fid": "80941.174",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42444758",
+    "80941.174"
+   ],
+   [
+    "42444758",
+    "80942.174"
+   ],
+   [
+    "42444755",
+    "80863.672"
+   ],
+   [
+    "42444755",
+    "80864.672"
+   ],
+   [
+    "42444754",
+    "81009.279"
+   ],
+   [
+    "42444754",
+    "81006.281"
+   ],
+   [
+    "42444755",
+    "80865.672"
+   ],
+   [
+    "42444754",
+    "81011.279"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 170,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "shutters"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "shutters": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 645,
+    "x1": 669,
+    "y0": 860,
+    "y1": 946,
+    "cx": 660.4,
+    "cy": 903.9,
+    "npix": 1291,
+    "area_pct": 0.047,
+    "score": 0.573
+   },
+   {
+    "x0": 960,
+    "x1": 984,
+    "y0": 753,
+    "y1": 799,
+    "cx": 971.6,
+    "cy": 775.6,
+    "npix": 874,
+    "area_pct": 0.032,
+    "score": 0.195
+   },
+   {
+    "x0": 0,
+    "x1": 44,
+    "y0": 1080,
+    "y1": 1106,
+    "cx": 21.2,
+    "cy": 1090.3,
+    "npix": 920,
+    "area_pct": 0.033,
+    "score": 0.183
+   }
+  ],
+  "window": [
+   {
+    "x0": 380,
+    "x1": 997,
+    "y0": 570,
+    "y1": 1463,
+    "cx": 700.0,
+    "cy": 1012.5,
+    "npix": 491728,
+    "area_pct": 17.785,
+    "score": 0.939
+   }
+  ],
+  "shutters": [
+   {
+    "x0": 387,
+    "x1": 996,
+    "y0": 571,
+    "y1": 1454,
+    "cx": 703.8,
+    "cy": 1012.6,
+    "npix": 481593,
+    "area_pct": 17.419,
+    "score": 0.858
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2"
+  ],
+  "window": [
+   "window|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

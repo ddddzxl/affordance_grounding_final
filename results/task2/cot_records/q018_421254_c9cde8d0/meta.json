@@ -1,0 +1,205 @@
+{
+ "q": 18,
+ "visit": "421254",
+ "desc_id": "c9cde8d0-3967-46d7-b839-dc2f5d0f8f35",
+ "text": "Turn on the TV using the left remote on the nightstand",
+ "parse": {
+  "text": "Turn on the TV using the left remote on the nightstand",
+  "target": {
+   "concept": "remote control",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "remote control",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "nightstand",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "remote control",
+    "b": "nightstand"
+   }
+  ],
+  "select": [
+   {
+    "on": "remote control",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": "independent check on the train split (val untouched): handheld-device GT median 478 points vs 87-108 for fixed-furniture handles, a factor of 4.4-5.5 -> the annotation covers the whole device",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42444754",
+  "fid": "80977.876",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42444754",
+    "80977.876"
+   ],
+   [
+    "42444755",
+    "80834.684"
+   ],
+   [
+    "42444754",
+    "80981.874"
+   ],
+   [
+    "42444754",
+    "80985.872"
+   ],
+   [
+    "42444754",
+    "80984.873"
+   ],
+   [
+    "42444754",
+    "80980.874"
+   ],
+   [
+    "42444754",
+    "80978.875"
+   ],
+   [
+    "42444754",
+    "80979.875"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 170,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "remote control",
+  "nightstand"
+ ],
+ "roles": {
+  "remote control": "target",
+  "nightstand": "container"
+ },
+ "candidates": {
+  "remote control": [
+   {
+    "x0": 695,
+    "x1": 774,
+    "y0": 780,
+    "y1": 906,
+    "cx": 733.3,
+    "cy": 842.8,
+    "npix": 6636,
+    "area_pct": 0.24,
+    "score": 0.958
+   },
+   {
+    "x0": 820,
+    "x1": 879,
+    "y0": 747,
+    "y1": 872,
+    "cx": 849.1,
+    "cy": 810.7,
+    "npix": 6032,
+    "area_pct": 0.218,
+    "score": 0.951
+   },
+   {
+    "x0": 1240,
+    "x1": 1384,
+    "y0": 1034,
+    "y1": 1112,
+    "cx": 1313.9,
+    "cy": 1074.7,
+    "npix": 6621,
+    "area_pct": 0.239,
+    "score": 0.26
+   }
+  ],
+  "nightstand": [
+   {
+    "x0": 664,
+    "x1": 1143,
+    "y0": 694,
+    "y1": 1263,
+    "cx": 874.8,
+    "cy": 1037.6,
+    "npix": 160960,
+    "area_pct": 5.822,
+    "score": 0.913
+   }
+  ]
+ },
+ "mask_keys": {
+  "remote control": [
+   "remote control|0",
+   "remote control|1",
+   "remote control|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

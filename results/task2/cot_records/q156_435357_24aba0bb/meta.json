@@ -1,0 +1,267 @@
+{
+ "q": 156,
+ "visit": "435357",
+ "desc_id": "24aba0bb-073c-48a2-bd5c-55e14b87438c",
+ "text": "Open the middle drawer of the TV stand",
+ "parse": {
+  "text": "Open the middle drawer of the TV stand",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "TV stand",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "TV stand",
+    "b": "drawer"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "middle",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899624",
+  "fid": "230012.386",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 6,
+  "topk": [
+   [
+    "42899624",
+    "230012.386"
+   ],
+   [
+    "42899624",
+    "230086.590"
+   ],
+   [
+    "42899624",
+    "230130.389"
+   ],
+   [
+    "42899624",
+    "230128.390"
+   ],
+   [
+    "42899624",
+    "230127.391"
+   ],
+   [
+    "42899624",
+    "230129.390"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 0.957,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.933,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.878,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.826,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 191,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "TV stand"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "TV stand": "container"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1040,
+    "x1": 1054,
+    "y0": 933,
+    "y1": 952,
+    "cx": 1048.3,
+    "cy": 942.8,
+    "npix": 228,
+    "area_pct": 0.008,
+    "score": 0.77
+   },
+   {
+    "x0": 1170,
+    "x1": 1184,
+    "y0": 913,
+    "y1": 932,
+    "cx": 1177.9,
+    "cy": 921.7,
+    "npix": 191,
+    "area_pct": 0.007,
+    "score": 0.749
+   },
+   {
+    "x0": 1290,
+    "x1": 1304,
+    "y0": 900,
+    "y1": 912,
+    "cx": 1296.1,
+    "cy": 905.5,
+    "npix": 157,
+    "area_pct": 0.006,
+    "score": 0.696
+   },
+   {
+    "x0": 555,
+    "x1": 569,
+    "y0": 820,
+    "y1": 872,
+    "cx": 561.9,
+    "cy": 846.3,
+    "npix": 699,
+    "area_pct": 0.025,
+    "score": 0.395
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 1110,
+    "x1": 1234,
+    "y0": 883,
+    "y1": 959,
+    "cx": 1171.0,
+    "cy": 921.2,
+    "npix": 7724,
+    "area_pct": 0.279,
+    "score": 0.908
+   },
+   {
+    "x0": 1233,
+    "x1": 1349,
+    "y0": 867,
+    "y1": 939,
+    "cx": 1290.3,
+    "cy": 903.1,
+    "npix": 6652,
+    "area_pct": 0.241,
+    "score": 0.903
+   },
+   {
+    "x0": 971,
+    "x1": 1109,
+    "y0": 900,
+    "y1": 981,
+    "cx": 1040.4,
+    "cy": 940.2,
+    "npix": 8727,
+    "area_pct": 0.316,
+    "score": 0.893
+   }
+  ],
+  "TV stand": [
+   {
+    "x0": 1156,
+    "x1": 1309,
+    "y0": 773,
+    "y1": 801,
+    "cx": 1230.2,
+    "cy": 788.1,
+    "npix": 3005,
+    "area_pct": 0.109,
+    "score": 0.817
+   },
+   {
+    "x0": 878,
+    "x1": 1373,
+    "y0": 780,
+    "y1": 1006,
+    "cx": 1120.1,
+    "cy": 888.0,
+    "npix": 69787,
+    "area_pct": 2.524,
+    "score": 0.7
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

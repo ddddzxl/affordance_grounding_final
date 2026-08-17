@@ -1,0 +1,33 @@
+TASK: "Control the temperature using the radiator dial next to the window"
+
+PARSE:
+  target concept = "dial"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'dial'  role=target
+  entity  : 'window'  role=landmark
+  relation: next_to(a='dial', b='window')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  dial                 0  1777  1819   945   982  1797.3   963.7   0.041  0.326
+  dial                 1  1907  1919   711   934  1914.8   907.7   0.012  0.216
+  dial                 2  1853  1912  1050  1092  1882.0  1072.1    0.07  0.155
+  window               0  1085  1613     0   566  1344.4   254.4   8.728  0.893
+
+QUESTION: which "dial" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: dial #<id>[, #<id> ...]

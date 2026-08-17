@@ -1,0 +1,36 @@
+TASK: "Plug the device in the left socket between the radiator and the closet"
+
+PARSE:
+  target concept = "socket"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'socket'  role=target
+  entity  : 'radiator'  role=landmark
+  entity  : 'closet'  role=landmark
+  relation: between(a='socket', b='radiator')
+  relation: between(a='socket', b='closet')
+  select  : on='socket' axis=horizontal value='left' index=None from=None
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  socket               0   955  1103  1059  1152  1027.9  1106.0   0.345   0.89
+  radiator             0  1200  1439   655  1266  1333.6   963.9   4.423  0.936
+  closet               0     0   690     0  1396   300.0   697.3  27.267  0.828
+  closet               1     0    79  1506  1663    27.5  1577.3   0.247  0.224
+
+QUESTION: which "socket" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: socket #<id>[, #<id> ...]

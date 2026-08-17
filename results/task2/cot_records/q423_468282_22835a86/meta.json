@@ -1,0 +1,188 @@
+{
+ "q": 423,
+ "visit": "468282",
+ "desc_id": "22835a86-c774-43e5-9249-53c2dd9494bd",
+ "text": "Select a washing machine program",
+ "parse": {
+  "text": "Select a washing machine program",
+  "target": {
+   "concept": "program knob",
+   "host": "washing machine"
+  },
+  "entities": [
+   {
+    "name": "program knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "washing machine",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "no disambiguating cue — any of the washing machine controls is acceptable",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331279",
+  "fid": "14319.317",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331279",
+    "14319.317"
+   ],
+   [
+    "47331279",
+    "14320.316"
+   ],
+   [
+    "47331279",
+    "14307.705"
+   ],
+   [
+    "47331279",
+    "14321.316"
+   ],
+   [
+    "47331279",
+    "14322.316"
+   ],
+   [
+    "47331279",
+    "14317.318"
+   ],
+   [
+    "47331279",
+    "14308.704"
+   ],
+   [
+    "47331279",
+    "14318.317"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 215,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "program knob",
+  "washing machine"
+ ],
+ "roles": {
+  "program knob": "target",
+  "washing machine": "host"
+ },
+ "candidates": {
+  "program knob": [
+   {
+    "x0": 790,
+    "x1": 884,
+    "y0": 607,
+    "y1": 706,
+    "cx": 836.0,
+    "cy": 656.2,
+    "npix": 7138,
+    "area_pct": 0.258,
+    "score": 0.894
+   },
+   {
+    "x0": 1220,
+    "x1": 1249,
+    "y0": 647,
+    "y1": 679,
+    "cx": 1235.5,
+    "cy": 661.0,
+    "npix": 706,
+    "area_pct": 0.026,
+    "score": 0.207
+   }
+  ],
+  "washing machine": [
+   {
+    "x0": 106,
+    "x1": 1352,
+    "y0": 318,
+    "y1": 1761,
+    "cx": 690.1,
+    "cy": 963.3,
+    "npix": 1342822,
+    "area_pct": 48.569,
+    "score": 0.98
+   }
+  ]
+ },
+ "mask_keys": {
+  "program knob": [
+   "program knob|0",
+   "program knob|1"
+  ],
+  "washing machine": [
+   "washing machine|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": {
+  "orig": "program dial",
+  "used": "program knob",
+  "probe_hits": 1,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

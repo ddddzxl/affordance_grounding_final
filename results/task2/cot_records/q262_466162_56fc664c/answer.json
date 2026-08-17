@@ -1,0 +1,8 @@
+{
+ "final": [
+  1
+ ],
+ "confidence": "medium",
+ "kind": "twin_handles",
+ "solver": "frontier-llm, manual CoT"
+}

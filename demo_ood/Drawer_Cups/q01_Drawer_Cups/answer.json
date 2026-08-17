@@ -1,0 +1,10 @@
+{
+ "final": [
+  1
+ ],
+ "confidence": "high",
+ "kind": "select",
+ "note": "cabinet #3 (cups directly above) holds 4 drawers; handle 1 is the topmost (cy=1191)",
+ "solver": "frontier-llm, manual CoT",
+ "based_on_frame": "0017"
+}

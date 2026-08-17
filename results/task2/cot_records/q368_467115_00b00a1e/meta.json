@@ -1,0 +1,182 @@
+{
+ "q": 368,
+ "visit": "467115",
+ "desc_id": "00b00a1e-c27b-49bf-b733-bd184b8583a0",
+ "text": "Open the microwave door",
+ "parse": {
+  "text": "Open the microwave door",
+  "target": {
+   "concept": "microwave handle",
+   "host": "microwave"
+  },
+  "entities": [
+   {
+    "name": "microwave handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "microwave",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28315.757",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333310",
+    "28315.757"
+   ],
+   [
+    "47333308",
+    "28018.162"
+   ],
+   [
+    "47333308",
+    "28017.162"
+   ],
+   [
+    "47333308",
+    "28021.160"
+   ],
+   [
+    "47333308",
+    "28099.362"
+   ],
+   [
+    "47333308",
+    "28015.163"
+   ],
+   [
+    "47333310",
+    "28221.562"
+   ],
+   [
+    "47333308",
+    "28016.162"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "microwave handle",
+  "microwave"
+ ],
+ "roles": {
+  "microwave handle": "target",
+  "microwave": "host"
+ },
+ "candidates": {
+  "microwave handle": [
+   {
+    "x0": 695,
+    "x1": 779,
+    "y0": 553,
+    "y1": 1005,
+    "cx": 733.6,
+    "cy": 766.2,
+    "npix": 22827,
+    "area_pct": 0.826,
+    "score": 0.946
+   }
+  ],
+  "microwave": [
+   {
+    "x0": 346,
+    "x1": 1268,
+    "y0": 406,
+    "y1": 1054,
+    "cx": 795.9,
+    "cy": 703.5,
+    "npix": 423207,
+    "area_pct": 15.307,
+    "score": 0.976
+   },
+   {
+    "x0": 386,
+    "x1": 1187,
+    "y0": 863,
+    "y1": 1415,
+    "cx": 790.9,
+    "cy": 1092.4,
+    "npix": 173076,
+    "area_pct": 6.26,
+    "score": 0.176
+   }
+  ]
+ },
+ "mask_keys": {
+  "microwave handle": [
+   "microwave handle|0"
+  ],
+  "microwave": [
+   "microwave|0",
+   "microwave|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

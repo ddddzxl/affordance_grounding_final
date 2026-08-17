@@ -1,0 +1,42 @@
+TASK: "Turn on the fan"
+
+PARSE:
+  target concept = "fan button"   <- the thing that must be output
+  host           = 'fan'   <- countable object the target sits on
+  entity  : 'fan button'  role=target
+  entity  : 'fan'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  fan button           0  1240  1252   700   717  1245.8   707.7   0.007  0.226
+  fan button           1  1200  1226   705   719  1214.2   711.5   0.011  0.188
+  fan button           2  1149  1272   574   644  1212.4   608.9   0.253  0.186
+  fan                  0  1041  1411   385   779  1221.8   582.8   3.396  0.965
+
+
+
+
+
+CONTAINMENT (fan button inside the FILLED mask of each fan):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  fan #0   x[1041,1411] cx  1221.8 cy   582.8 w= 370 contains #0, #1, #2
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "fan button" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: fan button #<id>[, #<id> ...]

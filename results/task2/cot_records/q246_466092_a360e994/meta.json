@@ -1,0 +1,230 @@
+{
+ "q": 246,
+ "visit": "466092",
+ "desc_id": "a360e994-b06a-4476-9882-429ef164e940",
+ "text": "Open the right drawer of the desk with the laptop on top",
+ "parse": {
+  "text": "Open the right drawer of the desk with the laptop on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "desk",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "laptop",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "desk",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "desk",
+    "b": "laptop"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796562",
+  "fid": "16011.402",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 5,
+  "topk": [
+   [
+    "44796562",
+    "16011.402"
+   ],
+   [
+    "44796568",
+    "16121.989"
+   ],
+   [
+    "44796568",
+    "16120.990"
+   ],
+   [
+    "44796568",
+    "16119.990"
+   ],
+   [
+    "44796568",
+    "16125.204"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "desk",
+  "laptop"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "desk": "container",
+  "laptop": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 880,
+    "x1": 919,
+    "y0": 665,
+    "y1": 699,
+    "cx": 899.7,
+    "cy": 681.8,
+    "npix": 1139,
+    "area_pct": 0.041,
+    "score": 0.838
+   },
+   {
+    "x0": 587,
+    "x1": 633,
+    "y0": 645,
+    "y1": 674,
+    "cx": 610.6,
+    "cy": 658.4,
+    "npix": 1258,
+    "area_pct": 0.046,
+    "score": 0.826
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 455,
+    "x1": 1033,
+    "y0": 614,
+    "y1": 728,
+    "cx": 774.6,
+    "cy": 672.0,
+    "npix": 25221,
+    "area_pct": 0.912,
+    "score": 0.75
+   }
+  ],
+  "desk": [
+   {
+    "x0": 413,
+    "x1": 1153,
+    "y0": 530,
+    "y1": 1098,
+    "cx": 837.0,
+    "cy": 706.6,
+    "npix": 99930,
+    "area_pct": 3.614,
+    "score": 0.981
+   }
+  ],
+  "laptop": [
+   {
+    "x0": 645,
+    "x1": 918,
+    "y0": 529,
+    "y1": 604,
+    "cx": 773.2,
+    "cy": 567.0,
+    "npix": 15096,
+    "area_pct": 0.546,
+    "score": 0.699
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1"
+  ],
+  "drawer": [
+   "drawer|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

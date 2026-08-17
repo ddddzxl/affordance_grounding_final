@@ -1,0 +1,452 @@
+{
+ "q": 297,
+ "visit": "466437",
+ "desc_id": "e7121d04-a07d-4156-9686-dbb355893feb",
+ "text": "Open the bottom right drawer of the cabinet with the mirror and beauty products on top",
+ "parse": {
+  "text": "Open the bottom right drawer of the cabinet with the mirror and beauty products on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "mirror",
+    "role": "landmark",
+    "instanceable": true
+   },
+   {
+    "name": "beauty products",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "mirror"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "beauty products"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   },
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45260951",
+  "fid": "6108.217",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L2",
+  "n_top": 2,
+  "topk": [
+   [
+    "45260951",
+    "6108.217"
+   ],
+   [
+    "45260952",
+    "6024.117"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.367,
+    "s2": 0.748,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.287,
+    "s2": 0.659,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "mirror",
+  "beauty products"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "mirror": "landmark",
+  "beauty products": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 742,
+    "x1": 959,
+    "y0": 1427,
+    "y1": 1539,
+    "cx": 844.6,
+    "cy": 1491.0,
+    "npix": 5774,
+    "area_pct": 0.209,
+    "score": 0.958
+   },
+   {
+    "x0": 695,
+    "x1": 942,
+    "y0": 1153,
+    "y1": 1253,
+    "cx": 809.4,
+    "cy": 1214.7,
+    "npix": 7197,
+    "area_pct": 0.26,
+    "score": 0.953
+   },
+   {
+    "x0": 625,
+    "x1": 912,
+    "y0": 800,
+    "y1": 886,
+    "cx": 759.2,
+    "cy": 852.2,
+    "npix": 8805,
+    "area_pct": 0.318,
+    "score": 0.938
+   },
+   {
+    "x0": 674,
+    "x1": 798,
+    "y0": 580,
+    "y1": 599,
+    "cx": 739.3,
+    "cy": 588.3,
+    "npix": 1617,
+    "area_pct": 0.058,
+    "score": 0.319
+   },
+   {
+    "x0": 345,
+    "x1": 394,
+    "y0": 113,
+    "y1": 191,
+    "cx": 369.4,
+    "cy": 150.2,
+    "npix": 2710,
+    "area_pct": 0.098,
+    "score": 0.153
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 459,
+    "x1": 1379,
+    "y0": 1228,
+    "y1": 1734,
+    "cx": 936.8,
+    "cy": 1478.0,
+    "npix": 202310,
+    "area_pct": 7.317,
+    "score": 0.945
+   },
+   {
+    "x0": 371,
+    "x1": 1435,
+    "y0": 960,
+    "y1": 1483,
+    "cx": 933.5,
+    "cy": 1205.4,
+    "npix": 279140,
+    "area_pct": 10.096,
+    "score": 0.939
+   },
+   {
+    "x0": 202,
+    "x1": 1439,
+    "y0": 553,
+    "y1": 1136,
+    "cx": 893.5,
+    "cy": 805.8,
+    "npix": 476984,
+    "area_pct": 17.252,
+    "score": 0.858
+   },
+   {
+    "x0": 1360,
+    "x1": 1439,
+    "y0": 1488,
+    "y1": 1776,
+    "cx": 1408.8,
+    "cy": 1647.1,
+    "npix": 16126,
+    "area_pct": 0.583,
+    "score": 0.838
+   },
+   {
+    "x0": 1410,
+    "x1": 1439,
+    "y0": 1354,
+    "y1": 1481,
+    "cx": 1427.9,
+    "cy": 1430.0,
+    "npix": 2583,
+    "area_pct": 0.093,
+    "score": 0.497
+   },
+   {
+    "x0": 0,
+    "x1": 172,
+    "y0": 1191,
+    "y1": 1904,
+    "cx": 48.3,
+    "cy": 1533.5,
+    "npix": 21419,
+    "area_pct": 0.775,
+    "score": 0.238
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 102,
+    "x1": 1439,
+    "y0": 309,
+    "y1": 1769,
+    "cx": 899.6,
+    "cy": 950.9,
+    "npix": 1371056,
+    "area_pct": 49.59,
+    "score": 0.592
+   },
+   {
+    "x0": 1360,
+    "x1": 1439,
+    "y0": 1487,
+    "y1": 1773,
+    "cx": 1409.2,
+    "cy": 1646.2,
+    "npix": 15980,
+    "area_pct": 0.578,
+    "score": 0.401
+   },
+   {
+    "x0": 1315,
+    "x1": 1418,
+    "y0": 0,
+    "y1": 192,
+    "cx": 1360.6,
+    "cy": 88.7,
+    "npix": 15395,
+    "area_pct": 0.557,
+    "score": 0.248
+   },
+   {
+    "x0": 1410,
+    "x1": 1439,
+    "y0": 1365,
+    "y1": 1484,
+    "cx": 1428.1,
+    "cy": 1434.7,
+    "npix": 2400,
+    "area_pct": 0.087,
+    "score": 0.241
+   },
+   {
+    "x0": 540,
+    "x1": 1204,
+    "y0": 49,
+    "y1": 348,
+    "cx": 877.8,
+    "cy": 218.8,
+    "npix": 146264,
+    "area_pct": 5.29,
+    "score": 0.174
+   },
+   {
+    "x0": 90,
+    "x1": 450,
+    "y0": 66,
+    "y1": 358,
+    "cx": 275.8,
+    "cy": 185.3,
+    "npix": 64052,
+    "area_pct": 2.317,
+    "score": 0.162
+   }
+  ],
+  "mirror": [
+   {
+    "x0": 1210,
+    "x1": 1418,
+    "y0": 0,
+    "y1": 239,
+    "cx": 1305.0,
+    "cy": 107.1,
+    "npix": 36150,
+    "area_pct": 1.308,
+    "score": 0.23
+   },
+   {
+    "x0": 611,
+    "x1": 1121,
+    "y0": 91,
+    "y1": 165,
+    "cx": 874.5,
+    "cy": 127.7,
+    "npix": 18548,
+    "area_pct": 0.671,
+    "score": 0.15
+   }
+  ],
+  "beauty products": [
+   {
+    "x0": 1385,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 246,
+    "cx": 1416.9,
+    "cy": 144.5,
+    "npix": 10136,
+    "area_pct": 0.367,
+    "score": 0.83
+   },
+   {
+    "x0": 495,
+    "x1": 579,
+    "y0": 120,
+    "y1": 306,
+    "cx": 531.1,
+    "cy": 197.1,
+    "npix": 8743,
+    "area_pct": 0.316,
+    "score": 0.521
+   },
+   {
+    "x0": 560,
+    "x1": 609,
+    "y0": 60,
+    "y1": 152,
+    "cx": 584.3,
+    "cy": 102.3,
+    "npix": 2743,
+    "area_pct": 0.099,
+    "score": 0.423
+   },
+   {
+    "x0": 90,
+    "x1": 450,
+    "y0": 67,
+    "y1": 299,
+    "cx": 276.5,
+    "cy": 184.8,
+    "npix": 63836,
+    "area_pct": 2.309,
+    "score": 0.383
+   },
+   {
+    "x0": 540,
+    "x1": 1203,
+    "y0": 75,
+    "y1": 378,
+    "cx": 878.7,
+    "cy": 219.2,
+    "npix": 147866,
+    "area_pct": 5.348,
+    "score": 0.362
+   },
+   {
+    "x0": 130,
+    "x1": 502,
+    "y0": 240,
+    "y1": 462,
+    "cx": 320.0,
+    "cy": 360.2,
+    "npix": 57530,
+    "area_pct": 2.081,
+    "score": 0.338
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 3,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

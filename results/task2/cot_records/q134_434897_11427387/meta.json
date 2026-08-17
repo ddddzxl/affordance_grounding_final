@@ -1,0 +1,318 @@
+{
+ "q": 134,
+ "visit": "434897",
+ "desc_id": "11427387-abe5-443f-9987-abfaa197a22a",
+ "text": "Adjust the room's temperature using the dial next to the door",
+ "parse": {
+  "text": "Adjust the room's temperature using the dial next to the door",
+  "target": {
+   "concept": "radiator knob",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "radiator knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "radiator knob",
+    "b": "door"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899165",
+  "fid": "182807.545",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899165",
+    "182807.545"
+   ],
+   [
+    "42899163",
+    "182680.731"
+   ],
+   [
+    "42899163",
+    "182718.132"
+   ],
+   [
+    "42899163",
+    "182720.131"
+   ],
+   [
+    "42899165",
+    "182809.544"
+   ],
+   [
+    "42899165",
+    "182806.545"
+   ],
+   [
+    "42899163",
+    "182681.730"
+   ],
+   [
+    "42899163",
+    "182684.746"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 94,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 34
+ },
+ "concepts": [
+  "radiator knob",
+  "door"
+ ],
+ "roles": {
+  "radiator knob": "target",
+  "door": "landmark"
+ },
+ "candidates": {
+  "radiator knob": [
+   {
+    "x0": 790,
+    "x1": 819,
+    "y0": 967,
+    "y1": 999,
+    "cx": 804.0,
+    "cy": 981.3,
+    "npix": 744,
+    "area_pct": 0.027,
+    "score": 0.485
+   },
+   {
+    "x0": 775,
+    "x1": 805,
+    "y0": 673,
+    "y1": 706,
+    "cx": 791.2,
+    "cy": 688.6,
+    "npix": 837,
+    "area_pct": 0.03,
+    "score": 0.46
+   },
+   {
+    "x0": 780,
+    "x1": 809,
+    "y0": 813,
+    "y1": 846,
+    "cx": 796.9,
+    "cy": 831.4,
+    "npix": 755,
+    "area_pct": 0.027,
+    "score": 0.456
+   },
+   {
+    "x0": 855,
+    "x1": 879,
+    "y0": 693,
+    "y1": 720,
+    "cx": 866.4,
+    "cy": 706.7,
+    "npix": 567,
+    "area_pct": 0.021,
+    "score": 0.453
+   },
+   {
+    "x0": 860,
+    "x1": 879,
+    "y0": 820,
+    "y1": 852,
+    "cx": 870.2,
+    "cy": 836.9,
+    "npix": 552,
+    "area_pct": 0.02,
+    "score": 0.444
+   },
+   {
+    "x0": 852,
+    "x1": 879,
+    "y0": 567,
+    "y1": 599,
+    "cx": 866.1,
+    "cy": 584.0,
+    "npix": 589,
+    "area_pct": 0.021,
+    "score": 0.436
+   },
+   {
+    "x0": 845,
+    "x1": 859,
+    "y0": 187,
+    "y1": 206,
+    "cx": 851.7,
+    "cy": 195.8,
+    "npix": 267,
+    "area_pct": 0.01,
+    "score": 0.315
+   },
+   {
+    "x0": 885,
+    "x1": 889,
+    "y0": 333,
+    "y1": 352,
+    "cx": 887.0,
+    "cy": 342.8,
+    "npix": 87,
+    "area_pct": 0.003,
+    "score": 0.171
+   },
+   {
+    "x0": 717,
+    "x1": 789,
+    "y0": 748,
+    "y1": 846,
+    "cx": 755.7,
+    "cy": 794.9,
+    "npix": 3783,
+    "area_pct": 0.137,
+    "score": 0.153
+   }
+  ],
+  "door": [
+   {
+    "x0": 86,
+    "x1": 776,
+    "y0": 0,
+    "y1": 1919,
+    "cx": 492.7,
+    "cy": 822.8,
+    "npix": 849250,
+    "area_pct": 30.717,
+    "score": 0.933
+   },
+   {
+    "x0": 839,
+    "x1": 906,
+    "y0": 0,
+    "y1": 525,
+    "cx": 863.1,
+    "cy": 250.6,
+    "npix": 20375,
+    "area_pct": 0.737,
+    "score": 0.695
+   },
+   {
+    "x0": 691,
+    "x1": 840,
+    "y0": 0,
+    "y1": 650,
+    "cx": 771.9,
+    "cy": 292.2,
+    "npix": 76047,
+    "area_pct": 2.751,
+    "score": 0.635
+   },
+   {
+    "x0": 880,
+    "x1": 920,
+    "y0": 0,
+    "y1": 814,
+    "cx": 902.9,
+    "cy": 366.7,
+    "npix": 24811,
+    "area_pct": 0.897,
+    "score": 0.463
+   },
+   {
+    "x0": 0,
+    "x1": 473,
+    "y0": 7,
+    "y1": 1919,
+    "cx": 97.9,
+    "cy": 1165.2,
+    "npix": 308347,
+    "area_pct": 11.153,
+    "score": 0.185
+   }
+  ]
+ },
+ "mask_keys": {
+  "radiator knob": [
+   "radiator knob|0",
+   "radiator knob|1",
+   "radiator knob|2",
+   "radiator knob|3",
+   "radiator knob|4",
+   "radiator knob|5",
+   "radiator knob|6",
+   "radiator knob|7",
+   "radiator knob|8"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   8
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "radiator dial",
+  "used": "radiator knob",
+  "probe_hits": 4,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

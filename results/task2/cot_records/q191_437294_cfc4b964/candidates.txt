@@ -1,0 +1,35 @@
+TASK: "Plug the device in one of the sockets behind the nightstand next to he door"
+
+PARSE:
+  target concept = "socket"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'socket'  role=target
+  entity  : 'nightstand'  role=landmark
+  entity  : 'door'  role=landmark
+  relation: behind(a='socket', b='nightstand')
+  relation: next_to(a='nightstand', b='door')
+  residual: 'one of the sockets' — any instance satisfying the relation is acceptable
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  socket               0   553   692   370   454   622.6   410.6   0.364  0.953
+  nightstand           0   320   928   431  1100   636.3   753.9  11.498   0.88
+  door                 0  1040  1310     0  1144  1170.3   494.5   7.775  0.908
+
+QUESTION: which "socket" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: socket #<id>[, #<id> ...]

@@ -1,0 +1,10 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "high",
+ "kind": "select",
+ "note": "frame set manually; left upper door (cx=390) sits above the fridge and holds knob 0",
+ "solver": "frontier-llm, manual CoT",
+ "based_on_frame": "0019"
+}

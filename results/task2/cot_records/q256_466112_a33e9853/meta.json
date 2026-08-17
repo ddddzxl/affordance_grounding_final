@@ -1,0 +1,212 @@
+{
+ "q": 256,
+ "visit": "466112",
+ "desc_id": "a33e9853-9776-4ebf-bcba-9a8abf63e25f",
+ "text": "Open the door to the left of the bathtub",
+ "parse": {
+  "text": "Open the door to the left of the bathtub",
+  "target": {
+   "concept": "door handle",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "bathtub",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "left_of",
+    "a": "door",
+    "b": "bathtub"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796521",
+  "fid": "3958.413",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 6,
+  "topk": [
+   [
+    "44796521",
+    "3958.413"
+   ],
+   [
+    "44796521",
+    "3957.414"
+   ],
+   [
+    "44796517",
+    "3896.221"
+   ],
+   [
+    "44796521",
+    "3988.918"
+   ],
+   [
+    "44796517",
+    "3886.225"
+   ],
+   [
+    "44796520",
+    "4026.220"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.787,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.2
+   }
+  ],
+  "n_frames": 176,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "door",
+  "bathtub"
+ ],
+ "roles": {
+  "door handle": "target",
+  "door": "host",
+  "bathtub": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 965,
+    "x1": 1039,
+    "y0": 467,
+    "y1": 526,
+    "cx": 1002.4,
+    "cy": 496.8,
+    "npix": 3426,
+    "area_pct": 0.124,
+    "score": 0.924
+   },
+   {
+    "x0": 0,
+    "x1": 1439,
+    "y0": 440,
+    "y1": 672,
+    "cx": 972.5,
+    "cy": 595.9,
+    "npix": 469,
+    "area_pct": 0.017,
+    "score": 0.165
+   }
+  ],
+  "door": [
+   {
+    "x0": 769,
+    "x1": 1104,
+    "y0": 0,
+    "y1": 1146,
+    "cx": 920.5,
+    "cy": 510.2,
+    "npix": 310025,
+    "area_pct": 11.213,
+    "score": 0.98
+   },
+   {
+    "x0": 0,
+    "x1": 735,
+    "y0": 0,
+    "y1": 976,
+    "cx": 570.1,
+    "cy": 488.9,
+    "npix": 203006,
+    "area_pct": 7.343,
+    "score": 0.207
+   }
+  ],
+  "bathtub": [
+   {
+    "x0": 1225,
+    "x1": 1439,
+    "y0": 754,
+    "y1": 1359,
+    "cx": 1348.2,
+    "cy": 1053.2,
+    "npix": 98169,
+    "area_pct": 3.551,
+    "score": 0.449
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1"
+  ],
+  "door": [
+   "door|0",
+   "door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

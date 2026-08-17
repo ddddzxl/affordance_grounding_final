@@ -1,0 +1,135 @@
+{
+ "q": 370,
+ "visit": "467115",
+ "desc_id": "0b94689e-ff51-4df9-89fa-1e9a92746947",
+ "text": "Control the temperature using the radiator dial under the kitchen window",
+ "parse": {
+  "text": "Control the temperature using the radiator dial under the kitchen window",
+  "target": {
+   "concept": "radiator dial",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "radiator dial",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "under",
+    "a": "radiator dial",
+    "b": "window"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333319",
+  "fid": "28534.151",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 1,
+  "topk": [
+   [
+    "47333319",
+    "28534.151"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 21
+ },
+ "concepts": [
+  "radiator dial",
+  "window"
+ ],
+ "roles": {
+  "radiator dial": "target",
+  "window": "landmark"
+ },
+ "candidates": {
+  "radiator dial": [
+   {
+    "x0": 0,
+    "x1": 34,
+    "y0": 246,
+    "y1": 299,
+    "cx": 15.5,
+    "cy": 272.3,
+    "npix": 1699,
+    "area_pct": 0.061,
+    "score": 0.243
+   }
+  ],
+  "window": [
+   {
+    "x0": 250,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 614,
+    "cx": 857.5,
+    "cy": 302.6,
+    "npix": 706568,
+    "area_pct": 25.556,
+    "score": 0.432
+   },
+   {
+    "x0": 0,
+    "x1": 49,
+    "y0": 0,
+    "y1": 39,
+    "cx": 24.2,
+    "cy": 19.2,
+    "npix": 1958,
+    "area_pct": 0.071,
+    "score": 0.158
+   }
+  ]
+ },
+ "mask_keys": {
+  "radiator dial": [
+   "radiator dial|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

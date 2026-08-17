@@ -1,0 +1,46 @@
+TASK: "Open the bread bin next to the water bottles"
+
+PARSE:
+  target concept = "bread bin lid"   <- the thing that must be output
+  host           = 'bread bin'   <- countable object the target sits on
+  entity  : 'bread bin lid'  role=target
+  entity  : 'bread bin'  role=host
+  entity  : 'water bottles'  role=landmark
+  relation: next_to(a='bread bin', b='water bottles')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  bread bin lid        0   405   684   270   408   529.6   328.2   0.926  0.307
+  bread bin lid        1   753   846   305   339   799.1   321.8    0.09  0.194
+  bread bin lid        2    47   205   244   279   122.9   261.4   0.175  0.187
+  bread bin           (0 detections)
+  water bottles        0   334   406   155   404   367.9   291.7   0.449  0.886
+  water bottles        1   271   346   160   413   310.6   293.5   0.482  0.865
+  water bottles        2   213   286   227   419   249.9   322.6   0.451  0.721
+
+
+
+
+
+CONTAINMENT (bread bin lid inside the FILLED mask of each bread bin):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "bread bin lid" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: bread bin lid #<id>[, #<id> ...]

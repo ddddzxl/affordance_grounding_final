@@ -1,0 +1,39 @@
+TASK: "Turn on the TV using one of the remotes in front of the TV"
+
+PARSE:
+  target concept = "remote control"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'remote control'  role=target
+  entity  : 'TV'  role=landmark
+  relation: in_front_of(a='remote control', b='TV')
+  residual: 'one of the remotes' - any instance is acceptable | independent check on the train split (val untouched): handheld-device GT median 478 points vs 87-108 for fixed-furniture handles, a factor of 4.4-5.5 -> the annotation covers the whole device
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  remote control       0  1200  1305   727   794  1253.7   761.6   0.108  0.926
+  remote control       1  1267  1399   615   699  1335.1   655.2   0.149  0.889
+  remote control       2  1365  1446   755   808  1404.6   781.8   0.054  0.238
+  remote control       3  1907  1919   175   199  1914.5   187.6   0.008  0.216
+  remote control       4  1253  1372   828  1019  1313.4   922.2   0.509  0.201
+  remote control       5   613   672  1420  1439   646.3  1432.1   0.027  0.195
+  remote control       6  1260  1359   680   739  1328.8   719.1   0.049  0.183
+  remote control       7  1387  1533   695   771  1467.1   740.5   0.132  0.159
+  TV                   0  1109  1919    36   795  1536.2   386.2  14.873  0.978
+
+QUESTION: which "remote control" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: remote control #<id>[, #<id> ...]

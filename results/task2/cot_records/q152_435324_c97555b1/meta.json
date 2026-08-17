@@ -1,0 +1,157 @@
+{
+ "q": 152,
+ "visit": "435324",
+ "desc_id": "c97555b1-f59f-4abe-b13b-ea755c305c8c",
+ "text": "Plug the device in the socket next to the cabinet",
+ "parse": {
+  "text": "Plug the device in the socket next to the cabinet",
+  "target": {
+   "concept": "socket",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "socket",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "socket",
+    "b": "cabinet"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899221",
+  "fid": "188392.208",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 3,
+  "topk": [
+   [
+    "42899221",
+    "188392.208"
+   ],
+   [
+    "42899221",
+    "188391.208"
+   ],
+   [
+    "42899221",
+    "188350.009"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 161,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "socket",
+  "cabinet"
+ ],
+ "roles": {
+  "socket": "target",
+  "cabinet": "landmark"
+ },
+ "candidates": {
+  "socket": [
+   {
+    "x0": 222,
+    "x1": 306,
+    "y0": 648,
+    "y1": 744,
+    "cx": 264.4,
+    "cy": 695.4,
+    "npix": 6721,
+    "area_pct": 0.243,
+    "score": 0.853
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 254,
+    "x1": 1515,
+    "y0": 205,
+    "y1": 1439,
+    "cx": 873.1,
+    "cy": 754.8,
+    "npix": 1079384,
+    "area_pct": 39.04,
+    "score": 0.717
+   },
+   {
+    "x0": 1422,
+    "x1": 1919,
+    "y0": 10,
+    "y1": 1439,
+    "cx": 1762.3,
+    "cy": 954.1,
+    "npix": 335683,
+    "area_pct": 12.141,
+    "score": 0.499
+   }
+  ]
+ },
+ "mask_keys": {
+  "socket": [
+   "socket|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

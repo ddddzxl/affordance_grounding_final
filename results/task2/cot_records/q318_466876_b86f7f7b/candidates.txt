@@ -1,0 +1,41 @@
+TASK: "Flush the toilet"
+
+PARSE:
+  target concept = "flush button"   <- the thing that must be output
+  host           = 'toilet'   <- countable object the target sits on
+  entity  : 'flush button'  role=target
+  entity  : 'toilet'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  flush button         0   875   944   413   452   908.8   432.5   0.083  0.891
+  flush button         1   131   175   387   446   154.4   418.7   0.066  0.246
+  toilet               0   407  1188   319  1486   780.3   870.6  17.511  0.971
+
+
+
+
+
+CONTAINMENT (flush button inside the FILLED mask of each toilet):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  toilet #0   x[ 407,1188] cx   780.3 cy   870.6 w= 781 contains #0
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "flush button" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: flush button #<id>[, #<id> ...]

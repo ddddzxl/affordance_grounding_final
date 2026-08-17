@@ -1,0 +1,199 @@
+{
+ "q": 393,
+ "visit": "467115",
+ "desc_id": "7b8dd2e9-dd7e-4356-bfb3-ac2dbfb0347b",
+ "text": "Select a function on the kitchen range hood",
+ "parse": {
+  "text": "Select a function on the kitchen range hood",
+  "target": {
+   "concept": "range hood panel",
+   "host": "range hood"
+  },
+  "entities": [
+   {
+    "name": "range hood panel",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "range hood",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "no disambiguating cue — any of the range hood controls is acceptable",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333308",
+  "fid": "28094.364",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333308",
+    "28094.364"
+   ],
+   [
+    "47333319",
+    "28371.668"
+   ],
+   [
+    "47333319",
+    "28410.652"
+   ],
+   [
+    "47333319",
+    "28385.662"
+   ],
+   [
+    "47333319",
+    "28386.661"
+   ],
+   [
+    "47333310",
+    "28300.763"
+   ],
+   [
+    "47333319",
+    "28540.265"
+   ],
+   [
+    "47333310",
+    "28204.553"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.893,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "range hood panel",
+  "range hood"
+ ],
+ "roles": {
+  "range hood panel": "target",
+  "range hood": "host"
+ },
+ "candidates": {
+  "range hood panel": [
+   {
+    "x0": 515,
+    "x1": 634,
+    "y0": 900,
+    "y1": 1192,
+    "cx": 574.0,
+    "cy": 1042.9,
+    "npix": 30098,
+    "area_pct": 1.089,
+    "score": 0.537
+   },
+   {
+    "x0": 477,
+    "x1": 679,
+    "y0": 1174,
+    "y1": 1206,
+    "cx": 589.2,
+    "cy": 1190.3,
+    "npix": 4606,
+    "area_pct": 0.167,
+    "score": 0.433
+   }
+  ],
+  "range hood": [
+   {
+    "x0": 488,
+    "x1": 677,
+    "y0": 900,
+    "y1": 1204,
+    "cx": 576.2,
+    "cy": 1055.6,
+    "npix": 33402,
+    "area_pct": 1.208,
+    "score": 0.839
+   },
+   {
+    "x0": 0,
+    "x1": 295,
+    "y0": 1053,
+    "y1": 1285,
+    "cx": 145.0,
+    "cy": 1165.8,
+    "npix": 65692,
+    "area_pct": 2.376,
+    "score": 0.207
+   }
+  ]
+ },
+ "mask_keys": {
+  "range hood panel": [
+   "range hood panel|0",
+   "range hood panel|1"
+  ],
+  "range hood": [
+   "range hood|0",
+   "range hood|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": {
+  "orig": "range hood button",
+  "used": "range hood panel",
+  "probe_hits": 1,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

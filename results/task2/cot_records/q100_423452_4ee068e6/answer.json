@@ -1,0 +1,9 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "high",
+ "kind": "relation",
+ "flaw": "ambiguous_gt",
+ "solver": "frontier-llm, manual CoT"
+}

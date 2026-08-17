@@ -1,0 +1,207 @@
+{
+ "q": 179,
+ "visit": "437294",
+ "desc_id": "2f45cfc1-b1cf-4405-b340-942c7e2d4392",
+ "text": "Open the left chest on the vanity table",
+ "parse": {
+  "text": "Open the left chest on the vanity table",
+  "target": {
+   "concept": "chest knob",
+   "host": "chest"
+  },
+  "entities": [
+   {
+    "name": "chest knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "chest",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "vanity table",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "chest",
+    "b": "vanity table"
+   }
+  ],
+  "select": [
+   {
+    "on": "chest",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": "'chest' is a small box standing on the table; the interactable part is its lid/latch",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43649762",
+  "fid": "52528.854",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "43649762",
+    "52528.854"
+   ],
+   [
+    "43649762",
+    "52529.854"
+   ],
+   [
+    "43649762",
+    "52500.150"
+   ],
+   [
+    "43649762",
+    "52501.149"
+   ],
+   [
+    "43649762",
+    "52530.853"
+   ],
+   [
+    "43649762",
+    "52496.151"
+   ],
+   [
+    "43649762",
+    "52479.158"
+   ],
+   [
+    "43649762",
+    "52480.158"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 203,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "chest knob",
+  "chest",
+  "vanity table"
+ ],
+ "roles": {
+  "chest knob": "target",
+  "chest": "host",
+  "vanity table": "container"
+ },
+ "candidates": {
+  "chest knob": [
+   {
+    "x0": 853,
+    "x1": 906,
+    "y0": 784,
+    "y1": 834,
+    "cx": 878.9,
+    "cy": 811.0,
+    "npix": 2001,
+    "area_pct": 0.072,
+    "score": 0.536
+   },
+   {
+    "x0": 873,
+    "x1": 919,
+    "y0": 970,
+    "y1": 1021,
+    "cx": 895.2,
+    "cy": 998.4,
+    "npix": 1679,
+    "area_pct": 0.061,
+    "score": 0.528
+   }
+  ],
+  "chest": [],
+  "vanity table": [
+   {
+    "x0": 418,
+    "x1": 1274,
+    "y0": 240,
+    "y1": 1181,
+    "cx": 856.6,
+    "cy": 688.8,
+    "npix": 652125,
+    "area_pct": 23.587,
+    "score": 0.865
+   }
+  ]
+ },
+ "mask_keys": {
+  "chest knob": [
+   "chest knob|0",
+   "chest knob|1"
+  ],
+  "chest": []
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "chest lid",
+  "used": "chest knob",
+  "probe_hits": 6,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

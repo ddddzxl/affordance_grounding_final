@@ -1,0 +1,335 @@
+{
+ "q": 372,
+ "visit": "467115",
+ "desc_id": "1f233c36-2abc-4ab8-b223-5ec35274a29c",
+ "text": "Open the counter door directly under the kitchen sink",
+ "parse": {
+  "text": "Open the counter door directly under the kitchen sink",
+  "target": {
+   "concept": "door handle",
+   "host": "counter door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "counter door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "counter",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "sink",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "counter",
+    "b": "counter door"
+   },
+   {
+    "rel": "under",
+    "a": "counter door",
+    "b": "sink"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28301.763",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L3",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333310",
+    "28301.763"
+   ],
+   [
+    "47333319",
+    "28400.656"
+   ],
+   [
+    "47333319",
+    "28372.667"
+   ],
+   [
+    "47333319",
+    "28398.657"
+   ],
+   [
+    "47333308",
+    "28042.269"
+   ],
+   [
+    "47333319",
+    "28392.659"
+   ],
+   [
+    "47333319",
+    "28399.656"
+   ],
+   [
+    "47333319",
+    "28394.658"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "counter door",
+  "counter",
+  "sink"
+ ],
+ "roles": {
+  "door handle": "target",
+  "counter door": "host",
+  "counter": "container",
+  "sink": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 555,
+    "x1": 874,
+    "y0": 1292,
+    "y1": 1506,
+    "cx": 718.8,
+    "cy": 1397.6,
+    "npix": 13425,
+    "area_pct": 0.486,
+    "score": 0.805
+   },
+   {
+    "x0": 1116,
+    "x1": 1439,
+    "y0": 1406,
+    "y1": 1612,
+    "cx": 1277.8,
+    "cy": 1502.9,
+    "npix": 14545,
+    "area_pct": 0.526,
+    "score": 0.798
+   },
+   {
+    "x0": 550,
+    "x1": 914,
+    "y0": 1087,
+    "y1": 1300,
+    "cx": 736.6,
+    "cy": 1195.6,
+    "npix": 14223,
+    "area_pct": 0.514,
+    "score": 0.784
+   },
+   {
+    "x0": 285,
+    "x1": 447,
+    "y0": 1113,
+    "y1": 1188,
+    "cx": 367.1,
+    "cy": 1150.6,
+    "npix": 5970,
+    "area_pct": 0.216,
+    "score": 0.719
+   },
+   {
+    "x0": 165,
+    "x1": 419,
+    "y0": 1406,
+    "y1": 1618,
+    "cx": 295.0,
+    "cy": 1510.6,
+    "npix": 7728,
+    "area_pct": 0.28,
+    "score": 0.596
+   },
+   {
+    "x0": 330,
+    "x1": 389,
+    "y0": 360,
+    "y1": 399,
+    "cx": 355.9,
+    "cy": 380.1,
+    "npix": 1437,
+    "area_pct": 0.052,
+    "score": 0.226
+   },
+   {
+    "x0": 0,
+    "x1": 88,
+    "y0": 874,
+    "y1": 984,
+    "cx": 21.2,
+    "cy": 922.1,
+    "npix": 1029,
+    "area_pct": 0.037,
+    "score": 0.22
+   },
+   {
+    "x0": 920,
+    "x1": 1009,
+    "y0": 474,
+    "y1": 526,
+    "cx": 968.2,
+    "cy": 500.1,
+    "npix": 2954,
+    "area_pct": 0.107,
+    "score": 0.183
+   }
+  ],
+  "counter door": [],
+  "counter": [
+   {
+    "x0": 0,
+    "x1": 1439,
+    "y0": 610,
+    "y1": 1485,
+    "cx": 889.2,
+    "cy": 994.2,
+    "npix": 305509,
+    "area_pct": 11.05,
+    "score": 0.699
+   },
+   {
+    "x0": 0,
+    "x1": 280,
+    "y0": 300,
+    "y1": 525,
+    "cx": 97.4,
+    "cy": 420.4,
+    "npix": 28648,
+    "area_pct": 1.036,
+    "score": 0.345
+   },
+   {
+    "x0": 1045,
+    "x1": 1439,
+    "y0": 1113,
+    "y1": 1490,
+    "cx": 1250.5,
+    "cy": 1247.6,
+    "npix": 31757,
+    "area_pct": 1.149,
+    "score": 0.301
+   },
+   {
+    "x0": 0,
+    "x1": 328,
+    "y0": 281,
+    "y1": 496,
+    "cx": 159.4,
+    "cy": 350.2,
+    "npix": 19045,
+    "area_pct": 0.689,
+    "score": 0.251
+   },
+   {
+    "x0": 0,
+    "x1": 94,
+    "y0": 1144,
+    "y1": 1326,
+    "cx": 36.6,
+    "cy": 1259.2,
+    "npix": 8190,
+    "area_pct": 0.296,
+    "score": 0.152
+   }
+  ],
+  "sink": [
+   {
+    "x0": 1109,
+    "x1": 1439,
+    "y0": 720,
+    "y1": 1291,
+    "cx": 1321.2,
+    "cy": 1043.1,
+    "npix": 103930,
+    "area_pct": 3.759,
+    "score": 0.816
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4",
+   "door handle|5",
+   "door handle|6",
+   "door handle|7"
+  ],
+  "counter door": []
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

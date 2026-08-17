@@ -1,0 +1,121 @@
+{
+ "q": 320,
+ "visit": "466876",
+ "desc_id": "f77152fc-dca8-4704-aea2-fa2507c5ed7b",
+ "text": "Adjust the intensity of the plug-in air freshener",
+ "parse": {
+  "text": "Adjust the intensity of the plug-in air freshener",
+  "target": {
+   "concept": "air freshener",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "air freshener",
+    "role": "target",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "the sentence names no sub-part; inferring a dial from train's verb->affordance statistics was not supported, so the neutral noun from the sentence is kept",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331558",
+  "fid": "9808.948",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "47331558",
+    "9808.948"
+   ],
+   [
+    "47331561",
+    "9763.150"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 160,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "air freshener"
+ ],
+ "roles": {
+  "air freshener": "target"
+ },
+ "candidates": {
+  "air freshener": [
+   {
+    "x0": 684,
+    "x1": 777,
+    "y0": 813,
+    "y1": 1013,
+    "cx": 727.4,
+    "cy": 918.9,
+    "npix": 14185,
+    "area_pct": 0.513,
+    "score": 0.379
+   },
+   {
+    "x0": 655,
+    "x1": 753,
+    "y0": 653,
+    "y1": 938,
+    "cx": 700.7,
+    "cy": 778.9,
+    "npix": 13891,
+    "area_pct": 0.502,
+    "score": 0.192
+   }
+  ]
+ },
+ "mask_keys": {
+  "air freshener": [
+   "air freshener|0",
+   "air freshener|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

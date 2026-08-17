@@ -1,0 +1,255 @@
+{
+ "q": 295,
+ "visit": "466437",
+ "desc_id": "e0fe364b-dc48-4488-a9c1-a44ef5fb8866",
+ "text": "Open the window next to the nightstand",
+ "parse": {
+  "text": "Open the window next to the nightstand",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "nightstand",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "window",
+    "b": "nightstand"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45260957",
+  "fid": "5981.517",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "45260957",
+    "5981.517"
+   ],
+   [
+    "45260952",
+    "6033.113"
+   ],
+   [
+    "45260951",
+    "6164.111"
+   ],
+   [
+    "45260951",
+    "6163.112"
+   ],
+   [
+    "45260952",
+    "6032.114"
+   ],
+   [
+    "45260951",
+    "6162.112"
+   ],
+   [
+    "45260951",
+    "6159.113"
+   ],
+   [
+    "45260957",
+    "5965.107"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "nightstand"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "nightstand": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 700,
+    "x1": 769,
+    "y0": 1367,
+    "y1": 1394,
+    "cx": 731.9,
+    "cy": 1380.7,
+    "npix": 1289,
+    "area_pct": 0.047,
+    "score": 0.655
+   },
+   {
+    "x0": 0,
+    "x1": 917,
+    "y0": 0,
+    "y1": 1393,
+    "cx": 600.6,
+    "cy": 1021.7,
+    "npix": 106721,
+    "area_pct": 3.86,
+    "score": 0.191
+   },
+   {
+    "x0": 395,
+    "x1": 419,
+    "y0": 1100,
+    "y1": 1112,
+    "cx": 408.2,
+    "cy": 1106.4,
+    "npix": 279,
+    "area_pct": 0.01,
+    "score": 0.183
+   },
+   {
+    "x0": 730,
+    "x1": 779,
+    "y0": 1015,
+    "y1": 1066,
+    "cx": 757.5,
+    "cy": 1046.8,
+    "npix": 1445,
+    "area_pct": 0.052,
+    "score": 0.153
+   }
+  ],
+  "window": [
+   {
+    "x0": 428,
+    "x1": 759,
+    "y0": 838,
+    "y1": 1239,
+    "cx": 610.1,
+    "cy": 1037.4,
+    "npix": 106752,
+    "area_pct": 3.861,
+    "score": 0.926
+   },
+   {
+    "x0": 168,
+    "x1": 329,
+    "y0": 966,
+    "y1": 1252,
+    "cx": 248.6,
+    "cy": 1102.1,
+    "npix": 36062,
+    "area_pct": 1.304,
+    "score": 0.159
+   }
+  ],
+  "nightstand": [
+   {
+    "x0": 650,
+    "x1": 875,
+    "y0": 1226,
+    "y1": 1446,
+    "cx": 733.5,
+    "cy": 1328.7,
+    "npix": 24697,
+    "area_pct": 0.893,
+    "score": 0.918
+   },
+   {
+    "x0": 470,
+    "x1": 664,
+    "y0": 1280,
+    "y1": 1406,
+    "cx": 569.6,
+    "cy": 1348.3,
+    "npix": 18432,
+    "area_pct": 0.667,
+    "score": 0.355
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2",
+   "window handle|3"
+  ],
+  "window": [
+   "window|0",
+   "window|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   3
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

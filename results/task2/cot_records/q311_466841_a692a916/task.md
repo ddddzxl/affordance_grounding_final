@@ -1,0 +1,76 @@
+# q311_466841_a692a916 - visit 466841 / desc a692a916
+
+## Instruction
+
+> Open the top drawer of the cabinet with the printer on top
+
+## Stage 0 parse
+
+```json
+{
+ "target": {
+  "concept": "drawer handle",
+  "host": "drawer"
+ },
+ "entities": [
+  {
+   "name": "drawer handle",
+   "role": "target",
+   "instanceable": true
+  },
+  {
+   "name": "drawer",
+   "role": "host",
+   "instanceable": true
+  },
+  {
+   "name": "cabinet",
+   "role": "container",
+   "instanceable": true
+  },
+  {
+   "name": "printer",
+   "role": "landmark",
+   "instanceable": true
+  }
+ ],
+ "relations": [
+  {
+   "rel": "contains",
+   "a": "cabinet",
+   "b": "drawer"
+  },
+  {
+   "rel": "has_on_top",
+   "a": "cabinet",
+   "b": "printer"
+  }
+ ],
+ "select": [
+  {
+   "on": "drawer",
+   "axis": "vertical",
+   "value": "top",
+   "index": null,
+   "from": null
+  }
+ ],
+ "residual": null
+}
+```
+
+## Selected frame
+
+- `466841/47331589/15956.993`  (1920x1440)
+- relaxation level **L3**, chosen from 135 frames (stride 10)
+- top-4 alternative frames: `[['47331589', '15956.993'], ['47331587', '16007.206'], ['47331589', '15954.994'], ['47331591', '16063.300']]`
+
+## Candidate counts (after NMS)
+
+- `drawer handle` (target): **3**
+- `drawer` (host): **0**
+- `cabinet` (container): **3**
+- `printer` (landmark): **1**
+
+> This directory contains **no ground truth**. The reasoning stage read only
+> `candidates.txt`.

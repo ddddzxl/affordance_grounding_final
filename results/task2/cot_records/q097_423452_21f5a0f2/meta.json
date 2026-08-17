@@ -1,0 +1,264 @@
+{
+ "q": 97,
+ "visit": "423452",
+ "desc_id": "21f5a0f2-ba5a-4dd0-beca-8f088dbcff3a",
+ "text": "Open the top drawer of the wooden cabinet with the lamp on top",
+ "parse": {
+  "text": "Open the top drawer of the wooden cabinet with the lamp on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "lamp"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897434",
+  "fid": "104173.339",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42897434",
+    "104173.339"
+   ],
+   [
+    "42897434",
+    "104176.338"
+   ],
+   [
+    "42897434",
+    "104174.339"
+   ],
+   [
+    "42897434",
+    "104175.339"
+   ],
+   [
+    "42897434",
+    "104177.338"
+   ],
+   [
+    "42897426",
+    "104131.740"
+   ],
+   [
+    "42897434",
+    "104168.341"
+   ],
+   [
+    "42897434",
+    "104167.342"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 309,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "lamp"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "lamp": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 647,
+    "x1": 846,
+    "y0": 610,
+    "y1": 664,
+    "cx": 745.5,
+    "cy": 638.7,
+    "npix": 5369,
+    "area_pct": 0.194,
+    "score": 0.945
+   },
+   {
+    "x0": 1000,
+    "x1": 1039,
+    "y0": 844,
+    "y1": 969,
+    "cx": 1022.1,
+    "cy": 907.6,
+    "npix": 3702,
+    "area_pct": 0.134,
+    "score": 0.882
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 370,
+    "x1": 1092,
+    "y0": 515,
+    "y1": 739,
+    "cx": 741.3,
+    "cy": 627.5,
+    "npix": 135268,
+    "area_pct": 4.893,
+    "score": 0.966
+   },
+   {
+    "x0": 434,
+    "x1": 1078,
+    "y0": 741,
+    "y1": 1085,
+    "cx": 769.5,
+    "cy": 910.0,
+    "npix": 188022,
+    "area_pct": 6.801,
+    "score": 0.707
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 195,
+    "x1": 1219,
+    "y0": 195,
+    "y1": 1200,
+    "cx": 754.8,
+    "cy": 708.7,
+    "npix": 722336,
+    "area_pct": 26.126,
+    "score": 0.874
+   },
+   {
+    "x0": 0,
+    "x1": 259,
+    "y0": 380,
+    "y1": 1439,
+    "cx": 102.3,
+    "cy": 916.2,
+    "npix": 206100,
+    "area_pct": 7.454,
+    "score": 0.267
+   }
+  ],
+  "lamp": [
+   {
+    "x0": 553,
+    "x1": 759,
+    "y0": 0,
+    "y1": 319,
+    "cx": 656.1,
+    "cy": 181.8,
+    "npix": 40591,
+    "area_pct": 1.468,
+    "score": 0.847
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

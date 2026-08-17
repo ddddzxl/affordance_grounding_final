@@ -1,0 +1,26 @@
+# la_scale sweep — v0mlp_none (UNWEIGHTED CE), logit_adjust ON, from cached raw logits.
+# This is the CURRENT BEST v0 config: prior corrected at inference (log π_test - log π_train).
+# VERDICT: AP rises with la_scale, peak at la=1.0 (the EXACT prior correction, shift ~-3.77).
+#          Instance AP prefers high-precision/low-recall (killing FP instances beats keeping
+#          recall), so over-correcting (la=1.0) wins. v0(MLP) CEILING after prior fix:
+#          AP 3.13 / AP50 8.25 — far below oracle 71. The 68-pt gap = point-independent MLP's
+#          lack of spatial consistency (point prec 0.53 / rec 0.39 vs GT 1.0) -> go to v1.
+#
+#   la_scale   AP      AP50    AP25
+   0.4      2.126   4.816   33.839
+   0.5      2.210   5.438   35.238
+   0.6      2.399   6.268   37.330
+   0.7      2.580   6.939   28.900
+   0.8      2.577   7.505   30.312
+   1.0      3.130   8.253   28.099   # <- best AP (also natural precision 0.53, recall 0.39)
+#
+# per-class @ la=1.0 (AP / AP50 / AP25):
+#   rotate     5.617  15.376  21.804
+#   key_press  8.597  16.565  59.991
+#   tip_push   2.112   5.478  36.904
+#   hook_pull  0.170   1.119  12.719   # point-richest class, but recall crushed by over-correction
+#   pinch_pull 7.282  23.711  61.386
+#   hook_turn  3.752  10.246  30.864
+#   foot_push  0.000   0.000   0.000   # 1 val instance — noise
+#   plug_in    0.441   1.242  16.658
+#   unplug     0.199   0.544  12.562

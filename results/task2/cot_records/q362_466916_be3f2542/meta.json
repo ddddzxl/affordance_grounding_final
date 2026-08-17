@@ -1,0 +1,253 @@
+{
+ "q": 362,
+ "visit": "466916",
+ "desc_id": "be3f2542-0036-46fe-8491-ca0fc7a17faa",
+ "text": "Play a game using the left joystick on the shelf of the TV stand",
+ "parse": {
+  "text": "Play a game using the left joystick on the shelf of the TV stand",
+  "target": {
+   "concept": "joystick",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "joystick",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "shelf",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "TV stand",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "joystick",
+    "b": "shelf"
+   },
+   {
+    "rel": "contains",
+    "a": "TV stand",
+    "b": "shelf"
+   }
+  ],
+  "select": [
+   {
+    "on": "joystick",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": "train: 'play a game' is a key_press affordance, so the target is a button on the joystick | independent check on the train split (val untouched): handheld-device GT has a median of 478 points while fixed-furniture handles have 87-108, a factor of 4.4-5.5. The annotation therefore covers the whole device rather than an individual key: what a person grasps is the whole remote or controller, and which key the press lands on does not constitute a separate interactable entity. Fixed furniture is the opposite -- there you operate the handle itself.",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331617",
+  "fid": "18249.299",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL-T",
+  "n_top": 3,
+  "topk": [
+   [
+    "47331617",
+    "18249.299"
+   ],
+   [
+    "47331618",
+    "18010.896"
+   ],
+   [
+    "47331618",
+    "18011.896"
+   ]
+  ],
+  "consistency": [
+   null,
+   null,
+   null
+  ],
+  "n_frames": 306,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_target_visible",
+   "n_pool": 50,
+   "n_vis": 3
+  },
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "joystick",
+  "shelf",
+  "TV stand"
+ ],
+ "roles": {
+  "joystick": "target",
+  "shelf": "container",
+  "TV stand": "landmark"
+ },
+ "candidates": {
+  "joystick": [
+   {
+    "x0": 1053,
+    "x1": 1212,
+    "y0": 629,
+    "y1": 704,
+    "cx": 1131.3,
+    "cy": 668.2,
+    "npix": 9818,
+    "area_pct": 0.355,
+    "score": 0.76
+   },
+   {
+    "x0": 887,
+    "x1": 1046,
+    "y0": 630,
+    "y1": 709,
+    "cx": 964.5,
+    "cy": 672.9,
+    "npix": 10154,
+    "area_pct": 0.367,
+    "score": 0.745
+   },
+   {
+    "x0": 1627,
+    "x1": 1759,
+    "y0": 235,
+    "y1": 299,
+    "cx": 1693.9,
+    "cy": 267.6,
+    "npix": 6349,
+    "area_pct": 0.23,
+    "score": 0.311
+   }
+  ],
+  "shelf": [
+   {
+    "x0": 760,
+    "x1": 1332,
+    "y0": 525,
+    "y1": 619,
+    "cx": 1117.3,
+    "cy": 591.1,
+    "npix": 12880,
+    "area_pct": 0.466,
+    "score": 0.898
+   },
+   {
+    "x0": 780,
+    "x1": 1312,
+    "y0": 695,
+    "y1": 756,
+    "cx": 1050.7,
+    "cy": 727.2,
+    "npix": 24353,
+    "area_pct": 0.881,
+    "score": 0.732
+   },
+   {
+    "x0": 631,
+    "x1": 1919,
+    "y0": 165,
+    "y1": 480,
+    "cx": 1305.2,
+    "cy": 341.2,
+    "npix": 258435,
+    "area_pct": 9.347,
+    "score": 0.336
+   },
+   {
+    "x0": 760,
+    "x1": 1919,
+    "y0": 728,
+    "y1": 819,
+    "cx": 1331.6,
+    "cy": 772.2,
+    "npix": 67997,
+    "area_pct": 2.459,
+    "score": 0.278
+   }
+  ],
+  "TV stand": [
+   {
+    "x0": 628,
+    "x1": 1919,
+    "y0": 167,
+    "y1": 818,
+    "cx": 1354.8,
+    "cy": 507.9,
+    "npix": 578473,
+    "area_pct": 20.923,
+    "score": 0.667
+   },
+   {
+    "x0": 1621,
+    "x1": 1760,
+    "y0": 235,
+    "y1": 299,
+    "cx": 1693.1,
+    "cy": 267.3,
+    "npix": 6562,
+    "area_pct": 0.237,
+    "score": 0.624
+   },
+   {
+    "x0": 939,
+    "x1": 1259,
+    "y0": 168,
+    "y1": 298,
+    "cx": 1104.4,
+    "cy": 205.4,
+    "npix": 18186,
+    "area_pct": 0.658,
+    "score": 0.623
+   },
+   {
+    "x0": 1627,
+    "x1": 1909,
+    "y0": 155,
+    "y1": 199,
+    "cx": 1785.3,
+    "cy": 175.6,
+    "npix": 9120,
+    "area_pct": 0.33,
+    "score": 0.214
+   }
+  ]
+ },
+ "mask_keys": {
+  "joystick": [
+   "joystick|0",
+   "joystick|1",
+   "joystick|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "no target inside container",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

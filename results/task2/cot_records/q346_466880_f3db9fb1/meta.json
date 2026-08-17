@@ -1,0 +1,321 @@
+{
+ "q": 346,
+ "visit": "466880",
+ "desc_id": "f3db9fb1-005d-40b8-80cb-4a6bba45047d",
+ "text": "Open the cabinet door directly above the fridge",
+ "parse": {
+  "text": "Open the cabinet door directly above the fridge",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "fridge",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "above",
+    "a": "cabinet door",
+    "b": "fridge"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331711",
+  "fid": "11269.339",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 3,
+  "topk": [
+   [
+    "47331711",
+    "11269.339"
+   ],
+   [
+    "47331710",
+    "11231.238"
+   ],
+   [
+    "47331711",
+    "11271.339"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.801,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.673,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.2
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "cabinet",
+  "fridge"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "cabinet": "container",
+  "fridge": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 853,
+    "x1": 886,
+    "y0": 795,
+    "y1": 829,
+    "cx": 870.9,
+    "cy": 813.3,
+    "npix": 979,
+    "area_pct": 0.035,
+    "score": 0.321
+   },
+   {
+    "x0": 1033,
+    "x1": 1098,
+    "y0": 1263,
+    "y1": 1344,
+    "cx": 1063.5,
+    "cy": 1303.6,
+    "npix": 3766,
+    "area_pct": 0.136,
+    "score": 0.245
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 801,
+    "x1": 1147,
+    "y0": 399,
+    "y1": 851,
+    "cx": 959.6,
+    "cy": 643.0,
+    "npix": 109388,
+    "area_pct": 3.956,
+    "score": 0.93
+   },
+   {
+    "x0": 421,
+    "x1": 890,
+    "y0": 215,
+    "y1": 1439,
+    "cx": 631.6,
+    "cy": 885.8,
+    "npix": 461677,
+    "area_pct": 16.698,
+    "score": 0.795
+   },
+   {
+    "x0": 0,
+    "x1": 432,
+    "y0": 27,
+    "y1": 1439,
+    "cx": 206.0,
+    "cy": 781.5,
+    "npix": 556582,
+    "area_pct": 20.131,
+    "score": 0.669
+   },
+   {
+    "x0": 852,
+    "x1": 1377,
+    "y0": 801,
+    "y1": 1439,
+    "cx": 1032.0,
+    "cy": 1142.0,
+    "npix": 182387,
+    "area_pct": 6.597,
+    "score": 0.367
+   },
+   {
+    "x0": 1719,
+    "x1": 1919,
+    "y0": 736,
+    "y1": 1432,
+    "cx": 1836.7,
+    "cy": 1044.3,
+    "npix": 50537,
+    "area_pct": 1.828,
+    "score": 0.243
+   },
+   {
+    "x0": 1443,
+    "x1": 1900,
+    "y0": 710,
+    "y1": 1439,
+    "cx": 1662.4,
+    "cy": 1092.6,
+    "npix": 205521,
+    "area_pct": 7.433,
+    "score": 0.223
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 800,
+    "x1": 1150,
+    "y0": 396,
+    "y1": 852,
+    "cx": 960.0,
+    "cy": 642.0,
+    "npix": 111013,
+    "area_pct": 4.015,
+    "score": 0.873
+   },
+   {
+    "x0": 420,
+    "x1": 885,
+    "y0": 214,
+    "y1": 1439,
+    "cx": 629.0,
+    "cy": 878.5,
+    "npix": 458079,
+    "area_pct": 16.568,
+    "score": 0.583
+   },
+   {
+    "x0": 0,
+    "x1": 432,
+    "y0": 26,
+    "y1": 1439,
+    "cx": 206.2,
+    "cy": 781.4,
+    "npix": 555581,
+    "area_pct": 20.095,
+    "score": 0.513
+   },
+   {
+    "x0": 1716,
+    "x1": 1919,
+    "y0": 735,
+    "y1": 1433,
+    "cx": 1840.2,
+    "cy": 1042.3,
+    "npix": 55956,
+    "area_pct": 2.024,
+    "score": 0.277
+   },
+   {
+    "x0": 1442,
+    "x1": 1910,
+    "y0": 710,
+    "y1": 1439,
+    "cx": 1662.9,
+    "cy": 1090.9,
+    "npix": 208975,
+    "area_pct": 7.558,
+    "score": 0.266
+   },
+   {
+    "x0": 851,
+    "x1": 1403,
+    "y0": 800,
+    "y1": 1439,
+    "cx": 1033.8,
+    "cy": 1142.7,
+    "npix": 184224,
+    "area_pct": 6.663,
+    "score": 0.193
+   }
+  ],
+  "fridge": [
+   {
+    "x0": 848,
+    "x1": 1568,
+    "y0": 781,
+    "y1": 1439,
+    "cx": 1191.0,
+    "cy": 1134.7,
+    "npix": 392553,
+    "area_pct": 14.198,
+    "score": 0.958
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1",
+   "cabinet door|2",
+   "cabinet door|3",
+   "cabinet door|4",
+   "cabinet door|5"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

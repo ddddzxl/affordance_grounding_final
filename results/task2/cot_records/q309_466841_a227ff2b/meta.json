@@ -1,0 +1,304 @@
+{
+ "q": 309,
+ "visit": "466841",
+ "desc_id": "a227ff2b-a5e3-4950-92e3-d59d5cba7e6c",
+ "text": "Open the small white storage box on the desk",
+ "parse": {
+  "text": "Open the small white storage box on the desk",
+  "target": {
+   "concept": "storage box lid",
+   "host": "storage box"
+  },
+  "entities": [
+   {
+    "name": "storage box lid",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "storage box",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "desk",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "storage box",
+    "b": "desk"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331589",
+  "fid": "15935.002",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331589",
+    "15935.002"
+   ],
+   [
+    "47331591",
+    "16027.898"
+   ],
+   [
+    "47331589",
+    "15939.001"
+   ],
+   [
+    "47331587",
+    "15993.195"
+   ],
+   [
+    "47331587",
+    "15992.196"
+   ],
+   [
+    "47331591",
+    "16034.895"
+   ],
+   [
+    "47331589",
+    "15930.004"
+   ],
+   [
+    "47331591",
+    "16037.894"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 0.71,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.613,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.591,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 0.02,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 135,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "storage box lid",
+  "storage box",
+  "desk"
+ ],
+ "roles": {
+  "storage box lid": "target",
+  "storage box": "host",
+  "desk": "container"
+ },
+ "candidates": {
+  "storage box lid": [
+   {
+    "x0": 27,
+    "x1": 186,
+    "y0": 1211,
+    "y1": 1294,
+    "cx": 107.9,
+    "cy": 1252.7,
+    "npix": 10548,
+    "area_pct": 0.382,
+    "score": 0.806
+   },
+   {
+    "x0": 220,
+    "x1": 472,
+    "y0": 1256,
+    "y1": 1323,
+    "cx": 329.7,
+    "cy": 1289.9,
+    "npix": 7707,
+    "area_pct": 0.279,
+    "score": 0.746
+   },
+   {
+    "x0": 980,
+    "x1": 1187,
+    "y0": 715,
+    "y1": 818,
+    "cx": 1091.9,
+    "cy": 764.6,
+    "npix": 17235,
+    "area_pct": 0.623,
+    "score": 0.738
+   },
+   {
+    "x0": 0,
+    "x1": 19,
+    "y0": 1240,
+    "y1": 1300,
+    "cx": 8.1,
+    "cy": 1265.3,
+    "npix": 950,
+    "area_pct": 0.034,
+    "score": 0.301
+   },
+   {
+    "x0": 1067,
+    "x1": 1119,
+    "y0": 955,
+    "y1": 1009,
+    "cx": 1093.3,
+    "cy": 971.0,
+    "npix": 1218,
+    "area_pct": 0.044,
+    "score": 0.152
+   }
+  ],
+  "storage box": [
+   {
+    "x0": 220,
+    "x1": 472,
+    "y0": 1262,
+    "y1": 1380,
+    "cx": 341.5,
+    "cy": 1317.4,
+    "npix": 20442,
+    "area_pct": 0.739,
+    "score": 0.887
+   },
+   {
+    "x0": 26,
+    "x1": 192,
+    "y0": 1210,
+    "y1": 1384,
+    "cx": 104.8,
+    "cy": 1282.4,
+    "npix": 19170,
+    "area_pct": 0.693,
+    "score": 0.538
+   },
+   {
+    "x0": 0,
+    "x1": 19,
+    "y0": 1242,
+    "y1": 1408,
+    "cx": 5.5,
+    "cy": 1305.9,
+    "npix": 1613,
+    "area_pct": 0.058,
+    "score": 0.423
+   },
+   {
+    "x0": 1500,
+    "x1": 1599,
+    "y0": 1255,
+    "y1": 1334,
+    "cx": 1549.7,
+    "cy": 1295.9,
+    "npix": 5336,
+    "area_pct": 0.193,
+    "score": 0.304
+   },
+   {
+    "x0": 980,
+    "x1": 1192,
+    "y0": 713,
+    "y1": 1053,
+    "cx": 1098.5,
+    "cy": 830.0,
+    "npix": 35118,
+    "area_pct": 1.27,
+    "score": 0.184
+   },
+   {
+    "x0": 33,
+    "x1": 205,
+    "y0": 1270,
+    "y1": 1387,
+    "cx": 111.4,
+    "cy": 1322.6,
+    "npix": 11711,
+    "area_pct": 0.424,
+    "score": 0.179
+   }
+  ],
+  "desk": [
+   {
+    "x0": 0,
+    "x1": 1497,
+    "y0": 1185,
+    "y1": 1439,
+    "cx": 972.9,
+    "cy": 1364.0,
+    "npix": 163997,
+    "area_pct": 5.932,
+    "score": 0.875
+   }
+  ]
+ },
+ "mask_keys": {
+  "storage box lid": [
+   "storage box lid|0",
+   "storage box lid|1",
+   "storage box lid|2",
+   "storage box lid|3",
+   "storage box lid|4"
+  ],
+  "storage box": [
+   "storage box|0",
+   "storage box|1",
+   "storage box|2",
+   "storage box|3",
+   "storage box|4",
+   "storage box|5"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

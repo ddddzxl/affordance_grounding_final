@@ -1,0 +1,45 @@
+TASK: "Close the window next to the toilet"
+
+PARSE:
+  target concept = "window handle"   <- the thing that must be output
+  host           = 'window'   <- countable object the target sits on
+  entity  : 'window handle'  role=target
+  entity  : 'window'  role=host
+  entity  : 'toilet'  role=landmark
+  relation: next_to(a='window', b='toilet')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  window handle        0  1340  1438   695   824  1375.1   761.0    0.24  0.449
+  window handle        1   367   432   685   737   399.1   712.1   0.081   0.35
+  window               0  1638  1799   230   593  1716.8   409.6     0.8  0.909
+  toilet               0   136   415   428   967   288.4   662.3    3.07  0.974
+  toilet               1   867  1305  1180  1439  1112.1  1335.7   2.866  0.315
+
+
+
+
+
+CONTAINMENT (window handle inside the FILLED mask of each window):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  window #0   x[1638,1799] cx  1716.8 cy   409.6 w= 161 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "window handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: window handle #<id>[, #<id> ...]

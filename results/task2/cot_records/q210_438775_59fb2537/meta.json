@@ -1,0 +1,184 @@
+{
+ "q": 210,
+ "visit": "438775",
+ "desc_id": "59fb2537-40ac-446d-9481-dcd46ce7c41b",
+ "text": "Turn on the lamp on the side table next to the telephone",
+ "parse": {
+  "text": "Turn on the lamp on the side table next to the telephone",
+  "target": {
+   "concept": "light switch",
+   "host": "lamp"
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "side table",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "telephone",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "lamp",
+    "b": "side table"
+   },
+   {
+    "rel": "next_to",
+    "a": "side table",
+    "b": "telephone"
+   }
+  ],
+  "select": [],
+  "residual": "unified with val8's 'light switch'; which lamp it is, is carried by `host`, not by the search term",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358173",
+  "fid": "62503.161",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL-T",
+  "n_top": 8,
+  "topk": [
+   [
+    "44358173",
+    "62503.161"
+   ],
+   [
+    "44358173",
+    "62495.947"
+   ],
+   [
+    "44358173",
+    "62408.749"
+   ],
+   [
+    "44358173",
+    "62500.146"
+   ],
+   [
+    "44358173",
+    "62494.948"
+   ],
+   [
+    "44358173",
+    "62504.161"
+   ],
+   [
+    "44358173",
+    "62501.162"
+   ],
+   [
+    "44358173",
+    "62493.948"
+   ]
+  ],
+  "consistency": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "n_frames": 266,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_target_visible",
+   "n_pool": 50,
+   "n_vis": 15
+  },
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch",
+  "lamp",
+  "side table",
+  "telephone"
+ ],
+ "roles": {
+  "light switch": "target",
+  "lamp": "host",
+  "side table": "container",
+  "telephone": "landmark"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 0,
+    "x1": 146,
+    "y0": 40,
+    "y1": 159,
+    "cx": 65.5,
+    "cy": 98.3,
+    "npix": 13596,
+    "area_pct": 0.492,
+    "score": 0.302
+   }
+  ],
+  "lamp": [],
+  "side table": [
+   {
+    "x0": 633,
+    "x1": 1339,
+    "y0": 312,
+    "y1": 1169,
+    "cx": 972.8,
+    "cy": 691.5,
+    "npix": 233593,
+    "area_pct": 8.449,
+    "score": 0.668
+   },
+   {
+    "x0": 0,
+    "x1": 266,
+    "y0": 194,
+    "y1": 922,
+    "cx": 86.0,
+    "cy": 637.0,
+    "npix": 91276,
+    "area_pct": 3.301,
+    "score": 0.206
+   }
+  ],
+  "telephone": []
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0"
+  ],
+  "lamp": []
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "landmark 'telephone' unusable",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

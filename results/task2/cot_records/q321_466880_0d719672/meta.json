@@ -1,0 +1,257 @@
+{
+ "q": 321,
+ "visit": "466880",
+ "desc_id": "0d719672-3fbd-4a02-b825-59cb59abd6e2",
+ "text": "Open the window above the kitchen sink",
+ "parse": {
+  "text": "Open the window above the kitchen sink",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "sink",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "above",
+    "a": "window",
+    "b": "sink"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331711",
+  "fid": "11298.727",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331711",
+    "11298.727"
+   ],
+   [
+    "47331710",
+    "11196.136"
+   ],
+   [
+    "47331711",
+    "11275.937"
+   ],
+   [
+    "47331710",
+    "11215.228"
+   ],
+   [
+    "47331710",
+    "11200.134"
+   ],
+   [
+    "47331707",
+    "11143.540"
+   ],
+   [
+    "47331711",
+    "11297.728"
+   ],
+   [
+    "47331711",
+    "11307.840"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "sink"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "sink": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 1633,
+    "x1": 1672,
+    "y0": 705,
+    "y1": 769,
+    "cx": 1651.1,
+    "cy": 736.5,
+    "npix": 1133,
+    "area_pct": 0.041,
+    "score": 0.808
+   },
+   {
+    "x0": 1827,
+    "x1": 1892,
+    "y0": 1275,
+    "y1": 1304,
+    "cx": 1859.1,
+    "cy": 1291.1,
+    "npix": 1604,
+    "area_pct": 0.058,
+    "score": 0.601
+   },
+   {
+    "x0": 1193,
+    "x1": 1252,
+    "y0": 1250,
+    "y1": 1281,
+    "cx": 1223.9,
+    "cy": 1265.9,
+    "npix": 1522,
+    "area_pct": 0.055,
+    "score": 0.593
+   },
+   {
+    "x0": 1494,
+    "x1": 1559,
+    "y0": 1265,
+    "y1": 1294,
+    "cx": 1527.5,
+    "cy": 1280.5,
+    "npix": 1708,
+    "area_pct": 0.062,
+    "score": 0.577
+   },
+   {
+    "x0": 1547,
+    "x1": 1572,
+    "y0": 1055,
+    "y1": 1084,
+    "cx": 1557.9,
+    "cy": 1069.1,
+    "npix": 545,
+    "area_pct": 0.02,
+    "score": 0.214
+   },
+   {
+    "x0": 1153,
+    "x1": 1166,
+    "y0": 963,
+    "y1": 1044,
+    "cx": 1160.2,
+    "cy": 1020.8,
+    "npix": 494,
+    "area_pct": 0.018,
+    "score": 0.197
+   }
+  ],
+  "window": [
+   {
+    "x0": 1106,
+    "x1": 1685,
+    "y0": 366,
+    "y1": 1069,
+    "cx": 1400.5,
+    "cy": 694.7,
+    "npix": 350521,
+    "area_pct": 12.678,
+    "score": 0.949
+   }
+  ],
+  "sink": [
+   {
+    "x0": 1224,
+    "x1": 1725,
+    "y0": 1128,
+    "y1": 1224,
+    "cx": 1518.7,
+    "cy": 1178.2,
+    "npix": 27041,
+    "area_pct": 0.978,
+    "score": 0.787
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2",
+   "window handle|3",
+   "window handle|4",
+   "window handle|5"
+  ],
+  "window": [
+   "window|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   5
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

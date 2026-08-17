@@ -1,0 +1,221 @@
+{
+ "q": 46,
+ "visit": "421657",
+ "desc_id": "e70977fa-9667-4c50-9916-ab63fa662f18",
+ "text": "Turn on the table lamp on the nightstand next to the closet",
+ "parse": {
+  "text": "Turn on the table lamp on the nightstand next to the closet",
+  "target": {
+   "concept": "light switch",
+   "host": "table lamp"
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "table lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "nightstand",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "table lamp",
+    "b": "nightstand"
+   },
+   {
+    "rel": "next_to",
+    "a": "nightstand",
+    "b": "closet"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42445642",
+  "fid": "58232.491",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL-T",
+  "n_top": 5,
+  "topk": [
+   [
+    "42445642",
+    "58232.491"
+   ],
+   [
+    "42445633",
+    "58089.301"
+   ],
+   [
+    "42445639",
+    "58298.014"
+   ],
+   [
+    "42445639",
+    "58352.092"
+   ],
+   [
+    "42445639",
+    "58333.883"
+   ]
+  ],
+  "consistency": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "n_frames": 165,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_target_visible",
+   "n_pool": 50,
+   "n_vis": 5
+  },
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch",
+  "table lamp",
+  "nightstand",
+  "closet"
+ ],
+ "roles": {
+  "light switch": "target",
+  "table lamp": "host",
+  "nightstand": "container",
+  "closet": "landmark"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 1698,
+    "x1": 1806,
+    "y0": 81,
+    "y1": 279,
+    "cx": 1750.3,
+    "cy": 183.2,
+    "npix": 17080,
+    "area_pct": 0.618,
+    "score": 0.854
+   }
+  ],
+  "table lamp": [
+   {
+    "x0": 427,
+    "x1": 532,
+    "y0": 375,
+    "y1": 694,
+    "cx": 479.8,
+    "cy": 472.0,
+    "npix": 13728,
+    "area_pct": 0.497,
+    "score": 0.895
+   },
+   {
+    "x0": 1227,
+    "x1": 1306,
+    "y0": 435,
+    "y1": 679,
+    "cx": 1264.0,
+    "cy": 514.9,
+    "npix": 8723,
+    "area_pct": 0.316,
+    "score": 0.876
+   }
+  ],
+  "nightstand": [
+   {
+    "x0": 400,
+    "x1": 539,
+    "y0": 690,
+    "y1": 1110,
+    "cx": 469.2,
+    "cy": 855.9,
+    "npix": 33870,
+    "area_pct": 1.225,
+    "score": 0.956
+   },
+   {
+    "x0": 1130,
+    "x1": 1332,
+    "y0": 669,
+    "y1": 786,
+    "cx": 1246.8,
+    "cy": 717.4,
+    "npix": 15324,
+    "area_pct": 0.554,
+    "score": 0.951
+   }
+  ],
+  "closet": [
+   {
+    "x0": 0,
+    "x1": 397,
+    "y0": 0,
+    "y1": 1439,
+    "cx": 194.6,
+    "cy": 711.4,
+    "npix": 555746,
+    "area_pct": 20.101,
+    "score": 0.642
+   },
+   {
+    "x0": 1867,
+    "x1": 1919,
+    "y0": 932,
+    "y1": 1439,
+    "cx": 1901.5,
+    "cy": 1252.1,
+    "npix": 14848,
+    "area_pct": 0.537,
+    "score": 0.247
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0"
+  ],
+  "table lamp": [
+   "table lamp|0",
+   "table lamp|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "landmark 'closet' unusable",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

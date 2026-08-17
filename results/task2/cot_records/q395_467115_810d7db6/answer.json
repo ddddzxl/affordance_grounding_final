@@ -1,0 +1,9 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "medium",
+ "kind": "landmark_choice",
+ "proj_verified": "same as q387: centre distance 60 px against diagonals of 388 and 422 px (ratio 0.15)",
+ "solver": "frontier-llm, manual CoT"
+}

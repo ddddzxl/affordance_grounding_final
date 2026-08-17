@@ -1,0 +1,215 @@
+{
+ "q": 434,
+ "visit": "468476",
+ "desc_id": "0fa790f7-659e-479d-b679-de2b3a7be3ee",
+ "text": "Open the left window behind the blue armchair",
+ "parse": {
+  "text": "Open the left window behind the blue armchair",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "armchair",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "behind",
+    "a": "window",
+    "b": "armchair"
+   }
+  ],
+  "select": [
+   {
+    "on": "window",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45261682",
+  "fid": "3528.478",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "45261682",
+    "3528.478"
+   ],
+   [
+    "45261682",
+    "3533.476"
+   ],
+   [
+    "45261682",
+    "3532.476"
+   ],
+   [
+    "45261686",
+    "3756.267"
+   ],
+   [
+    "45261681",
+    "3600.065"
+   ],
+   [
+    "45261681",
+    "3599.065"
+   ],
+   [
+    "45261681",
+    "3602.064"
+   ],
+   [
+    "45261686",
+    "3819.474"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.945,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.926,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.925,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 222,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "armchair"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "armchair": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 225,
+    "x1": 243,
+    "y0": 1393,
+    "y1": 1412,
+    "cx": 233.2,
+    "cy": 1403.0,
+    "npix": 261,
+    "area_pct": 0.009,
+    "score": 0.156
+   }
+  ],
+  "window": [
+   {
+    "x0": 0,
+    "x1": 337,
+    "y0": 862,
+    "y1": 1440,
+    "cx": 168.2,
+    "cy": 1137.0,
+    "npix": 169005,
+    "area_pct": 6.113,
+    "score": 0.752
+   }
+  ],
+  "armchair": [
+   {
+    "x0": 0,
+    "x1": 184,
+    "y0": 1407,
+    "y1": 1749,
+    "cx": 78.2,
+    "cy": 1584.6,
+    "npix": 35348,
+    "area_pct": 1.279,
+    "score": 0.676
+   },
+   {
+    "x0": 283,
+    "x1": 841,
+    "y0": 1456,
+    "y1": 1919,
+    "cx": 530.7,
+    "cy": 1778.6,
+    "npix": 121747,
+    "area_pct": 4.403,
+    "score": 0.209
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0"
+  ],
+  "window": [
+   "window|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

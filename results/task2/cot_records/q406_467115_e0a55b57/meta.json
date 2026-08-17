@@ -1,0 +1,378 @@
+{
+ "q": 406,
+ "visit": "467115",
+ "desc_id": "e0a55b57-3684-4233-a85a-32eaf35a46cb",
+ "text": "Open the top middle cabinet door located to the left of the dining table",
+ "parse": {
+  "text": "Open the top middle cabinet door located to the left of the dining table",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "dining table",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "left_of",
+    "a": "cabinet",
+    "b": "dining table"
+   }
+  ],
+  "select": [
+   {
+    "on": "cabinet door",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   },
+   {
+    "on": "cabinet door",
+    "axis": "horizontal",
+    "value": "middle",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28241.654",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "47333310",
+    "28241.654"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.05,
+    "s2": 0.537,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "cabinet",
+  "dining table"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "cabinet": "container",
+  "dining table": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 580,
+    "x1": 634,
+    "y0": 880,
+    "y1": 946,
+    "cx": 605.8,
+    "cy": 914.0,
+    "npix": 1416,
+    "area_pct": 0.051,
+    "score": 0.809
+   },
+   {
+    "x0": 590,
+    "x1": 643,
+    "y0": 1093,
+    "y1": 1179,
+    "cx": 615.5,
+    "cy": 1140.4,
+    "npix": 1610,
+    "area_pct": 0.058,
+    "score": 0.803
+   },
+   {
+    "x0": 511,
+    "x1": 554,
+    "y0": 800,
+    "y1": 859,
+    "cx": 532.9,
+    "cy": 831.1,
+    "npix": 1054,
+    "area_pct": 0.038,
+    "score": 0.788
+   },
+   {
+    "x0": 530,
+    "x1": 569,
+    "y0": 993,
+    "y1": 1059,
+    "cx": 549.0,
+    "cy": 1030.5,
+    "npix": 1152,
+    "area_pct": 0.042,
+    "score": 0.773
+   },
+   {
+    "x0": 560,
+    "x1": 609,
+    "y0": 807,
+    "y1": 866,
+    "cx": 584.3,
+    "cy": 836.4,
+    "npix": 1309,
+    "area_pct": 0.047,
+    "score": 0.693
+   },
+   {
+    "x0": 445,
+    "x1": 469,
+    "y0": 721,
+    "y1": 766,
+    "cx": 457.2,
+    "cy": 743.9,
+    "npix": 655,
+    "area_pct": 0.024,
+    "score": 0.685
+   },
+   {
+    "x0": 460,
+    "x1": 494,
+    "y0": 893,
+    "y1": 939,
+    "cx": 476.6,
+    "cy": 918.5,
+    "npix": 849,
+    "area_pct": 0.031,
+    "score": 0.655
+   },
+   {
+    "x0": 489,
+    "x1": 524,
+    "y0": 732,
+    "y1": 779,
+    "cx": 507.8,
+    "cy": 754.6,
+    "npix": 749,
+    "area_pct": 0.027,
+    "score": 0.563
+   },
+   {
+    "x0": 450,
+    "x1": 484,
+    "y0": 690,
+    "y1": 732,
+    "cx": 466.9,
+    "cy": 711.4,
+    "npix": 711,
+    "area_pct": 0.026,
+    "score": 0.416
+   },
+   {
+    "x0": 461,
+    "x1": 489,
+    "y0": 320,
+    "y1": 512,
+    "cx": 477.3,
+    "cy": 474.3,
+    "npix": 761,
+    "area_pct": 0.028,
+    "score": 0.193
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 542,
+    "x1": 679,
+    "y0": 193,
+    "y1": 918,
+    "cx": 612.6,
+    "cy": 526.7,
+    "npix": 68565,
+    "area_pct": 2.48,
+    "score": 0.912
+   },
+   {
+    "x0": 415,
+    "x1": 504,
+    "y0": 246,
+    "y1": 730,
+    "cx": 459.5,
+    "cy": 477.1,
+    "npix": 24488,
+    "area_pct": 0.886,
+    "score": 0.903
+   },
+   {
+    "x0": 471,
+    "x1": 571,
+    "y0": 214,
+    "y1": 804,
+    "cx": 522.0,
+    "cy": 491.7,
+    "npix": 36601,
+    "area_pct": 1.324,
+    "score": 0.894
+   },
+   {
+    "x0": 451,
+    "x1": 585,
+    "y0": 734,
+    "y1": 1023,
+    "cx": 523.6,
+    "cy": 867.4,
+    "npix": 19312,
+    "area_pct": 0.698,
+    "score": 0.266
+   },
+   {
+    "x0": 475,
+    "x1": 697,
+    "y0": 921,
+    "y1": 1386,
+    "cx": 595.6,
+    "cy": 1147.3,
+    "npix": 33472,
+    "area_pct": 1.211,
+    "score": 0.215
+   },
+   {
+    "x0": 578,
+    "x1": 689,
+    "y0": 873,
+    "y1": 1168,
+    "cx": 635.3,
+    "cy": 1006.8,
+    "npix": 19637,
+    "area_pct": 0.71,
+    "score": 0.199
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 414,
+    "x1": 1023,
+    "y0": 136,
+    "y1": 1385,
+    "cx": 702.1,
+    "cy": 608.1,
+    "npix": 483426,
+    "area_pct": 17.485,
+    "score": 0.875
+   },
+   {
+    "x0": 254,
+    "x1": 470,
+    "y0": 481,
+    "y1": 1050,
+    "cx": 368.0,
+    "cy": 740.1,
+    "npix": 82373,
+    "area_pct": 2.979,
+    "score": 0.433
+   }
+  ],
+  "dining table": [
+   {
+    "x0": 961,
+    "x1": 1439,
+    "y0": 840,
+    "y1": 1852,
+    "cx": 1230.5,
+    "cy": 1262.5,
+    "npix": 306939,
+    "area_pct": 11.102,
+    "score": 0.872
+   },
+   {
+    "x0": 225,
+    "x1": 289,
+    "y0": 666,
+    "y1": 759,
+    "cx": 259.6,
+    "cy": 709.4,
+    "npix": 4405,
+    "area_pct": 0.159,
+    "score": 0.186
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4",
+   "door handle|5",
+   "door handle|6",
+   "door handle|7",
+   "door handle|8",
+   "door handle|9"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1",
+   "cabinet door|2",
+   "cabinet door|3",
+   "cabinet door|4",
+   "cabinet door|5"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   8,
+   9
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

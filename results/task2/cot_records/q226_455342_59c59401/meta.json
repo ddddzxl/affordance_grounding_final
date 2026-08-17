@@ -1,0 +1,267 @@
+{
+ "q": 226,
+ "visit": "455342",
+ "desc_id": "59c59401-bdf5-4f70-9505-8b25b83478b1",
+ "text": "Control the volume on the mini music system under the TV stand",
+ "parse": {
+  "text": "Control the volume on the mini music system under the TV stand",
+  "target": {
+   "concept": "volume knob",
+   "host": "music system"
+  },
+  "entities": [
+   {
+    "name": "volume knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "music system",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "TV stand",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "under",
+    "a": "music system",
+    "b": "TV stand"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358471",
+  "fid": "46554.396",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 5,
+  "topk": [
+   [
+    "44358471",
+    "46554.396"
+   ],
+   [
+    "44358472",
+    "46610.091"
+   ],
+   [
+    "44358472",
+    "46627.101"
+   ],
+   [
+    "44358472",
+    "46629.100"
+   ],
+   [
+    "44358472",
+    "46626.101"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.565,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.555,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 97,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "volume knob",
+  "music system",
+  "TV stand"
+ ],
+ "roles": {
+  "volume knob": "target",
+  "music system": "host",
+  "TV stand": "landmark"
+ },
+ "candidates": {
+  "volume knob": [
+   {
+    "x0": 773,
+    "x1": 820,
+    "y0": 496,
+    "y1": 539,
+    "cx": 797.8,
+    "cy": 517.3,
+    "npix": 1613,
+    "area_pct": 0.058,
+    "score": 0.398
+   },
+   {
+    "x0": 560,
+    "x1": 606,
+    "y0": 480,
+    "y1": 519,
+    "cx": 582.4,
+    "cy": 500.5,
+    "npix": 1482,
+    "area_pct": 0.054,
+    "score": 0.377
+   },
+   {
+    "x0": 360,
+    "x1": 399,
+    "y0": 470,
+    "y1": 509,
+    "cx": 379.3,
+    "cy": 487.8,
+    "npix": 1314,
+    "area_pct": 0.048,
+    "score": 0.369
+   }
+  ],
+  "music system": [
+   {
+    "x0": 307,
+    "x1": 973,
+    "y0": 113,
+    "y1": 733,
+    "cx": 652.6,
+    "cy": 408.6,
+    "npix": 259797,
+    "area_pct": 9.397,
+    "score": 0.442
+   },
+   {
+    "x0": 560,
+    "x1": 725,
+    "y0": 605,
+    "y1": 709,
+    "cx": 640.9,
+    "cy": 655.4,
+    "npix": 13740,
+    "area_pct": 0.497,
+    "score": 0.31
+   },
+   {
+    "x0": 415,
+    "x1": 494,
+    "y0": 589,
+    "y1": 654,
+    "cx": 453.6,
+    "cy": 618.4,
+    "npix": 4013,
+    "area_pct": 0.145,
+    "score": 0.188
+   }
+  ],
+  "TV stand": [
+   {
+    "x0": 307,
+    "x1": 973,
+    "y0": 360,
+    "y1": 734,
+    "cx": 648.0,
+    "cy": 498.6,
+    "npix": 145239,
+    "area_pct": 5.253,
+    "score": 0.928
+   },
+   {
+    "x0": 525,
+    "x1": 845,
+    "y0": 360,
+    "y1": 384,
+    "cx": 667.0,
+    "cy": 371.1,
+    "npix": 4070,
+    "area_pct": 0.147,
+    "score": 0.384
+   },
+   {
+    "x0": 607,
+    "x1": 684,
+    "y0": 385,
+    "y1": 419,
+    "cx": 643.2,
+    "cy": 402.0,
+    "npix": 2336,
+    "area_pct": 0.084,
+    "score": 0.202
+   },
+   {
+    "x0": 343,
+    "x1": 517,
+    "y0": 564,
+    "y1": 679,
+    "cx": 443.0,
+    "cy": 631.8,
+    "npix": 6293,
+    "area_pct": 0.228,
+    "score": 0.191
+   }
+  ]
+ },
+ "mask_keys": {
+  "volume knob": [
+   "volume knob|0",
+   "volume knob|1",
+   "volume knob|2"
+  ],
+  "music system": [
+   "music system|0",
+   "music system|1",
+   "music system|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1,
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(3)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

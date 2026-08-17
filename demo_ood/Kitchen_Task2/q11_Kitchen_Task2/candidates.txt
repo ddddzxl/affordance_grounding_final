@@ -1,0 +1,26 @@
+TASK: "Plug in the Ninja blender using the nearest socket"
+
+PARSE:
+  target concept = "socket"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'socket'  role=target
+  entity  : 'blender'  role=landmark
+  relation: near(a='socket', b='blender')
+  residual: 'nearest' as in q10; the brand name Ninja is not detectable, so only blender is kept
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  y increases DOWNWARD.
+  => "top" = SMALL y,  "bottom" = LARGE y,  "left" = SMALL x,  "right" = LARGE x
+  => "A above B" means A.cy < B.cy.
+  area% = mask pixels as % of the whole image.  score = SAM3 confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class                      id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  socket                      0  1057  1119  1320  1426  1088.7  1370.6   0.208  0.922
+  socket                      1   535   604  1407  1459   568.1  1433.5   0.116  0.900
+  blender                     0   820  1138  1307  1919   956.9  1613.1   4.480  0.466
+
+QUESTION: which "socket" id(s) does the instruction refer to?

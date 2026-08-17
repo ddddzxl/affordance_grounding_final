@@ -1,0 +1,49 @@
+TASK: "Turn on the tap in the sink"
+
+PARSE:
+  target concept = "faucet handle"   <- the thing that must be output
+  host           = 'faucet'   <- countable object the target sits on
+  entity  : 'faucet handle'  role=target
+  entity  : 'faucet'  role=host
+  entity  : 'sink'  role=container
+  relation: on_top(a='faucet', b='sink')
+  residual: 'tap' and 'faucet' are the same object; unified to one concept so sibling descriptions share one candidate pool
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  faucet handle        0   420   599   493   614   506.2   553.2   0.205  0.582
+  faucet handle        1   317   424   580   685   373.0   632.3   0.334  0.526
+  faucet handle        2   715   824   667   752   770.9   708.1   0.255   0.43
+  faucet handle        3   130   229   693   773   175.7   736.4   0.159  0.352
+  faucet handle        4   854   949  1286  1372   901.7  1330.3   0.239  0.211
+  faucet handle        5   736   813   727   752   790.6   738.6   0.032   0.15
+  faucet               0   319   824   493  1000   458.9   747.1   1.732   0.97
+  sink                 0    93  1430   754  1731   715.6  1198.1  23.627  0.905
+
+
+
+
+
+CONTAINMENT (faucet handle inside the FILLED mask of each faucet):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  faucet #0   x[ 319, 824] cx   458.9 cy   747.1 w= 505 contains #0, #1, #2, #5
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "faucet handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: faucet handle #<id>[, #<id> ...]

@@ -1,0 +1,8 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "low",
+ "kind": "no_host_detected",
+ "solver": "frontier-llm, manual CoT"
+}

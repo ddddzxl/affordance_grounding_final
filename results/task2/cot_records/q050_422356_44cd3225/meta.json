@@ -1,0 +1,147 @@
+{
+ "q": 50,
+ "visit": "422356",
+ "desc_id": "44cd3225-afcd-42dc-8631-dcd8c6fbded7",
+ "text": "Turn on the ceiling light",
+ "parse": {
+  "text": "Turn on the ceiling light",
+  "target": {
+   "concept": "light switch",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42446576",
+  "fid": "205894.963",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42446576",
+    "205894.963"
+   ],
+   [
+    "42446576",
+    "205890.065"
+   ],
+   [
+    "42446579",
+    "205773.364"
+   ],
+   [
+    "42446579",
+    "205758.586"
+   ],
+   [
+    "42446579",
+    "205785.459"
+   ],
+   [
+    "42446579",
+    "205774.363"
+   ],
+   [
+    "42446579",
+    "205818.462"
+   ],
+   [
+    "42446579",
+    "205819.461"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 115,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 18
+ },
+ "concepts": [
+  "light switch"
+ ],
+ "roles": {
+  "light switch": "target"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 1013,
+    "x1": 1099,
+    "y0": 130,
+    "y1": 234,
+    "cx": 1056.1,
+    "cy": 180.2,
+    "npix": 8236,
+    "area_pct": 0.298,
+    "score": 0.68
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

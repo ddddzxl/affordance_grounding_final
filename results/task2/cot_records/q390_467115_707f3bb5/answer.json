@@ -1,0 +1,9 @@
+{
+ "final": [
+  3,
+  5
+ ],
+ "confidence": "high",
+ "kind": "ordinal",
+ "solver": "frontier-llm, manual CoT"
+}

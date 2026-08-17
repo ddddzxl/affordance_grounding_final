@@ -1,0 +1,52 @@
+TASK: "Open the right door of the TV stand"
+
+PARSE:
+  target concept = "door handle"   <- the thing that must be output
+  host           = 'cabinet door'   <- countable object the target sits on
+  entity  : 'door handle'  role=target
+  entity  : 'cabinet door'  role=host
+  entity  : 'TV stand'  role=container
+  relation: contains(a='TV stand', b='cabinet door')
+  select  : on='cabinet door' axis=horizontal value='right' index=None from=None
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  door handle          0   893  1038   645   904   967.2   769.7   1.173  0.161
+  cabinet door         0   565  1252   580   939   913.3   751.8   4.542  0.806
+  cabinet door         1  1620  1919     0   377  1776.5   180.6   3.442  0.449
+  cabinet door         2   893  1038   645   904   967.3   769.1   1.175  0.232
+  TV stand             0   160  1405   386  1011   854.8   690.9  15.583  0.885
+  TV stand             1   413   698   376   444   569.9   411.2   0.281  0.553
+  TV stand             2   813   906   485   524   857.0   504.1     0.1  0.403
+  TV stand             3  1213  1259   470   564  1234.4   517.1   0.077  0.353
+  TV stand             4   939  1179   439   523  1065.6   476.7   0.458  0.209
+
+
+
+
+
+CONTAINMENT (door handle inside the FILLED mask of each cabinet door):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  cabinet door #0   x[ 565,1252] cx   913.3 cy   751.8 w= 687 contains (none)
+  cabinet door #1   x[1620,1919] cx  1776.5 cy   180.6 w= 299 contains (none)
+  cabinet door #2   x[ 893,1038] cx   967.3 cy   769.1 w= 145 contains #0
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "door handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: door handle #<id>[, #<id> ...]

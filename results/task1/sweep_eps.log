@@ -1,0 +1,15 @@
+# eps sweep — v0mlp_s0 (inv_sqrt) MODEL cls, no logit_adjust, prob_thresh=0, min_cluster=20
+# STATUS: SUPERSEDED by the prior-shift diagnosis. Kept as evidence that eps is NOT a lever.
+# VERDICT: AP is flat / slightly DOWN as eps grows -> the "fragmentation (eps too small)"
+#          hypothesis is WRONG. (oracle=71 with the SAME DBSCAN already proved clustering
+#          isn't the bottleneck; the real one is prior shift -> over-prediction, found later.)
+#
+#   eps     AP      AP50    AP25
+   0.05   1.056   1.939   22.626   # original model run (default eps)
+   0.08   0.760   1.438   21.321
+   0.12   0.756   1.460   20.547
+   0.16   0.766   1.482   19.054
+   0.20   0.767   1.491   18.592
+   0.30   0.705   1.241   18.219
+#
+# (full per-class per eps was captured in the raw run; averages above are the takeaway.)

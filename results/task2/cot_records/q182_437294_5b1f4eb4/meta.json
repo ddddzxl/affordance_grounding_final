@@ -1,0 +1,194 @@
+{
+ "q": 182,
+ "visit": "437294",
+ "desc_id": "5b1f4eb4-cbbf-4b7e-a03c-ffe7c1e621a6",
+ "text": "Turn on the right mirror light on the vanity table",
+ "parse": {
+  "text": "Turn on the right mirror light on the vanity table",
+  "target": {
+   "concept": "light switch",
+   "host": "mirror light"
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "mirror light",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "vanity table",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "mirror light",
+    "b": "vanity table"
+   }
+  ],
+  "select": [
+   {
+    "on": "mirror light",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43649762",
+  "fid": "52490.154",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 6,
+  "topk": [
+   [
+    "43649762",
+    "52490.154"
+   ],
+   [
+    "43649767",
+    "52367.055"
+   ],
+   [
+    "43649762",
+    "52473.244"
+   ],
+   [
+    "43649767",
+    "52368.054"
+   ],
+   [
+    "43649767",
+    "52369.054"
+   ],
+   [
+    "43649762",
+    "52501.149"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 203,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch",
+  "mirror light",
+  "vanity table"
+ ],
+ "roles": {
+  "light switch": "target",
+  "mirror light": "host",
+  "vanity table": "container"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 719,
+    "x1": 806,
+    "y0": 149,
+    "y1": 260,
+    "cx": 764.0,
+    "cy": 203.2,
+    "npix": 8858,
+    "area_pct": 0.32,
+    "score": 0.244
+   },
+   {
+    "x0": 819,
+    "x1": 999,
+    "y0": 145,
+    "y1": 268,
+    "cx": 915.9,
+    "cy": 205.2,
+    "npix": 19788,
+    "area_pct": 0.716,
+    "score": 0.21
+   }
+  ],
+  "mirror light": [],
+  "vanity table": [
+   {
+    "x0": 0,
+    "x1": 1645,
+    "y0": 0,
+    "y1": 1430,
+    "cx": 944.1,
+    "cy": 383.2,
+    "npix": 433570,
+    "area_pct": 15.682,
+    "score": 0.747
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0",
+   "light switch|1"
+  ],
+  "mirror light": []
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

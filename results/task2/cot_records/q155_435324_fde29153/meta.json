@@ -1,0 +1,129 @@
+{
+ "q": 155,
+ "visit": "435324",
+ "desc_id": "fde29153-ba1e-498b-b260-a19cc46d8403",
+ "text": "Adjust the room's temperature using the radiator dial next to the bed",
+ "parse": {
+  "text": "Adjust the room's temperature using the radiator dial next to the bed",
+  "target": {
+   "concept": "radiator knob",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "radiator knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "bed",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "radiator knob",
+    "b": "bed"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899221",
+  "fid": "188372.200",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 1,
+  "topk": [
+   [
+    "42899221",
+    "188372.200"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 161,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "radiator knob",
+  "bed"
+ ],
+ "roles": {
+  "radiator knob": "target",
+  "bed": "landmark"
+ },
+ "candidates": {
+  "radiator knob": [
+   {
+    "x0": 920,
+    "x1": 1032,
+    "y0": 745,
+    "y1": 839,
+    "cx": 977.8,
+    "cy": 794.0,
+    "npix": 8670,
+    "area_pct": 0.314,
+    "score": 0.401
+   }
+  ],
+  "bed": [
+   {
+    "x0": 1074,
+    "x1": 1919,
+    "y0": 592,
+    "y1": 1439,
+    "cx": 1460.2,
+    "cy": 1086.7,
+    "npix": 437327,
+    "area_pct": 15.818,
+    "score": 0.932
+   }
+  ]
+ },
+ "mask_keys": {
+  "radiator knob": [
+   "radiator knob|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "radiator dial",
+  "used": "radiator knob",
+  "probe_hits": 2,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

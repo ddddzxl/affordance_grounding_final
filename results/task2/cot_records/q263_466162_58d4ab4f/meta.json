@@ -1,0 +1,264 @@
+{
+ "q": 263,
+ "visit": "466162",
+ "desc_id": "58d4ab4f-6c53-4abc-bdb4-0b2184a551c9",
+ "text": "Open the bottom blue closet drawer to the right of the fireplace",
+ "parse": {
+  "text": "Open the bottom blue closet drawer to the right of the fireplace",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "fireplace",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "drawer"
+   },
+   {
+    "rel": "right_of",
+    "a": "closet",
+    "b": "fireplace"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796576",
+  "fid": "16702.292",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 5,
+  "topk": [
+   [
+    "44796576",
+    "16702.292"
+   ],
+   [
+    "44796579",
+    "16777.594"
+   ],
+   [
+    "44796575",
+    "16865.991"
+   ],
+   [
+    "44796576",
+    "16701.292"
+   ],
+   [
+    "44796576",
+    "16704.291"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.779,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.287,
+    "s2": 0.542,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "closet",
+  "fireplace"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "closet": "container",
+  "fireplace": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1060,
+    "x1": 1079,
+    "y0": 1335,
+    "y1": 1359,
+    "cx": 1069.9,
+    "cy": 1348.1,
+    "npix": 401,
+    "area_pct": 0.015,
+    "score": 0.822
+   },
+   {
+    "x0": 1133,
+    "x1": 1152,
+    "y0": 1015,
+    "y1": 1029,
+    "cx": 1142.3,
+    "cy": 1022.2,
+    "npix": 277,
+    "area_pct": 0.01,
+    "score": 0.548
+   },
+   {
+    "x0": 1160,
+    "x1": 1179,
+    "y0": 1014,
+    "y1": 1029,
+    "cx": 1169.5,
+    "cy": 1021.9,
+    "npix": 292,
+    "area_pct": 0.011,
+    "score": 0.449
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 1000,
+    "x1": 1139,
+    "y0": 1298,
+    "y1": 1390,
+    "cx": 1068.2,
+    "cy": 1345.8,
+    "npix": 10694,
+    "area_pct": 0.387,
+    "score": 0.86
+   },
+   {
+    "x0": 1087,
+    "x1": 1138,
+    "y0": 1170,
+    "y1": 1330,
+    "cx": 1116.2,
+    "cy": 1228.5,
+    "npix": 3489,
+    "area_pct": 0.126,
+    "score": 0.158
+   }
+  ],
+  "closet": [
+   {
+    "x0": 993,
+    "x1": 1345,
+    "y0": 708,
+    "y1": 1426,
+    "cx": 1138.1,
+    "cy": 974.2,
+    "npix": 143100,
+    "area_pct": 5.176,
+    "score": 0.775
+   },
+   {
+    "x0": 0,
+    "x1": 592,
+    "y0": 40,
+    "y1": 1439,
+    "cx": 339.7,
+    "cy": 852.0,
+    "npix": 537130,
+    "area_pct": 19.427,
+    "score": 0.171
+   }
+  ],
+  "fireplace": [
+   {
+    "x0": 567,
+    "x1": 825,
+    "y0": 1025,
+    "y1": 1371,
+    "cx": 686.7,
+    "cy": 1190.9,
+    "npix": 74577,
+    "area_pct": 2.697,
+    "score": 0.845
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,251 @@
+{
+ "q": 312,
+ "visit": "466841",
+ "desc_id": "ccfd1713-8bd7-44c0-afb6-454c11141b90",
+ "text": "Open the middle window behind the potted plant",
+ "parse": {
+  "text": "Open the middle window behind the potted plant",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "potted plant",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "behind",
+    "a": "window",
+    "b": "potted plant"
+   }
+  ],
+  "select": [
+   {
+    "on": "window",
+    "axis": "horizontal",
+    "value": "middle",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331591",
+  "fid": "16038.894",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 5,
+  "topk": [
+   [
+    "47331591",
+    "16038.894"
+   ],
+   [
+    "47331589",
+    "15937.001"
+   ],
+   [
+    "47331589",
+    "15939.001"
+   ],
+   [
+    "47331587",
+    "15990.197"
+   ],
+   [
+    "47331591",
+    "16039.893"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 0.957,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.2
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.513,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.05,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 135,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "potted plant"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "potted plant": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 600,
+    "x1": 680,
+    "y0": 705,
+    "y1": 785,
+    "cx": 642.9,
+    "cy": 743.9,
+    "npix": 4896,
+    "area_pct": 0.177,
+    "score": 0.202
+   },
+   {
+    "x0": 680,
+    "x1": 752,
+    "y0": 1000,
+    "y1": 1079,
+    "cx": 718.1,
+    "cy": 1037.6,
+    "npix": 4425,
+    "area_pct": 0.16,
+    "score": 0.193
+   },
+   {
+    "x0": 732,
+    "x1": 813,
+    "y0": 1250,
+    "y1": 1324,
+    "cx": 776.0,
+    "cy": 1283.3,
+    "npix": 4831,
+    "area_pct": 0.175,
+    "score": 0.189
+   }
+  ],
+  "window": [
+   {
+    "x0": 363,
+    "x1": 1361,
+    "y0": 0,
+    "y1": 515,
+    "cx": 844.8,
+    "cy": 204.4,
+    "npix": 371838,
+    "area_pct": 13.449,
+    "score": 0.809
+   },
+   {
+    "x0": 1397,
+    "x1": 1919,
+    "y0": 0,
+    "y1": 466,
+    "cx": 1582.3,
+    "cy": 200.4,
+    "npix": 108033,
+    "area_pct": 3.907,
+    "score": 0.707
+   },
+   {
+    "x0": 0,
+    "x1": 124,
+    "y0": 57,
+    "y1": 328,
+    "cx": 37.3,
+    "cy": 219.6,
+    "npix": 10485,
+    "area_pct": 0.379,
+    "score": 0.202
+   }
+  ],
+  "potted plant": [
+   {
+    "x0": 1422,
+    "x1": 1919,
+    "y0": 0,
+    "y1": 574,
+    "cx": 1732.0,
+    "cy": 292.1,
+    "npix": 124743,
+    "area_pct": 4.512,
+    "score": 0.943
+   },
+   {
+    "x0": 1080,
+    "x1": 1504,
+    "y0": 300,
+    "y1": 620,
+    "cx": 1268.2,
+    "cy": 458.9,
+    "npix": 95739,
+    "area_pct": 3.463,
+    "score": 0.89
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2"
+  ],
+  "window": [
+   "window|0",
+   "window|1",
+   "window|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

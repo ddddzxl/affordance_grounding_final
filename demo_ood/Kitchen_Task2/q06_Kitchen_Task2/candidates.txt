@@ -1,0 +1,35 @@
+TASK: "Open the right door of the refrigerator"
+
+PARSE:
+  target concept = "refrigerator door handle"   <- the thing that must be output
+  host           = 'refrigerator door'   <- countable object the target sits on
+  entity  : 'refrigerator door handle'  role=target
+  entity  : 'refrigerator door'  role=host
+  entity  : 'refrigerator'  role=container
+  relation: contains(a='refrigerator', b='refrigerator door')
+  select  : on='refrigerator door' axis=horizontal value='right' index=None from=None
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  y increases DOWNWARD.
+  => "top" = SMALL y,  "bottom" = LARGE y,  "left" = SMALL x,  "right" = LARGE x
+  => "A above B" means A.cy < B.cy.
+  area% = mask pixels as % of the whole image.  score = SAM3 confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class                      id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  refrigerator door handle    0  1177  1299   490  1499  1251.8   968.1   2.044  0.939
+  refrigerator door handle    1  1109  1218   493  1511  1172.5   992.0   2.220  0.911
+  refrigerator door           0  1143  1439    72  1900  1317.5  1121.3   9.850  0.927
+  refrigerator door           1   657  1232    68  1919   914.9   992.9  19.948  0.843
+  refrigerator door           2  1109  1217   492  1510  1167.1   989.7   2.590  0.438
+  refrigerator                0   601  1439    49  1919  1041.1   962.2  51.821  0.978
+
+CONTAINMENT (refrigerator door handle ids inside each refrigerator door):
+  refrigerator door #0  contains refrigerator door handle [0]  [via bbox]
+  refrigerator door #1  contains refrigerator door handle [1]  [via bbox]
+  refrigerator door #2  contains refrigerator door handle [1]
+
+QUESTION: which "refrigerator door handle" id(s) does the instruction refer to?

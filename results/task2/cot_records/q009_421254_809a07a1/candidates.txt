@@ -1,0 +1,90 @@
+TASK: "Open the fourth drawer of the cabinet located to the left of the TV"
+
+PARSE:
+  target concept = "drawer handle"   <- the thing that must be output
+  host           = 'drawer'   <- countable object the target sits on
+  entity  : 'drawer handle'  role=target
+  entity  : 'drawer'  role=host
+  entity  : 'cabinet'  role=container
+  entity  : 'TV'  role=landmark
+  relation: contains(a='cabinet', b='drawer')
+  relation: left_of(a='cabinet', b='TV')
+  select  : on='drawer' axis=ordinal value=None index=4 from=None
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  drawer handle        0  1185  1229   693   739  1206.6   715.3   0.057  0.912
+  drawer handle        1  1220  1274   353   404  1246.7   377.4    0.07  0.905
+  drawer handle        2   730   769   267   306   748.7   284.5   0.047  0.905
+  drawer handle        3  1125  1164  1167  1206  1144.3  1185.8    0.04  0.904
+  drawer handle        4  1150  1194   953   992  1173.0   974.0   0.044  0.897
+  drawer handle        5   375   414   200   232   395.1   215.5    0.04  0.894
+  drawer handle        6   755   789   787   819   772.9   800.4    0.03   0.89
+  drawer handle        7   745   779   553   586   761.9   570.0   0.036  0.888
+  drawer handle        8   435   469   533   566   452.3   550.9   0.032  0.886
+  drawer handle        9   405   439   380   412   423.0   394.6   0.035  0.883
+  drawer handle       10   480   514   800   826   498.1   813.1   0.026  0.879
+  drawer handle       11   500   529   913   939   515.7   926.5   0.022   0.87
+  drawer handle       12   225   259   460   486   241.7   470.7   0.024  0.868
+  drawer handle       13   155   189   160   192   171.7   175.0   0.031  0.867
+  drawer handle       14   190   224   313   339   207.9   326.0   0.025  0.866
+  drawer handle       15   260   289   587   612   275.3   597.7   0.021  0.866
+  drawer handle       16   290   319   700   726   303.8   712.3    0.02  0.862
+  drawer handle       17   768   799   979  1006   784.8   992.3   0.025  0.858
+  drawer handle       18   315   339   807   832   327.4   817.1   0.016  0.856
+  drawer handle       19   460   494   678   706   478.2   691.7   0.028  0.849
+  ... (1 more 'drawer handle' with lower score omitted)
+  drawer               0   560   979   222   592   780.5   395.5    3.94  0.968
+  drawer               1   975  1439   300   732  1215.2   501.8   5.401  0.964
+  drawer               2   159   595   390   673   389.6   527.4    1.91  0.958
+  drawer               3   253   640   740  1039   455.4   888.9   1.169  0.955
+  drawer               4   592  1439   487  1039  1049.5   752.5   7.543  0.949
+  drawer               5    80   295   101   279   190.5   185.7   0.984  0.946
+  drawer               6   129   584   253   525   368.2   379.5   2.291  0.944
+  drawer               7   194   614   518   813   414.0   662.3   1.666  0.943
+  drawer               8   226   628   634   931   434.5   781.6    1.39  0.943
+  drawer               9   278   564   128   345   423.8   230.5    1.59  0.943
+  drawer              10   646  1404   897  1460  1038.0  1183.3   4.615  0.942
+  drawer              11   627  1439   714  1285  1057.5   993.3   6.038  0.933
+  cabinet              0   561  1439   221  1501  1044.1   791.9  29.141  0.718
+  cabinet              1    81   663    50  1091   392.4   523.9  11.833  0.613
+  TV                   0   645  1402     0   211  1018.2    86.7   4.116  0.924
+
+
+
+
+
+CONTAINMENT (drawer handle inside the FILLED mask of each drawer):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  drawer #0   x[ 560, 979] cx   780.5 cy   395.5 w= 419 contains #2
+  drawer #1   x[ 975,1439] cx  1215.2 cy   501.8 w= 464 contains #1
+  drawer #2   x[ 159, 595] cx   389.6 cy   527.4 w= 436 contains #8, #12
+  drawer #3   x[ 253, 640] cx   455.4 cy   888.9 w= 387 contains #11, #18
+  drawer #4   x[ 592,1439] cx  1049.5 cy   752.5 w= 847 contains #0
+  drawer #5   x[  80, 295] cx   190.5 cy   185.7 w= 215 contains #13
+  drawer #6   x[ 129, 584] cx   368.2 cy   379.5 w= 455 contains #9, #14
+  drawer #7   x[ 194, 614] cx   414.0 cy   662.3 w= 420 contains #15, #19
+  drawer #8   x[ 226, 628] cx   434.5 cy   781.6 w= 402 contains #10, #16
+  drawer #9   x[ 278, 564] cx   423.8 cy   230.5 w= 286 contains #5
+  drawer #10  x[ 646,1404] cx  1038.0 cy  1183.3 w= 758 contains #3
+  drawer #11  x[ 627,1439] cx  1057.5 cy   993.3 w= 812 contains #4, #6
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "drawer handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: drawer handle #<id>[, #<id> ...]

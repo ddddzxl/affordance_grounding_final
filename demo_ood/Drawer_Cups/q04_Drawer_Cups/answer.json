@@ -1,0 +1,10 @@
+{
+ "final": [
+  3
+ ],
+ "confidence": "high",
+ "kind": "select",
+ "note": "bottom of the column: handle 3 (cy=1759)",
+ "solver": "frontier-llm, manual CoT",
+ "based_on_frame": "0017"
+}

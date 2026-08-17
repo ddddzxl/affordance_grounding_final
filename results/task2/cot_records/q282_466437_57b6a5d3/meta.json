@@ -1,0 +1,213 @@
+{
+ "q": 282,
+ "visit": "466437",
+ "desc_id": "57b6a5d3-f031-42b3-926b-1219d3d1909b",
+ "text": "Open the small red jewelry box next to the mirror on the cabinet",
+ "parse": {
+  "text": "Open the small red jewelry box next to the mirror on the cabinet",
+  "target": {
+   "concept": "lid",
+   "host": "jewelry box"
+  },
+  "entities": [
+   {
+    "name": "lid",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "jewelry box",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "mirror",
+    "role": "landmark",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "jewelry box",
+    "b": "mirror"
+   },
+   {
+    "rel": "on_top",
+    "a": "jewelry box",
+    "b": "cabinet"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45260951",
+  "fid": "6170.109",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL",
+  "n_top": 8,
+  "topk": [
+   [
+    "45260951",
+    "6170.109"
+   ],
+   [
+    "45260951",
+    "6173.108"
+   ],
+   [
+    "45260951",
+    "6172.108"
+   ],
+   [
+    "45260951",
+    "6171.109"
+   ],
+   [
+    "45260951",
+    "6184.320"
+   ],
+   [
+    "45260951",
+    "6195.316"
+   ],
+   [
+    "45260951",
+    "6204.312"
+   ],
+   [
+    "45260951",
+    "6113.215"
+   ]
+  ],
+  "consistency": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_topk",
+   "n_pool": 50,
+   "n_vis": 0
+  },
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "lid",
+  "jewelry box",
+  "mirror",
+  "cabinet"
+ ],
+ "roles": {
+  "jewelry box": "host",
+  "mirror": "landmark",
+  "cabinet": "container",
+  "lid": "target"
+ },
+ "candidates": {
+  "lid": [
+   {
+    "x0": 406,
+    "x1": 1329,
+    "y0": 276,
+    "y1": 659,
+    "cx": 799.3,
+    "cy": 520.0,
+    "npix": 174935,
+    "area_pct": 6.327,
+    "score": 0.352
+   },
+   {
+    "x0": 520,
+    "x1": 569,
+    "y0": 119,
+    "y1": 212,
+    "cx": 541.5,
+    "cy": 168.4,
+    "npix": 3595,
+    "area_pct": 0.13,
+    "score": 0.291
+   },
+   {
+    "x0": 625,
+    "x1": 1260,
+    "y0": 0,
+    "y1": 451,
+    "cx": 937.7,
+    "cy": 216.0,
+    "npix": 251143,
+    "area_pct": 9.084,
+    "score": 0.274
+   }
+  ],
+  "jewelry box": [],
+  "mirror": [],
+  "cabinet": [
+   {
+    "x0": 411,
+    "x1": 1323,
+    "y0": 318,
+    "y1": 1438,
+    "cx": 856.1,
+    "cy": 945.5,
+    "npix": 570509,
+    "area_pct": 20.635,
+    "score": 0.825
+   },
+   {
+    "x0": 1269,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 89,
+    "cx": 1373.6,
+    "cy": 30.6,
+    "npix": 8301,
+    "area_pct": 0.3,
+    "score": 0.184
+   }
+  ]
+ },
+ "mask_keys": {
+  "lid": [
+   "lid|0",
+   "lid|1",
+   "lid|2"
+  ],
+  "jewelry box": []
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "landmark 'mirror' unusable",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "jewelry box lid",
+  "used": "lid",
+  "n_on_frame": 3,
+  "where": "selected_frame"
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

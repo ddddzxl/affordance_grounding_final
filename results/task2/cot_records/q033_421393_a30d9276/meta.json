@@ -1,0 +1,179 @@
+{
+ "q": 33,
+ "visit": "421393",
+ "desc_id": "a30d9276-c934-4332-915f-59f58674301c",
+ "text": "Plug the device in the right socket between the radiator and the closet",
+ "parse": {
+  "text": "Plug the device in the right socket between the radiator and the closet",
+  "target": {
+   "concept": "socket",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "socket",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "radiator",
+    "role": "landmark",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "between",
+    "a": "socket",
+    "b": "radiator"
+   },
+   {
+    "rel": "between",
+    "a": "socket",
+    "b": "closet"
+   }
+  ],
+  "select": [
+   {
+    "on": "socket",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42444923",
+  "fid": "220895.256",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 2,
+  "topk": [
+   [
+    "42444923",
+    "220895.256"
+   ],
+   [
+    "42444923",
+    "220894.257"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 137,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "socket",
+  "radiator",
+  "closet"
+ ],
+ "roles": {
+  "socket": "target",
+  "radiator": "landmark",
+  "closet": "landmark"
+ },
+ "candidates": {
+  "socket": [
+   {
+    "x0": 955,
+    "x1": 1103,
+    "y0": 1059,
+    "y1": 1152,
+    "cx": 1027.9,
+    "cy": 1106.0,
+    "npix": 9527,
+    "area_pct": 0.345,
+    "score": 0.89
+   }
+  ],
+  "radiator": [
+   {
+    "x0": 1200,
+    "x1": 1439,
+    "y0": 655,
+    "y1": 1266,
+    "cx": 1333.6,
+    "cy": 963.9,
+    "npix": 122286,
+    "area_pct": 4.423,
+    "score": 0.936
+   }
+  ],
+  "closet": [
+   {
+    "x0": 0,
+    "x1": 690,
+    "y0": 0,
+    "y1": 1396,
+    "cx": 300.0,
+    "cy": 697.3,
+    "npix": 753872,
+    "area_pct": 27.267,
+    "score": 0.828
+   },
+   {
+    "x0": 0,
+    "x1": 79,
+    "y0": 1506,
+    "y1": 1663,
+    "cx": 27.5,
+    "cy": 1577.3,
+    "npix": 6817,
+    "area_pct": 0.247,
+    "score": 0.224
+   }
+  ]
+ },
+ "mask_keys": {
+  "socket": [
+   "socket|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

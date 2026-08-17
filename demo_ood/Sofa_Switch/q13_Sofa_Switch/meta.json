@@ -1,0 +1,89 @@
+{
+ "scan": "Sofa_Switch",
+ "id": "q13",
+ "frame": "0014",
+ "rgb": "frame_00014.jpg",
+ "W": 1440,
+ "H": 1920,
+ "text": "Turn on the light using the switch near the sofa",
+ "parse": {
+  "target": {
+   "concept": "light switch",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "sofa",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "near",
+    "a": "light switch",
+    "b": "sofa"
+   }
+  ],
+  "select": [],
+  "residual": "the light being operated (a ceiling light) is not co-located with the switch and may not be within the scanned volume at all, so it is not made an entity"
+ },
+ "det": {
+  "light switch": [
+   {
+    "i": 0,
+    "score": 0.8549,
+    "n": 3903,
+    "x0": 340,
+    "x1": 389,
+    "y0": 574,
+    "y1": 679,
+    "cx": 364.26364335126823,
+    "cy": 626.9820650781451
+   },
+   {
+    "i": 1,
+    "score": 0.8419,
+    "n": 4366,
+    "x0": 215,
+    "x1": 279,
+    "y0": 620,
+    "y1": 726,
+    "cx": 246.024049473202,
+    "cy": 672.6791113147045
+   },
+   {
+    "i": 2,
+    "score": 0.7689,
+    "n": 4242,
+    "x0": 275,
+    "x1": 334,
+    "y0": 600,
+    "y1": 699,
+    "cx": 305.31211692597833,
+    "cy": 648.8760018859028
+   }
+  ],
+  "sofa": [
+   {
+    "i": 0,
+    "score": 0.9675,
+    "n": 1048480,
+    "x0": 342,
+    "x1": 1439,
+    "y0": 344,
+    "y1": 1919,
+    "cx": 984.534204753548,
+    "cy": 1181.2778584236228
+   }
+  ]
+ },
+ "n_miss": 0,
+ "n_rel_sat": 1,
+ "n_rel": 1
+}

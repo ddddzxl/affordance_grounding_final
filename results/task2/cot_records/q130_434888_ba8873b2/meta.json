@@ -1,0 +1,236 @@
+{
+ "q": 130,
+ "visit": "434888",
+ "desc_id": "ba8873b2-d297-49b5-a232-c6409b8f97ee",
+ "text": "Unplug the right lamp on the vanity table",
+ "parse": {
+  "text": "Unplug the right lamp on the vanity table",
+  "target": {
+   "concept": "plug",
+   "host": "lamp"
+  },
+  "entities": [
+   {
+    "name": "plug",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "vanity table",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "lamp",
+    "b": "vanity table"
+   }
+  ],
+  "select": [
+   {
+    "on": "lamp",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": "the plug sits at the socket end, not on the lamp; 'right' orders the lamps",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899184",
+  "fid": "184459.299",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 3,
+  "topk": [
+   [
+    "42899184",
+    "184459.299"
+   ],
+   [
+    "42899184",
+    "184442.805"
+   ],
+   [
+    "42899185",
+    "184318.307"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 105,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "plug",
+  "lamp",
+  "vanity table"
+ ],
+ "roles": {
+  "plug": "target",
+  "lamp": "host",
+  "vanity table": "container"
+ },
+ "candidates": {
+  "plug": [
+   {
+    "x0": 65,
+    "x1": 124,
+    "y0": 1333,
+    "y1": 1392,
+    "cx": 94.3,
+    "cy": 1356.7,
+    "npix": 2395,
+    "area_pct": 0.087,
+    "score": 0.589
+   },
+   {
+    "x0": 135,
+    "x1": 184,
+    "y0": 1267,
+    "y1": 1299,
+    "cx": 160.0,
+    "cy": 1282.4,
+    "npix": 1069,
+    "area_pct": 0.039,
+    "score": 0.507
+   },
+   {
+    "x0": 60,
+    "x1": 104,
+    "y0": 1740,
+    "y1": 1772,
+    "cx": 80.7,
+    "cy": 1756.1,
+    "npix": 1046,
+    "area_pct": 0.038,
+    "score": 0.233
+   },
+   {
+    "x0": 890,
+    "x1": 919,
+    "y0": 427,
+    "y1": 439,
+    "cx": 905.6,
+    "cy": 433.3,
+    "npix": 346,
+    "area_pct": 0.013,
+    "score": 0.161
+   }
+  ],
+  "lamp": [
+   {
+    "x0": 48,
+    "x1": 265,
+    "y0": 109,
+    "y1": 531,
+    "cx": 162.6,
+    "cy": 316.5,
+    "npix": 61736,
+    "area_pct": 2.233,
+    "score": 0.237
+   },
+   {
+    "x0": 918,
+    "x1": 1114,
+    "y0": 88,
+    "y1": 499,
+    "cx": 1015.9,
+    "cy": 292.9,
+    "npix": 57049,
+    "area_pct": 2.063,
+    "score": 0.209
+   }
+  ],
+  "vanity table": [
+   {
+    "x0": 14,
+    "x1": 1312,
+    "y0": 434,
+    "y1": 1376,
+    "cx": 655.5,
+    "cy": 720.6,
+    "npix": 453406,
+    "area_pct": 16.399,
+    "score": 0.865
+   },
+   {
+    "x0": 311,
+    "x1": 989,
+    "y0": 0,
+    "y1": 518,
+    "cx": 649.4,
+    "cy": 172.7,
+    "npix": 210598,
+    "area_pct": 7.617,
+    "score": 0.167
+   }
+  ]
+ },
+ "mask_keys": {
+  "plug": [
+   "plug|0",
+   "plug|1",
+   "plug|2",
+   "plug|3"
+  ],
+  "lamp": [
+   "lamp|0",
+   "lamp|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

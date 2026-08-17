@@ -1,0 +1,263 @@
+{
+ "q": 178,
+ "visit": "437294",
+ "desc_id": "0f43291f-ec8c-4ef3-9f21-4e1b53e7fe13",
+ "text": "Open to the left window above the radiator",
+ "parse": {
+  "text": "Open to the left window above the radiator",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "radiator",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "above",
+    "a": "window",
+    "b": "radiator"
+   }
+  ],
+  "select": [
+   {
+    "on": "window",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43649767",
+  "fid": "52372.053",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "43649767",
+    "52372.053"
+   ],
+   [
+    "43649767",
+    "52392.044"
+   ],
+   [
+    "43649762",
+    "52548.846"
+   ],
+   [
+    "43649762",
+    "52546.847"
+   ],
+   [
+    "43649767",
+    "52388.046"
+   ],
+   [
+    "43649762",
+    "52547.846"
+   ],
+   [
+    "43649767",
+    "52393.144"
+   ],
+   [
+    "43649763",
+    "52431.145"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 203,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "radiator"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "radiator": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 1300,
+    "x1": 1326,
+    "y0": 595,
+    "y1": 679,
+    "cx": 1314.8,
+    "cy": 637.0,
+    "npix": 1844,
+    "area_pct": 0.067,
+    "score": 0.588
+   },
+   {
+    "x0": 1320,
+    "x1": 1339,
+    "y0": 595,
+    "y1": 679,
+    "cx": 1331.0,
+    "cy": 638.0,
+    "npix": 1396,
+    "area_pct": 0.05,
+    "score": 0.539
+   },
+   {
+    "x0": 1880,
+    "x1": 1919,
+    "y0": 420,
+    "y1": 439,
+    "cx": 1901.6,
+    "cy": 429.9,
+    "npix": 629,
+    "area_pct": 0.023,
+    "score": 0.212
+   },
+   {
+    "x0": 427,
+    "x1": 546,
+    "y0": 100,
+    "y1": 184,
+    "cx": 490.1,
+    "cy": 140.8,
+    "npix": 3826,
+    "area_pct": 0.138,
+    "score": 0.157
+   }
+  ],
+  "window": [
+   {
+    "x0": 1708,
+    "x1": 1919,
+    "y0": 110,
+    "y1": 923,
+    "cx": 1820.0,
+    "cy": 514.8,
+    "npix": 159194,
+    "area_pct": 5.758,
+    "score": 0.657
+   },
+   {
+    "x0": 426,
+    "x1": 512,
+    "y0": 247,
+    "y1": 394,
+    "cx": 466.1,
+    "cy": 320.1,
+    "npix": 9474,
+    "area_pct": 0.343,
+    "score": 0.159
+   }
+  ],
+  "radiator": [
+   {
+    "x0": 1753,
+    "x1": 1919,
+    "y0": 962,
+    "y1": 1184,
+    "cx": 1838.4,
+    "cy": 1067.8,
+    "npix": 33768,
+    "area_pct": 1.221,
+    "score": 0.875
+   },
+   {
+    "x0": 1574,
+    "x1": 1752,
+    "y0": 957,
+    "y1": 1154,
+    "cx": 1667.5,
+    "cy": 1062.8,
+    "npix": 30137,
+    "area_pct": 1.09,
+    "score": 0.159
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2",
+   "window handle|3"
+  ],
+  "window": [
+   "window|0",
+   "window|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   3
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

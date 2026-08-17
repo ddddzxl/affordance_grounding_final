@@ -1,0 +1,50 @@
+TASK: "Open the left door of the wooden closet"
+
+PARSE:
+  target concept = "door handle"   <- the thing that must be output
+  host           = 'closet door'   <- countable object the target sits on
+  entity  : 'door handle'  role=target
+  entity  : 'closet door'  role=host
+  entity  : 'closet'  role=container
+  relation: contains(a='closet', b='closet door')
+  select  : on='closet door' axis=horizontal value='left' index=None from=None
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  door handle          0   827   866   355   479   846.2   416.4   0.157  0.865
+  door handle          1   754   799   340   473   780.5   409.7   0.171  0.856
+  door handle          2  1073  1119   995  1024  1095.8  1008.8   0.039  0.259
+  door handle          3  1080  1126   889   942  1104.7   913.3   0.073  0.204
+  closet door          0   328   826     0  1149   566.3   564.9  17.639  0.883
+  closet door          1   770  1247     0  1129   993.6   516.9  14.294  0.881
+  closet               0   326  1248     0  1150   758.6   542.4  33.218  0.959
+  closet               1  1180  1313   175   790  1249.6   491.6   1.685  0.161
+
+
+
+
+
+CONTAINMENT (door handle inside the FILLED mask of each closet door):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  closet door #0   x[ 328, 826] cx   566.3 cy   564.9 w= 498 contains #1   [via bbox, mask test found nothing]
+  closet door #1   x[ 770,1247] cx   993.6 cy   516.9 w= 477 contains #0
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "door handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: door handle #<id>[, #<id> ...]

@@ -1,0 +1,590 @@
+{
+ "_meta": "The 13 instructions of the OOD demo with their parses, using the same schema as the val pipeline. The vision side is cached and deduplicated by (scan, concept): instructions in one scene share a single set of detections, and only the parse and the reasoning differ per question.",
+ "Drawer_Cups": [
+  {
+   "id": "q01",
+   "text": "Open the top drawer of the cabinet with cups directly on top",
+   "parse": {
+    "target": {
+     "concept": "drawer handle",
+     "host": "drawer"
+    },
+    "entities": [
+     {
+      "name": "drawer handle",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "drawer",
+      "role": "host",
+      "instanceable": true
+     },
+     {
+      "name": "cabinet",
+      "role": "container",
+      "instanceable": true
+     },
+     {
+      "name": "cup",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "contains",
+      "a": "cabinet",
+      "b": "drawer"
+     },
+     {
+      "rel": "has_on_top",
+      "a": "cabinet",
+      "b": "cup"
+     }
+    ],
+    "select": [
+     {
+      "on": "drawer",
+      "axis": "vertical",
+      "value": "top",
+      "index": null,
+      "from": null
+     }
+    ],
+    "residual": null
+   }
+  },
+  {
+   "id": "q02",
+   "text": "Open the second drawer from the top of the cabinet with cups directly on top",
+   "parse": {
+    "target": {
+     "concept": "drawer handle",
+     "host": "drawer"
+    },
+    "entities": [
+     {
+      "name": "drawer handle",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "drawer",
+      "role": "host",
+      "instanceable": true
+     },
+     {
+      "name": "cabinet",
+      "role": "container",
+      "instanceable": true
+     },
+     {
+      "name": "cup",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "contains",
+      "a": "cabinet",
+      "b": "drawer"
+     },
+     {
+      "rel": "has_on_top",
+      "a": "cabinet",
+      "b": "cup"
+     }
+    ],
+    "select": [
+     {
+      "on": "drawer",
+      "axis": "ordinal",
+      "value": null,
+      "index": 2,
+      "from": "top"
+     }
+    ],
+    "residual": null
+   }
+  },
+  {
+   "id": "q03",
+   "text": "Open the third drawer from the top of the cabinet with cups directly on top",
+   "parse": {
+    "target": {
+     "concept": "drawer handle",
+     "host": "drawer"
+    },
+    "entities": [
+     {
+      "name": "drawer handle",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "drawer",
+      "role": "host",
+      "instanceable": true
+     },
+     {
+      "name": "cabinet",
+      "role": "container",
+      "instanceable": true
+     },
+     {
+      "name": "cup",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "contains",
+      "a": "cabinet",
+      "b": "drawer"
+     },
+     {
+      "rel": "has_on_top",
+      "a": "cabinet",
+      "b": "cup"
+     }
+    ],
+    "select": [
+     {
+      "on": "drawer",
+      "axis": "ordinal",
+      "value": null,
+      "index": 3,
+      "from": "top"
+     }
+    ],
+    "residual": null
+   }
+  },
+  {
+   "id": "q04",
+   "text": "Open the bottom drawer of the cabinet with cups directly on top",
+   "parse": {
+    "target": {
+     "concept": "drawer handle",
+     "host": "drawer"
+    },
+    "entities": [
+     {
+      "name": "drawer handle",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "drawer",
+      "role": "host",
+      "instanceable": true
+     },
+     {
+      "name": "cabinet",
+      "role": "container",
+      "instanceable": true
+     },
+     {
+      "name": "cup",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "contains",
+      "a": "cabinet",
+      "b": "drawer"
+     },
+     {
+      "rel": "has_on_top",
+      "a": "cabinet",
+      "b": "cup"
+     }
+    ],
+    "select": [
+     {
+      "on": "drawer",
+      "axis": "vertical",
+      "value": "bottom",
+      "index": null,
+      "from": null
+     }
+    ],
+    "residual": null
+   }
+  }
+ ],
+ "Kitchen_Task2": [
+  {
+   "id": "q05",
+   "text": "Open the left door of the refrigerator",
+   "parse": {
+    "target": {
+     "concept": "refrigerator door handle",
+     "host": "refrigerator door"
+    },
+    "entities": [
+     {
+      "name": "refrigerator door handle",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "refrigerator door",
+      "role": "host",
+      "instanceable": true
+     },
+     {
+      "name": "refrigerator",
+      "role": "container",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "contains",
+      "a": "refrigerator",
+      "b": "refrigerator door"
+     }
+    ],
+    "select": [
+     {
+      "on": "refrigerator door",
+      "axis": "horizontal",
+      "value": "left",
+      "index": null,
+      "from": null
+     }
+    ],
+    "residual": null
+   }
+  },
+  {
+   "id": "q06",
+   "text": "Open the right door of the refrigerator",
+   "parse": {
+    "target": {
+     "concept": "refrigerator door handle",
+     "host": "refrigerator door"
+    },
+    "entities": [
+     {
+      "name": "refrigerator door handle",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "refrigerator door",
+      "role": "host",
+      "instanceable": true
+     },
+     {
+      "name": "refrigerator",
+      "role": "container",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "contains",
+      "a": "refrigerator",
+      "b": "refrigerator door"
+     }
+    ],
+    "select": [
+     {
+      "on": "refrigerator door",
+      "axis": "horizontal",
+      "value": "right",
+      "index": null,
+      "from": null
+     }
+    ],
+    "residual": null
+   }
+  },
+  {
+   "id": "q07",
+   "text": "Open the left door of the cabinet above the refrigerator",
+   "parse": {
+    "target": {
+     "concept": "cabinet knob",
+     "host": "cabinet door"
+    },
+    "entities": [
+     {
+      "name": "cabinet knob",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "cabinet door",
+      "role": "host",
+      "instanceable": true
+     },
+     {
+      "name": "cabinet",
+      "role": "container",
+      "instanceable": true
+     },
+     {
+      "name": "refrigerator",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "contains",
+      "a": "cabinet",
+      "b": "cabinet door"
+     },
+     {
+      "rel": "above",
+      "a": "cabinet",
+      "b": "refrigerator"
+     }
+    ],
+    "select": [
+     {
+      "on": "cabinet door",
+      "axis": "horizontal",
+      "value": "left",
+      "index": null,
+      "from": null
+     }
+    ],
+    "residual": null
+   },
+   "frame": "0019",
+   "frame_why": "Automatic selection returned frame 0048 (the most knob detections, with every relation individually satisfied), but in that frame the refrigerator shows only a strip at the far left and there is no knob above it at all -- each relation holding individually is not the same as the whole target -> host -> container -> landmark chain landing on one set of instances. In frame 0019 the refrigerator scores 0.952 at 28.9% area with exactly two knobs directly above it, which is the frame this question can actually be reasoned on. Specified manually, with the limitation of automatic frame selection recorded as observed."
+  },
+  {
+   "id": "q08",
+   "text": "Open the right door of the cabinet above the refrigerator",
+   "parse": {
+    "target": {
+     "concept": "cabinet knob",
+     "host": "cabinet door"
+    },
+    "entities": [
+     {
+      "name": "cabinet knob",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "cabinet door",
+      "role": "host",
+      "instanceable": true
+     },
+     {
+      "name": "cabinet",
+      "role": "container",
+      "instanceable": true
+     },
+     {
+      "name": "refrigerator",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "contains",
+      "a": "cabinet",
+      "b": "cabinet door"
+     },
+     {
+      "rel": "above",
+      "a": "cabinet",
+      "b": "refrigerator"
+     }
+    ],
+    "select": [
+     {
+      "on": "cabinet door",
+      "axis": "horizontal",
+      "value": "right",
+      "index": null,
+      "from": null
+     }
+    ],
+    "residual": null
+   },
+   "frame": "0019",
+   "frame_why": "Automatic selection returned frame 0048 (the most knob detections, with every relation individually satisfied), but in that frame the refrigerator shows only a strip at the far left and there is no knob above it at all -- each relation holding individually is not the same as the whole target -> host -> container -> landmark chain landing on one set of instances. In frame 0019 the refrigerator scores 0.952 at 28.9% area with exactly two knobs directly above it, which is the frame this question can actually be reasoned on. Specified manually, with the limitation of automatic frame selection recorded as observed."
+  },
+  {
+   "id": "q09",
+   "text": "Open the door of the pantry to the left of the refrigerator",
+   "parse": {
+    "target": {
+     "concept": "door handle",
+     "host": "door"
+    },
+    "entities": [
+     {
+      "name": "door handle",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "door",
+      "role": "host",
+      "instanceable": true
+     },
+     {
+      "name": "pantry",
+      "role": "container",
+      "instanceable": false
+     },
+     {
+      "name": "refrigerator",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "left_of",
+      "a": "door",
+      "b": "refrigerator"
+     }
+    ],
+    "select": [],
+    "residual": "pantry is not instanceable (it is a space, not an object), so the relation attaches to the door"
+   }
+  },
+  {
+   "id": "q10",
+   "text": "Plug in the air fryer using the nearest socket",
+   "parse": {
+    "target": {
+     "concept": "socket",
+     "host": null
+    },
+    "entities": [
+     {
+      "name": "socket",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "air fryer",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "near",
+      "a": "socket",
+      "b": "air fryer"
+     }
+    ],
+    "select": [],
+    "residual": "'nearest' requires taking the closest socket by distance to the air fryer -- the schema has no distance axis, so this is left to the reasoning stage"
+   }
+  },
+  {
+   "id": "q11",
+   "text": "Plug in the Ninja blender using the nearest socket",
+   "parse": {
+    "target": {
+     "concept": "socket",
+     "host": null
+    },
+    "entities": [
+     {
+      "name": "socket",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "blender",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "near",
+      "a": "socket",
+      "b": "blender"
+     }
+    ],
+    "select": [],
+    "residual": "'nearest' as in q10; the brand name Ninja is not detectable, so only blender is kept"
+   }
+  },
+  {
+   "id": "q12",
+   "text": "Plug in the Instant Pot using the nearest socket",
+   "parse": {
+    "target": {
+     "concept": "socket",
+     "host": null
+    },
+    "entities": [
+     {
+      "name": "socket",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "pressure cooker",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "near",
+      "a": "socket",
+      "b": "pressure cooker"
+     }
+    ],
+    "select": [],
+    "residual": "'nearest' as in q10; Instant Pot is a brand name, so the retrieval term is the generic pressure cooker"
+   }
+  }
+ ],
+ "Sofa_Switch": [
+  {
+   "id": "q13",
+   "text": "Turn on the light using the switch near the sofa",
+   "parse": {
+    "target": {
+     "concept": "light switch",
+     "host": null
+    },
+    "entities": [
+     {
+      "name": "light switch",
+      "role": "target",
+      "instanceable": true
+     },
+     {
+      "name": "sofa",
+      "role": "landmark",
+      "instanceable": true
+     }
+    ],
+    "relations": [
+     {
+      "rel": "near",
+      "a": "light switch",
+      "b": "sofa"
+     }
+    ],
+    "select": [],
+    "residual": "the light being operated (a ceiling light) is not co-located with the switch and may not be within the scanned volume at all, so it is not made an entity"
+   }
+  }
+ ]
+}

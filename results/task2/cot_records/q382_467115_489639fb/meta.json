@@ -1,0 +1,135 @@
+{
+ "q": 382,
+ "visit": "467115",
+ "desc_id": "489639fb-811a-4088-85f1-6be8cdf5c74a",
+ "text": "Control the temperature using the radiator dial next to the TV",
+ "parse": {
+  "text": "Control the temperature using the radiator dial next to the TV",
+  "target": {
+   "concept": "radiator dial",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "radiator dial",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "TV",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "radiator dial",
+    "b": "TV"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333319",
+  "fid": "28534.151",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 1,
+  "topk": [
+   [
+    "47333319",
+    "28534.151"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 21
+ },
+ "concepts": [
+  "radiator dial",
+  "TV"
+ ],
+ "roles": {
+  "radiator dial": "target",
+  "TV": "landmark"
+ },
+ "candidates": {
+  "radiator dial": [
+   {
+    "x0": 0,
+    "x1": 34,
+    "y0": 246,
+    "y1": 299,
+    "cx": 15.5,
+    "cy": 272.3,
+    "npix": 1699,
+    "area_pct": 0.061,
+    "score": 0.243
+   }
+  ],
+  "TV": [
+   {
+    "x0": 55,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 776,
+    "cx": 774.9,
+    "cy": 378.4,
+    "npix": 1016771,
+    "area_pct": 36.776,
+    "score": 0.855
+   },
+   {
+    "x0": 0,
+    "x1": 54,
+    "y0": 0,
+    "y1": 244,
+    "cx": 24.7,
+    "cy": 56.3,
+    "npix": 5428,
+    "area_pct": 0.196,
+    "score": 0.245
+   }
+  ]
+ },
+ "mask_keys": {
+  "radiator dial": [
+   "radiator dial|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

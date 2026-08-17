@@ -1,0 +1,43 @@
+TASK: "Adjust the room's temperature using the dial next to the door"
+
+PARSE:
+  target concept = "radiator knob"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'radiator knob'  role=target
+  entity  : 'door'  role=landmark
+  relation: next_to(a='radiator knob', b='door')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  radiator knob        0   790   819   967   999   804.0   981.3   0.027  0.485
+  radiator knob        1   775   805   673   706   791.2   688.6    0.03   0.46
+  radiator knob        2   780   809   813   846   796.9   831.4   0.027  0.456
+  radiator knob        3   855   879   693   720   866.4   706.7   0.021  0.453
+  radiator knob        4   860   879   820   852   870.2   836.9    0.02  0.444
+  radiator knob        5   852   879   567   599   866.1   584.0   0.021  0.436
+  radiator knob        6   845   859   187   206   851.7   195.8    0.01  0.315
+  radiator knob        7   885   889   333   352   887.0   342.8   0.003  0.171
+  radiator knob        8   717   789   748   846   755.7   794.9   0.137  0.153
+  door                 0    86   776     0  1919   492.7   822.8  30.717  0.933
+  door                 1   839   906     0   525   863.1   250.6   0.737  0.695
+  door                 2   691   840     0   650   771.9   292.2   2.751  0.635
+  door                 3   880   920     0   814   902.9   366.7   0.897  0.463
+  door                 4     0   473     7  1919    97.9  1165.2  11.153  0.185
+
+QUESTION: which "radiator knob" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: radiator knob #<id>[, #<id> ...]

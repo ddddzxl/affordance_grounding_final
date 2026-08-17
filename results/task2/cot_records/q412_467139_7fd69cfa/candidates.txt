@@ -1,0 +1,45 @@
+TASK: "Flush the toilet"
+
+PARSE:
+  target concept = "flush button"   <- the thing that must be output
+  host           = 'toilet'   <- countable object the target sits on
+  entity  : 'flush button'  role=target
+  entity  : 'toilet'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  flush button         0   661   916     0    44   762.7    17.2   0.277   0.78
+  flush button         1   900   939     0     9   916.4     3.7   0.011   0.57
+  flush button         2   920   946  1248  1280   933.8  1264.5   0.026  0.244
+  flush button         3   613   639   370   394   626.7   381.5   0.022  0.233
+  flush button         4   980  1006   275   304   994.2   287.7   0.023  0.227
+  flush button         5    80   127   660   734   104.3   694.7    0.11  0.179
+  toilet               0   553  1353   108  1324   930.9   728.2  21.677  0.989
+
+
+
+
+
+CONTAINMENT (flush button inside the FILLED mask of each toilet):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  toilet #0   x[ 553,1353] cx   930.9 cy   728.2 w= 800 contains #2, #3, #4
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "flush button" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: flush button #<id>[, #<id> ...]

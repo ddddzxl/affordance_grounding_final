@@ -1,0 +1,255 @@
+{
+ "q": 384,
+ "visit": "467115",
+ "desc_id": "59b08ea9-f091-45c4-ad78-8ee6ae677311",
+ "text": "Open the drawer under the oven",
+ "parse": {
+  "text": "Open the drawer under the oven",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "oven",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "under",
+    "a": "drawer",
+    "b": "oven"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333319",
+  "fid": "28354.658",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333319",
+    "28354.658"
+   ],
+   [
+    "47333308",
+    "28020.161"
+   ],
+   [
+    "47333310",
+    "28302.762"
+   ],
+   [
+    "47333319",
+    "28481.856"
+   ],
+   [
+    "47333308",
+    "28017.162"
+   ],
+   [
+    "47333308",
+    "28099.362"
+   ],
+   [
+    "47333308",
+    "28021.160"
+   ],
+   [
+    "47333308",
+    "28018.162"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.817,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.624,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.544,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "oven"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "oven": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 710,
+    "x1": 1069,
+    "y0": 1320,
+    "y1": 1379,
+    "cx": 887.8,
+    "cy": 1347.8,
+    "npix": 8853,
+    "area_pct": 0.32,
+    "score": 0.951
+   },
+   {
+    "x0": 560,
+    "x1": 599,
+    "y0": 1720,
+    "y1": 1919,
+    "cx": 578.0,
+    "cy": 1823.9,
+    "npix": 7094,
+    "area_pct": 0.257,
+    "score": 0.325
+   },
+   {
+    "x0": 1107,
+    "x1": 1163,
+    "y0": 1777,
+    "y1": 1919,
+    "cx": 1135.0,
+    "cy": 1850.3,
+    "npix": 6161,
+    "area_pct": 0.223,
+    "score": 0.198
+   },
+   {
+    "x0": 0,
+    "x1": 159,
+    "y0": 1688,
+    "y1": 1904,
+    "cx": 72.3,
+    "cy": 1764.4,
+    "npix": 14630,
+    "area_pct": 0.529,
+    "score": 0.15
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 500,
+    "x1": 1224,
+    "y0": 872,
+    "y1": 1409,
+    "cx": 876.3,
+    "cy": 1110.0,
+    "npix": 326128,
+    "area_pct": 11.796,
+    "score": 0.649
+   },
+   {
+    "x0": 1215,
+    "x1": 1439,
+    "y0": 867,
+    "y1": 1340,
+    "cx": 1330.7,
+    "cy": 1103.4,
+    "npix": 99602,
+    "area_pct": 3.603,
+    "score": 0.511
+   }
+  ],
+  "oven": [
+   {
+    "x0": 604,
+    "x1": 1250,
+    "y0": 1563,
+    "y1": 1919,
+    "cx": 893.8,
+    "cy": 1772.3,
+    "npix": 179846,
+    "area_pct": 6.505,
+    "score": 0.564
+   },
+   {
+    "x0": 0,
+    "x1": 603,
+    "y0": 1019,
+    "y1": 1919,
+    "cx": 298.9,
+    "cy": 1478.6,
+    "npix": 507672,
+    "area_pct": 18.362,
+    "score": 0.183
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

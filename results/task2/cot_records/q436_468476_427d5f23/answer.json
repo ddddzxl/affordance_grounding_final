@@ -1,0 +1,9 @@
+{
+ "final": [
+  1
+ ],
+ "confidence": "medium",
+ "kind": "containment",
+ "flaw": "ambiguous_gt",
+ "solver": "frontier-llm, manual CoT"
+}

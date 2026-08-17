@@ -1,0 +1,42 @@
+TASK: "Adjust the room's temperature using the radiator dial"
+
+PARSE:
+  target concept = "radiator knob"   <- the thing that must be output
+  host           = 'radiator'   <- countable object the target sits on
+  entity  : 'radiator knob'  role=target
+  entity  : 'radiator'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  radiator knob        0   841   894  1026  1092   868.9  1057.9    0.09  0.774
+  radiator knob        1   585   614   641   686   600.5   661.8   0.031  0.689
+  radiator knob        2   870   937  1527  1746   904.5  1611.8   0.285  0.565
+  radiator             0   570   891   648  1605   748.1  1109.5    5.18  0.956
+
+
+
+
+
+CONTAINMENT (radiator knob inside the FILLED mask of each radiator):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  radiator #0   x[ 570, 891] cx   748.1 cy  1109.5 w= 321 contains #0
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "radiator knob" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: radiator knob #<id>[, #<id> ...]

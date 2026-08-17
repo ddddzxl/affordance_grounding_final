@@ -1,0 +1,221 @@
+{
+ "q": 170,
+ "visit": "437157",
+ "desc_id": "163b76b3-e52c-4294-ba87-370528f84e46",
+ "text": "Open the drawer of the bedside table with the telephone on top",
+ "parse": {
+  "text": "Open the drawer of the bedside table with the telephone on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "bedside table",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "telephone",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "bedside table",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "bedside table",
+    "b": "telephone"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43649686",
+  "fid": "36162.281",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "43649686",
+    "36162.281"
+   ],
+   [
+    "43649686",
+    "36160.565"
+   ],
+   [
+    "43649686",
+    "36158.565"
+   ],
+   [
+    "43649686",
+    "36159.565"
+   ],
+   [
+    "43649686",
+    "36163.280"
+   ],
+   [
+    "43649686",
+    "36157.566"
+   ],
+   [
+    "43649686",
+    "36156.566"
+   ],
+   [
+    "43649686",
+    "36152.568"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 239,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "bedside table",
+  "telephone"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "bedside table": "container",
+  "telephone": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 760,
+    "x1": 804,
+    "y0": 953,
+    "y1": 999,
+    "cx": 783.0,
+    "cy": 973.4,
+    "npix": 1678,
+    "area_pct": 0.061,
+    "score": 0.919
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 560,
+    "x1": 1069,
+    "y0": 890,
+    "y1": 1066,
+    "cx": 825.0,
+    "cy": 974.2,
+    "npix": 57572,
+    "area_pct": 2.082,
+    "score": 0.953
+   }
+  ],
+  "bedside table": [
+   {
+    "x0": 396,
+    "x1": 1346,
+    "y0": 688,
+    "y1": 1919,
+    "cx": 924.5,
+    "cy": 1096.6,
+    "npix": 427123,
+    "area_pct": 15.449,
+    "score": 0.979
+   }
+  ],
+  "telephone": [
+   {
+    "x0": 1100,
+    "x1": 1335,
+    "y0": 400,
+    "y1": 759,
+    "cx": 1214.2,
+    "cy": 613.9,
+    "npix": 46788,
+    "area_pct": 1.692,
+    "score": 0.881
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0"
+  ],
+  "drawer": [
+   "drawer|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

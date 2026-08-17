@@ -1,0 +1,206 @@
+{
+ "q": 267,
+ "visit": "466162",
+ "desc_id": "96d8570f-8c99-4c30-b502-ed5a5b7133f7",
+ "text": "Turn on the faucet",
+ "parse": {
+  "text": "Turn on the faucet",
+  "target": {
+   "concept": "faucet handle",
+   "host": "faucet"
+  },
+  "entities": [
+   {
+    "name": "faucet handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "faucet",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796575",
+  "fid": "16939.494",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44796575",
+    "16939.494"
+   ],
+   [
+    "44796576",
+    "16747.690"
+   ],
+   [
+    "44796579",
+    "16810.580"
+   ],
+   [
+    "44796575",
+    "16908.190"
+   ],
+   [
+    "44796576",
+    "16746.690"
+   ],
+   [
+    "44796579",
+    "16836.786"
+   ],
+   [
+    "44796576",
+    "16729.281"
+   ],
+   [
+    "44796576",
+    "16730.680"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "faucet handle",
+  "faucet"
+ ],
+ "roles": {
+  "faucet handle": "target",
+  "faucet": "host"
+ },
+ "candidates": {
+  "faucet handle": [
+   {
+    "x0": 907,
+    "x1": 946,
+    "y0": 785,
+    "y1": 823,
+    "cx": 926.0,
+    "cy": 802.1,
+    "npix": 1090,
+    "area_pct": 0.039,
+    "score": 0.733
+   },
+   {
+    "x0": 720,
+    "x1": 766,
+    "y0": 815,
+    "y1": 850,
+    "cx": 741.7,
+    "cy": 830.0,
+    "npix": 1196,
+    "area_pct": 0.043,
+    "score": 0.713
+   },
+   {
+    "x0": 953,
+    "x1": 972,
+    "y0": 865,
+    "y1": 890,
+    "cx": 961.3,
+    "cy": 879.3,
+    "npix": 390,
+    "area_pct": 0.014,
+    "score": 0.198
+   }
+  ],
+  "faucet": [
+   {
+    "x0": 720,
+    "x1": 785,
+    "y0": 815,
+    "y1": 929,
+    "cx": 746.4,
+    "cy": 880.0,
+    "npix": 4514,
+    "area_pct": 0.163,
+    "score": 0.897
+   },
+   {
+    "x0": 907,
+    "x1": 958,
+    "y0": 785,
+    "y1": 933,
+    "cx": 928.2,
+    "cy": 847.5,
+    "npix": 4127,
+    "area_pct": 0.149,
+    "score": 0.699
+   }
+  ]
+ },
+ "mask_keys": {
+  "faucet handle": [
+   "faucet handle|0",
+   "faucet handle|1",
+   "faucet handle|2"
+  ],
+  "faucet": [
+   "faucet|0",
+   "faucet|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

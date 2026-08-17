@@ -1,0 +1,49 @@
+TASK: "Close the door next to the red armchair"
+
+PARSE:
+  target concept = "door handle"   <- the thing that must be output
+  host           = 'door'   <- countable object the target sits on
+  entity  : 'door handle'  role=target
+  entity  : 'door'  role=host
+  entity  : 'armchair'  role=landmark
+  relation: next_to(a='door', b='armchair')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  door handle          0  1187  1226   505   614  1204.0   562.1   0.106  0.872
+  door handle          1  1100  1146   955   989  1125.5   975.6   0.037  0.418
+  door handle          2  1160  1172   515   544  1166.0   529.5   0.014  0.232
+  door handle          3   140   179   144   239   161.0   198.8   0.088  0.184
+  door handle          4  1161  1179   215   282  1171.3   246.2   0.036  0.182
+  door handle          5  1613  1626   510   549  1619.6   529.9   0.019  0.171
+  door                 0  1173  1332   119  1028  1246.7   545.5   4.208  0.959
+  armchair             0  1616  1919   765  1258  1778.0  1046.7   4.057  0.545
+  armchair             1   959  1466   958  1436  1241.8  1143.8   3.926  0.313
+
+
+
+
+
+CONTAINMENT (door handle inside the FILLED mask of each door):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  door #0   x[1173,1332] cx  1246.7 cy   545.5 w= 159 contains #0, #4
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "door handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: door handle #<id>[, #<id> ...]

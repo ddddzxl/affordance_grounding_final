@@ -1,0 +1,8 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "high",
+ "kind": "container",
+ "solver": "frontier-llm, manual CoT"
+}

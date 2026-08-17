@@ -1,0 +1,367 @@
+{
+ "q": 284,
+ "visit": "466437",
+ "desc_id": "7640da2c-44de-4bc2-85e8-fe524c0af2a8",
+ "text": "Open the top drawer of the wooden nightstand with the books on top",
+ "parse": {
+  "text": "Open the top drawer of the wooden nightstand with the books on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "nightstand",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "books",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "nightstand",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "nightstand",
+    "b": "books"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45260952",
+  "fid": "6047.108",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "45260952",
+    "6047.108"
+   ],
+   [
+    "45260951",
+    "6183.321"
+   ],
+   [
+    "45260951",
+    "6186.319"
+   ],
+   [
+    "45260951",
+    "6184.320"
+   ],
+   [
+    "45260951",
+    "6182.321"
+   ],
+   [
+    "45260951",
+    "6187.319"
+   ],
+   [
+    "45260952",
+    "6048.107"
+   ],
+   [
+    "45260951",
+    "6178.106"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "nightstand",
+  "books"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "nightstand": "container",
+  "books": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 635,
+    "x1": 769,
+    "y0": 1020,
+    "y1": 1052,
+    "cx": 699.2,
+    "cy": 1038.0,
+    "npix": 2475,
+    "area_pct": 0.09,
+    "score": 0.915
+   },
+   {
+    "x0": 635,
+    "x1": 759,
+    "y0": 1200,
+    "y1": 1232,
+    "cx": 697.5,
+    "cy": 1218.1,
+    "npix": 2169,
+    "area_pct": 0.078,
+    "score": 0.909
+   },
+   {
+    "x0": 750,
+    "x1": 794,
+    "y0": 67,
+    "y1": 99,
+    "cx": 772.4,
+    "cy": 82.1,
+    "npix": 1380,
+    "area_pct": 0.05,
+    "score": 0.22
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 505,
+    "x1": 883,
+    "y0": 929,
+    "y1": 1122,
+    "cx": 691.8,
+    "cy": 1023.7,
+    "npix": 65447,
+    "area_pct": 2.367,
+    "score": 0.961
+   },
+   {
+    "x0": 515,
+    "x1": 867,
+    "y0": 1111,
+    "y1": 1304,
+    "cx": 687.2,
+    "cy": 1204.2,
+    "npix": 60051,
+    "area_pct": 2.172,
+    "score": 0.953
+   },
+   {
+    "x0": 650,
+    "x1": 886,
+    "y0": 159,
+    "y1": 246,
+    "cx": 769.1,
+    "cy": 211.6,
+    "npix": 14876,
+    "area_pct": 0.538,
+    "score": 0.304
+   },
+   {
+    "x0": 645,
+    "x1": 894,
+    "y0": 59,
+    "y1": 138,
+    "cx": 771.8,
+    "cy": 90.3,
+    "npix": 13998,
+    "area_pct": 0.506,
+    "score": 0.282
+   },
+   {
+    "x0": 649,
+    "x1": 888,
+    "y0": 107,
+    "y1": 207,
+    "cx": 765.4,
+    "cy": 149.9,
+    "npix": 16482,
+    "area_pct": 0.596,
+    "score": 0.257
+   }
+  ],
+  "nightstand": [
+   {
+    "x0": 486,
+    "x1": 944,
+    "y0": 742,
+    "y1": 1304,
+    "cx": 700.4,
+    "cy": 1053.1,
+    "npix": 188548,
+    "area_pct": 6.82,
+    "score": 0.972
+   }
+  ],
+  "books": [
+   {
+    "x0": 756,
+    "x1": 914,
+    "y0": 621,
+    "y1": 805,
+    "cx": 835.5,
+    "cy": 707.5,
+    "npix": 24744,
+    "area_pct": 0.895,
+    "score": 0.739
+   },
+   {
+    "x0": 545,
+    "x1": 699,
+    "y0": 780,
+    "y1": 846,
+    "cx": 623.2,
+    "cy": 813.4,
+    "npix": 10070,
+    "area_pct": 0.364,
+    "score": 0.703
+   },
+   {
+    "x0": 750,
+    "x1": 877,
+    "y0": 574,
+    "y1": 619,
+    "cx": 814.2,
+    "cy": 598.1,
+    "npix": 4918,
+    "area_pct": 0.178,
+    "score": 0.399
+   },
+   {
+    "x0": 753,
+    "x1": 869,
+    "y0": 545,
+    "y1": 579,
+    "cx": 808.9,
+    "cy": 562.0,
+    "npix": 3418,
+    "area_pct": 0.124,
+    "score": 0.37
+   },
+   {
+    "x0": 712,
+    "x1": 758,
+    "y0": 581,
+    "y1": 759,
+    "cx": 740.6,
+    "cy": 674.9,
+    "npix": 5147,
+    "area_pct": 0.186,
+    "score": 0.26
+   },
+   {
+    "x0": 760,
+    "x1": 899,
+    "y0": 787,
+    "y1": 892,
+    "cx": 828.3,
+    "cy": 838.7,
+    "npix": 13618,
+    "area_pct": 0.493,
+    "score": 0.256
+   },
+   {
+    "x0": 679,
+    "x1": 729,
+    "y0": 590,
+    "y1": 753,
+    "cx": 708.2,
+    "cy": 663.5,
+    "npix": 5783,
+    "area_pct": 0.209,
+    "score": 0.155
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

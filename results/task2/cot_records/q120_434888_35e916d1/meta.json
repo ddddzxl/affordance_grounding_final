@@ -1,0 +1,227 @@
+{
+ "q": 120,
+ "visit": "434888",
+ "desc_id": "35e916d1-6095-4479-8c60-16f321c8339a",
+ "text": "Open the drawer of the nightstand located to the left of the bed",
+ "parse": {
+  "text": "Open the drawer of the nightstand located to the left of the bed",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "nightstand",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "bed",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "nightstand",
+    "b": "drawer"
+   },
+   {
+    "rel": "left_of",
+    "a": "nightstand",
+    "b": "bed"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899187",
+  "fid": "184356.808",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 4,
+  "topk": [
+   [
+    "42899187",
+    "184356.808"
+   ],
+   [
+    "42899184",
+    "184437.808"
+   ],
+   [
+    "42899184",
+    "184485.005"
+   ],
+   [
+    "42899187",
+    "184408.903"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 105,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "nightstand",
+  "bed"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "nightstand": "container",
+  "bed": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 345,
+    "x1": 373,
+    "y0": 387,
+    "y1": 406,
+    "cx": 358.4,
+    "cy": 396.0,
+    "npix": 475,
+    "area_pct": 0.017,
+    "score": 0.82
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 245,
+    "x1": 465,
+    "y0": 367,
+    "y1": 426,
+    "cx": 354.7,
+    "cy": 396.7,
+    "npix": 12934,
+    "area_pct": 0.468,
+    "score": 0.908
+   }
+  ],
+  "nightstand": [
+   {
+    "x0": 177,
+    "x1": 528,
+    "y0": 327,
+    "y1": 825,
+    "cx": 353.4,
+    "cy": 495.2,
+    "npix": 66655,
+    "area_pct": 2.411,
+    "score": 0.965
+   }
+  ],
+  "bed": [
+   {
+    "x0": 291,
+    "x1": 1439,
+    "y0": 146,
+    "y1": 1766,
+    "cx": 915.5,
+    "cy": 998.7,
+    "npix": 1359814,
+    "area_pct": 49.183,
+    "score": 0.903
+   },
+   {
+    "x0": 1350,
+    "x1": 1439,
+    "y0": 295,
+    "y1": 553,
+    "cx": 1405.5,
+    "cy": 435.9,
+    "npix": 15203,
+    "area_pct": 0.55,
+    "score": 0.28
+   },
+   {
+    "x0": 553,
+    "x1": 1171,
+    "y0": 0,
+    "y1": 355,
+    "cx": 838.0,
+    "cy": 108.9,
+    "npix": 119714,
+    "area_pct": 4.33,
+    "score": 0.217
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0"
+  ],
+  "drawer": [
+   "drawer|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

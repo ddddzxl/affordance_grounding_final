@@ -1,0 +1,252 @@
+{
+ "q": 29,
+ "visit": "421393",
+ "desc_id": "561310ae-a8f4-424c-84cc-d1ecf6a00959",
+ "text": "Turn on the ceiling light using the switch next to the door",
+ "parse": {
+  "text": "Turn on the ceiling light using the switch next to the door",
+  "target": {
+   "concept": "light switch",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "light switch",
+    "b": "door"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42444923",
+  "fid": "220941.254",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42444923",
+    "220941.254"
+   ],
+   [
+    "42444924",
+    "220961.063"
+   ],
+   [
+    "42444924",
+    "220959.064"
+   ],
+   [
+    "42444924",
+    "220962.063"
+   ],
+   [
+    "42444923",
+    "220939.255"
+   ],
+   [
+    "42444923",
+    "220885.960"
+   ],
+   [
+    "42444923",
+    "220879.063"
+   ],
+   [
+    "42444924",
+    "220960.063"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 137,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch",
+  "door"
+ ],
+ "roles": {
+  "light switch": "target",
+  "door": "landmark"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 710,
+    "x1": 729,
+    "y0": 953,
+    "y1": 1006,
+    "cx": 719.5,
+    "cy": 979.5,
+    "npix": 1064,
+    "area_pct": 0.038,
+    "score": 0.829
+   },
+   {
+    "x0": 685,
+    "x1": 714,
+    "y0": 1233,
+    "y1": 1306,
+    "cx": 699.6,
+    "cy": 1269.0,
+    "npix": 1756,
+    "area_pct": 0.064,
+    "score": 0.337
+   },
+   {
+    "x0": 700,
+    "x1": 719,
+    "y0": 1407,
+    "y1": 1446,
+    "cx": 709.3,
+    "cy": 1422.8,
+    "npix": 608,
+    "area_pct": 0.022,
+    "score": 0.262
+   }
+  ],
+  "door": [
+   {
+    "x0": 223,
+    "x1": 582,
+    "y0": 511,
+    "y1": 1919,
+    "cx": 404.6,
+    "cy": 1229.0,
+    "npix": 385128,
+    "area_pct": 13.93,
+    "score": 0.975
+   },
+   {
+    "x0": 1006,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 1919,
+    "cx": 1242.2,
+    "cy": 963.5,
+    "npix": 741337,
+    "area_pct": 26.813,
+    "score": 0.965
+   },
+   {
+    "x0": 791,
+    "x1": 874,
+    "y0": 708,
+    "y1": 1557,
+    "cx": 832.7,
+    "cy": 1126.3,
+    "npix": 39653,
+    "area_pct": 1.434,
+    "score": 0.824
+   },
+   {
+    "x0": 835,
+    "x1": 893,
+    "y0": 707,
+    "y1": 1514,
+    "cx": 864.0,
+    "cy": 1089.8,
+    "npix": 15079,
+    "area_pct": 0.545,
+    "score": 0.53
+   },
+   {
+    "x0": 995,
+    "x1": 1044,
+    "y0": 926,
+    "y1": 1346,
+    "cx": 1021.6,
+    "cy": 1129.4,
+    "npix": 13333,
+    "area_pct": 0.482,
+    "score": 0.405
+   },
+   {
+    "x0": 968,
+    "x1": 1022,
+    "y0": 933,
+    "y1": 1396,
+    "cx": 993.4,
+    "cy": 1164.6,
+    "npix": 14723,
+    "area_pct": 0.533,
+    "score": 0.374
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0",
+   "light switch|1",
+   "light switch|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

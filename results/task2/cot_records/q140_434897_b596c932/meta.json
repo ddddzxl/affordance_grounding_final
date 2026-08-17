@@ -1,0 +1,124 @@
+{
+ "q": 140,
+ "visit": "434897",
+ "desc_id": "b596c932-bd3d-4bfd-a562-3f3efabfe6ae",
+ "text": "Plug the device in the one of the sockets next to the wooden closet",
+ "parse": {
+  "text": "Plug the device in the one of the sockets next to the wooden closet",
+  "target": {
+   "concept": "socket",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "socket",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "socket",
+    "b": "closet"
+   }
+  ],
+  "select": [],
+  "residual": "'one of the sockets' — any instance satisfying the relation is acceptable",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899163",
+  "fid": "182706.737",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "42899163",
+    "182706.737"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 94,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "socket",
+  "closet"
+ ],
+ "roles": {
+  "socket": "target",
+  "closet": "landmark"
+ },
+ "candidates": {
+  "socket": [
+   {
+    "x0": 374,
+    "x1": 474,
+    "y0": 607,
+    "y1": 666,
+    "cx": 423.1,
+    "cy": 634.6,
+    "npix": 5303,
+    "area_pct": 0.192,
+    "score": 0.887
+   }
+  ],
+  "closet": [
+   {
+    "x0": 0,
+    "x1": 310,
+    "y0": 445,
+    "y1": 1820,
+    "cx": 131.5,
+    "cy": 1227.8,
+    "npix": 262012,
+    "area_pct": 9.477,
+    "score": 0.566
+   }
+  ]
+ },
+ "mask_keys": {
+  "socket": [
+   "socket|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "final": [
+  0,
+  1
+ ],
+ "confidence": "medium",
+ "kind": "host_unique_give_all",
+ "solver": "frontier-llm, manual CoT"
+}

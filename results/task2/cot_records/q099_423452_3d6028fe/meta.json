@@ -1,0 +1,268 @@
+{
+ "q": 99,
+ "visit": "423452",
+ "desc_id": "3d6028fe-a7c3-41d8-b583-aada17860b51",
+ "text": "Close the door next to the red armchair",
+ "parse": {
+  "text": "Close the door next to the red armchair",
+  "target": {
+   "concept": "door handle",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "armchair",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "door",
+    "b": "armchair"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897422",
+  "fid": "104033.148",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42897422",
+    "104033.148"
+   ],
+   [
+    "42897422",
+    "104059.137"
+   ],
+   [
+    "42897434",
+    "104333.839"
+   ],
+   [
+    "42897422",
+    "104058.137"
+   ],
+   [
+    "42897426",
+    "104130.740"
+   ],
+   [
+    "42897426",
+    "104129.741"
+   ],
+   [
+    "42897434",
+    "104161.261"
+   ],
+   [
+    "42897434",
+    "104337.937"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.732,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.589,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 309,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "door",
+  "armchair"
+ ],
+ "roles": {
+  "door handle": "target",
+  "door": "host",
+  "armchair": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1187,
+    "x1": 1226,
+    "y0": 505,
+    "y1": 614,
+    "cx": 1204.0,
+    "cy": 562.1,
+    "npix": 2935,
+    "area_pct": 0.106,
+    "score": 0.872
+   },
+   {
+    "x0": 1100,
+    "x1": 1146,
+    "y0": 955,
+    "y1": 989,
+    "cx": 1125.5,
+    "cy": 975.6,
+    "npix": 1016,
+    "area_pct": 0.037,
+    "score": 0.418
+   },
+   {
+    "x0": 1160,
+    "x1": 1172,
+    "y0": 515,
+    "y1": 544,
+    "cx": 1166.0,
+    "cy": 529.5,
+    "npix": 379,
+    "area_pct": 0.014,
+    "score": 0.232
+   },
+   {
+    "x0": 140,
+    "x1": 179,
+    "y0": 144,
+    "y1": 239,
+    "cx": 161.0,
+    "cy": 198.8,
+    "npix": 2440,
+    "area_pct": 0.088,
+    "score": 0.184
+   },
+   {
+    "x0": 1161,
+    "x1": 1179,
+    "y0": 215,
+    "y1": 282,
+    "cx": 1171.3,
+    "cy": 246.2,
+    "npix": 999,
+    "area_pct": 0.036,
+    "score": 0.182
+   },
+   {
+    "x0": 1613,
+    "x1": 1626,
+    "y0": 510,
+    "y1": 549,
+    "cx": 1619.6,
+    "cy": 529.9,
+    "npix": 531,
+    "area_pct": 0.019,
+    "score": 0.171
+   }
+  ],
+  "door": [
+   {
+    "x0": 1173,
+    "x1": 1332,
+    "y0": 119,
+    "y1": 1028,
+    "cx": 1246.7,
+    "cy": 545.5,
+    "npix": 116340,
+    "area_pct": 4.208,
+    "score": 0.959
+   }
+  ],
+  "armchair": [
+   {
+    "x0": 1616,
+    "x1": 1919,
+    "y0": 765,
+    "y1": 1258,
+    "cx": 1778.0,
+    "cy": 1046.7,
+    "npix": 112164,
+    "area_pct": 4.057,
+    "score": 0.545
+   },
+   {
+    "x0": 959,
+    "x1": 1466,
+    "y0": 958,
+    "y1": 1436,
+    "cx": 1241.8,
+    "cy": 1143.8,
+    "npix": 108559,
+    "area_pct": 3.926,
+    "score": 0.313
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4",
+   "door handle|5"
+  ],
+  "door": [
+   "door|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   4
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

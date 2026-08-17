@@ -1,0 +1,46 @@
+TASK: "Adjust the intensity of the heater next to the blue couch"
+
+PARSE:
+  target concept = "heater knob"   <- the thing that must be output
+  host           = 'heater'   <- countable object the target sits on
+  entity  : 'heater knob'  role=target
+  entity  : 'heater'  role=host
+  entity  : 'couch'  role=landmark
+  relation: next_to(a='heater', b='couch')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  heater knob          0   390   468  1200  1319   428.4  1258.0   0.264  0.544
+  heater knob          1   419   439  1333  1352   429.3  1342.6   0.012  0.262
+  heater               0   381   544  1054  1432   457.7  1246.2   1.604  0.673
+  heater               1     0   353     8   612   264.0   470.3   1.324  0.168
+  couch                0   547  1439   381  1738  1050.2  1069.2  34.349  0.861
+
+
+
+
+
+CONTAINMENT (heater knob inside the FILLED mask of each heater):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  heater #0   x[ 381, 544] cx   457.7 cy  1246.2 w= 163 contains #0, #1
+  heater #1   x[   0, 353] cx   264.0 cy   470.3 w= 353 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "heater knob" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: heater knob #<id>[, #<id> ...]

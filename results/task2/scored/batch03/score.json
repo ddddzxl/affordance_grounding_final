@@ -1,0 +1,500 @@
+[
+ {
+  "q": "q011_421254_a1574eea",
+  "text": "Open the fifth drawer of the cabinet located to the left of the TV",
+  "concept": "drawer handle",
+  "pick": [
+   10,
+   16
+  ],
+  "gt_ids": [
+   10,
+   16
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "ordinal",
+  "best_frac": 0.674,
+  "n_cand": 21,
+  "pred_px": 1271,
+  "gt_px": 89,
+  "gt_bbox_px": 25282.0,
+  "prec2d": 0.07,
+  "coarse_ratio": 14.28,
+  "caveat": null
+ },
+ {
+  "q": "q016_421254_b35175d1",
+  "text": "Open the second drawer of the cabinet located to the left of the TV",
+  "concept": "drawer handle",
+  "pick": [
+   9,
+   14
+  ],
+  "gt_ids": [
+   9,
+   14
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "ordinal",
+  "best_frac": 0.576,
+  "n_cand": 21,
+  "pred_px": 1665,
+  "gt_px": 151,
+  "gt_bbox_px": 20990.8,
+  "prec2d": 0.085,
+  "coarse_ratio": 11.03,
+  "caveat": null
+ },
+ {
+  "q": "q077_422842_c29120db",
+  "text": "Open the right middle drawer of the dressing table",
+  "concept": "drawer handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "vert+horiz",
+  "best_frac": 0.876,
+  "n_cand": 12,
+  "pred_px": 2505,
+  "gt_px": 233,
+  "gt_bbox_px": 7585.8,
+  "prec2d": 0.081,
+  "coarse_ratio": 10.75,
+  "caveat": null
+ },
+ {
+  "q": "q085_422842_f9e960fa",
+  "text": "Open the bottom right drawer of the dressing table",
+  "concept": "drawer handle",
+  "pick": [
+   2
+  ],
+  "gt_ids": [
+   2
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "vert+horiz",
+  "best_frac": 0.911,
+  "n_cand": 10,
+  "pred_px": 1383,
+  "gt_px": 179,
+  "gt_bbox_px": 2270.8,
+  "prec2d": 0.118,
+  "coarse_ratio": 7.73,
+  "caveat": null
+ },
+ {
+  "q": "q136_434897_3f2efafa",
+  "text": "Open the window to the left of the mirror",
+  "concept": "window handle",
+  "pick": [
+   9
+  ],
+  "gt_ids": [
+   9
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "rel-only",
+  "best_frac": 0.823,
+  "n_cand": 14,
+  "pred_px": 1060,
+  "gt_px": 198,
+  "gt_bbox_px": 807.8,
+  "prec2d": 0.154,
+  "coarse_ratio": 5.35,
+  "caveat": null
+ },
+ {
+  "q": "q138_434897_5e656d6b",
+  "text": "Open the top left drawer of the wooden closet",
+  "concept": "drawer handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "vert+horiz",
+  "best_frac": 0.995,
+  "n_cand": 7,
+  "pred_px": 869,
+  "gt_px": 207,
+  "gt_bbox_px": 735.0,
+  "prec2d": 0.237,
+  "coarse_ratio": 4.2,
+  "caveat": null
+ },
+ {
+  "q": "q145_435324_6e973a7a",
+  "text": "Open the bottom closet drawer between the door and the cabinet",
+  "concept": "drawer handle",
+  "pick": [
+   5,
+   7,
+   9
+  ],
+  "gt_ids": [
+   5,
+   7
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "select",
+  "best_frac": 0.351,
+  "n_cand": 13,
+  "pred_px": 1214,
+  "gt_px": 111,
+  "gt_bbox_px": 700.5,
+  "prec2d": 0.059,
+  "coarse_ratio": 10.94,
+  "caveat": null
+ },
+ {
+  "q": "q148_435324_8e3a0295",
+  "text": "Open the second drawer of the wooden cabinet in the corner",
+  "concept": "drawer handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 0.535,
+  "conf": "medium",
+  "kind": "ordinal",
+  "best_frac": 0.958,
+  "n_cand": 13,
+  "pred_px": 1127,
+  "gt_px": 166,
+  "gt_bbox_px": 8041.2,
+  "prec2d": 0.141,
+  "coarse_ratio": 6.79,
+  "caveat": null
+ },
+ {
+  "q": "q195_438102_584d0818",
+  "text": "Open the under bed storage drawer",
+  "concept": "drawer handle",
+  "pick": [
+   1,
+   5
+  ],
+  "gt_ids": [
+   3
+  ],
+  "correct": false,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "rel-only",
+  "best_frac": 0.538,
+  "n_cand": 7,
+  "pred_px": 1027,
+  "gt_px": 357,
+  "gt_bbox_px": 159832.0,
+  "prec2d": 0.0,
+  "coarse_ratio": 2.88,
+  "caveat": null
+ },
+ {
+  "q": "q220_438775_f5c1f30c",
+  "text": "Open the left window door behind the leather ottoman",
+  "concept": "window handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 0.0,
+  "conf": "low",
+  "kind": "select",
+  "best_frac": 0.0,
+  "n_cand": 19,
+  "pred_px": 4233,
+  "gt_px": 0,
+  "gt_bbox_px": 0.0,
+  "prec2d": 0.0,
+  "coarse_ratio": NaN,
+  "caveat": null
+ },
+ {
+  "q": "q233_455342_d7a0c1c7",
+  "text": "Play a game using the joystick on the TV stand",
+  "concept": "joystick",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "rel-only",
+  "best_frac": 0.875,
+  "n_cand": 2,
+  "pred_px": 6677,
+  "gt_px": 1218,
+  "gt_bbox_px": 9982.1,
+  "prec2d": 0.16,
+  "coarse_ratio": 5.48,
+  "caveat": null
+ },
+ {
+  "q": "q248_466092_d2f1a848",
+  "text": "Turn on the TV using one of the remotes on the coffee table",
+  "concept": "remote control",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "rel-only",
+  "best_frac": 0.923,
+  "n_cand": 1,
+  "pred_px": 17130,
+  "gt_px": 1305,
+  "gt_bbox_px": 29713.2,
+  "prec2d": 0.07,
+  "coarse_ratio": 13.13,
+  "caveat": null
+ },
+ {
+  "q": "q264_466162_5a54c80a",
+  "text": "Open the window above the radiator",
+  "concept": "window handle",
+  "pick": [
+   0,
+   1
+  ],
+  "gt_ids": [
+   0,
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "rel-only",
+  "best_frac": 0.281,
+  "n_cand": 7,
+  "pred_px": 525,
+  "gt_px": 89,
+  "gt_bbox_px": 4118.4,
+  "prec2d": 0.084,
+  "coarse_ratio": 5.9,
+  "caveat": null
+ },
+ {
+  "q": "q268_466162_9813bfd4",
+  "text": "Open the bottom drawer of the cabinet with the beauty products on top",
+  "concept": "drawer handle",
+  "pick": [
+   1,
+   3
+  ],
+  "gt_ids": [
+   1,
+   3
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.535,
+  "n_cand": 12,
+  "pred_px": 2554,
+  "gt_px": 484,
+  "gt_bbox_px": 35763.0,
+  "prec2d": 0.179,
+  "coarse_ratio": 5.28,
+  "caveat": null
+ },
+ {
+  "q": "q293_466437_d7edf5a5",
+  "text": "Open the second-row, right drawer of the cabinet with the mirror and beauty products on top",
+  "concept": "drawer handle",
+  "pick": [
+   0,
+   10,
+   15
+  ],
+  "gt_ids": [
+   0,
+   10
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "ordinal",
+  "best_frac": 0.594,
+  "n_cand": 21,
+  "pred_px": 9382,
+  "gt_px": 106,
+  "gt_bbox_px": 5691.1,
+  "prec2d": 0.008,
+  "coarse_ratio": 88.51,
+  "caveat": null
+ },
+ {
+  "q": "q294_466437_dce1a73a",
+  "text": "Open the second-row, left drawer of the cabinet with the mirror and beauty products on top",
+  "concept": "drawer handle",
+  "pick": [
+   6,
+   13,
+   17,
+   18
+  ],
+  "gt_ids": [
+   4,
+   5,
+   19
+  ],
+  "correct": false,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "low",
+  "kind": "ordinal",
+  "best_frac": 0.785,
+  "n_cand": 21,
+  "pred_px": 4106,
+  "gt_px": 93,
+  "gt_bbox_px": 1572.3,
+  "prec2d": 0.0,
+  "coarse_ratio": 44.15,
+  "caveat": null
+ },
+ {
+  "q": "q354_466916_85b96697",
+  "text": "Play a game using the right joystick on the shelf of the TV stand",
+  "concept": "joystick",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.923,
+  "n_cand": 3,
+  "pred_px": 9818,
+  "gt_px": 559,
+  "gt_bbox_px": 12417.0,
+  "prec2d": 0.053,
+  "coarse_ratio": 17.56,
+  "caveat": null
+ },
+ {
+  "q": "q362_466916_be3f2542",
+  "text": "Play a game using the left joystick on the shelf of the TV stand",
+  "concept": "joystick",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.928,
+  "n_cand": 3,
+  "pred_px": 10154,
+  "gt_px": 540,
+  "gt_bbox_px": 13052.1,
+  "prec2d": 0.049,
+  "coarse_ratio": 18.8,
+  "caveat": null
+ },
+ {
+  "q": "q379_467115_41789392",
+  "text": "Open the top right cabinet door located to the left of the dining table",
+  "concept": "door handle",
+  "pick": [
+   4
+  ],
+  "gt_ids": [
+   4
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "vert+horiz",
+  "best_frac": 0.779,
+  "n_cand": 10,
+  "pred_px": 1309,
+  "gt_px": 163,
+  "gt_bbox_px": 2373.7,
+  "prec2d": 0.097,
+  "coarse_ratio": 8.03,
+  "caveat": null
+ },
+ {
+  "q": "q383_467115_57b979ae",
+  "text": "Open the bottom, right cabinet drawer located to the left of the dining table",
+  "concept": "drawer handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "vert+horiz",
+  "best_frac": 0.787,
+  "n_cand": 10,
+  "pred_px": 1569,
+  "gt_px": 277,
+  "gt_bbox_px": 4446.7,
+  "prec2d": 0.139,
+  "coarse_ratio": 5.66,
+  "caveat": null
+ }
+]

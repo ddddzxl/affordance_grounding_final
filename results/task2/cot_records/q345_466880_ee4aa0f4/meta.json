@@ -1,0 +1,239 @@
+{
+ "q": 345,
+ "visit": "466880",
+ "desc_id": "ee4aa0f4-3b29-46fa-91bb-b5180f2a039b",
+ "text": "Open the top drawer of the white cabinet under the telephone mounted on the wall",
+ "parse": {
+  "text": "Open the top drawer of the white cabinet under the telephone mounted on the wall",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "telephone",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "under",
+    "a": "cabinet",
+    "b": "telephone"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331707",
+  "fid": "11162.133",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L2",
+  "n_top": 1,
+  "topk": [
+   [
+    "47331707",
+    "11162.133"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "telephone"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "telephone": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1193,
+    "x1": 1225,
+    "y0": 870,
+    "y1": 909,
+    "cx": 1208.2,
+    "cy": 889.0,
+    "npix": 993,
+    "area_pct": 0.036,
+    "score": 0.827
+   },
+   {
+    "x0": 1193,
+    "x1": 1219,
+    "y0": 1005,
+    "y1": 1044,
+    "cx": 1205.8,
+    "cy": 1023.2,
+    "npix": 861,
+    "area_pct": 0.031,
+    "score": 0.775
+   },
+   {
+    "x0": 555,
+    "x1": 660,
+    "y0": 0,
+    "y1": 429,
+    "cx": 612.0,
+    "cy": 341.4,
+    "npix": 5706,
+    "area_pct": 0.206,
+    "score": 0.183
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 1114,
+    "x1": 1268,
+    "y0": 793,
+    "y1": 1171,
+    "cx": 1181.7,
+    "cy": 967.6,
+    "npix": 36382,
+    "area_pct": 1.316,
+    "score": 0.634
+   },
+   {
+    "x0": 814,
+    "x1": 1113,
+    "y0": 829,
+    "y1": 1195,
+    "cx": 972.0,
+    "cy": 1007.6,
+    "npix": 79483,
+    "area_pct": 2.875,
+    "score": 0.191
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 814,
+    "x1": 1277,
+    "y0": 670,
+    "y1": 1207,
+    "cx": 1048.8,
+    "cy": 922.8,
+    "npix": 186926,
+    "area_pct": 6.761,
+    "score": 0.705
+   },
+   {
+    "x0": 1454,
+    "x1": 1687,
+    "y0": 0,
+    "y1": 898,
+    "cx": 1570.3,
+    "cy": 380.1,
+    "npix": 101172,
+    "area_pct": 3.659,
+    "score": 0.548
+   },
+   {
+    "x0": 1746,
+    "x1": 1919,
+    "y0": 0,
+    "y1": 533,
+    "cx": 1837.4,
+    "cy": 247.4,
+    "npix": 50552,
+    "area_pct": 1.828,
+    "score": 0.183
+   }
+  ],
+  "telephone": [
+   {
+    "x0": 880,
+    "x1": 930,
+    "y0": 0,
+    "y1": 139,
+    "cx": 903.3,
+    "cy": 73.9,
+    "npix": 4576,
+    "area_pct": 0.166,
+    "score": 0.487
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

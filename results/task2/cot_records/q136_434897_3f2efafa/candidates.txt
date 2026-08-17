@@ -1,0 +1,56 @@
+TASK: "Open the window to the left of the mirror"
+
+PARSE:
+  target concept = "window handle"   <- the thing that must be output
+  host           = 'window'   <- countable object the target sits on
+  entity  : 'window handle'  role=target
+  entity  : 'window'  role=host
+  entity  : 'mirror'  role=landmark
+  relation: left_of(a='window', b='mirror')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  window handle        0   445   519  1020  1059   481.0  1040.4   0.035  0.661
+  window handle        1   895   959  1013  1052   927.5  1032.5   0.038  0.614
+  window handle        2    60   149  1807  1919   109.9  1852.6   0.183  0.538
+  window handle        3   205   234  1407  1446   220.3  1427.2   0.031  0.435
+  window handle        4   123   159  1561  1606   141.6  1584.1   0.048  0.393
+  window handle        5   210   239  1540  1579   224.5  1560.2   0.031  0.384
+  window handle        6   125   164  1733  1779   144.9  1754.1   0.051  0.373
+  window handle        7   215   244  1693  1732   229.6  1711.4   0.031  0.367
+  window handle        8   200   214  1053  1077   207.1  1065.3   0.009  0.351
+  window handle        9   690   745  1120  1146   715.1  1132.1   0.038  0.327
+  window handle       10   239   249  1167  1186   243.2  1175.9   0.005  0.318
+  window handle       11   370  1382   188   732   713.5   706.6   0.424  0.253
+  window handle       12   190   213  1020  1032   200.6  1026.2    0.01  0.238
+  window handle       13  1292  1399     0   219  1323.6   128.4   0.359  0.205
+  window               0   515   893   766  1192   703.7   976.3   5.686  0.972
+  mirror               0  1081  1386   889  1525  1228.0  1174.6   5.818   0.96
+
+
+
+
+
+CONTAINMENT (window handle inside the FILLED mask of each window):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  window #0   x[ 515, 893] cx   703.7 cy   976.3 w= 378 contains #9
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "window handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: window handle #<id>[, #<id> ...]

@@ -1,0 +1,49 @@
+TASK: "Turn on the tap in the bathtub"
+
+PARSE:
+  target concept = "faucet handle"   <- the thing that must be output
+  host           = 'faucet'   <- countable object the target sits on
+  entity  : 'faucet handle'  role=target
+  entity  : 'faucet'  role=host
+  entity  : 'bathtub'  role=container
+  relation: on_top(a='faucet', b='bathtub')
+  residual: 'tap' and 'faucet' are the same object; unified to one concept so sibling descriptions share one candidate pool
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  faucet handle        0   515   594   806   863   554.7   830.8   0.074  0.734
+  faucet handle        1   530   659   854   931   589.7   878.7   0.138  0.231
+  faucet handle        2   552   679   907   999   602.1   948.9   0.195  0.161
+  faucet handle        3   525   589   858   932   558.7   892.3   0.095  0.159
+  faucet               0   518   678   806   999   586.3   905.0    0.46  0.906
+  faucet               1   471   664     0   200   569.1   128.4   0.622  0.464
+  bathtub              0   424  1439   639  1790  1020.4  1181.1  29.464  0.912
+
+
+
+
+
+CONTAINMENT (faucet handle inside the FILLED mask of each faucet):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  faucet #0   x[ 518, 678] cx   586.3 cy   905.0 w= 160 contains #0, #1, #2, #3
+  faucet #1   x[ 471, 664] cx   569.1 cy   128.4 w= 193 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "faucet handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: faucet handle #<id>[, #<id> ...]

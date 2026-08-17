@@ -1,0 +1,471 @@
+{
+ "q": 310,
+ "visit": "466841",
+ "desc_id": "a2dd9263-a560-4dcd-ab71-98558b2138eb",
+ "text": "Open the left cabinet door with the bird cage and the toys on top",
+ "parse": {
+  "text": "Open the left cabinet door with the bird cage and the toys on top",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "bird cage",
+    "role": "landmark",
+    "instanceable": true
+   },
+   {
+    "name": "toys",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "bird cage"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "toys"
+   }
+  ],
+  "select": [
+   {
+    "on": "cabinet door",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331587",
+  "fid": "15986.198",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 2,
+  "topk": [
+   [
+    "47331587",
+    "15986.198"
+   ],
+   [
+    "47331589",
+    "15931.004"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.367,
+    "s2": 0.788,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 135,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "cabinet",
+  "bird cage",
+  "toys"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "cabinet": "container",
+  "bird cage": "landmark",
+  "toys": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 900,
+    "x1": 972,
+    "y0": 1251,
+    "y1": 1333,
+    "cx": 934.8,
+    "cy": 1291.4,
+    "npix": 4116,
+    "area_pct": 0.149,
+    "score": 0.307
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 870,
+    "x1": 1812,
+    "y0": 925,
+    "y1": 1439,
+    "cx": 1306.9,
+    "cy": 1209.0,
+    "npix": 408806,
+    "area_pct": 14.786,
+    "score": 0.978
+   },
+   {
+    "x0": 1788,
+    "x1": 1919,
+    "y0": 1075,
+    "y1": 1398,
+    "cx": 1862.9,
+    "cy": 1244.4,
+    "npix": 35133,
+    "area_pct": 1.271,
+    "score": 0.755
+   },
+   {
+    "x0": 1772,
+    "x1": 1919,
+    "y0": 1385,
+    "y1": 1439,
+    "cx": 1842.3,
+    "cy": 1416.9,
+    "npix": 6351,
+    "area_pct": 0.23,
+    "score": 0.624
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 869,
+    "x1": 1813,
+    "y0": 921,
+    "y1": 1439,
+    "cx": 1306.9,
+    "cy": 1207.2,
+    "npix": 409961,
+    "area_pct": 14.828,
+    "score": 0.891
+   },
+   {
+    "x0": 1788,
+    "x1": 1919,
+    "y0": 1074,
+    "y1": 1399,
+    "cx": 1863.0,
+    "cy": 1244.0,
+    "npix": 35090,
+    "area_pct": 1.269,
+    "score": 0.572
+   },
+   {
+    "x0": 1774,
+    "x1": 1919,
+    "y0": 1384,
+    "y1": 1439,
+    "cx": 1842.5,
+    "cy": 1416.9,
+    "npix": 6287,
+    "area_pct": 0.227,
+    "score": 0.524
+   },
+   {
+    "x0": 0,
+    "x1": 866,
+    "y0": 780,
+    "y1": 1439,
+    "cx": 497.7,
+    "cy": 1142.1,
+    "npix": 142120,
+    "area_pct": 5.14,
+    "score": 0.296
+   },
+   {
+    "x0": 1780,
+    "x1": 1919,
+    "y0": 810,
+    "y1": 1075,
+    "cx": 1854.6,
+    "cy": 950.2,
+    "npix": 23345,
+    "area_pct": 0.844,
+    "score": 0.209
+   }
+  ],
+  "bird cage": [
+   {
+    "x0": 0,
+    "x1": 1224,
+    "y0": 0,
+    "y1": 896,
+    "cx": 611.8,
+    "cy": 407.4,
+    "npix": 970387,
+    "area_pct": 35.098,
+    "score": 0.979
+   }
+  ],
+  "toys": [
+   {
+    "x0": 1533,
+    "x1": 1857,
+    "y0": 420,
+    "y1": 764,
+    "cx": 1685.4,
+    "cy": 637.5,
+    "npix": 48040,
+    "area_pct": 1.738,
+    "score": 0.643
+   },
+   {
+    "x0": 280,
+    "x1": 471,
+    "y0": 805,
+    "y1": 869,
+    "cx": 383.4,
+    "cy": 837.4,
+    "npix": 8000,
+    "area_pct": 0.289,
+    "score": 0.56
+   },
+   {
+    "x0": 1860,
+    "x1": 1919,
+    "y0": 735,
+    "y1": 905,
+    "cx": 1893.6,
+    "cy": 814.5,
+    "npix": 8318,
+    "area_pct": 0.301,
+    "score": 0.47
+   },
+   {
+    "x0": 1540,
+    "x1": 1800,
+    "y0": 736,
+    "y1": 854,
+    "cx": 1664.8,
+    "cy": 799.1,
+    "npix": 20475,
+    "area_pct": 0.741,
+    "score": 0.462
+   },
+   {
+    "x0": 1380,
+    "x1": 1546,
+    "y0": 628,
+    "y1": 854,
+    "cx": 1456.5,
+    "cy": 758.7,
+    "npix": 26115,
+    "area_pct": 0.945,
+    "score": 0.458
+   },
+   {
+    "x0": 1228,
+    "x1": 1366,
+    "y0": 560,
+    "y1": 804,
+    "cx": 1299.6,
+    "cy": 684.1,
+    "npix": 26695,
+    "area_pct": 0.966,
+    "score": 0.421
+   },
+   {
+    "x0": 1519,
+    "x1": 1724,
+    "y0": 493,
+    "y1": 588,
+    "cx": 1619.5,
+    "cy": 543.8,
+    "npix": 12057,
+    "area_pct": 0.436,
+    "score": 0.351
+   },
+   {
+    "x0": 509,
+    "x1": 806,
+    "y0": 1245,
+    "y1": 1408,
+    "cx": 654.4,
+    "cy": 1321.6,
+    "npix": 31008,
+    "area_pct": 1.122,
+    "score": 0.337
+   },
+   {
+    "x0": 140,
+    "x1": 192,
+    "y0": 846,
+    "y1": 879,
+    "cx": 169.8,
+    "cy": 865.3,
+    "npix": 1129,
+    "area_pct": 0.041,
+    "score": 0.318
+   },
+   {
+    "x0": 827,
+    "x1": 932,
+    "y0": 0,
+    "y1": 194,
+    "cx": 878.4,
+    "cy": 64.0,
+    "npix": 9779,
+    "area_pct": 0.354,
+    "score": 0.286
+   },
+   {
+    "x0": 500,
+    "x1": 759,
+    "y0": 102,
+    "y1": 491,
+    "cx": 642.7,
+    "cy": 388.4,
+    "npix": 18939,
+    "area_pct": 0.685,
+    "score": 0.279
+   },
+   {
+    "x0": 1379,
+    "x1": 1543,
+    "y0": 700,
+    "y1": 788,
+    "cx": 1466.4,
+    "cy": 741.4,
+    "npix": 7242,
+    "area_pct": 0.262,
+    "score": 0.265
+   },
+   {
+    "x0": 551,
+    "x1": 732,
+    "y0": 924,
+    "y1": 1051,
+    "cx": 648.1,
+    "cy": 983.6,
+    "npix": 18035,
+    "area_pct": 0.652,
+    "score": 0.239
+   },
+   {
+    "x0": 694,
+    "x1": 1197,
+    "y0": 0,
+    "y1": 673,
+    "cx": 926.2,
+    "cy": 336.1,
+    "npix": 63575,
+    "area_pct": 2.299,
+    "score": 0.196
+   },
+   {
+    "x0": 413,
+    "x1": 565,
+    "y0": 86,
+    "y1": 116,
+    "cx": 471.9,
+    "cy": 102.6,
+    "npix": 2819,
+    "area_pct": 0.102,
+    "score": 0.193
+   },
+   {
+    "x0": 787,
+    "x1": 933,
+    "y0": 5,
+    "y1": 145,
+    "cx": 854.1,
+    "cy": 94.6,
+    "npix": 2481,
+    "area_pct": 0.09,
+    "score": 0.168
+   },
+   {
+    "x0": 8,
+    "x1": 250,
+    "y0": 1147,
+    "y1": 1436,
+    "cx": 140.3,
+    "cy": 1358.5,
+    "npix": 25252,
+    "area_pct": 0.913,
+    "score": 0.163
+   },
+   {
+    "x0": 80,
+    "x1": 286,
+    "y0": 64,
+    "y1": 184,
+    "cx": 182.6,
+    "cy": 119.2,
+    "npix": 15150,
+    "area_pct": 0.548,
+    "score": 0.156
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1",
+   "cabinet door|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

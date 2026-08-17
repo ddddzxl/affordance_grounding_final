@@ -1,0 +1,9 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "medium",
+ "kind": "over_detection",
+ "flaw": "ambiguous_task",
+ "solver": "frontier-llm, manual CoT"
+}

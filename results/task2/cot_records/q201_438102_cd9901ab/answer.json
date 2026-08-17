@@ -1,0 +1,8 @@
+{
+ "final": [
+  1
+ ],
+ "confidence": "medium",
+ "kind": "two_columns",
+ "solver": "frontier-llm, manual CoT"
+}

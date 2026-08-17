@@ -1,0 +1,47 @@
+TASK: "Open the oven door"
+
+PARSE:
+  target concept = "oven handle"   <- the thing that must be output
+  host           = 'oven'   <- countable object the target sits on
+  entity  : 'oven handle'  role=target
+  entity  : 'oven'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  oven handle          0   225   689   394   745   481.3   593.5   0.465  0.802
+  oven handle          1   420   649   973  1195   537.2  1086.5    0.23  0.522
+  oven handle          2   784  1199   580   838   996.2   714.1   0.725  0.505
+  oven handle          3   782  1123   842  1096   957.9   972.2    0.56  0.451
+  oven handle          4   724   811     0    53   765.8    21.2   0.111  0.292
+  oven handle          5   352   574     0    95   541.9    48.5   0.107  0.216
+  oven                 0   172   806   260  1238   586.2   729.9   7.048  0.793
+  oven                 1   132   760   195   691   478.8   435.6   3.485  0.343
+
+
+
+
+
+CONTAINMENT (oven handle inside the FILLED mask of each oven):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  oven #0   x[ 172, 806] cx   586.2 cy   729.9 w= 634 contains #0
+  oven #1   x[ 132, 760] cx   478.8 cy   435.6 w= 628 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "oven handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: oven handle #<id>[, #<id> ...]

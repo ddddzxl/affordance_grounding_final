@@ -1,0 +1,52 @@
+TASK: "Control the volume on the mini music system under the TV stand"
+
+PARSE:
+  target concept = "volume knob"   <- the thing that must be output
+  host           = 'music system'   <- countable object the target sits on
+  entity  : 'volume knob'  role=target
+  entity  : 'music system'  role=host
+  entity  : 'TV stand'  role=landmark
+  relation: under(a='music system', b='TV stand')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  volume knob          0   773   820   496   539   797.8   517.3   0.058  0.398
+  volume knob          1   560   606   480   519   582.4   500.5   0.054  0.377
+  volume knob          2   360   399   470   509   379.3   487.8   0.048  0.369
+  music system         0   307   973   113   733   652.6   408.6   9.397  0.442
+  music system         1   560   725   605   709   640.9   655.4   0.497   0.31
+  music system         2   415   494   589   654   453.6   618.4   0.145  0.188
+  TV stand             0   307   973   360   734   648.0   498.6   5.253  0.928
+  TV stand             1   525   845   360   384   667.0   371.1   0.147  0.384
+  TV stand             2   607   684   385   419   643.2   402.0   0.084  0.202
+  TV stand             3   343   517   564   679   443.0   631.8   0.228  0.191
+
+
+
+
+
+CONTAINMENT (volume knob inside the FILLED mask of each music system):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  music system #0   x[ 307, 973] cx   652.6 cy   408.6 w= 666 contains #0, #1, #2
+  music system #1   x[ 560, 725] cx   640.9 cy   655.4 w= 165 contains (none)
+  music system #2   x[ 415, 494] cx   453.6 cy   618.4 w=  79 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "volume knob" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: volume knob #<id>[, #<id> ...]

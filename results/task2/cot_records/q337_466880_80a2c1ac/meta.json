@@ -1,0 +1,159 @@
+{
+ "q": 337,
+ "visit": "466880",
+ "desc_id": "80a2c1ac-f6e2-42a7-a870-4d7d06c0358b",
+ "text": "Turn on the ceiling light",
+ "parse": {
+  "text": "Turn on the ceiling light",
+  "target": {
+   "concept": "light switch",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331711",
+  "fid": "11278.935",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331711",
+    "11278.935"
+   ],
+   [
+    "47331711",
+    "11324.833"
+   ],
+   [
+    "47331711",
+    "11270.339"
+   ],
+   [
+    "47331707",
+    "11115.035"
+   ],
+   [
+    "47331710",
+    "11236.236"
+   ],
+   [
+    "47331710",
+    "11231.238"
+   ],
+   [
+    "47331710",
+    "11182.641"
+   ],
+   [
+    "47331711",
+    "11283.334"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch"
+ ],
+ "roles": {
+  "light switch": "target"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 287,
+    "x1": 406,
+    "y0": 774,
+    "y1": 1015,
+    "cx": 344.9,
+    "cy": 892.9,
+    "npix": 21735,
+    "area_pct": 0.786,
+    "score": 0.925
+   },
+   {
+    "x0": 1900,
+    "x1": 1919,
+    "y0": 705,
+    "y1": 737,
+    "cx": 1912.6,
+    "cy": 721.5,
+    "npix": 407,
+    "area_pct": 0.015,
+    "score": 0.215
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0",
+   "light switch|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

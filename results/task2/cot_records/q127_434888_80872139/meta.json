@@ -1,0 +1,223 @@
+{
+ "q": 127,
+ "visit": "434888",
+ "desc_id": "80872139-e88f-4899-bf28-846b8a157545",
+ "text": "Open the lamp on the nightstand near the painting",
+ "parse": {
+  "text": "Open the lamp on the nightstand near the painting",
+  "target": {
+   "concept": "lamp chain",
+   "host": "lamp"
+  },
+  "entities": [
+   {
+    "name": "lamp chain",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "nightstand",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "painting",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "lamp",
+    "b": "nightstand"
+   },
+   {
+    "rel": "near",
+    "a": "nightstand",
+    "b": "painting"
+   }
+  ],
+  "select": [],
+  "residual": "train: 'open the lamp' is pinch_pull in 41/42 annotations — it is a pull-chain switch, not a press switch (note 'turn on the lamp' IS push 46/54, so the verb carries the distinction).",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899187",
+  "fid": "184405.904",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL-T",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899187",
+    "184405.904"
+   ],
+   [
+    "42899187",
+    "184357.807"
+   ],
+   [
+    "42899184",
+    "184443.805"
+   ],
+   [
+    "42899187",
+    "184406.904"
+   ],
+   [
+    "42899184",
+    "184441.806"
+   ],
+   [
+    "42899185",
+    "184320.306"
+   ],
+   [
+    "42899187",
+    "184358.807"
+   ],
+   [
+    "42899184",
+    "184442.805"
+   ]
+  ],
+  "consistency": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "n_frames": 105,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_target_visible",
+   "n_pool": 40,
+   "n_vis": 12
+  },
+  "pool": "fun3du",
+  "n_pool": 40
+ },
+ "concepts": [
+  "lamp chain",
+  "lamp",
+  "nightstand",
+  "painting"
+ ],
+ "roles": {
+  "lamp chain": "target",
+  "lamp": "host",
+  "nightstand": "container",
+  "painting": "landmark"
+ },
+ "candidates": {
+  "lamp chain": [
+   {
+    "x0": 620,
+    "x1": 629,
+    "y0": 1287,
+    "y1": 1428,
+    "cx": 624.6,
+    "cy": 1355.9,
+    "npix": 1342,
+    "area_pct": 0.049,
+    "score": 0.262
+   },
+   {
+    "x0": 1035,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 287,
+    "cx": 1272.5,
+    "cy": 123.4,
+    "npix": 89930,
+    "area_pct": 3.253,
+    "score": 0.185
+   }
+  ],
+  "lamp": [
+   {
+    "x0": 595,
+    "x1": 734,
+    "y0": 1213,
+    "y1": 1443,
+    "cx": 668.4,
+    "cy": 1315.5,
+    "npix": 10182,
+    "area_pct": 0.368,
+    "score": 0.953
+   },
+   {
+    "x0": 1036,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 286,
+    "cx": 1272.8,
+    "cy": 123.5,
+    "npix": 89486,
+    "area_pct": 3.237,
+    "score": 0.379
+   }
+  ],
+  "nightstand": [
+   {
+    "x0": 550,
+    "x1": 854,
+    "y0": 1420,
+    "y1": 1919,
+    "cx": 705.3,
+    "cy": 1607.4,
+    "npix": 69502,
+    "area_pct": 2.514,
+    "score": 0.974
+   }
+  ],
+  "painting": [
+   {
+    "x0": 166,
+    "x1": 504,
+    "y0": 38,
+    "y1": 1365,
+    "cx": 318.3,
+    "cy": 767.6,
+    "npix": 314769,
+    "area_pct": 11.385,
+    "score": 0.956
+   }
+  ]
+ },
+ "mask_keys": {
+  "lamp chain": [
+   "lamp chain|0",
+   "lamp chain|1"
+  ],
+  "lamp": [
+   "lamp|0",
+   "lamp|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "no target inside container",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

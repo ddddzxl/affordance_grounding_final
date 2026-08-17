@@ -1,0 +1,192 @@
+{
+ "q": 367,
+ "visit": "466916",
+ "desc_id": "fcba124a-85b9-4e5e-8c28-01976f927542",
+ "text": "Open the right window above the couch",
+ "parse": {
+  "text": "Open the right window above the couch",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "couch",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "above",
+    "a": "window",
+    "b": "couch"
+   }
+  ],
+  "select": [
+   {
+    "on": "window",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331615",
+  "fid": "18075.003",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 5,
+  "topk": [
+   [
+    "47331615",
+    "18075.003"
+   ],
+   [
+    "47331615",
+    "18073.004"
+   ],
+   [
+    "47331617",
+    "18210.398"
+   ],
+   [
+    "47331617",
+    "18211.398"
+   ],
+   [
+    "47331615",
+    "18046.898"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 306,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "couch"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "couch": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 1120,
+    "x1": 1159,
+    "y0": 0,
+    "y1": 19,
+    "cx": 1140.1,
+    "cy": 8.0,
+    "npix": 630,
+    "area_pct": 0.023,
+    "score": 0.174
+   }
+  ],
+  "window": [
+   {
+    "x0": 48,
+    "x1": 1163,
+    "y0": 0,
+    "y1": 947,
+    "cx": 571.0,
+    "cy": 357.2,
+    "npix": 738772,
+    "area_pct": 26.721,
+    "score": 0.818
+   }
+  ],
+  "couch": [
+   {
+    "x0": 228,
+    "x1": 1539,
+    "y0": 689,
+    "y1": 1290,
+    "cx": 859.0,
+    "cy": 909.2,
+    "npix": 277778,
+    "area_pct": 10.047,
+    "score": 0.863
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0"
+  ],
+  "window": [
+   "window|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,50 @@
+TASK: "Open the fridge"
+
+PARSE:
+  target concept = "fridge handle"   <- the thing that must be output
+  host           = 'fridge'   <- countable object the target sits on
+  entity  : 'fridge handle'  role=target
+  entity  : 'fridge'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  fridge handle        0   750   774   960  1072   761.4  1018.1   0.088  0.629
+  fridge handle        1   750   759  1081  1192   753.3  1127.7   0.027  0.587
+  fridge handle        2   760   774  1087  1181   768.7  1136.8   0.035  0.516
+  fridge handle        3   750   759   960  1192   753.8  1052.6   0.055   0.48
+  fridge handle        4   968   989  1093  1206   979.4  1149.0   0.079  0.332
+  fridge handle        5   890  1004   947   966   951.1   955.4   0.071  0.162
+  fridge handle        6   980   994  1093  1206   987.4  1149.7   0.044  0.162
+  fridge handle        7   910   989  1313  1346   948.2  1329.4   0.059   0.16
+  fridge handle        8   830   944  1233  1266   888.5  1250.4   0.087  0.158
+  fridge               0   585   894   854  1467   706.7  1084.9   4.207  0.957
+  fridge               1  1005  1094  1320  1586  1046.7  1432.5    0.35  0.212
+
+
+
+
+
+CONTAINMENT (fridge handle inside the FILLED mask of each fridge):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  fridge #0   x[ 585, 894] cx   706.7 cy  1084.9 w= 309 contains #0, #1, #2, #3
+  fridge #1   x[1005,1094] cx  1046.7 cy  1432.5 w=  89 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "fridge handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: fridge handle #<id>[, #<id> ...]

@@ -1,0 +1,108 @@
+TASK: "Open the second-row, left drawer of the cabinet with the mirror and beauty products on top"
+
+PARSE:
+  target concept = "drawer handle"   <- the thing that must be output
+  host           = 'drawer'   <- countable object the target sits on
+  entity  : 'drawer handle'  role=target
+  entity  : 'drawer'  role=host
+  entity  : 'cabinet'  role=container
+  entity  : 'mirror'  role=landmark
+  entity  : 'beauty products'  role=landmark
+  relation: contains(a='cabinet', b='drawer')
+  relation: has_on_top(a='cabinet', b='mirror')
+  relation: has_on_top(a='cabinet', b='beauty products')
+  select  : on='drawer' axis=ordinal value=None index=2 from='top'
+  select  : on='drawer' axis=horizontal value='left' index=None from=None
+  residual: 'second-row' orders the drawer ROWS from the top
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  drawer handle        0   985  1064  1467  1639  1012.5  1563.5   0.141   0.77
+  drawer handle        1   911   974  1027  1098   944.4  1067.9   0.056  0.735
+  drawer handle        2   920   968  1360  1446   941.2  1394.2   0.062  0.731
+  drawer handle        3   985  1049  1719  1845  1009.9  1781.1   0.104  0.723
+  drawer handle        4   940   979  1266  1406   960.7  1335.7   0.052  0.686
+  drawer handle        5   924   974  1204  1272   946.0  1239.3   0.059  0.659
+  drawer handle        6   930   979  1100  1219   956.6  1160.4   0.047  0.636
+  drawer handle        7   986  1090  1179  1629  1047.2  1420.7   0.225  0.622
+  drawer handle        8   985  1064  1297  1412  1012.5  1361.0   0.087  0.615
+  drawer handle        9   926   973   960  1092   945.6  1016.9   0.047  0.605
+  drawer handle       10   995  1084  1548  1866  1038.0  1691.2   0.143  0.599
+  drawer handle       11   981  1003  1644  1719   992.1  1684.5   0.024  0.421
+  drawer handle       12   935   974  1440  1566   952.8  1503.5   0.069  0.395
+  drawer handle       13   929   949  1110  1206   936.3  1155.8   0.029  0.358
+  drawer handle       14  1017  1065  1844  1912  1041.3  1884.3   0.062  0.265
+  drawer handle       15   990  1034  1566  1764  1010.6  1647.3   0.055  0.199
+  drawer handle       16   975  1008  1222  1339   986.0  1292.5   0.036  0.196
+  drawer handle       17   925   959  1154  1212   937.3  1184.6   0.043  0.194
+  drawer handle       18   930   954  1100  1172   939.2  1135.4    0.03  0.159
+  drawer handle       19   929   972  1260  1332   947.4  1285.6   0.042  0.158
+  ... (1 more 'drawer handle' with lower score omitted)
+  drawer               0   977  1142  1122  1750  1059.2  1458.8   1.524  0.815
+  drawer               1   988  1137  1436  1919  1060.8  1713.5   1.063  0.769
+  drawer               2   979  1072  1566  1919  1018.6  1761.0   0.492  0.763
+  drawer               3   920   984   960  1222   952.8  1095.6   0.319  0.662
+  drawer               4   920   992  1267  1605   955.4  1418.5   0.412  0.619
+  drawer               5   925   979  1099  1250   946.4  1181.9   0.162  0.487
+  drawer               6   925   984  1205  1438   956.4  1292.2   0.263  0.455
+  drawer               7   940   994  1267  1481   970.7  1353.2    0.19  0.258
+  drawer               8   930   974  1427  1574   951.7  1492.0   0.084   0.25
+  cabinet              0   915  1439   868  1919  1169.1  1468.6  13.965  0.769
+  cabinet              1   299   549   278  1087   420.1   632.2   4.378  0.504
+  mirror               0  1373  1439   483   970  1412.2   739.8   0.765  0.658
+  mirror               1  1155  1316   820   892  1244.1   852.9   0.311  0.222
+  mirror               2  1315  1369   588   899  1343.1   746.9   0.338  0.164
+  beauty products      0  1305  1349   899  1000  1326.1   949.2   0.127  0.905
+  beauty products      1  1385  1439   993  1226  1418.4  1132.1   0.315  0.888
+  beauty products      2  1321  1399   974  1052  1360.2  1011.8   0.171  0.803
+  beauty products      3  1390  1429   887   972  1412.1   928.2   0.087  0.761
+  beauty products      4  1385  1432   940  1059  1409.2  1008.3   0.098  0.722
+  beauty products      5  1140  1314   993  1359  1220.8  1172.5   1.814  0.562
+  beauty products      6  1175  1224   789   819  1200.1   805.9   0.043  0.543
+  beauty products      7  1120  1319   814   972  1223.3   886.8   0.918  0.448
+  beauty products      8   952  1069   753   836  1012.3   793.3   0.308   0.43
+  beauty products      9   954  1067   813   892  1007.9   860.7   0.251  0.427
+  beauty products     10  1014  1159  1053  1086  1080.8  1065.7   0.123  0.405
+  beauty products     11  1240  1259   780   825  1248.7   799.7   0.028  0.349
+  beauty products     12   450   479   288   312   464.0   301.1   0.017  0.327
+  beauty products     13   415   439   573   606   424.8   591.2    0.02  0.325
+  beauty products     14  1380  1439   803   866  1411.5   833.9   0.117  0.317
+  beauty products     15  1380  1439   724   806  1410.7   766.7   0.164  0.312
+  beauty products     16   485   514   714   787   500.6   750.1   0.064  0.209
+  beauty products     17   457   504   341   444   476.5   396.5   0.106   0.18
+
+
+
+
+
+CONTAINMENT (drawer handle inside the FILLED mask of each drawer):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  drawer #0   x[ 977,1142] cx  1059.2 cy  1458.8 w= 165 contains #7, #8, #16
+  drawer #1   x[ 988,1137] cx  1060.8 cy  1713.5 w= 149 contains #0, #10, #15
+  drawer #2   x[ 979,1072] cx  1018.6 cy  1761.0 w=  93 contains #3, #11, #14, #15
+  drawer #3   x[ 920, 984] cx   952.8 cy  1095.6 w=  64 contains #1, #6, #9, #18
+  drawer #4   x[ 920, 992] cx   955.4 cy  1418.5 w=  72 contains #2, #4, #12, #19
+  drawer #5   x[ 925, 979] cx   946.4 cy  1181.9 w=  54 contains #6, #13, #17, #18
+  drawer #6   x[ 925, 984] cx   956.4 cy  1292.2 w=  59 contains #4, #5, #19
+  drawer #7   x[ 940, 994] cx   970.7 cy  1353.2 w=  54 contains #4, #19
+  drawer #8   x[ 930, 974] cx   951.7 cy  1492.0 w=  44 contains #12
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "drawer handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: drawer handle #<id>[, #<id> ...]

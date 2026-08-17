@@ -1,0 +1,265 @@
+{
+ "q": 247,
+ "visit": "466092",
+ "desc_id": "c9166d96-b92b-4e6d-8ab9-5bdf0fb71792",
+ "text": "Turn on the lamp on the table to the left of the red couch",
+ "parse": {
+  "text": "Turn on the lamp on the table to the left of the red couch",
+  "target": {
+   "concept": "light switch",
+   "host": "lamp"
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "table",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "couch",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "lamp",
+    "b": "table"
+   },
+   {
+    "rel": "left_of",
+    "a": "table",
+    "b": "couch"
+   }
+  ],
+  "select": [],
+  "residual": "unified with val8's 'light switch'; which lamp it is, is carried by `host`, not by the search term",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796562",
+  "fid": "15962.405",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L2",
+  "n_top": 1,
+  "topk": [
+   [
+    "44796562",
+    "15962.405"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 0.02,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch",
+  "lamp",
+  "table",
+  "couch"
+ ],
+ "roles": {
+  "light switch": "target",
+  "lamp": "host",
+  "table": "container",
+  "couch": "landmark"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 1213,
+    "x1": 1259,
+    "y0": 415,
+    "y1": 464,
+    "cx": 1235.7,
+    "cy": 439.2,
+    "npix": 2231,
+    "area_pct": 0.081,
+    "score": 0.2
+   },
+   {
+    "x0": 907,
+    "x1": 946,
+    "y0": 415,
+    "y1": 429,
+    "cx": 925.8,
+    "cy": 422.2,
+    "npix": 566,
+    "area_pct": 0.02,
+    "score": 0.179
+   },
+   {
+    "x0": 1220,
+    "x1": 1266,
+    "y0": 344,
+    "y1": 394,
+    "cx": 1242.9,
+    "cy": 369.3,
+    "npix": 2287,
+    "area_pct": 0.083,
+    "score": 0.174
+   },
+   {
+    "x0": 1207,
+    "x1": 1252,
+    "y0": 480,
+    "y1": 529,
+    "cx": 1229.1,
+    "cy": 504.5,
+    "npix": 2030,
+    "area_pct": 0.073,
+    "score": 0.168
+   }
+  ],
+  "lamp": [
+   {
+    "x0": 693,
+    "x1": 806,
+    "y0": 210,
+    "y1": 383,
+    "cx": 754.1,
+    "cy": 268.7,
+    "npix": 10562,
+    "area_pct": 0.382,
+    "score": 0.845
+   },
+   {
+    "x0": 1460,
+    "x1": 1539,
+    "y0": 0,
+    "y1": 34,
+    "cx": 1498.9,
+    "cy": 15.9,
+    "npix": 2568,
+    "area_pct": 0.093,
+    "score": 0.796
+   },
+   {
+    "x0": 1447,
+    "x1": 1516,
+    "y0": 120,
+    "y1": 139,
+    "cx": 1481.9,
+    "cy": 129.4,
+    "npix": 1235,
+    "area_pct": 0.045,
+    "score": 0.307
+   }
+  ],
+  "table": [
+   {
+    "x0": 894,
+    "x1": 1393,
+    "y0": 615,
+    "y1": 799,
+    "cx": 1149.6,
+    "cy": 690.0,
+    "npix": 44914,
+    "area_pct": 1.624,
+    "score": 0.878
+   },
+   {
+    "x0": 802,
+    "x1": 1898,
+    "y0": 0,
+    "y1": 533,
+    "cx": 949.8,
+    "cy": 399.7,
+    "npix": 52421,
+    "area_pct": 1.896,
+    "score": 0.2
+   },
+   {
+    "x0": 1628,
+    "x1": 1919,
+    "y0": 12,
+    "y1": 694,
+    "cx": 1788.0,
+    "cy": 524.0,
+    "npix": 80853,
+    "area_pct": 2.924,
+    "score": 0.185
+   }
+  ],
+  "couch": [
+   {
+    "x0": 0,
+    "x1": 1909,
+    "y0": 522,
+    "y1": 1439,
+    "cx": 1098.1,
+    "cy": 1184.1,
+    "npix": 569650,
+    "area_pct": 20.604,
+    "score": 0.932
+   },
+   {
+    "x0": 65,
+    "x1": 871,
+    "y0": 318,
+    "y1": 680,
+    "cx": 514.0,
+    "cy": 492.8,
+    "npix": 129844,
+    "area_pct": 4.696,
+    "score": 0.93
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0",
+   "light switch|1",
+   "light switch|2",
+   "light switch|3"
+  ],
+  "lamp": [
+   "lamp|0",
+   "lamp|1",
+   "lamp|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

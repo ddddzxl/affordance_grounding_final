@@ -1,0 +1,258 @@
+{
+ "q": 87,
+ "visit": "423070",
+ "desc_id": "79e41073-7773-4d4a-a692-4ad05c067f4d",
+ "text": "Flush the toilet",
+ "parse": {
+  "text": "Flush the toilet",
+  "target": {
+   "concept": "flush button",
+   "host": "toilet"
+  },
+  "entities": [
+   {
+    "name": "flush button",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "toilet",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42447205",
+  "fid": "209316.788",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42447205",
+    "209316.788"
+   ],
+   [
+    "42447202",
+    "209432.673"
+   ],
+   [
+    "42447210",
+    "209188.690"
+   ],
+   [
+    "42447205",
+    "209313.789"
+   ],
+   [
+    "42447202",
+    "209478.787"
+   ],
+   [
+    "42447205",
+    "209303.077"
+   ],
+   [
+    "42447202",
+    "209477.788"
+   ],
+   [
+    "42447205",
+    "209363.185"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 251,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "flush button",
+  "toilet"
+ ],
+ "roles": {
+  "flush button": "target",
+  "toilet": "host"
+ },
+ "candidates": {
+  "flush button": [
+   {
+    "x0": 320,
+    "x1": 391,
+    "y0": 455,
+    "y1": 499,
+    "cx": 352.9,
+    "cy": 477.2,
+    "npix": 2609,
+    "area_pct": 0.094,
+    "score": 0.626
+   },
+   {
+    "x0": 1320,
+    "x1": 1352,
+    "y0": 275,
+    "y1": 315,
+    "cx": 1337.6,
+    "cy": 296.3,
+    "npix": 1034,
+    "area_pct": 0.037,
+    "score": 0.549
+   },
+   {
+    "x0": 1147,
+    "x1": 1199,
+    "y0": 195,
+    "y1": 219,
+    "cx": 1173.0,
+    "cy": 207.6,
+    "npix": 1129,
+    "area_pct": 0.041,
+    "score": 0.531
+   },
+   {
+    "x0": 1079,
+    "x1": 1099,
+    "y0": 315,
+    "y1": 344,
+    "cx": 1090.1,
+    "cy": 329.5,
+    "npix": 541,
+    "area_pct": 0.02,
+    "score": 0.501
+   },
+   {
+    "x0": 307,
+    "x1": 353,
+    "y0": 335,
+    "y1": 379,
+    "cx": 330.4,
+    "cy": 357.0,
+    "npix": 1692,
+    "area_pct": 0.061,
+    "score": 0.4
+   },
+   {
+    "x0": 1035,
+    "x1": 1066,
+    "y0": 625,
+    "y1": 668,
+    "cx": 1051.3,
+    "cy": 646.9,
+    "npix": 1052,
+    "area_pct": 0.038,
+    "score": 0.265
+   },
+   {
+    "x0": 1653,
+    "x1": 1912,
+    "y0": 1180,
+    "y1": 1382,
+    "cx": 1784.5,
+    "cy": 1283.0,
+    "npix": 35833,
+    "area_pct": 1.296,
+    "score": 0.222
+   },
+   {
+    "x0": 1306,
+    "x1": 1342,
+    "y0": 579,
+    "y1": 614,
+    "cx": 1322.9,
+    "cy": 597.6,
+    "npix": 812,
+    "area_pct": 0.029,
+    "score": 0.183
+   }
+  ],
+  "toilet": [
+   {
+    "x0": 953,
+    "x1": 1532,
+    "y0": 176,
+    "y1": 1155,
+    "cx": 1210.0,
+    "cy": 640.1,
+    "npix": 384100,
+    "area_pct": 13.893,
+    "score": 0.985
+   }
+  ]
+ },
+ "mask_keys": {
+  "flush button": [
+   "flush button|0",
+   "flush button|1",
+   "flush button|2",
+   "flush button|3",
+   "flush button|4",
+   "flush button|5",
+   "flush button|6",
+   "flush button|7"
+  ],
+  "toilet": [
+   "toilet|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1,
+   2,
+   3,
+   5,
+   7
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(5)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

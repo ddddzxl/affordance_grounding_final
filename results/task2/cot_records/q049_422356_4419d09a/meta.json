@@ -1,0 +1,182 @@
+{
+ "q": 49,
+ "visit": "422356",
+ "desc_id": "4419d09a-0b92-4984-b357-e4cbed6e1a92",
+ "text": "Close the door",
+ "parse": {
+  "text": "Close the door",
+  "target": {
+   "concept": "door handle",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42446579",
+  "fid": "205758.586",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42446579",
+    "205758.586"
+   ],
+   [
+    "42446579",
+    "205818.462"
+   ],
+   [
+    "42446579",
+    "205781.460"
+   ],
+   [
+    "42446579",
+    "205766.366"
+   ],
+   [
+    "42446579",
+    "205782.460"
+   ],
+   [
+    "42446579",
+    "205760.569"
+   ],
+   [
+    "42446579",
+    "205777.362"
+   ],
+   [
+    "42446576",
+    "205890.065"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 115,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "door"
+ ],
+ "roles": {
+  "door handle": "target",
+  "door": "host"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1093,
+    "x1": 1159,
+    "y0": 1285,
+    "y1": 1439,
+    "cx": 1122.9,
+    "cy": 1353.7,
+    "npix": 6062,
+    "area_pct": 0.219,
+    "score": 0.908
+   },
+   {
+    "x0": 1860,
+    "x1": 1919,
+    "y0": 1364,
+    "y1": 1439,
+    "cx": 1890.1,
+    "cy": 1404.0,
+    "npix": 4138,
+    "area_pct": 0.15,
+    "score": 0.428
+   }
+  ],
+  "door": [
+   {
+    "x0": 586,
+    "x1": 1190,
+    "y0": 147,
+    "y1": 1439,
+    "cx": 874.4,
+    "cy": 819.5,
+    "npix": 692679,
+    "area_pct": 25.053,
+    "score": 0.96
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1"
+  ],
+  "door": [
+   "door|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

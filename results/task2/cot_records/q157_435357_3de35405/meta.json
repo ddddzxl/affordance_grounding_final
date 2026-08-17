@@ -1,0 +1,152 @@
+{
+ "q": 157,
+ "visit": "435357",
+ "desc_id": "3de35405-1f8c-4a4d-8043-25f323404bb3",
+ "text": "Turn on the ceiling light",
+ "parse": {
+  "text": "Turn on the ceiling light",
+  "target": {
+   "concept": "light button",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "light button",
+    "role": "target",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899630",
+  "fid": "229889.685",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899630",
+    "229889.685"
+   ],
+   [
+    "42899624",
+    "230076.477"
+   ],
+   [
+    "42899624",
+    "230106.282"
+   ],
+   [
+    "42899624",
+    "230103.284"
+   ],
+   [
+    "42899624",
+    "230107.282"
+   ],
+   [
+    "42899632",
+    "229995.176"
+   ],
+   [
+    "42899624",
+    "230105.283"
+   ],
+   [
+    "42899624",
+    "230109.281"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 191,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 9
+ },
+ "concepts": [
+  "light button"
+ ],
+ "roles": {
+  "light button": "target"
+ },
+ "candidates": {
+  "light button": [
+   {
+    "x0": 786,
+    "x1": 817,
+    "y0": 1347,
+    "y1": 1359,
+    "cx": 801.6,
+    "cy": 1352.6,
+    "npix": 355,
+    "area_pct": 0.013,
+    "score": 0.42
+   }
+  ]
+ },
+ "mask_keys": {
+  "light button": [
+   "light button|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "light switch",
+  "used": "light button",
+  "probe_hits": 1,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

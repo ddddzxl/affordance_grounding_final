@@ -1,0 +1,166 @@
+{
+ "q": 207,
+ "visit": "438775",
+ "desc_id": "333a0512-4fe3-4907-82ab-7a6bf4152035",
+ "text": "Control the room's temperature using the radiator dial next to the potted plant",
+ "parse": {
+  "text": "Control the room's temperature using the radiator dial next to the potted plant",
+  "target": {
+   "concept": "radiator knob",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "radiator knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "potted plant",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "radiator knob",
+    "b": "potted plant"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358170",
+  "fid": "62317.152",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 5,
+  "topk": [
+   [
+    "44358170",
+    "62317.152"
+   ],
+   [
+    "44358173",
+    "62391.755"
+   ],
+   [
+    "44358170",
+    "62318.151"
+   ],
+   [
+    "44358173",
+    "62392.755"
+   ],
+   [
+    "44358170",
+    "62337.560"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 266,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "radiator knob",
+  "potted plant"
+ ],
+ "roles": {
+  "radiator knob": "target",
+  "potted plant": "landmark"
+ },
+ "candidates": {
+  "radiator knob": [
+   {
+    "x0": 993,
+    "x1": 1019,
+    "y0": 810,
+    "y1": 849,
+    "cx": 1004.4,
+    "cy": 829.0,
+    "npix": 894,
+    "area_pct": 0.032,
+    "score": 0.5
+   }
+  ],
+  "potted plant": [
+   {
+    "x0": 481,
+    "x1": 865,
+    "y0": 257,
+    "y1": 734,
+    "cx": 707.1,
+    "cy": 509.9,
+    "npix": 62423,
+    "area_pct": 2.258,
+    "score": 0.62
+   }
+  ]
+ },
+ "mask_keys": {
+  "radiator knob": [
+   "radiator knob|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "radiator dial",
+  "used": "radiator knob",
+  "probe_hits": 2,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,239 @@
+{
+ "q": 31,
+ "visit": "421393",
+ "desc_id": "76c3cde8-35ca-4d86-840b-7fbb9d6d1f04",
+ "text": "Open the right part of the window",
+ "parse": {
+  "text": "Open the right part of the window",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [
+   {
+    "on": "window",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42444923",
+  "fid": "220879.063",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42444923",
+    "220879.063"
+   ],
+   [
+    "42444924",
+    "220960.063"
+   ],
+   [
+    "42444923",
+    "220881.062"
+   ],
+   [
+    "42444923",
+    "220897.256"
+   ],
+   [
+    "42444924",
+    "220959.064"
+   ],
+   [
+    "42444924",
+    "220975.057"
+   ],
+   [
+    "42444923",
+    "220901.254"
+   ],
+   [
+    "42444924",
+    "220985.053"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 137,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 440,
+    "x1": 469,
+    "y0": 826,
+    "y1": 886,
+    "cx": 452.7,
+    "cy": 850.4,
+    "npix": 810,
+    "area_pct": 0.029,
+    "score": 0.608
+   },
+   {
+    "x0": 455,
+    "x1": 469,
+    "y0": 1047,
+    "y1": 1079,
+    "cx": 461.2,
+    "cy": 1064.5,
+    "npix": 419,
+    "area_pct": 0.015,
+    "score": 0.466
+   },
+   {
+    "x0": 300,
+    "x1": 513,
+    "y0": 1353,
+    "y1": 1392,
+    "cx": 405.6,
+    "cy": 1373.1,
+    "npix": 5333,
+    "area_pct": 0.193,
+    "score": 0.319
+   },
+   {
+    "x0": 305,
+    "x1": 514,
+    "y0": 1447,
+    "y1": 1492,
+    "cx": 409.9,
+    "cy": 1472.0,
+    "npix": 6069,
+    "area_pct": 0.22,
+    "score": 0.298
+   },
+   {
+    "x0": 318,
+    "x1": 520,
+    "y0": 1640,
+    "y1": 1690,
+    "cx": 412.8,
+    "cy": 1663.8,
+    "npix": 5907,
+    "area_pct": 0.214,
+    "score": 0.292
+   },
+   {
+    "x0": 310,
+    "x1": 519,
+    "y0": 1543,
+    "y1": 1586,
+    "cx": 415.4,
+    "cy": 1567.5,
+    "npix": 5660,
+    "area_pct": 0.205,
+    "score": 0.277
+   }
+  ],
+  "window": [
+   {
+    "x0": 216,
+    "x1": 599,
+    "y0": 730,
+    "y1": 1184,
+    "cx": 408.4,
+    "cy": 955.7,
+    "npix": 155040,
+    "area_pct": 5.608,
+    "score": 0.952
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2",
+   "window handle|3",
+   "window handle|4",
+   "window handle|5"
+  ],
+  "window": [
+   "window|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

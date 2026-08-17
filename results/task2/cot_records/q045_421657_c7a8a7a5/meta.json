@@ -1,0 +1,263 @@
+{
+ "q": 45,
+ "visit": "421657",
+ "desc_id": "c7a8a7a5-8db1-4027-b6e1-77f037ec64ad",
+ "text": "Open the left door of the wooden closet",
+ "parse": {
+  "text": "Open the left door of the wooden closet",
+  "target": {
+   "concept": "door handle",
+   "host": "closet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "closet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "closet door"
+   }
+  ],
+  "select": [
+   {
+    "on": "closet door",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42445642",
+  "fid": "58279.688",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42445642",
+    "58279.688"
+   ],
+   [
+    "42445633",
+    "58117.489"
+   ],
+   [
+    "42445633",
+    "58132.699"
+   ],
+   [
+    "42445639",
+    "58338.897"
+   ],
+   [
+    "42445633",
+    "58118.489"
+   ],
+   [
+    "42445642",
+    "58252.500"
+   ],
+   [
+    "42445639",
+    "58312.292"
+   ],
+   [
+    "42445642",
+    "58251.500"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 165,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "closet door",
+  "closet"
+ ],
+ "roles": {
+  "door handle": "target",
+  "closet door": "host",
+  "closet": "container"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 827,
+    "x1": 866,
+    "y0": 355,
+    "y1": 479,
+    "cx": 846.2,
+    "cy": 416.4,
+    "npix": 4340,
+    "area_pct": 0.157,
+    "score": 0.865
+   },
+   {
+    "x0": 754,
+    "x1": 799,
+    "y0": 340,
+    "y1": 473,
+    "cx": 780.5,
+    "cy": 409.7,
+    "npix": 4741,
+    "area_pct": 0.171,
+    "score": 0.856
+   },
+   {
+    "x0": 1073,
+    "x1": 1119,
+    "y0": 995,
+    "y1": 1024,
+    "cx": 1095.8,
+    "cy": 1008.8,
+    "npix": 1083,
+    "area_pct": 0.039,
+    "score": 0.259
+   },
+   {
+    "x0": 1080,
+    "x1": 1126,
+    "y0": 889,
+    "y1": 942,
+    "cx": 1104.7,
+    "cy": 913.3,
+    "npix": 2008,
+    "area_pct": 0.073,
+    "score": 0.204
+   }
+  ],
+  "closet door": [
+   {
+    "x0": 328,
+    "x1": 826,
+    "y0": 0,
+    "y1": 1149,
+    "cx": 566.3,
+    "cy": 564.9,
+    "npix": 487682,
+    "area_pct": 17.639,
+    "score": 0.883
+   },
+   {
+    "x0": 770,
+    "x1": 1247,
+    "y0": 0,
+    "y1": 1129,
+    "cx": 993.6,
+    "cy": 516.9,
+    "npix": 395187,
+    "area_pct": 14.294,
+    "score": 0.881
+   }
+  ],
+  "closet": [
+   {
+    "x0": 326,
+    "x1": 1248,
+    "y0": 0,
+    "y1": 1150,
+    "cx": 758.6,
+    "cy": 542.4,
+    "npix": 918402,
+    "area_pct": 33.218,
+    "score": 0.959
+   },
+   {
+    "x0": 1180,
+    "x1": 1313,
+    "y0": 175,
+    "y1": 790,
+    "cx": 1249.6,
+    "cy": 491.6,
+    "npix": 46582,
+    "area_pct": 1.685,
+    "score": 0.161
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3"
+  ],
+  "closet door": [
+   "closet door|0",
+   "closet door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

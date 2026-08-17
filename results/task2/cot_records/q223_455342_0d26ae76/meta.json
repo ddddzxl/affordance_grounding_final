@@ -1,0 +1,206 @@
+{
+ "q": 223,
+ "visit": "455342",
+ "desc_id": "0d26ae76-85c5-44bb-b128-115f50f3d999",
+ "text": "Lock the terrace door",
+ "parse": {
+  "text": "Lock the terrace door",
+  "target": {
+   "concept": "door lock",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door lock",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'terrace' is a room/area-level locator, not groundable; train: 'lock' is a rotate affordance disjoint from the handle (274/274 pairs in train share 0 annotation)",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358471",
+  "fid": "46568.990",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44358471",
+    "46568.990"
+   ],
+   [
+    "44358472",
+    "46641.095"
+   ],
+   [
+    "44358472",
+    "46649.392"
+   ],
+   [
+    "44358471",
+    "46597.296"
+   ],
+   [
+    "44358472",
+    "46642.095"
+   ],
+   [
+    "44358471",
+    "46569.990"
+   ],
+   [
+    "44358472",
+    "46609.091"
+   ],
+   [
+    "44358471",
+    "46574.988"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.964,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 97,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door lock",
+  "door"
+ ],
+ "roles": {
+  "door lock": "target",
+  "door": "host"
+ },
+ "candidates": {
+  "door lock": [
+   {
+    "x0": 560,
+    "x1": 639,
+    "y0": 1074,
+    "y1": 1154,
+    "cx": 585.2,
+    "cy": 1109.1,
+    "npix": 2355,
+    "area_pct": 0.085,
+    "score": 0.769
+   },
+   {
+    "x0": 527,
+    "x1": 546,
+    "y0": 1090,
+    "y1": 1129,
+    "cx": 538.1,
+    "cy": 1107.7,
+    "npix": 635,
+    "area_pct": 0.023,
+    "score": 0.452
+   },
+   {
+    "x0": 507,
+    "x1": 526,
+    "y0": 965,
+    "y1": 989,
+    "cx": 516.9,
+    "cy": 977.7,
+    "npix": 456,
+    "area_pct": 0.016,
+    "score": 0.202
+   }
+  ],
+  "door": [
+   {
+    "x0": 525,
+    "x1": 873,
+    "y0": 464,
+    "y1": 1359,
+    "cx": 696.8,
+    "cy": 896.5,
+    "npix": 276475,
+    "area_pct": 10.0,
+    "score": 0.942
+   },
+   {
+    "x0": 0,
+    "x1": 145,
+    "y0": 596,
+    "y1": 871,
+    "cx": 56.7,
+    "cy": 737.3,
+    "npix": 30782,
+    "area_pct": 1.113,
+    "score": 0.244
+   }
+  ]
+ },
+ "mask_keys": {
+  "door lock": [
+   "door lock|0",
+   "door lock|1",
+   "door lock|2"
+  ],
+  "door": [
+   "door|0",
+   "door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

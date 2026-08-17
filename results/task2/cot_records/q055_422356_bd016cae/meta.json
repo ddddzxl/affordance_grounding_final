@@ -1,0 +1,196 @@
+{
+ "q": 55,
+ "visit": "422356",
+ "desc_id": "bd016cae-2e4c-4835-99ee-c2ca7594cb92",
+ "text": "Turn on the TV using the remote control on the table",
+ "parse": {
+  "text": "Turn on the TV using the remote control on the table",
+  "target": {
+   "concept": "remote control",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "remote control",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "table",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "remote control",
+    "b": "table"
+   }
+  ],
+  "select": [],
+  "residual": "independent check on the train split (val untouched): handheld-device GT median 478 points vs 87-108 for fixed-furniture handles, a factor of 4.4-5.5 -> the annotation covers the whole device",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42446579",
+  "fid": "205816.462",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42446579",
+    "205816.462"
+   ],
+   [
+    "42446576",
+    "205865.359"
+   ],
+   [
+    "42446579",
+    "205814.463"
+   ],
+   [
+    "42446579",
+    "205815.463"
+   ],
+   [
+    "42446576",
+    "205866.359"
+   ],
+   [
+    "42446579",
+    "205834.655"
+   ],
+   [
+    "42446576",
+    "205896.963"
+   ],
+   [
+    "42446579",
+    "205835.671"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 115,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "remote control",
+  "table"
+ ],
+ "roles": {
+  "remote control": "target",
+  "table": "container"
+ },
+ "candidates": {
+  "remote control": [
+   {
+    "x0": 467,
+    "x1": 873,
+    "y0": 815,
+    "y1": 1009,
+    "cx": 668.5,
+    "cy": 911.9,
+    "npix": 33453,
+    "area_pct": 1.21,
+    "score": 0.974
+   },
+   {
+    "x0": 1296,
+    "x1": 1583,
+    "y0": 1175,
+    "y1": 1294,
+    "cx": 1438.6,
+    "cy": 1236.3,
+    "npix": 21310,
+    "area_pct": 0.771,
+    "score": 0.384
+   }
+  ],
+  "table": [
+   {
+    "x0": 108,
+    "x1": 1478,
+    "y0": 71,
+    "y1": 1432,
+    "cx": 765.8,
+    "cy": 694.6,
+    "npix": 993914,
+    "area_pct": 35.949,
+    "score": 0.967
+   },
+   {
+    "x0": 844,
+    "x1": 1133,
+    "y0": 0,
+    "y1": 274,
+    "cx": 1012.6,
+    "cy": 85.3,
+    "npix": 16469,
+    "area_pct": 0.596,
+    "score": 0.197
+   }
+  ]
+ },
+ "mask_keys": {
+  "remote control": [
+   "remote control|0",
+   "remote control|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

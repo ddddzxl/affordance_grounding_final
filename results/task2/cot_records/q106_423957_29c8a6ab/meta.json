@@ -1,0 +1,209 @@
+{
+ "q": 106,
+ "visit": "423957",
+ "desc_id": "29c8a6ab-c895-4994-94b7-f88d2a546130",
+ "text": "Plug the device in the left socket next to the door",
+ "parse": {
+  "text": "Plug the device in the left socket next to the door",
+  "target": {
+   "concept": "socket",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "socket",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "socket",
+    "b": "door"
+   }
+  ],
+  "select": [
+   {
+    "on": "socket",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42898343",
+  "fid": "508277.524",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 4,
+  "topk": [
+   [
+    "42898343",
+    "508277.524"
+   ],
+   [
+    "42898340",
+    "508450.819"
+   ],
+   [
+    "42898343",
+    "508321.822"
+   ],
+   [
+    "42898343",
+    "508276.524"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.525,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.525,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.367,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 106,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "socket",
+  "door"
+ ],
+ "roles": {
+  "socket": "target",
+  "door": "landmark"
+ },
+ "candidates": {
+  "socket": [
+   {
+    "x0": 100,
+    "x1": 266,
+    "y0": 765,
+    "y1": 845,
+    "cx": 184.6,
+    "cy": 805.0,
+    "npix": 12182,
+    "area_pct": 0.441,
+    "score": 0.853
+   }
+  ],
+  "door": [
+   {
+    "x0": 941,
+    "x1": 1243,
+    "y0": 0,
+    "y1": 1011,
+    "cx": 1063.2,
+    "cy": 449.2,
+    "npix": 130428,
+    "area_pct": 4.717,
+    "score": 0.914
+   },
+   {
+    "x0": 0,
+    "x1": 77,
+    "y0": 293,
+    "y1": 1284,
+    "cx": 22.0,
+    "cy": 897.9,
+    "npix": 33377,
+    "area_pct": 1.207,
+    "score": 0.693
+   },
+   {
+    "x0": 582,
+    "x1": 806,
+    "y0": 0,
+    "y1": 409,
+    "cx": 697.7,
+    "cy": 196.0,
+    "npix": 74609,
+    "area_pct": 2.699,
+    "score": 0.334
+   },
+   {
+    "x0": 773,
+    "x1": 1003,
+    "y0": 0,
+    "y1": 425,
+    "cx": 882.2,
+    "cy": 204.0,
+    "npix": 75704,
+    "area_pct": 2.738,
+    "score": 0.325
+   },
+   {
+    "x0": 962,
+    "x1": 1066,
+    "y0": 0,
+    "y1": 439,
+    "cx": 1009.8,
+    "cy": 207.6,
+    "npix": 17191,
+    "area_pct": 0.622,
+    "score": 0.19
+   }
+  ]
+ },
+ "mask_keys": {
+  "socket": [
+   "socket|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

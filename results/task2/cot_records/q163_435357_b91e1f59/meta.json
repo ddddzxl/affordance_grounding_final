@@ -1,0 +1,167 @@
+{
+ "q": 163,
+ "visit": "435357",
+ "desc_id": "b91e1f59-9c5e-4cc9-80af-aca726eefe8a",
+ "text": "Turn on the cylindrical white lamp in front of the window",
+ "parse": {
+  "text": "Turn on the cylindrical white lamp in front of the window",
+  "target": {
+   "concept": "light panel",
+   "host": "lamp"
+  },
+  "entities": [
+   {
+    "name": "light panel",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "in_front_of",
+    "a": "lamp",
+    "b": "window"
+   }
+  ],
+  "select": [],
+  "residual": "unified with val8's 'light switch'; which lamp it is, is carried by `host`, not by the search term",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899624",
+  "fid": "230054.486",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899624",
+    "230054.486"
+   ],
+   [
+    "42899624",
+    "230053.487"
+   ],
+   [
+    "42899624",
+    "230057.485"
+   ],
+   [
+    "42899624",
+    "230052.487"
+   ],
+   [
+    "42899624",
+    "230051.487"
+   ],
+   [
+    "42899624",
+    "230055.486"
+   ],
+   [
+    "42899624",
+    "230058.485"
+   ],
+   [
+    "42899624",
+    "230059.484"
+   ]
+  ],
+  "consistency": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "n_frames": 191,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_topk",
+   "n_pool": 50,
+   "n_vis": 0
+  },
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light panel",
+  "lamp",
+  "window"
+ ],
+ "roles": {
+  "lamp": "host",
+  "window": "landmark",
+  "light panel": "target"
+ },
+ "candidates": {
+  "light panel": [
+   {
+    "x0": 302,
+    "x1": 1042,
+    "y0": 464,
+    "y1": 1179,
+    "cx": 692.2,
+    "cy": 806.4,
+    "npix": 453622,
+    "area_pct": 16.407,
+    "score": 0.295
+   }
+  ],
+  "lamp": [
+   {
+    "x0": 301,
+    "x1": 1042,
+    "y0": 462,
+    "y1": 1623,
+    "cx": 701.6,
+    "cy": 934.3,
+    "npix": 586500,
+    "area_pct": 21.213,
+    "score": 0.951
+   }
+  ],
+  "window": []
+ },
+ "mask_keys": {
+  "light panel": [
+   "light panel|0"
+  ],
+  "lamp": [
+   "lamp|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "landmark 'window' unusable",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "light button",
+  "used": "light panel",
+  "n_on_frame": 1,
+  "where": "selected_frame"
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

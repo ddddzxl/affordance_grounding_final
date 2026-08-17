@@ -1,0 +1,215 @@
+{
+ "q": 146,
+ "visit": "435324",
+ "desc_id": "7f4d658e-0d42-4a8e-a56e-dc4c9449baa3",
+ "text": "Open the bottom drawer of the wooden cabinet in the corner",
+ "parse": {
+  "text": "Open the bottom drawer of the wooden cabinet in the corner",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": "'in the corner' is a room-level locator, not groundable",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899221",
+  "fid": "188385.194",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899221",
+    "188385.194"
+   ],
+   [
+    "42899216",
+    "188221.295"
+   ],
+   [
+    "42899220",
+    "188313.107"
+   ],
+   [
+    "42899216",
+    "188245.002"
+   ],
+   [
+    "42899216",
+    "188222.295"
+   ],
+   [
+    "42899221",
+    "188369.201"
+   ],
+   [
+    "42899220",
+    "188273.507"
+   ],
+   [
+    "42899220",
+    "188315.107"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 161,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 593,
+    "x1": 726,
+    "y0": 985,
+    "y1": 1009,
+    "cx": 659.9,
+    "cy": 996.1,
+    "npix": 2366,
+    "area_pct": 0.086,
+    "score": 0.882
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 279,
+    "x1": 1026,
+    "y0": 891,
+    "y1": 1115,
+    "cx": 659.2,
+    "cy": 1003.3,
+    "npix": 120442,
+    "area_pct": 4.356,
+    "score": 0.94
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 0,
+    "x1": 1165,
+    "y0": 0,
+    "y1": 1189,
+    "cx": 618.0,
+    "cy": 514.8,
+    "npix": 1112535,
+    "area_pct": 40.239,
+    "score": 0.926
+   },
+   {
+    "x0": 0,
+    "x1": 177,
+    "y0": 283,
+    "y1": 1139,
+    "cx": 59.1,
+    "cy": 744.7,
+    "npix": 80559,
+    "area_pct": 2.914,
+    "score": 0.54
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0"
+  ],
+  "drawer": [
+   "drawer|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

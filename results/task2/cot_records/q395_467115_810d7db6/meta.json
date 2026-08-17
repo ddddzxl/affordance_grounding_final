@@ -1,0 +1,376 @@
+{
+ "q": 395,
+ "visit": "467115",
+ "desc_id": "810d7db6-34ad-4ea2-ba50-ff00fbfe7356",
+ "text": "Open the top counter drawer directly under the electric kettle",
+ "parse": {
+  "text": "Open the top counter drawer directly under the electric kettle",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "counter",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "electric kettle",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "counter",
+    "b": "drawer"
+   },
+   {
+    "rel": "under",
+    "a": "drawer",
+    "b": "electric kettle"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28301.763",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 7,
+  "topk": [
+   [
+    "47333310",
+    "28301.763"
+   ],
+   [
+    "47333310",
+    "28303.762"
+   ],
+   [
+    "47333319",
+    "28392.659"
+   ],
+   [
+    "47333319",
+    "28384.662"
+   ],
+   [
+    "47333319",
+    "28393.659"
+   ],
+   [
+    "47333308",
+    "28039.270"
+   ],
+   [
+    "47333319",
+    "28385.662"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "counter",
+  "electric kettle"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "counter": "container",
+  "electric kettle": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 550,
+    "x1": 914,
+    "y0": 1087,
+    "y1": 1300,
+    "cx": 735.8,
+    "cy": 1195.3,
+    "npix": 13934,
+    "area_pct": 0.504,
+    "score": 0.973
+   },
+   {
+    "x0": 555,
+    "x1": 874,
+    "y0": 1292,
+    "y1": 1506,
+    "cx": 718.3,
+    "cy": 1397.6,
+    "npix": 13081,
+    "area_pct": 0.473,
+    "score": 0.972
+   },
+   {
+    "x0": 1116,
+    "x1": 1439,
+    "y0": 1406,
+    "y1": 1612,
+    "cx": 1277.2,
+    "cy": 1502.4,
+    "npix": 14245,
+    "area_pct": 0.515,
+    "score": 0.96
+   },
+   {
+    "x0": 165,
+    "x1": 419,
+    "y0": 1407,
+    "y1": 1617,
+    "cx": 294.7,
+    "cy": 1510.5,
+    "npix": 7568,
+    "area_pct": 0.274,
+    "score": 0.849
+   },
+   {
+    "x0": 285,
+    "x1": 445,
+    "y0": 1113,
+    "y1": 1191,
+    "cx": 367.0,
+    "cy": 1150.7,
+    "npix": 6043,
+    "area_pct": 0.219,
+    "score": 0.504
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 524,
+    "x1": 1059,
+    "y0": 1027,
+    "y1": 1471,
+    "cx": 798.6,
+    "cy": 1252.4,
+    "npix": 89739,
+    "area_pct": 3.246,
+    "score": 0.949
+   },
+   {
+    "x0": 543,
+    "x1": 1032,
+    "y0": 1199,
+    "y1": 1919,
+    "cx": 785.8,
+    "cy": 1587.4,
+    "npix": 221082,
+    "area_pct": 7.996,
+    "score": 0.677
+   },
+   {
+    "x0": 96,
+    "x1": 602,
+    "y0": 1300,
+    "y1": 1746,
+    "cx": 369.6,
+    "cy": 1530.5,
+    "npix": 40252,
+    "area_pct": 1.456,
+    "score": 0.505
+   },
+   {
+    "x0": 0,
+    "x1": 94,
+    "y0": 1136,
+    "y1": 1326,
+    "cx": 34.8,
+    "cy": 1258.1,
+    "npix": 8507,
+    "area_pct": 0.308,
+    "score": 0.475
+   },
+   {
+    "x0": 982,
+    "x1": 1439,
+    "y0": 1321,
+    "y1": 1919,
+    "cx": 1219.5,
+    "cy": 1666.8,
+    "npix": 212900,
+    "area_pct": 7.7,
+    "score": 0.456
+   }
+  ],
+  "counter": [
+   {
+    "x0": 0,
+    "x1": 1439,
+    "y0": 610,
+    "y1": 1485,
+    "cx": 889.2,
+    "cy": 994.2,
+    "npix": 305509,
+    "area_pct": 11.05,
+    "score": 0.699
+   },
+   {
+    "x0": 0,
+    "x1": 280,
+    "y0": 300,
+    "y1": 525,
+    "cx": 97.4,
+    "cy": 420.4,
+    "npix": 28648,
+    "area_pct": 1.036,
+    "score": 0.345
+   },
+   {
+    "x0": 1045,
+    "x1": 1439,
+    "y0": 1113,
+    "y1": 1490,
+    "cx": 1250.5,
+    "cy": 1247.6,
+    "npix": 31757,
+    "area_pct": 1.149,
+    "score": 0.301
+   },
+   {
+    "x0": 0,
+    "x1": 328,
+    "y0": 281,
+    "y1": 496,
+    "cx": 159.4,
+    "cy": 350.2,
+    "npix": 19045,
+    "area_pct": 0.689,
+    "score": 0.251
+   },
+   {
+    "x0": 0,
+    "x1": 94,
+    "y0": 1144,
+    "y1": 1326,
+    "cx": 36.6,
+    "cy": 1259.2,
+    "npix": 8190,
+    "area_pct": 0.296,
+    "score": 0.152
+   }
+  ],
+  "electric kettle": [
+   {
+    "x0": 1011,
+    "x1": 1439,
+    "y0": 153,
+    "y1": 755,
+    "cx": 1205.5,
+    "cy": 440.3,
+    "npix": 213106,
+    "area_pct": 7.708,
+    "score": 0.927
+   },
+   {
+    "x0": 632,
+    "x1": 949,
+    "y0": 160,
+    "y1": 536,
+    "cx": 789.2,
+    "cy": 390.1,
+    "npix": 69995,
+    "area_pct": 2.532,
+    "score": 0.774
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

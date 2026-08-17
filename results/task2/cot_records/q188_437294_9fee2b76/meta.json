@@ -1,0 +1,185 @@
+{
+ "q": 188,
+ "visit": "437294",
+ "desc_id": "9fee2b76-202a-42aa-882d-e27b89999d8d",
+ "text": "Plug the device in the socket next to the table lamp",
+ "parse": {
+  "text": "Plug the device in the socket next to the table lamp",
+  "target": {
+   "concept": "socket",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "socket",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "table lamp",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "socket",
+    "b": "table lamp"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43649762",
+  "fid": "52587.746",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "43649762",
+    "52587.746"
+   ],
+   [
+    "43649763",
+    "52438.259"
+   ],
+   [
+    "43649762",
+    "52588.746"
+   ],
+   [
+    "43649767",
+    "52398.358"
+   ],
+   [
+    "43649762",
+    "52549.846"
+   ],
+   [
+    "43649763",
+    "52437.259"
+   ],
+   [
+    "43649762",
+    "52550.845"
+   ],
+   [
+    "43649767",
+    "52397.359"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 203,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "socket",
+  "table lamp"
+ ],
+ "roles": {
+  "socket": "target",
+  "table lamp": "landmark"
+ },
+ "candidates": {
+  "socket": [
+   {
+    "x0": 1033,
+    "x1": 1159,
+    "y0": 780,
+    "y1": 854,
+    "cx": 1105.8,
+    "cy": 814.7,
+    "npix": 7005,
+    "area_pct": 0.253,
+    "score": 0.944
+   },
+   {
+    "x0": 1160,
+    "x1": 1214,
+    "y0": 1270,
+    "y1": 1304,
+    "cx": 1187.3,
+    "cy": 1289.0,
+    "npix": 1111,
+    "area_pct": 0.04,
+    "score": 0.185
+   }
+  ],
+  "table lamp": [
+   {
+    "x0": 1240,
+    "x1": 1617,
+    "y0": 522,
+    "y1": 974,
+    "cx": 1423.1,
+    "cy": 719.1,
+    "npix": 99551,
+    "area_pct": 3.601,
+    "score": 0.966
+   }
+  ]
+ },
+ "mask_keys": {
+  "socket": [
+   "socket|0",
+   "socket|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,256 @@
+{
+ "q": 124,
+ "visit": "434888",
+ "desc_id": "4610904f-6285-4357-aab4-e20feea7b1b0",
+ "text": "Open the top left drawer of the closet next to the door",
+ "parse": {
+  "text": "Open the top left drawer of the closet next to the door",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "drawer"
+   },
+   {
+    "rel": "next_to",
+    "a": "closet",
+    "b": "door"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   },
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899185",
+  "fid": "184290.602",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 1,
+  "topk": [
+   [
+    "42899185",
+    "184290.602"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 105,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "closet",
+  "door"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "closet": "container",
+  "door": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1305,
+    "x1": 1364,
+    "y0": 1340,
+    "y1": 1386,
+    "cx": 1332.5,
+    "cy": 1365.2,
+    "npix": 1686,
+    "area_pct": 0.061,
+    "score": 0.781
+   },
+   {
+    "x0": 1350,
+    "x1": 1404,
+    "y0": 1386,
+    "y1": 1432,
+    "cx": 1374.0,
+    "cy": 1408.8,
+    "npix": 1789,
+    "area_pct": 0.065,
+    "score": 0.743
+   },
+   {
+    "x0": 980,
+    "x1": 989,
+    "y0": 1233,
+    "y1": 1275,
+    "cx": 984.4,
+    "cy": 1253.4,
+    "npix": 402,
+    "area_pct": 0.015,
+    "score": 0.332
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 960,
+    "x1": 1075,
+    "y0": 1179,
+    "y1": 1406,
+    "cx": 1023.3,
+    "cy": 1282.7,
+    "npix": 13354,
+    "area_pct": 0.483,
+    "score": 0.554
+   },
+   {
+    "x0": 1015,
+    "x1": 1099,
+    "y0": 1786,
+    "y1": 1919,
+    "cx": 1052.4,
+    "cy": 1873.1,
+    "npix": 6259,
+    "area_pct": 0.226,
+    "score": 0.481
+   }
+  ],
+  "closet": [
+   {
+    "x0": 1014,
+    "x1": 1439,
+    "y0": 322,
+    "y1": 1919,
+    "cx": 1264.1,
+    "cy": 1198.8,
+    "npix": 537411,
+    "area_pct": 19.438,
+    "score": 0.715
+   }
+  ],
+  "door": [
+   {
+    "x0": 1048,
+    "x1": 1439,
+    "y0": 403,
+    "y1": 1919,
+    "cx": 1259.0,
+    "cy": 1234.8,
+    "npix": 424936,
+    "area_pct": 15.37,
+    "score": 0.787
+   },
+   {
+    "x0": 1353,
+    "x1": 1439,
+    "y0": 1356,
+    "y1": 1919,
+    "cx": 1408.2,
+    "cy": 1722.4,
+    "npix": 25490,
+    "area_pct": 0.922,
+    "score": 0.327
+   },
+   {
+    "x0": 1015,
+    "x1": 1097,
+    "y0": 1789,
+    "y1": 1919,
+    "cx": 1052.0,
+    "cy": 1873.8,
+    "npix": 6014,
+    "area_pct": 0.218,
+    "score": 0.216
+   },
+   {
+    "x0": 960,
+    "x1": 1084,
+    "y0": 1159,
+    "y1": 1407,
+    "cx": 1026.4,
+    "cy": 1261.5,
+    "npix": 19973,
+    "area_pct": 0.722,
+    "score": 0.198
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

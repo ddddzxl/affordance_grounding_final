@@ -1,0 +1,9 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "high",
+ "kind": "score",
+ "flaw": "unanswerable",
+ "solver": "frontier-llm, manual CoT"
+}

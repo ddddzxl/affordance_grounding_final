@@ -1,0 +1,393 @@
+{
+ "q": 199,
+ "visit": "438102",
+ "desc_id": "a73433ed-8288-420f-b941-8ca103ec066e",
+ "text": "Open the second cabinet drawer with the globe on top",
+ "parse": {
+  "text": "Open the second cabinet drawer with the globe on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "globe",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "globe"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "ordinal",
+    "value": null,
+    "index": 2,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43896247",
+  "fid": "7608.601",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "43896247",
+    "7608.601"
+   ],
+   [
+    "43896249",
+    "7566.102"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.367,
+    "s2": 0.697,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.287,
+    "s2": 0.845,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 193,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "globe"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "globe": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1207,
+    "x1": 1239,
+    "y0": 735,
+    "y1": 754,
+    "cx": 1220.2,
+    "cy": 744.0,
+    "npix": 510,
+    "area_pct": 0.018,
+    "score": 0.77
+   },
+   {
+    "x0": 1193,
+    "x1": 1226,
+    "y0": 876,
+    "y1": 899,
+    "cx": 1209.6,
+    "cy": 888.3,
+    "npix": 544,
+    "area_pct": 0.02,
+    "score": 0.762
+   },
+   {
+    "x0": 1220,
+    "x1": 1246,
+    "y0": 625,
+    "y1": 644,
+    "cx": 1233.0,
+    "cy": 634.5,
+    "npix": 456,
+    "area_pct": 0.016,
+    "score": 0.694
+   },
+   {
+    "x0": 1127,
+    "x1": 1146,
+    "y0": 650,
+    "y1": 664,
+    "cx": 1136.7,
+    "cy": 657.3,
+    "npix": 275,
+    "area_pct": 0.01,
+    "score": 0.693
+   },
+   {
+    "x0": 1127,
+    "x1": 1152,
+    "y0": 555,
+    "y1": 569,
+    "cx": 1140.4,
+    "cy": 561.4,
+    "npix": 295,
+    "area_pct": 0.011,
+    "score": 0.687
+   },
+   {
+    "x0": 1107,
+    "x1": 1126,
+    "y0": 920,
+    "y1": 934,
+    "cx": 1117.2,
+    "cy": 926.5,
+    "npix": 258,
+    "area_pct": 0.009,
+    "score": 0.648
+   },
+   {
+    "x0": 1113,
+    "x1": 1139,
+    "y0": 775,
+    "y1": 794,
+    "cx": 1125.3,
+    "cy": 784.4,
+    "npix": 408,
+    "area_pct": 0.015,
+    "score": 0.628
+   },
+   {
+    "x0": 1180,
+    "x1": 1206,
+    "y0": 1040,
+    "y1": 1049,
+    "cx": 1192.1,
+    "cy": 1045.1,
+    "npix": 209,
+    "area_pct": 0.008,
+    "score": 0.416
+   },
+   {
+    "x0": 940,
+    "x1": 1110,
+    "y0": 795,
+    "y1": 858,
+    "cx": 1083.9,
+    "cy": 811.0,
+    "npix": 487,
+    "area_pct": 0.018,
+    "score": 0.158
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 1081,
+    "x1": 1258,
+    "y0": 817,
+    "y1": 1050,
+    "cx": 1155.3,
+    "cy": 953.0,
+    "npix": 22093,
+    "area_pct": 0.799,
+    "score": 0.797
+   },
+   {
+    "x0": 1090,
+    "x1": 1279,
+    "y0": 701,
+    "y1": 994,
+    "cx": 1193.7,
+    "cy": 846.1,
+    "npix": 25515,
+    "area_pct": 0.923,
+    "score": 0.748
+   },
+   {
+    "x0": 1103,
+    "x1": 1294,
+    "y0": 630,
+    "y1": 831,
+    "cx": 1207.8,
+    "cy": 724.4,
+    "npix": 19662,
+    "area_pct": 0.711,
+    "score": 0.68
+   },
+   {
+    "x0": 1101,
+    "x1": 1304,
+    "y0": 499,
+    "y1": 713,
+    "cx": 1197.1,
+    "cy": 607.1,
+    "npix": 22282,
+    "area_pct": 0.806,
+    "score": 0.607
+   },
+   {
+    "x0": 1094,
+    "x1": 1173,
+    "y0": 580,
+    "y1": 713,
+    "cx": 1125.9,
+    "cy": 640.8,
+    "npix": 5314,
+    "area_pct": 0.192,
+    "score": 0.222
+   },
+   {
+    "x0": 1087,
+    "x1": 1133,
+    "y0": 585,
+    "y1": 819,
+    "cx": 1106.1,
+    "cy": 700.9,
+    "npix": 5530,
+    "area_pct": 0.2,
+    "score": 0.203
+   },
+   {
+    "x0": 1086,
+    "x1": 1140,
+    "y0": 619,
+    "y1": 824,
+    "cx": 1110.6,
+    "cy": 734.7,
+    "npix": 6292,
+    "area_pct": 0.228,
+    "score": 0.19
+   },
+   {
+    "x0": 1093,
+    "x1": 1230,
+    "y0": 596,
+    "y1": 787,
+    "cx": 1140.4,
+    "cy": 691.9,
+    "npix": 11849,
+    "area_pct": 0.429,
+    "score": 0.175
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 1081,
+    "x1": 1622,
+    "y0": 442,
+    "y1": 1049,
+    "cx": 1335.2,
+    "cy": 756.4,
+    "npix": 271709,
+    "area_pct": 9.827,
+    "score": 0.778
+   },
+   {
+    "x0": 749,
+    "x1": 825,
+    "y0": 283,
+    "y1": 504,
+    "cx": 789.4,
+    "cy": 391.4,
+    "npix": 10262,
+    "area_pct": 0.371,
+    "score": 0.246
+   },
+   {
+    "x0": 0,
+    "x1": 132,
+    "y0": 1122,
+    "y1": 1434,
+    "cx": 61.3,
+    "cy": 1283.8,
+    "npix": 21421,
+    "area_pct": 0.775,
+    "score": 0.152
+   }
+  ],
+  "globe": [
+   {
+    "x0": 1359,
+    "x1": 1638,
+    "y0": 180,
+    "y1": 462,
+    "cx": 1495.8,
+    "cy": 319.5,
+    "npix": 61609,
+    "area_pct": 2.228,
+    "score": 0.898
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4",
+   "drawer handle|5",
+   "drawer handle|6",
+   "drawer handle|7",
+   "drawer handle|8"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5",
+   "drawer|6",
+   "drawer|7"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   6
+  ],
+  "host": 5,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

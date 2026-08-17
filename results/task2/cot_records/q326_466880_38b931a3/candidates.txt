@@ -1,0 +1,79 @@
+TASK: "Open the second drawer of the counter to the left of the oven"
+
+PARSE:
+  target concept = "drawer handle"   <- the thing that must be output
+  host           = 'drawer'   <- countable object the target sits on
+  entity  : 'drawer handle'  role=target
+  entity  : 'drawer'  role=host
+  entity  : 'counter'  role=container
+  entity  : 'oven'  role=landmark
+  relation: contains(a='counter', b='drawer')
+  relation: left_of(a='counter', b='oven')
+  select  : on='drawer' axis=ordinal value=None index=2 from=None
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  drawer handle        0   360   406  1121  1179   381.3  1153.0   0.063  0.895
+  drawer handle        1   347   392  1340  1404   370.4  1374.6   0.067  0.887
+  drawer handle        2   367   412   984  1039   389.8  1012.3   0.063  0.884
+  drawer handle        3   147   207   715   749   175.7   732.5   0.056   0.87
+  drawer handle        4   453   486   770   812   470.3   790.5   0.037  0.862
+  drawer handle        5   453   472  1245  1284   462.3  1264.8   0.022  0.624
+  drawer handle        6  1300  1352   460   509  1325.0   483.5   0.067  0.585
+  drawer handle        7   720   759   330   369   737.1   350.1   0.042  0.521
+  drawer               0   294   439  1245  1439   353.1  1364.8   0.664  0.846
+  drawer               1   310   451  1056  1371   385.1  1208.0   0.877  0.803
+  drawer               2   393   544   719   838   452.9   791.1   0.347  0.721
+  drawer               3   332   459   937  1109   395.8  1022.3   0.309  0.606
+  drawer               4   328   457   990  1174   394.4  1084.7   0.364  0.494
+  drawer               5   440   479  1205  1362   457.1  1290.2   0.101   0.48
+  drawer               6   447   492  1056  1249   472.2  1142.3   0.189  0.419
+  drawer               7     9   339   697   769   177.1   730.8   0.478  0.379
+  drawer               8   302   470  1242  1403   389.5  1321.2   0.249  0.297
+  drawer               9   448   485  1195  1278   466.4  1235.2   0.078  0.267
+  drawer              10   300   332  1033  1245   315.2  1140.9   0.208  0.154
+  counter              0   299  1380   757  1439   761.3  1100.5   6.432  0.777
+  counter              1     0   559   589   716   233.9   645.3   1.706  0.549
+  counter              2   367   635   632   823   502.3   722.7    0.85  0.352
+  counter              3  1194  1739   914  1265  1501.4  1079.6   3.264  0.308
+  oven                 0   485   840  1097  1439   628.5  1304.9    1.82  0.788
+  oven                 1  1152  1666  1020  1439  1394.6  1261.6   4.584  0.777
+  oven                 2   533  1174   931  1384   900.8  1135.1   6.239  0.176
+
+
+
+
+
+CONTAINMENT (drawer handle inside the FILLED mask of each drawer):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  drawer #0   x[ 294, 439] cx   353.1 cy  1364.8 w= 145 contains #1
+  drawer #1   x[ 310, 451] cx   385.1 cy  1208.0 w= 141 contains #0
+  drawer #2   x[ 393, 544] cx   452.9 cy   791.1 w= 151 contains #4
+  drawer #3   x[ 332, 459] cx   395.8 cy  1022.3 w= 127 contains #2
+  drawer #4   x[ 328, 457] cx   394.4 cy  1084.7 w= 129 contains (none)
+  drawer #5   x[ 440, 479] cx   457.1 cy  1290.2 w=  39 contains #5
+  drawer #6   x[ 447, 492] cx   472.2 cy  1142.3 w=  45 contains (none)
+  drawer #7   x[   9, 339] cx   177.1 cy   730.8 w= 330 contains #3
+  drawer #8   x[ 302, 470] cx   389.5 cy  1321.2 w= 168 contains (none)
+  drawer #9   x[ 448, 485] cx   466.4 cy  1235.2 w=  37 contains #5
+  drawer #10  x[ 300, 332] cx   315.2 cy  1140.9 w=  32 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "drawer handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: drawer handle #<id>[, #<id> ...]

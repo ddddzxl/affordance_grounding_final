@@ -1,0 +1,439 @@
+{
+ "q": 326,
+ "visit": "466880",
+ "desc_id": "38b931a3-2365-4f7a-8cac-3b79ec5c249e",
+ "text": "Open the second drawer of the counter to the left of the oven",
+ "parse": {
+  "text": "Open the second drawer of the counter to the left of the oven",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "counter",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "oven",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "counter",
+    "b": "drawer"
+   },
+   {
+    "rel": "left_of",
+    "a": "counter",
+    "b": "oven"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "ordinal",
+    "value": null,
+    "index": 2,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331707",
+  "fid": "11125.831",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "47331707",
+    "11125.831"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "counter",
+  "oven"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "counter": "container",
+  "oven": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 360,
+    "x1": 406,
+    "y0": 1121,
+    "y1": 1179,
+    "cx": 381.3,
+    "cy": 1153.0,
+    "npix": 1735,
+    "area_pct": 0.063,
+    "score": 0.895
+   },
+   {
+    "x0": 347,
+    "x1": 392,
+    "y0": 1340,
+    "y1": 1404,
+    "cx": 370.4,
+    "cy": 1374.6,
+    "npix": 1854,
+    "area_pct": 0.067,
+    "score": 0.887
+   },
+   {
+    "x0": 367,
+    "x1": 412,
+    "y0": 984,
+    "y1": 1039,
+    "cx": 389.8,
+    "cy": 1012.3,
+    "npix": 1748,
+    "area_pct": 0.063,
+    "score": 0.884
+   },
+   {
+    "x0": 147,
+    "x1": 207,
+    "y0": 715,
+    "y1": 749,
+    "cx": 175.7,
+    "cy": 732.5,
+    "npix": 1561,
+    "area_pct": 0.056,
+    "score": 0.87
+   },
+   {
+    "x0": 453,
+    "x1": 486,
+    "y0": 770,
+    "y1": 812,
+    "cx": 470.3,
+    "cy": 790.5,
+    "npix": 1012,
+    "area_pct": 0.037,
+    "score": 0.862
+   },
+   {
+    "x0": 453,
+    "x1": 472,
+    "y0": 1245,
+    "y1": 1284,
+    "cx": 462.3,
+    "cy": 1264.8,
+    "npix": 596,
+    "area_pct": 0.022,
+    "score": 0.624
+   },
+   {
+    "x0": 1300,
+    "x1": 1352,
+    "y0": 460,
+    "y1": 509,
+    "cx": 1325.0,
+    "cy": 483.5,
+    "npix": 1864,
+    "area_pct": 0.067,
+    "score": 0.585
+   },
+   {
+    "x0": 720,
+    "x1": 759,
+    "y0": 330,
+    "y1": 369,
+    "cx": 737.1,
+    "cy": 350.1,
+    "npix": 1167,
+    "area_pct": 0.042,
+    "score": 0.521
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 294,
+    "x1": 439,
+    "y0": 1245,
+    "y1": 1439,
+    "cx": 353.1,
+    "cy": 1364.8,
+    "npix": 18363,
+    "area_pct": 0.664,
+    "score": 0.846
+   },
+   {
+    "x0": 310,
+    "x1": 451,
+    "y0": 1056,
+    "y1": 1371,
+    "cx": 385.1,
+    "cy": 1208.0,
+    "npix": 24261,
+    "area_pct": 0.877,
+    "score": 0.803
+   },
+   {
+    "x0": 393,
+    "x1": 544,
+    "y0": 719,
+    "y1": 838,
+    "cx": 452.9,
+    "cy": 791.1,
+    "npix": 9596,
+    "area_pct": 0.347,
+    "score": 0.721
+   },
+   {
+    "x0": 332,
+    "x1": 459,
+    "y0": 937,
+    "y1": 1109,
+    "cx": 395.8,
+    "cy": 1022.3,
+    "npix": 8541,
+    "area_pct": 0.309,
+    "score": 0.606
+   },
+   {
+    "x0": 328,
+    "x1": 457,
+    "y0": 990,
+    "y1": 1174,
+    "cx": 394.4,
+    "cy": 1084.7,
+    "npix": 10057,
+    "area_pct": 0.364,
+    "score": 0.494
+   },
+   {
+    "x0": 440,
+    "x1": 479,
+    "y0": 1205,
+    "y1": 1362,
+    "cx": 457.1,
+    "cy": 1290.2,
+    "npix": 2781,
+    "area_pct": 0.101,
+    "score": 0.48
+   },
+   {
+    "x0": 447,
+    "x1": 492,
+    "y0": 1056,
+    "y1": 1249,
+    "cx": 472.2,
+    "cy": 1142.3,
+    "npix": 5232,
+    "area_pct": 0.189,
+    "score": 0.419
+   },
+   {
+    "x0": 9,
+    "x1": 339,
+    "y0": 697,
+    "y1": 769,
+    "cx": 177.1,
+    "cy": 730.8,
+    "npix": 13211,
+    "area_pct": 0.478,
+    "score": 0.379
+   },
+   {
+    "x0": 302,
+    "x1": 470,
+    "y0": 1242,
+    "y1": 1403,
+    "cx": 389.5,
+    "cy": 1321.2,
+    "npix": 6888,
+    "area_pct": 0.249,
+    "score": 0.297
+   },
+   {
+    "x0": 448,
+    "x1": 485,
+    "y0": 1195,
+    "y1": 1278,
+    "cx": 466.4,
+    "cy": 1235.2,
+    "npix": 2162,
+    "area_pct": 0.078,
+    "score": 0.267
+   },
+   {
+    "x0": 300,
+    "x1": 332,
+    "y0": 1033,
+    "y1": 1245,
+    "cx": 315.2,
+    "cy": 1140.9,
+    "npix": 5742,
+    "area_pct": 0.208,
+    "score": 0.154
+   }
+  ],
+  "counter": [
+   {
+    "x0": 299,
+    "x1": 1380,
+    "y0": 757,
+    "y1": 1439,
+    "cx": 761.3,
+    "cy": 1100.5,
+    "npix": 177839,
+    "area_pct": 6.432,
+    "score": 0.777
+   },
+   {
+    "x0": 0,
+    "x1": 559,
+    "y0": 589,
+    "y1": 716,
+    "cx": 233.9,
+    "cy": 645.3,
+    "npix": 47163,
+    "area_pct": 1.706,
+    "score": 0.549
+   },
+   {
+    "x0": 367,
+    "x1": 635,
+    "y0": 632,
+    "y1": 823,
+    "cx": 502.3,
+    "cy": 722.7,
+    "npix": 23509,
+    "area_pct": 0.85,
+    "score": 0.352
+   },
+   {
+    "x0": 1194,
+    "x1": 1739,
+    "y0": 914,
+    "y1": 1265,
+    "cx": 1501.4,
+    "cy": 1079.6,
+    "npix": 90247,
+    "area_pct": 3.264,
+    "score": 0.308
+   }
+  ],
+  "oven": [
+   {
+    "x0": 485,
+    "x1": 840,
+    "y0": 1097,
+    "y1": 1439,
+    "cx": 628.5,
+    "cy": 1304.9,
+    "npix": 50307,
+    "area_pct": 1.82,
+    "score": 0.788
+   },
+   {
+    "x0": 1152,
+    "x1": 1666,
+    "y0": 1020,
+    "y1": 1439,
+    "cx": 1394.6,
+    "cy": 1261.6,
+    "npix": 126734,
+    "area_pct": 4.584,
+    "score": 0.777
+   },
+   {
+    "x0": 533,
+    "x1": 1174,
+    "y0": 931,
+    "y1": 1384,
+    "cx": 900.8,
+    "cy": 1135.1,
+    "npix": 172497,
+    "area_pct": 6.239,
+    "score": 0.176
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4",
+   "drawer handle|5",
+   "drawer handle|6",
+   "drawer handle|7"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5",
+   "drawer|6",
+   "drawer|7",
+   "drawer|8",
+   "drawer|9",
+   "drawer|10"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   4
+  ],
+  "host": 2,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

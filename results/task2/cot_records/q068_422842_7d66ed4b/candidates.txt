@@ -1,0 +1,68 @@
+TASK: "Open the top left drawer of the dressing table"
+
+PARSE:
+  target concept = "drawer handle"   <- the thing that must be output
+  host           = 'drawer'   <- countable object the target sits on
+  entity  : 'drawer handle'  role=target
+  entity  : 'drawer'  role=host
+  entity  : 'dressing table'  role=container
+  relation: contains(a='dressing table', b='drawer')
+  select  : on='drawer' axis=vertical value='top' index=None from=None
+  select  : on='drawer' axis=horizontal value='left' index=None from=None
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  drawer handle        0   656   814  1627  1812   737.0  1721.8   0.196   0.97
+  drawer handle        1   652   834  1253  1419   747.0  1337.6   0.218   0.97
+  drawer handle        2   655   829  1447  1632   743.5  1542.9   0.211  0.967
+  drawer handle        3   250   333  1020  1106   291.1  1063.4   0.078  0.939
+  drawer handle        4   265   344  1164  1252   306.2  1208.5   0.071  0.935
+  drawer handle        5   225   309   873   946   266.0   910.1   0.065  0.931
+  drawer handle        6   834   849   453   512   843.0   485.8   0.026  0.311
+  drawer handle        7   815   834   447   519   825.6   487.0   0.027  0.305
+  drawer handle        8   895   909   713   759   902.5   743.6   0.011  0.152
+  drawer               0   620   908  1342  1818   762.1  1580.1   1.859  0.959
+  drawer               1   621   895  1521  1919   743.5  1764.3   1.985  0.957
+  drawer               2   615   942  1192  1606   786.0  1400.9   2.213  0.935
+  drawer               3   250   404  1094  1419   329.4  1257.4   0.792   0.93
+  drawer               4   216   384   836  1218   302.8  1026.5   1.155  0.852
+  drawer               5   905  1029  1759  1919   952.3  1859.2   0.422  0.412
+  drawer               6   936  1318  1214  1572  1117.8  1395.8   1.913  0.287
+  drawer               7   365   617   979  1505   484.9  1242.8   2.804  0.168
+  dressing table       0   204  1345   381  1919   738.1  1251.0    20.2  0.776
+  dressing table       1   376  1119   361   791   847.8   534.6   5.227  0.185
+
+
+
+
+
+CONTAINMENT (drawer handle inside the FILLED mask of each drawer):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  drawer #0   x[ 620, 908] cx   762.1 cy  1580.1 w= 288 contains #2
+  drawer #1   x[ 621, 895] cx   743.5 cy  1764.3 w= 274 contains #0
+  drawer #2   x[ 615, 942] cx   786.0 cy  1400.9 w= 327 contains #1
+  drawer #3   x[ 250, 404] cx   329.4 cy  1257.4 w= 154 contains #4
+  drawer #4   x[ 216, 384] cx   302.8 cy  1026.5 w= 168 contains #3, #5
+  drawer #5   x[ 905,1029] cx   952.3 cy  1859.2 w= 124 contains (none)
+  drawer #6   x[ 936,1318] cx  1117.8 cy  1395.8 w= 382 contains (none)
+  drawer #7   x[ 365, 617] cx   484.9 cy  1242.8 w= 252 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "drawer handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: drawer handle #<id>[, #<id> ...]

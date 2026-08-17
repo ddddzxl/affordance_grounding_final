@@ -1,0 +1,242 @@
+{
+ "q": 394,
+ "visit": "467115",
+ "desc_id": "80b54aac-9e78-45c3-b7f5-52c68a36e12c",
+ "text": "Open the oven door",
+ "parse": {
+  "text": "Open the oven door",
+  "target": {
+   "concept": "oven handle",
+   "host": "oven"
+  },
+  "entities": [
+   {
+    "name": "oven handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "oven",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28302.762",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333310",
+    "28302.762"
+   ],
+   [
+    "47333308",
+    "28017.162"
+   ],
+   [
+    "47333308",
+    "28018.162"
+   ],
+   [
+    "47333308",
+    "28016.162"
+   ],
+   [
+    "47333319",
+    "28482.855"
+   ],
+   [
+    "47333308",
+    "28088.367"
+   ],
+   [
+    "47333310",
+    "28230.659"
+   ],
+   [
+    "47333308",
+    "28021.160"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "oven handle",
+  "oven"
+ ],
+ "roles": {
+  "oven handle": "target",
+  "oven": "host"
+ },
+ "candidates": {
+  "oven handle": [
+   {
+    "x0": 225,
+    "x1": 689,
+    "y0": 394,
+    "y1": 745,
+    "cx": 481.3,
+    "cy": 593.5,
+    "npix": 12856,
+    "area_pct": 0.465,
+    "score": 0.802
+   },
+   {
+    "x0": 420,
+    "x1": 649,
+    "y0": 973,
+    "y1": 1195,
+    "cx": 537.2,
+    "cy": 1086.5,
+    "npix": 6367,
+    "area_pct": 0.23,
+    "score": 0.522
+   },
+   {
+    "x0": 784,
+    "x1": 1199,
+    "y0": 580,
+    "y1": 838,
+    "cx": 996.2,
+    "cy": 714.1,
+    "npix": 20054,
+    "area_pct": 0.725,
+    "score": 0.505
+   },
+   {
+    "x0": 782,
+    "x1": 1123,
+    "y0": 842,
+    "y1": 1096,
+    "cx": 957.9,
+    "cy": 972.2,
+    "npix": 15493,
+    "area_pct": 0.56,
+    "score": 0.451
+   },
+   {
+    "x0": 724,
+    "x1": 811,
+    "y0": 0,
+    "y1": 53,
+    "cx": 765.8,
+    "cy": 21.2,
+    "npix": 3068,
+    "area_pct": 0.111,
+    "score": 0.292
+   },
+   {
+    "x0": 352,
+    "x1": 574,
+    "y0": 0,
+    "y1": 95,
+    "cx": 541.9,
+    "cy": 48.5,
+    "npix": 2961,
+    "area_pct": 0.107,
+    "score": 0.216
+   }
+  ],
+  "oven": [
+   {
+    "x0": 172,
+    "x1": 806,
+    "y0": 260,
+    "y1": 1238,
+    "cx": 586.2,
+    "cy": 729.9,
+    "npix": 194858,
+    "area_pct": 7.048,
+    "score": 0.793
+   },
+   {
+    "x0": 132,
+    "x1": 760,
+    "y0": 195,
+    "y1": 691,
+    "cx": 478.8,
+    "cy": 435.6,
+    "npix": 96351,
+    "area_pct": 3.485,
+    "score": 0.343
+   }
+  ]
+ },
+ "mask_keys": {
+  "oven handle": [
+   "oven handle|0",
+   "oven handle|1",
+   "oven handle|2",
+   "oven handle|3",
+   "oven handle|4",
+   "oven handle|5"
+  ],
+  "oven": [
+   "oven|0",
+   "oven|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

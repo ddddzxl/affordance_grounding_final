@@ -1,0 +1,212 @@
+{
+ "q": 216,
+ "visit": "438775",
+ "desc_id": "c29fac55-7a5b-4fd5-9f27-ce6f18176673",
+ "text": "Open the right glass door under the TV screen",
+ "parse": {
+  "text": "Open the right glass door under the TV screen",
+  "target": {
+   "concept": "door handle",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "TV screen",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "under",
+    "a": "door",
+    "b": "TV screen"
+   }
+  ],
+  "select": [
+   {
+    "on": "door",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358170",
+  "fid": "62317.152",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 7,
+  "topk": [
+   [
+    "44358170",
+    "62317.152"
+   ],
+   [
+    "44358176",
+    "62260.457"
+   ],
+   [
+    "44358170",
+    "62327.148"
+   ],
+   [
+    "44358176",
+    "62273.452"
+   ],
+   [
+    "44358170",
+    "62370.347"
+   ],
+   [
+    "44358173",
+    "62385.758"
+   ],
+   [
+    "44358173",
+    "62428.557"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.757,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.367,
+    "s2": 0.824,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.367,
+    "s2": 0.682,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.2
+   }
+  ],
+  "n_frames": 266,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "door",
+  "TV screen"
+ ],
+ "roles": {
+  "door handle": "target",
+  "door": "host",
+  "TV screen": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1081,
+    "x1": 1132,
+    "y0": 465,
+    "y1": 544,
+    "cx": 1101.0,
+    "cy": 503.9,
+    "npix": 2251,
+    "area_pct": 0.081,
+    "score": 0.593
+   },
+   {
+    "x0": 714,
+    "x1": 785,
+    "y0": 895,
+    "y1": 929,
+    "cx": 748.4,
+    "cy": 912.4,
+    "npix": 884,
+    "area_pct": 0.032,
+    "score": 0.427
+   }
+  ],
+  "door": [
+   {
+    "x0": 1074,
+    "x1": 1529,
+    "y0": 0,
+    "y1": 1009,
+    "cx": 1300.5,
+    "cy": 473.0,
+    "npix": 405496,
+    "area_pct": 14.666,
+    "score": 0.971
+   }
+  ],
+  "TV screen": [
+   {
+    "x0": 0,
+    "x1": 86,
+    "y0": 175,
+    "y1": 529,
+    "cx": 29.6,
+    "cy": 401.5,
+    "npix": 16846,
+    "area_pct": 0.609,
+    "score": 0.933
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1"
+  ],
+  "door": [
+   "door|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,27 @@
+TASK: "Plug in the Instant Pot using the nearest socket"
+
+PARSE:
+  target concept = "socket"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'socket'  role=target
+  entity  : 'pressure cooker'  role=landmark
+  relation: near(a='socket', b='pressure cooker')
+  residual: 'nearest' as in q10; Instant Pot is a brand name, so the retrieval term is the generic pressure cooker
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  y increases DOWNWARD.
+  => "top" = SMALL y,  "bottom" = LARGE y,  "left" = SMALL x,  "right" = LARGE x
+  => "A above B" means A.cy < B.cy.
+  area% = mask pixels as % of the whole image.  score = SAM3 confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class                      id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  socket                      0   180   283   533   672   232.7   599.4   0.398  0.919
+  socket                      1  1066  1184   568   739  1124.0   647.7   0.541  0.905
+  pressure cooker             0   452   799   563   946   617.8   753.0   3.331  0.962
+  pressure cooker             1  1240  1439  1227  1919  1365.0  1587.3   3.430  0.605
+
+QUESTION: which "socket" id(s) does the instruction refer to?

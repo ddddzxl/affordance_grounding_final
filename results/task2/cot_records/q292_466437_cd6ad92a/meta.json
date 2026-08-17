@@ -1,0 +1,280 @@
+{
+ "q": 292,
+ "visit": "466437",
+ "desc_id": "cd6ad92a-aa30-4fd0-9798-075a807318c9",
+ "text": "Open the window next to the closet",
+ "parse": {
+  "text": "Open the window next to the closet",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "window",
+    "b": "closet"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45260951",
+  "fid": "6121.312",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 7,
+  "topk": [
+   [
+    "45260951",
+    "6121.312"
+   ],
+   [
+    "45260957",
+    "5940.117"
+   ],
+   [
+    "45260952",
+    "6004.908"
+   ],
+   [
+    "45260952",
+    "6005.907"
+   ],
+   [
+    "45260957",
+    "5936.018"
+   ],
+   [
+    "45260951",
+    "6139.121"
+   ],
+   [
+    "45260951",
+    "6138.122"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "closet"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "closet": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 615,
+    "x1": 650,
+    "y0": 1060,
+    "y1": 1099,
+    "cx": 631.1,
+    "cy": 1076.2,
+    "npix": 1023,
+    "area_pct": 0.037,
+    "score": 0.513
+   },
+   {
+    "x0": 721,
+    "x1": 734,
+    "y0": 967,
+    "y1": 986,
+    "cx": 729.0,
+    "cy": 977.6,
+    "npix": 198,
+    "area_pct": 0.007,
+    "score": 0.329
+   },
+   {
+    "x0": 1055,
+    "x1": 1134,
+    "y0": 1093,
+    "y1": 1146,
+    "cx": 1096.6,
+    "cy": 1120.8,
+    "npix": 3402,
+    "area_pct": 0.123,
+    "score": 0.276
+   },
+   {
+    "x0": 1305,
+    "x1": 1394,
+    "y0": 1103,
+    "y1": 1159,
+    "cx": 1349.4,
+    "cy": 1131.6,
+    "npix": 4107,
+    "area_pct": 0.149,
+    "score": 0.262
+   },
+   {
+    "x0": 801,
+    "x1": 819,
+    "y0": 907,
+    "y1": 951,
+    "cx": 811.4,
+    "cy": 927.9,
+    "npix": 646,
+    "area_pct": 0.023,
+    "score": 0.161
+   },
+   {
+    "x0": 750,
+    "x1": 785,
+    "y0": 859,
+    "y1": 879,
+    "cx": 770.1,
+    "cy": 868.6,
+    "npix": 550,
+    "area_pct": 0.02,
+    "score": 0.154
+   },
+   {
+    "x0": 1240,
+    "x1": 1279,
+    "y0": 1467,
+    "y1": 1506,
+    "cx": 1259.6,
+    "cy": 1486.0,
+    "npix": 1301,
+    "area_pct": 0.047,
+    "score": 0.153
+   },
+   {
+    "x0": 725,
+    "x1": 739,
+    "y0": 970,
+    "y1": 992,
+    "cx": 733.5,
+    "cy": 982.0,
+    "npix": 229,
+    "area_pct": 0.008,
+    "score": 0.151
+   }
+  ],
+  "window": [
+   {
+    "x0": 620,
+    "x1": 863,
+    "y0": 720,
+    "y1": 1130,
+    "cx": 739.0,
+    "cy": 914.2,
+    "npix": 88449,
+    "area_pct": 3.199,
+    "score": 0.943
+   }
+  ],
+  "closet": [
+   {
+    "x0": 943,
+    "x1": 1439,
+    "y0": 450,
+    "y1": 1555,
+    "cx": 1174.9,
+    "cy": 941.8,
+    "npix": 434026,
+    "area_pct": 15.698,
+    "score": 0.836
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2",
+   "window handle|3",
+   "window handle|4",
+   "window handle|5",
+   "window handle|6",
+   "window handle|7"
+  ],
+  "window": [
+   "window|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1,
+   4,
+   5,
+   7
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(5)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,27 @@
+TASK: "Turn on the light using the switch near the sofa"
+
+PARSE:
+  target concept = "light switch"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'light switch'  role=target
+  entity  : 'sofa'  role=landmark
+  relation: near(a='light switch', b='sofa')
+  residual: the light being operated (a ceiling light) is not co-located with the switch and may not be within the scanned volume at all, so it is not made an entity
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  y increases DOWNWARD.
+  => "top" = SMALL y,  "bottom" = LARGE y,  "left" = SMALL x,  "right" = LARGE x
+  => "A above B" means A.cy < B.cy.
+  area% = mask pixels as % of the whole image.  score = SAM3 confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class                      id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  light switch                0   340   389   574   679   364.3   627.0   0.141  0.855
+  light switch                1   215   279   620   726   246.0   672.7   0.158  0.842
+  light switch                2   275   334   600   699   305.3   648.9   0.153  0.769
+  sofa                        0   342  1439   344  1919   984.5  1181.3  37.922  0.968
+
+QUESTION: which "light switch" id(s) does the instruction refer to?

@@ -1,0 +1,239 @@
+{
+ "q": 135,
+ "visit": "434897",
+ "desc_id": "31d68932-ba1c-4d58-b08d-40711c4190fa",
+ "text": "Open the bottom drawer of the wooden closet",
+ "parse": {
+  "text": "Open the bottom drawer of the wooden closet",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "drawer"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899165",
+  "fid": "182850.544",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899165",
+    "182850.544"
+   ],
+   [
+    "42899165",
+    "182807.545"
+   ],
+   [
+    "42899163",
+    "182724.146"
+   ],
+   [
+    "42899163",
+    "182723.147"
+   ],
+   [
+    "42899163",
+    "182719.132"
+   ],
+   [
+    "42899165",
+    "182867.137"
+   ],
+   [
+    "42899163",
+    "182718.132"
+   ],
+   [
+    "42899163",
+    "182684.746"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.367,
+    "s2": 0.827,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.999,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.979,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 94,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "closet"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "closet": "container"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1140,
+    "x1": 1439,
+    "y0": 27,
+    "y1": 319,
+    "cx": 1309.7,
+    "cy": 205.6,
+    "npix": 20651,
+    "area_pct": 0.747,
+    "score": 0.324
+   },
+   {
+    "x0": 0,
+    "x1": 19,
+    "y0": 1340,
+    "y1": 1373,
+    "cx": 7.5,
+    "cy": 1360.0,
+    "npix": 461,
+    "area_pct": 0.017,
+    "score": 0.305
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 0,
+    "x1": 145,
+    "y0": 1155,
+    "y1": 1678,
+    "cx": 52.7,
+    "cy": 1493.3,
+    "npix": 43383,
+    "area_pct": 1.569,
+    "score": 0.37
+   },
+   {
+    "x0": 0,
+    "x1": 729,
+    "y0": 0,
+    "y1": 1609,
+    "cx": 345.4,
+    "cy": 808.1,
+    "npix": 1057589,
+    "area_pct": 38.252,
+    "score": 0.157
+   }
+  ],
+  "closet": [
+   {
+    "x0": 0,
+    "x1": 727,
+    "y0": 0,
+    "y1": 1645,
+    "cx": 340.0,
+    "cy": 813.9,
+    "npix": 1075164,
+    "area_pct": 38.888,
+    "score": 0.552
+   },
+   {
+    "x0": 0,
+    "x1": 146,
+    "y0": 1167,
+    "y1": 1679,
+    "cx": 52.7,
+    "cy": 1495.2,
+    "npix": 43022,
+    "area_pct": 1.556,
+    "score": 0.208
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

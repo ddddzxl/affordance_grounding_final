@@ -1,0 +1,182 @@
+{
+ "q": 219,
+ "visit": "438775",
+ "desc_id": "f4c143ab-787d-4793-ad1d-b4d4f524eda4",
+ "text": "Lock the glass door that leads to the kitchen",
+ "parse": {
+  "text": "Lock the glass door that leads to the kitchen",
+  "target": {
+   "concept": "door lock",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door lock",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'leads to the kitchen' is a room-level locator, not groundable; train: 'lock' is a rotate affordance disjoint from the handle (274/274 pairs in train share 0 annotation)",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358170",
+  "fid": "62318.151",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44358170",
+    "62318.151"
+   ],
+   [
+    "44358170",
+    "62369.348"
+   ],
+   [
+    "44358176",
+    "62281.449"
+   ],
+   [
+    "44358176",
+    "62280.449"
+   ],
+   [
+    "44358170",
+    "62334.561"
+   ],
+   [
+    "44358170",
+    "62317.152"
+   ],
+   [
+    "44358176",
+    "62270.453"
+   ],
+   [
+    "44358173",
+    "62545.461"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.971,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.966,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 266,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door lock",
+  "door"
+ ],
+ "roles": {
+  "door lock": "target",
+  "door": "host"
+ },
+ "candidates": {
+  "door lock": [
+   {
+    "x0": 733,
+    "x1": 792,
+    "y0": 740,
+    "y1": 828,
+    "cx": 755.7,
+    "cy": 782.3,
+    "npix": 2715,
+    "area_pct": 0.098,
+    "score": 0.765
+   },
+   {
+    "x0": 266,
+    "x1": 352,
+    "y0": 1270,
+    "y1": 1329,
+    "cx": 305.0,
+    "cy": 1298.4,
+    "npix": 1827,
+    "area_pct": 0.066,
+    "score": 0.152
+   }
+  ],
+  "door": [
+   {
+    "x0": 723,
+    "x1": 1192,
+    "y0": 37,
+    "y1": 1394,
+    "cx": 958.0,
+    "cy": 682.2,
+    "npix": 548003,
+    "area_pct": 19.821,
+    "score": 0.913
+   }
+  ]
+ },
+ "mask_keys": {
+  "door lock": [
+   "door lock|0",
+   "door lock|1"
+  ],
+  "door": [
+   "door|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

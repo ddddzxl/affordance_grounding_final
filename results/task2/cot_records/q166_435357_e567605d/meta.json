@@ -1,0 +1,227 @@
+{
+ "q": 166,
+ "visit": "435357",
+ "desc_id": "e567605d-a180-4704-9b07-cec1873718c8",
+ "text": "Open the right drawer of the TV stand",
+ "parse": {
+  "text": "Open the right drawer of the TV stand",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "TV stand",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "TV stand",
+    "b": "drawer"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899630",
+  "fid": "229935.283",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899630",
+    "229935.283"
+   ],
+   [
+    "42899624",
+    "230012.386"
+   ],
+   [
+    "42899624",
+    "230013.386"
+   ],
+   [
+    "42899624",
+    "230086.590"
+   ],
+   [
+    "42899624",
+    "230130.389"
+   ],
+   [
+    "42899624",
+    "230128.390"
+   ],
+   [
+    "42899624",
+    "230132.389"
+   ],
+   [
+    "42899624",
+    "230127.391"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.957,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.933,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 191,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "TV stand"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "TV stand": "container"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 480,
+    "x1": 520,
+    "y0": 1207,
+    "y1": 1246,
+    "cx": 500.5,
+    "cy": 1228.1,
+    "npix": 1278,
+    "area_pct": 0.046,
+    "score": 0.908
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 150,
+    "x1": 837,
+    "y0": 1095,
+    "y1": 1299,
+    "cx": 498.4,
+    "cy": 1203.1,
+    "npix": 107560,
+    "area_pct": 3.89,
+    "score": 0.866
+   },
+   {
+    "x0": 0,
+    "x1": 189,
+    "y0": 1088,
+    "y1": 1307,
+    "cx": 83.3,
+    "cy": 1224.7,
+    "npix": 28011,
+    "area_pct": 1.013,
+    "score": 0.828
+   }
+  ],
+  "TV stand": [
+   {
+    "x0": 0,
+    "x1": 909,
+    "y0": 567,
+    "y1": 1364,
+    "cx": 400.6,
+    "cy": 1051.9,
+    "npix": 403894,
+    "area_pct": 14.608,
+    "score": 0.882
+   },
+   {
+    "x0": 45,
+    "x1": 626,
+    "y0": 593,
+    "y1": 832,
+    "cx": 340.7,
+    "cy": 708.8,
+    "npix": 59483,
+    "area_pct": 2.151,
+    "score": 0.855
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,280 @@
+{
+ "q": 118,
+ "visit": "434888",
+ "desc_id": "07242cd1-3570-4221-9e9c-22a1cde18d4c",
+ "text": "Open the bottom left drawer of the closet next to the door",
+ "parse": {
+  "text": "Open the bottom left drawer of the closet next to the door",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "drawer"
+   },
+   {
+    "rel": "next_to",
+    "a": "closet",
+    "b": "door"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   },
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899185",
+  "fid": "184292.701",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "42899185",
+    "184292.701"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.525,
+    "s2": 0.725,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 105,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "closet",
+  "door"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "closet": "container",
+  "door": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 730,
+    "x1": 759,
+    "y0": 653,
+    "y1": 679,
+    "cx": 744.0,
+    "cy": 664.0,
+    "npix": 660,
+    "area_pct": 0.024,
+    "score": 0.801
+   },
+   {
+    "x0": 970,
+    "x1": 1012,
+    "y0": 1020,
+    "y1": 1052,
+    "cx": 988.5,
+    "cy": 1033.7,
+    "npix": 999,
+    "area_pct": 0.036,
+    "score": 0.788
+   },
+   {
+    "x0": 730,
+    "x1": 760,
+    "y0": 787,
+    "y1": 806,
+    "cx": 744.0,
+    "cy": 794.4,
+    "npix": 453,
+    "area_pct": 0.016,
+    "score": 0.735
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 670,
+    "x1": 859,
+    "y0": 530,
+    "y1": 848,
+    "cx": 763.5,
+    "cy": 689.7,
+    "npix": 21453,
+    "area_pct": 0.776,
+    "score": 0.828
+   },
+   {
+    "x0": 871,
+    "x1": 1195,
+    "y0": 794,
+    "y1": 1323,
+    "cx": 1038.8,
+    "cy": 1069.1,
+    "npix": 48731,
+    "area_pct": 1.763,
+    "score": 0.756
+   },
+   {
+    "x0": 675,
+    "x1": 848,
+    "y0": 642,
+    "y1": 910,
+    "cx": 751.3,
+    "cy": 780.8,
+    "npix": 15729,
+    "area_pct": 0.569,
+    "score": 0.569
+   },
+   {
+    "x0": 835,
+    "x1": 1175,
+    "y0": 905,
+    "y1": 1470,
+    "cx": 1018.2,
+    "cy": 1191.1,
+    "npix": 58634,
+    "area_pct": 2.121,
+    "score": 0.165
+   }
+  ],
+  "closet": [
+   {
+    "x0": 631,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 1552,
+    "cx": 1089.8,
+    "cy": 643.9,
+    "npix": 969479,
+    "area_pct": 35.065,
+    "score": 0.483
+   }
+  ],
+  "door": [
+   {
+    "x0": 862,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 1177,
+    "cx": 1170.2,
+    "cy": 489.2,
+    "npix": 485675,
+    "area_pct": 17.566,
+    "score": 0.647
+   },
+   {
+    "x0": 635,
+    "x1": 880,
+    "y0": 0,
+    "y1": 660,
+    "cx": 758.6,
+    "cy": 277.3,
+    "npix": 110347,
+    "area_pct": 3.991,
+    "score": 0.415
+   },
+   {
+    "x0": 565,
+    "x1": 634,
+    "y0": 0,
+    "y1": 119,
+    "cx": 600.8,
+    "cy": 48.6,
+    "npix": 5762,
+    "area_pct": 0.208,
+    "score": 0.155
+   },
+   {
+    "x0": 0,
+    "x1": 24,
+    "y0": 1780,
+    "y1": 1872,
+    "cx": 9.3,
+    "cy": 1818.6,
+    "npix": 1520,
+    "area_pct": 0.055,
+    "score": 0.152
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 3,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

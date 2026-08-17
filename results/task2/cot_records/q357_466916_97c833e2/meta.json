@@ -1,0 +1,398 @@
+{
+ "q": 357,
+ "visit": "466916",
+ "desc_id": "97c833e2-b371-4865-ae8a-1d6b5b57a371",
+ "text": "Open the left door of the display cabinet with the lamp and printer on top",
+ "parse": {
+  "text": "Open the left door of the display cabinet with the lamp and printer on top",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "display cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "landmark",
+    "instanceable": true
+   },
+   {
+    "name": "printer",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "display cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "display cabinet",
+    "b": "lamp"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "display cabinet",
+    "b": "printer"
+   }
+  ],
+  "select": [
+   {
+    "on": "cabinet door",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331615",
+  "fid": "18099.094",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL-T",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331615",
+    "18099.094"
+   ],
+   [
+    "47331617",
+    "18153.705"
+   ],
+   [
+    "47331617",
+    "18135.595"
+   ],
+   [
+    "47331618",
+    "17971.196"
+   ],
+   [
+    "47331617",
+    "18149.590"
+   ],
+   [
+    "47331617",
+    "18141.593"
+   ],
+   [
+    "47331615",
+    "18104.092"
+   ],
+   [
+    "47331618",
+    "17972.195"
+   ]
+  ],
+  "consistency": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "n_frames": 306,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_target_visible",
+   "n_pool": 28,
+   "n_vis": 17
+  },
+  "pool": "fun3du",
+  "n_pool": 28
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "display cabinet",
+  "lamp",
+  "printer"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "display cabinet": "container",
+  "lamp": "landmark",
+  "printer": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1460,
+    "x1": 1894,
+    "y0": 5,
+    "y1": 927,
+    "cx": 1663.9,
+    "cy": 463.0,
+    "npix": 265309,
+    "area_pct": 9.596,
+    "score": 0.374
+   },
+   {
+    "x0": 330,
+    "x1": 560,
+    "y0": 470,
+    "y1": 1173,
+    "cx": 448.8,
+    "cy": 807.7,
+    "npix": 87022,
+    "area_pct": 3.147,
+    "score": 0.246
+   },
+   {
+    "x0": 1273,
+    "x1": 1299,
+    "y0": 885,
+    "y1": 910,
+    "cx": 1286.1,
+    "cy": 897.1,
+    "npix": 599,
+    "area_pct": 0.022,
+    "score": 0.182
+   },
+   {
+    "x0": 1446,
+    "x1": 1472,
+    "y0": 929,
+    "y1": 954,
+    "cx": 1459.2,
+    "cy": 940.7,
+    "npix": 596,
+    "area_pct": 0.022,
+    "score": 0.165
+   },
+   {
+    "x0": 1267,
+    "x1": 1292,
+    "y0": 985,
+    "y1": 1009,
+    "cx": 1279.0,
+    "cy": 996.3,
+    "npix": 544,
+    "area_pct": 0.02,
+    "score": 0.153
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 847,
+    "x1": 1558,
+    "y0": 0,
+    "y1": 623,
+    "cx": 1198.2,
+    "cy": 285.8,
+    "npix": 387660,
+    "area_pct": 14.021,
+    "score": 0.737
+   },
+   {
+    "x0": 470,
+    "x1": 787,
+    "y0": 485,
+    "y1": 1356,
+    "cx": 639.9,
+    "cy": 901.7,
+    "npix": 191604,
+    "area_pct": 6.93,
+    "score": 0.584
+   },
+   {
+    "x0": 26,
+    "x1": 406,
+    "y0": 426,
+    "y1": 972,
+    "cx": 223.6,
+    "cy": 683.1,
+    "npix": 136573,
+    "area_pct": 4.94,
+    "score": 0.562
+   },
+   {
+    "x0": 1462,
+    "x1": 1906,
+    "y0": 0,
+    "y1": 924,
+    "cx": 1670.8,
+    "cy": 439.5,
+    "npix": 279699,
+    "area_pct": 10.116,
+    "score": 0.551
+   },
+   {
+    "x0": 895,
+    "x1": 1518,
+    "y0": 1130,
+    "y1": 1439,
+    "cx": 1157.5,
+    "cy": 1321.3,
+    "npix": 128057,
+    "area_pct": 4.632,
+    "score": 0.55
+   },
+   {
+    "x0": 1513,
+    "x1": 1864,
+    "y0": 1337,
+    "y1": 1439,
+    "cx": 1641.2,
+    "cy": 1403.4,
+    "npix": 19876,
+    "area_pct": 0.719,
+    "score": 0.454
+   },
+   {
+    "x0": 140,
+    "x1": 529,
+    "y0": 900,
+    "y1": 1258,
+    "cx": 319.9,
+    "cy": 1072.8,
+    "npix": 67973,
+    "area_pct": 2.459,
+    "score": 0.426
+   },
+   {
+    "x0": 0,
+    "x1": 119,
+    "y0": 831,
+    "y1": 1108,
+    "cx": 47.5,
+    "cy": 975.7,
+    "npix": 20875,
+    "area_pct": 0.755,
+    "score": 0.404
+   },
+   {
+    "x0": 1787,
+    "x1": 1919,
+    "y0": 40,
+    "y1": 689,
+    "cx": 1873.4,
+    "cy": 449.7,
+    "npix": 47381,
+    "area_pct": 1.714,
+    "score": 0.379
+   },
+   {
+    "x0": 332,
+    "x1": 559,
+    "y0": 471,
+    "y1": 1169,
+    "cx": 448.8,
+    "cy": 805.9,
+    "npix": 85293,
+    "area_pct": 3.085,
+    "score": 0.217
+   },
+   {
+    "x0": 0,
+    "x1": 272,
+    "y0": 0,
+    "y1": 339,
+    "cx": 123.0,
+    "cy": 159.9,
+    "npix": 71566,
+    "area_pct": 2.588,
+    "score": 0.159
+   }
+  ],
+  "display cabinet": [
+   {
+    "x0": 847,
+    "x1": 1919,
+    "y0": 0,
+    "y1": 1436,
+    "cx": 1393.6,
+    "cy": 708.3,
+    "npix": 1437313,
+    "area_pct": 51.986,
+    "score": 0.318
+   },
+   {
+    "x0": 0,
+    "x1": 809,
+    "y0": 300,
+    "y1": 1428,
+    "cx": 440.6,
+    "cy": 791.7,
+    "npix": 662217,
+    "area_pct": 23.952,
+    "score": 0.226
+   },
+   {
+    "x0": 0,
+    "x1": 125,
+    "y0": 690,
+    "y1": 1136,
+    "cx": 45.2,
+    "cy": 959.5,
+    "npix": 29333,
+    "area_pct": 1.061,
+    "score": 0.221
+   }
+  ],
+  "lamp": [],
+  "printer": []
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1",
+   "cabinet door|2",
+   "cabinet door|3",
+   "cabinet door|4",
+   "cabinet door|5",
+   "cabinet door|6",
+   "cabinet door|7",
+   "cabinet door|8",
+   "cabinet door|9",
+   "cabinet door|10"
+  ]
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "landmark 'lamp' unusable",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

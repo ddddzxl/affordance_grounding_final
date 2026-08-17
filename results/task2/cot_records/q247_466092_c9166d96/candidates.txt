@@ -1,0 +1,57 @@
+TASK: "Turn on the lamp on the table to the left of the red couch"
+
+PARSE:
+  target concept = "light switch"   <- the thing that must be output
+  host           = 'lamp'   <- countable object the target sits on
+  entity  : 'light switch'  role=target
+  entity  : 'lamp'  role=host
+  entity  : 'table'  role=container
+  entity  : 'couch'  role=landmark
+  relation: on_top(a='lamp', b='table')
+  relation: left_of(a='table', b='couch')
+  residual: unified with val8's 'light switch'; which lamp it is, is carried by `host`, not by the search term
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  light switch         0  1213  1259   415   464  1235.7   439.2   0.081    0.2
+  light switch         1   907   946   415   429   925.8   422.2    0.02  0.179
+  light switch         2  1220  1266   344   394  1242.9   369.3   0.083  0.174
+  light switch         3  1207  1252   480   529  1229.1   504.5   0.073  0.168
+  lamp                 0   693   806   210   383   754.1   268.7   0.382  0.845
+  lamp                 1  1460  1539     0    34  1498.9    15.9   0.093  0.796
+  lamp                 2  1447  1516   120   139  1481.9   129.4   0.045  0.307
+  table                0   894  1393   615   799  1149.6   690.0   1.624  0.878
+  table                1   802  1898     0   533   949.8   399.7   1.896    0.2
+  table                2  1628  1919    12   694  1788.0   524.0   2.924  0.185
+  couch                0     0  1909   522  1439  1098.1  1184.1  20.604  0.932
+  couch                1    65   871   318   680   514.0   492.8   4.696   0.93
+
+
+
+
+
+CONTAINMENT (light switch inside the FILLED mask of each lamp):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  lamp #0   x[ 693, 806] cx   754.1 cy   268.7 w= 113 contains (none)
+  lamp #1   x[1460,1539] cx  1498.9 cy    15.9 w=  79 contains (none)
+  lamp #2   x[1447,1516] cx  1481.9 cy   129.4 w=  69 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "light switch" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: light switch #<id>[, #<id> ...]

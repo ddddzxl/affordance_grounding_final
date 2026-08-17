@@ -1,0 +1,242 @@
+{
+ "q": 103,
+ "visit": "423452",
+ "desc_id": "a50356e1-8f5e-46af-bafc-e152f37967ea",
+ "text": "Close the door that leads to the bedroom",
+ "parse": {
+  "text": "Close the door that leads to the bedroom",
+  "target": {
+   "concept": "door handle",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'leads to the bedroom' room-level locator - ignored",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897434",
+  "fid": "104293.439",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42897434",
+    "104293.439"
+   ],
+   [
+    "42897426",
+    "104096.638"
+   ],
+   [
+    "42897422",
+    "104033.148"
+   ],
+   [
+    "42897422",
+    "104059.137"
+   ],
+   [
+    "42897426",
+    "104144.735"
+   ],
+   [
+    "42897426",
+    "104128.741"
+   ],
+   [
+    "42897434",
+    "104333.839"
+   ],
+   [
+    "42897426",
+    "104146.734"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.732,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 309,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "door"
+ ],
+ "roles": {
+  "door handle": "target",
+  "door": "host"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1033,
+    "x1": 1073,
+    "y0": 500,
+    "y1": 624,
+    "cx": 1056.7,
+    "cy": 566.0,
+    "npix": 3627,
+    "area_pct": 0.131,
+    "score": 0.839
+   },
+   {
+    "x0": 1093,
+    "x1": 1112,
+    "y0": 520,
+    "y1": 534,
+    "cx": 1102.6,
+    "cy": 527.0,
+    "npix": 287,
+    "area_pct": 0.01,
+    "score": 0.324
+   },
+   {
+    "x0": 53,
+    "x1": 99,
+    "y0": 1175,
+    "y1": 1224,
+    "cx": 73.2,
+    "cy": 1198.7,
+    "npix": 1880,
+    "area_pct": 0.068,
+    "score": 0.235
+   },
+   {
+    "x0": 1093,
+    "x1": 1099,
+    "y0": 620,
+    "y1": 688,
+    "cx": 1096.0,
+    "cy": 653.7,
+    "npix": 465,
+    "area_pct": 0.017,
+    "score": 0.183
+   },
+   {
+    "x0": 500,
+    "x1": 559,
+    "y0": 1200,
+    "y1": 1314,
+    "cx": 534.0,
+    "cy": 1251.9,
+    "npix": 3889,
+    "area_pct": 0.141,
+    "score": 0.154
+   },
+   {
+    "x0": 0,
+    "x1": 136,
+    "y0": 1272,
+    "y1": 1433,
+    "cx": 29.7,
+    "cy": 1367.6,
+    "npix": 2968,
+    "area_pct": 0.107,
+    "score": 0.154
+   }
+  ],
+  "door": [
+   {
+    "x0": 854,
+    "x1": 1106,
+    "y0": 64,
+    "y1": 1164,
+    "cx": 978.9,
+    "cy": 596.4,
+    "npix": 237395,
+    "area_pct": 8.586,
+    "score": 0.977
+   },
+   {
+    "x0": 0,
+    "x1": 226,
+    "y0": 851,
+    "y1": 1434,
+    "cx": 111.2,
+    "cy": 1098.7,
+    "npix": 66757,
+    "area_pct": 2.415,
+    "score": 0.179
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4",
+   "door handle|5"
+  ],
+  "door": [
+   "door|0",
+   "door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

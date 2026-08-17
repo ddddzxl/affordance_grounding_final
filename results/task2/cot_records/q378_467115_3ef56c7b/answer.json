@@ -1,0 +1,8 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "medium",
+ "kind": "world_knowledge",
+ "solver": "frontier-llm, manual CoT"
+}

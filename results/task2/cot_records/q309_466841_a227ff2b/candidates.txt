@@ -1,0 +1,57 @@
+TASK: "Open the small white storage box on the desk"
+
+PARSE:
+  target concept = "storage box lid"   <- the thing that must be output
+  host           = 'storage box'   <- countable object the target sits on
+  entity  : 'storage box lid'  role=target
+  entity  : 'storage box'  role=host
+  entity  : 'desk'  role=container
+  relation: on_top(a='storage box', b='desk')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  storage box lid      0    27   186  1211  1294   107.9  1252.7   0.382  0.806
+  storage box lid      1   220   472  1256  1323   329.7  1289.9   0.279  0.746
+  storage box lid      2   980  1187   715   818  1091.9   764.6   0.623  0.738
+  storage box lid      3     0    19  1240  1300     8.1  1265.3   0.034  0.301
+  storage box lid      4  1067  1119   955  1009  1093.3   971.0   0.044  0.152
+  storage box          0   220   472  1262  1380   341.5  1317.4   0.739  0.887
+  storage box          1    26   192  1210  1384   104.8  1282.4   0.693  0.538
+  storage box          2     0    19  1242  1408     5.5  1305.9   0.058  0.423
+  storage box          3  1500  1599  1255  1334  1549.7  1295.9   0.193  0.304
+  storage box          4   980  1192   713  1053  1098.5   830.0    1.27  0.184
+  storage box          5    33   205  1270  1387   111.4  1322.6   0.424  0.179
+  desk                 0     0  1497  1185  1439   972.9  1364.0   5.932  0.875
+
+
+
+
+
+CONTAINMENT (storage box lid inside the FILLED mask of each storage box):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  storage box #0   x[ 220, 472] cx   341.5 cy  1317.4 w= 252 contains #1
+  storage box #1   x[  26, 192] cx   104.8 cy  1282.4 w= 166 contains #0
+  storage box #2   x[   0,  19] cx     5.5 cy  1305.9 w=  19 contains #3
+  storage box #3   x[1500,1599] cx  1549.7 cy  1295.9 w=  99 contains (none)
+  storage box #4   x[ 980,1192] cx  1098.5 cy   830.0 w= 212 contains #2, #4
+  storage box #5   x[  33, 205] cx   111.4 cy  1322.6 w= 172 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "storage box lid" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: storage box lid #<id>[, #<id> ...]

@@ -1,0 +1,607 @@
+{
+ "q": 268,
+ "visit": "466162",
+ "desc_id": "9813bfd4-ab20-4628-ab89-4709a120ff71",
+ "text": "Open the bottom drawer of the cabinet with the beauty products on top",
+ "parse": {
+  "text": "Open the bottom drawer of the cabinet with the beauty products on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "beauty products",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "beauty products"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796576",
+  "fid": "16751.688",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 1,
+  "topk": [
+   [
+    "44796576",
+    "16751.688"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.287,
+    "s2": 0.686,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "beauty products"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "beauty products": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 446,
+    "x1": 486,
+    "y0": 800,
+    "y1": 839,
+    "cx": 466.1,
+    "cy": 820.7,
+    "npix": 1359,
+    "area_pct": 0.049,
+    "score": 0.895
+   },
+   {
+    "x0": 460,
+    "x1": 499,
+    "y0": 960,
+    "y1": 999,
+    "cx": 478.1,
+    "cy": 980.1,
+    "npix": 1325,
+    "area_pct": 0.048,
+    "score": 0.885
+   },
+   {
+    "x0": 433,
+    "x1": 472,
+    "y0": 645,
+    "y1": 684,
+    "cx": 452.8,
+    "cy": 664.2,
+    "npix": 1429,
+    "area_pct": 0.052,
+    "score": 0.883
+   },
+   {
+    "x0": 780,
+    "x1": 819,
+    "y0": 890,
+    "y1": 929,
+    "cx": 799.0,
+    "cy": 909.7,
+    "npix": 1229,
+    "area_pct": 0.044,
+    "score": 0.881
+   },
+   {
+    "x0": 780,
+    "x1": 819,
+    "y0": 745,
+    "y1": 783,
+    "cx": 800.3,
+    "cy": 763.0,
+    "npix": 1112,
+    "area_pct": 0.04,
+    "score": 0.875
+   },
+   {
+    "x0": 780,
+    "x1": 819,
+    "y0": 605,
+    "y1": 639,
+    "cx": 800.6,
+    "cy": 622.2,
+    "npix": 1128,
+    "area_pct": 0.041,
+    "score": 0.873
+   },
+   {
+    "x0": 780,
+    "x1": 819,
+    "y0": 465,
+    "y1": 509,
+    "cx": 799.5,
+    "cy": 487.5,
+    "npix": 1531,
+    "area_pct": 0.055,
+    "score": 0.867
+   },
+   {
+    "x0": 420,
+    "x1": 466,
+    "y0": 490,
+    "y1": 529,
+    "cx": 441.9,
+    "cy": 508.6,
+    "npix": 1568,
+    "area_pct": 0.057,
+    "score": 0.86
+   },
+   {
+    "x0": 1913,
+    "x1": 1919,
+    "y0": 1010,
+    "y1": 1024,
+    "cx": 1916.3,
+    "cy": 1016.8,
+    "npix": 94,
+    "area_pct": 0.003,
+    "score": 0.426
+   },
+   {
+    "x0": 941,
+    "x1": 986,
+    "y0": 495,
+    "y1": 530,
+    "cx": 964.4,
+    "cy": 514.3,
+    "npix": 1188,
+    "area_pct": 0.043,
+    "score": 0.34
+   },
+   {
+    "x0": 173,
+    "x1": 227,
+    "y0": 556,
+    "y1": 599,
+    "cx": 199.6,
+    "cy": 578.2,
+    "npix": 2049,
+    "area_pct": 0.074,
+    "score": 0.256
+   },
+   {
+    "x0": 1613,
+    "x1": 1686,
+    "y0": 510,
+    "y1": 554,
+    "cx": 1650.3,
+    "cy": 533.3,
+    "npix": 2252,
+    "area_pct": 0.081,
+    "score": 0.243
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 285,
+    "x1": 958,
+    "y0": 811,
+    "y1": 1097,
+    "cx": 598.7,
+    "cy": 947.9,
+    "npix": 94940,
+    "area_pct": 3.434,
+    "score": 0.96
+   },
+   {
+    "x0": 227,
+    "x1": 626,
+    "y0": 436,
+    "y1": 589,
+    "cx": 423.6,
+    "cy": 507.6,
+    "npix": 52400,
+    "area_pct": 1.895,
+    "score": 0.96
+   },
+   {
+    "x0": 267,
+    "x1": 933,
+    "y0": 671,
+    "y1": 918,
+    "cx": 590.6,
+    "cy": 791.6,
+    "npix": 90406,
+    "area_pct": 3.27,
+    "score": 0.958
+   },
+   {
+    "x0": 247,
+    "x1": 965,
+    "y0": 544,
+    "y1": 749,
+    "cx": 581.9,
+    "cy": 641.2,
+    "npix": 89473,
+    "area_pct": 3.236,
+    "score": 0.958
+   },
+   {
+    "x0": 632,
+    "x1": 945,
+    "y0": 415,
+    "y1": 554,
+    "cx": 784.8,
+    "cy": 482.5,
+    "npix": 36453,
+    "area_pct": 1.318,
+    "score": 0.947
+   },
+   {
+    "x0": 1795,
+    "x1": 1919,
+    "y0": 931,
+    "y1": 1034,
+    "cx": 1860.0,
+    "cy": 982.5,
+    "npix": 9368,
+    "area_pct": 0.339,
+    "score": 0.739
+   },
+   {
+    "x0": 1836,
+    "x1": 1919,
+    "y0": 829,
+    "y1": 966,
+    "cx": 1882.1,
+    "cy": 890.6,
+    "npix": 7907,
+    "area_pct": 0.286,
+    "score": 0.632
+   },
+   {
+    "x0": 1829,
+    "x1": 1919,
+    "y0": 730,
+    "y1": 842,
+    "cx": 1883.9,
+    "cy": 783.7,
+    "npix": 6114,
+    "area_pct": 0.221,
+    "score": 0.629
+   },
+   {
+    "x0": 4,
+    "x1": 1013,
+    "y0": 0,
+    "y1": 442,
+    "cx": 549.7,
+    "cy": 349.7,
+    "npix": 120827,
+    "area_pct": 4.37,
+    "score": 0.171
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 94,
+    "x1": 1018,
+    "y0": 260,
+    "y1": 1125,
+    "cx": 552.9,
+    "cy": 641.6,
+    "npix": 618278,
+    "area_pct": 22.362,
+    "score": 0.807
+   },
+   {
+    "x0": 1779,
+    "x1": 1919,
+    "y0": 681,
+    "y1": 1054,
+    "cx": 1860.4,
+    "cy": 875.3,
+    "npix": 39494,
+    "area_pct": 1.428,
+    "score": 0.66
+   }
+  ],
+  "beauty products": [
+   {
+    "x0": 573,
+    "x1": 612,
+    "y0": 191,
+    "y1": 269,
+    "cx": 591.4,
+    "cy": 235.4,
+    "npix": 2471,
+    "area_pct": 0.089,
+    "score": 0.82
+   },
+   {
+    "x0": 827,
+    "x1": 848,
+    "y0": 172,
+    "y1": 274,
+    "cx": 836.3,
+    "cy": 227.6,
+    "npix": 1879,
+    "area_pct": 0.068,
+    "score": 0.81
+   },
+   {
+    "x0": 700,
+    "x1": 732,
+    "y0": 156,
+    "y1": 259,
+    "cx": 713.8,
+    "cy": 213.4,
+    "npix": 2524,
+    "area_pct": 0.091,
+    "score": 0.773
+   },
+   {
+    "x0": 773,
+    "x1": 806,
+    "y0": 145,
+    "y1": 239,
+    "cx": 786.9,
+    "cy": 192.6,
+    "npix": 2352,
+    "area_pct": 0.085,
+    "score": 0.747
+   },
+   {
+    "x0": 720,
+    "x1": 753,
+    "y0": 175,
+    "y1": 259,
+    "cx": 736.1,
+    "cy": 214.7,
+    "npix": 1748,
+    "area_pct": 0.063,
+    "score": 0.742
+   },
+   {
+    "x0": 807,
+    "x1": 826,
+    "y0": 210,
+    "y1": 274,
+    "cx": 816.3,
+    "cy": 244.2,
+    "npix": 1193,
+    "area_pct": 0.043,
+    "score": 0.701
+   },
+   {
+    "x0": 521,
+    "x1": 566,
+    "y0": 240,
+    "y1": 269,
+    "cx": 544.6,
+    "cy": 254.6,
+    "npix": 1227,
+    "area_pct": 0.044,
+    "score": 0.694
+   },
+   {
+    "x0": 780,
+    "x1": 812,
+    "y0": 220,
+    "y1": 279,
+    "cx": 794.4,
+    "cy": 251.6,
+    "npix": 1460,
+    "area_pct": 0.053,
+    "score": 0.693
+   },
+   {
+    "x0": 660,
+    "x1": 699,
+    "y0": 220,
+    "y1": 249,
+    "cx": 680.2,
+    "cy": 234.6,
+    "npix": 1061,
+    "area_pct": 0.038,
+    "score": 0.649
+   },
+   {
+    "x0": 553,
+    "x1": 599,
+    "y0": 181,
+    "y1": 257,
+    "cx": 570.5,
+    "cy": 209.2,
+    "npix": 1480,
+    "area_pct": 0.054,
+    "score": 0.631
+   },
+   {
+    "x0": 713,
+    "x1": 768,
+    "y0": 260,
+    "y1": 279,
+    "cx": 740.0,
+    "cy": 269.1,
+    "npix": 915,
+    "area_pct": 0.033,
+    "score": 0.551
+   },
+   {
+    "x0": 747,
+    "x1": 779,
+    "y0": 235,
+    "y1": 269,
+    "cx": 764.2,
+    "cy": 249.8,
+    "npix": 967,
+    "area_pct": 0.035,
+    "score": 0.528
+   },
+   {
+    "x0": 633,
+    "x1": 719,
+    "y0": 246,
+    "y1": 279,
+    "cx": 675.5,
+    "cy": 264.1,
+    "npix": 2336,
+    "area_pct": 0.084,
+    "score": 0.501
+   },
+   {
+    "x0": 260,
+    "x1": 372,
+    "y0": 225,
+    "y1": 279,
+    "cx": 317.1,
+    "cy": 251.5,
+    "npix": 5197,
+    "area_pct": 0.188,
+    "score": 0.464
+   },
+   {
+    "x0": 380,
+    "x1": 452,
+    "y0": 215,
+    "y1": 264,
+    "cx": 415.1,
+    "cy": 240.1,
+    "npix": 3454,
+    "area_pct": 0.125,
+    "score": 0.455
+   },
+   {
+    "x0": 159,
+    "x1": 272,
+    "y0": 220,
+    "y1": 275,
+    "cx": 211.5,
+    "cy": 247.6,
+    "npix": 5535,
+    "area_pct": 0.2,
+    "score": 0.367
+   },
+   {
+    "x0": 160,
+    "x1": 359,
+    "y0": 209,
+    "y1": 229,
+    "cx": 262.4,
+    "cy": 217.5,
+    "npix": 3192,
+    "area_pct": 0.115,
+    "score": 0.287
+   },
+   {
+    "x0": 13,
+    "x1": 186,
+    "y0": 875,
+    "y1": 1108,
+    "cx": 101.0,
+    "cy": 939.6,
+    "npix": 14419,
+    "area_pct": 0.522,
+    "score": 0.158
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4",
+   "drawer handle|5",
+   "drawer handle|6",
+   "drawer handle|7",
+   "drawer handle|8",
+   "drawer handle|9",
+   "drawer handle|10",
+   "drawer handle|11"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5",
+   "drawer|6",
+   "drawer|7",
+   "drawer|8"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1,
+   3
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

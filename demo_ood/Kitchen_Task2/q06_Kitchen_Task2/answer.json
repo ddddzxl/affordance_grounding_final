@@ -1,0 +1,11 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "high",
+ "kind": "select",
+ "note": "right fridge door (cx=1318) contains handle 0, at the right of the centre seam",
+ "solver": "frontier-llm, manual CoT",
+ "corrected": "Originally answered [1]. The answer was written against the candidate table from before the frame changed (frame 0023); after moving to frame 0008 the ids were reordered and the table was not re-read, which swapped left and right.",
+ "based_on_frame": "0008"
+}

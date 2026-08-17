@@ -1,0 +1,47 @@
+TASK: "Adjust the intensity of the floor lamp light next to the dining table"
+
+PARSE:
+  target concept = "dimmer switch"   <- the thing that must be output
+  host           = 'floor lamp'   <- countable object the target sits on
+  entity  : 'dimmer switch'  role=target
+  entity  : 'floor lamp'  role=host
+  entity  : 'dining table'  role=landmark
+  relation: next_to(a='floor lamp', b='dining table')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  dimmer switch        0  1833  1885   948   994  1858.4   970.8   0.083  0.533
+  dimmer switch        1  1882  1919   950   994  1902.5   972.4   0.055  0.512
+  dimmer switch        2   373   412   906   979   392.9   943.0   0.094  0.236
+  floor lamp           0   327   479   549  1129   395.3   784.3    0.82  0.886
+  floor lamp           1     0    72   521   719    31.3   613.2   0.102  0.281
+  dining table         0     0   793  1177  1439   433.5  1330.8   4.795   0.96
+
+
+
+
+
+CONTAINMENT (dimmer switch inside the FILLED mask of each floor lamp):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  floor lamp #0   x[ 327, 479] cx   395.3 cy   784.3 w= 152 contains #2
+  floor lamp #1   x[   0,  72] cx    31.3 cy   613.2 w=  72 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "dimmer switch" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: dimmer switch #<id>[, #<id> ...]

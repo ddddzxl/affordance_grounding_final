@@ -1,0 +1,286 @@
+[
+ {
+  "q": "q015_421254_b0527669",
+  "text": "Open the first drawer of the nightstand with the red table lamp on top",
+  "concept": "drawer handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "ordinal",
+  "best_frac": 0.724,
+  "n_cand": 3,
+  "pred_px": 1857,
+  "gt_px": 87,
+  "gt_bbox_px": 1611.2,
+  "prec2d": 0.034,
+  "coarse_ratio": 21.34,
+  "caveat": null
+ },
+ {
+  "q": "q019_421254_e6193419",
+  "text": "Turn on the ceiling light using the switch next to the TV",
+  "concept": "light switch",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "forced",
+  "kind": "rel-only",
+  "best_frac": 1.0,
+  "n_cand": 1,
+  "pred_px": 7785,
+  "gt_px": 24,
+  "gt_bbox_px": 472.2,
+  "prec2d": 0.003,
+  "coarse_ratio": 324.38,
+  "caveat": null
+ },
+ {
+  "q": "q020_421254_f35fb167",
+  "text": "Open the second drawer of the nightstand with the red table lamp on top",
+  "concept": "drawer handle",
+  "pick": [
+   2
+  ],
+  "gt_ids": [
+   2
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "ordinal",
+  "best_frac": 0.725,
+  "n_cand": 3,
+  "pred_px": 1682,
+  "gt_px": 80,
+  "gt_bbox_px": 1552.2,
+  "prec2d": 0.034,
+  "coarse_ratio": 21.02,
+  "caveat": null
+ },
+ {
+  "q": "q024_421393_090124ad",
+  "text": "Plug the device in the left socket between the radiator and the closet",
+  "concept": "socket",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "forced",
+  "kind": "select-degenerate",
+  "best_frac": 1.0,
+  "n_cand": 1,
+  "pred_px": 9527,
+  "gt_px": 56,
+  "gt_bbox_px": 813.6,
+  "prec2d": 0.006,
+  "coarse_ratio": 170.12,
+  "caveat": null
+ },
+ {
+  "q": "q029_421393_561310ae",
+  "text": "Turn on the ceiling light using the switch next to the door",
+  "concept": "light switch",
+  "pick": [
+   0
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 0.0,
+  "conf": "medium",
+  "kind": "rel-only",
+  "best_frac": 0.0,
+  "n_cand": 3,
+  "pred_px": 1064,
+  "gt_px": 0,
+  "gt_bbox_px": 0.0,
+  "prec2d": 0.0,
+  "coarse_ratio": NaN,
+  "caveat": null
+ },
+ {
+  "q": "q033_421393_a30d9276",
+  "text": "Plug the device in the right socket between the radiator and the closet",
+  "concept": "socket",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "forced",
+  "kind": "select-degenerate",
+  "best_frac": 1.0,
+  "n_cand": 1,
+  "pred_px": 9527,
+  "gt_px": 65,
+  "gt_bbox_px": 1122.5,
+  "prec2d": 0.007,
+  "coarse_ratio": 146.57,
+  "caveat": null
+ },
+ {
+  "q": "q035_421393_d481bb45",
+  "text": "Open the second drawer of the nightstand",
+  "concept": "drawer handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "ordinal",
+  "best_frac": 0.857,
+  "n_cand": 6,
+  "pred_px": 9098,
+  "gt_px": 140,
+  "gt_bbox_px": 6073.8,
+  "prec2d": 0.013,
+  "coarse_ratio": 64.99,
+  "caveat": null
+ },
+ {
+  "q": "q051_422356_7aed0171",
+  "text": "Type using the keyboard on the desk",
+  "concept": "keyboard",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "rel-only",
+  "best_frac": 0.91,
+  "n_cand": 2,
+  "pred_px": 102549,
+  "gt_px": 1958,
+  "gt_bbox_px": 128133.4,
+  "prec2d": 0.017,
+  "coarse_ratio": 52.37,
+  "caveat": null
+ },
+ {
+  "q": "q106_423957_29c8a6ab",
+  "text": "Plug the device in the left socket next to the door",
+  "concept": "socket",
+  "pick": [
+   0
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 1.0,
+  "conf": "forced",
+  "kind": "select-degenerate",
+  "best_frac": 0.0,
+  "n_cand": 1,
+  "pred_px": 12182,
+  "gt_px": 70,
+  "gt_bbox_px": 1186.9,
+  "prec2d": 0.0,
+  "coarse_ratio": 174.03,
+  "caveat": null
+ },
+ {
+  "q": "q118_434888_07242cd1",
+  "text": "Open the bottom left drawer of the closet next to the door",
+  "concept": "drawer handle",
+  "pick": [
+   2
+  ],
+  "gt_ids": [
+   2
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "vert+horiz",
+  "best_frac": 0.738,
+  "n_cand": 3,
+  "pred_px": 453,
+  "gt_px": 61,
+  "gt_bbox_px": 491.3,
+  "prec2d": 0.099,
+  "coarse_ratio": 7.43,
+  "caveat": null
+ },
+ {
+  "q": "q142_434897_d8d6f046",
+  "text": "Open the top right drawer of the wooden closet",
+  "concept": "drawer handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "low",
+  "kind": "vert+horiz",
+  "best_frac": 0.503,
+  "n_cand": 5,
+  "pred_px": 759,
+  "gt_px": 195,
+  "gt_bbox_px": 694.7,
+  "prec2d": 0.129,
+  "coarse_ratio": 3.89,
+  "caveat": null
+ },
+ {
+  "q": "q193_438102_34848c06",
+  "text": "Open the top left cabinet drawer with the globe on top",
+  "concept": "drawer handle",
+  "pick": [
+   2
+  ],
+  "gt_ids": [
+   2
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "vert+horiz",
+  "best_frac": 0.523,
+  "n_cand": 5,
+  "pred_px": 1511,
+  "gt_px": 65,
+  "gt_bbox_px": 1125.1,
+  "prec2d": 0.023,
+  "coarse_ratio": 23.25,
+  "caveat": null
+ }
+]

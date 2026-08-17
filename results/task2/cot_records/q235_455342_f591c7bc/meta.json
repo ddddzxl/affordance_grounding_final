@@ -1,0 +1,297 @@
+{
+ "q": 235,
+ "visit": "455342",
+ "desc_id": "f591c7bc-89e9-4b65-b6a9-c77a5d9afc24",
+ "text": "Open the right drawer of the wooden TV stand",
+ "parse": {
+  "text": "Open the right drawer of the wooden TV stand",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "TV stand",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "TV stand",
+    "b": "drawer"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358471",
+  "fid": "46592.298",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44358471",
+    "46592.298"
+   ],
+   [
+    "44358472",
+    "46655.389"
+   ],
+   [
+    "44358472",
+    "46615.089"
+   ],
+   [
+    "44358471",
+    "46590.299"
+   ],
+   [
+    "44358471",
+    "46570.990"
+   ],
+   [
+    "44358472",
+    "46637.097"
+   ],
+   [
+    "44358472",
+    "46611.090"
+   ],
+   [
+    "44358471",
+    "46572.989"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 97,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "TV stand"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "TV stand": "container"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 267,
+    "x1": 387,
+    "y0": 980,
+    "y1": 1069,
+    "cx": 325.9,
+    "cy": 1023.4,
+    "npix": 8472,
+    "area_pct": 0.306,
+    "score": 0.94
+   },
+   {
+    "x0": 840,
+    "x1": 932,
+    "y0": 820,
+    "y1": 893,
+    "cx": 887.5,
+    "cy": 856.9,
+    "npix": 5316,
+    "area_pct": 0.192,
+    "score": 0.88
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 0,
+    "x1": 638,
+    "y0": 864,
+    "y1": 1235,
+    "cx": 309.7,
+    "cy": 1050.5,
+    "npix": 130074,
+    "area_pct": 4.705,
+    "score": 0.961
+   },
+   {
+    "x0": 606,
+    "x1": 1117,
+    "y0": 716,
+    "y1": 1053,
+    "cx": 864.8,
+    "cy": 885.1,
+    "npix": 99148,
+    "area_pct": 3.586,
+    "score": 0.958
+   },
+   {
+    "x0": 0,
+    "x1": 66,
+    "y0": 1124,
+    "y1": 1264,
+    "cx": 23.6,
+    "cy": 1207.4,
+    "npix": 5389,
+    "area_pct": 0.195,
+    "score": 0.748
+   },
+   {
+    "x0": 0,
+    "x1": 1124,
+    "y0": 662,
+    "y1": 998,
+    "cx": 851.4,
+    "cy": 756.2,
+    "npix": 31648,
+    "area_pct": 1.145,
+    "score": 0.217
+   },
+   {
+    "x0": 0,
+    "x1": 598,
+    "y0": 0,
+    "y1": 1024,
+    "cx": 255.7,
+    "cy": 887.6,
+    "npix": 68104,
+    "area_pct": 2.463,
+    "score": 0.193
+   }
+  ],
+  "TV stand": [
+   {
+    "x0": 0,
+    "x1": 1140,
+    "y0": 459,
+    "y1": 1319,
+    "cx": 528.9,
+    "cy": 868.3,
+    "npix": 618799,
+    "area_pct": 22.381,
+    "score": 0.91
+   },
+   {
+    "x0": 496,
+    "x1": 598,
+    "y0": 520,
+    "y1": 554,
+    "cx": 552.7,
+    "cy": 538.6,
+    "npix": 1526,
+    "area_pct": 0.055,
+    "score": 0.209
+   },
+   {
+    "x0": 0,
+    "x1": 712,
+    "y0": 370,
+    "y1": 653,
+    "cx": 348.4,
+    "cy": 501.1,
+    "npix": 72520,
+    "area_pct": 2.623,
+    "score": 0.19
+   },
+   {
+    "x0": 174,
+    "x1": 406,
+    "y0": 391,
+    "y1": 522,
+    "cx": 309.0,
+    "cy": 464.4,
+    "npix": 11887,
+    "area_pct": 0.43,
+    "score": 0.167
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

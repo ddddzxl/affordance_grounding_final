@@ -1,0 +1,44 @@
+TASK: "Play a game using the left joystick on the shelf of the TV stand"
+
+PARSE:
+  target concept = "joystick"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'joystick'  role=target
+  entity  : 'shelf'  role=container
+  entity  : 'TV stand'  role=landmark
+  relation: on_top(a='joystick', b='shelf')
+  relation: contains(a='TV stand', b='shelf')
+  select  : on='joystick' axis=horizontal value='left' index=None from=None
+  residual: train: 'play a game' is a key_press affordance, so the target is a button on the joystick | independent check on the train split (val untouched): handheld-device GT has a median of 478 points while fixed-furniture handles have 87-108, a factor of 4.4-5.5. The annotation therefore covers the whole device rather than an individual key: what a person grasps is the whole remote or controller, and which key the press lands on does not constitute a separate interactable entity. Fixed furniture is the opposite -- there you operate the handle itself.
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  joystick             0  1053  1212   629   704  1131.3   668.2   0.355   0.76
+  joystick             1   887  1046   630   709   964.5   672.9   0.367  0.745
+  joystick             2  1627  1759   235   299  1693.9   267.6    0.23  0.311
+  shelf                0   760  1332   525   619  1117.3   591.1   0.466  0.898
+  shelf                1   780  1312   695   756  1050.7   727.2   0.881  0.732
+  shelf                2   631  1919   165   480  1305.2   341.2   9.347  0.336
+  shelf                3   760  1919   728   819  1331.6   772.2   2.459  0.278
+  TV stand             0   628  1919   167   818  1354.8   507.9  20.923  0.667
+  TV stand             1  1621  1760   235   299  1693.1   267.3   0.237  0.624
+  TV stand             2   939  1259   168   298  1104.4   205.4   0.658  0.623
+  TV stand             3  1627  1909   155   199  1785.3   175.6    0.33  0.214
+
+QUESTION: which "joystick" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: joystick #<id>[, #<id> ...]

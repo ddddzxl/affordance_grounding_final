@@ -1,0 +1,56 @@
+TASK: "Unplug the lamp on the cabinet next to the glass door"
+
+PARSE:
+  target concept = "plug"   <- the thing that must be output
+  host           = 'lamp'   <- countable object the target sits on
+  entity  : 'plug'  role=target
+  entity  : 'lamp'  role=host
+  entity  : 'cabinet'  role=container
+  entity  : 'door'  role=landmark
+  relation: on_top(a='lamp', b='cabinet')
+  relation: next_to(a='cabinet', b='door')
+  residual: the plug sits at the socket end, not on the lamp
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  plug                 0   980   999   520   549   989.5   534.5   0.021  0.383
+  plug                 1   927   952   515   544   939.1   530.0   0.027   0.36
+  lamp                 0   787   906   269   479   849.2   345.1   0.494  0.968
+  cabinet              0   722   951   470   759   838.0   616.5   1.762  0.842
+  cabinet              1     0   306   795  1433   130.8   994.0   3.712  0.294
+  cabinet              2   967  1152   630   849  1055.6   728.0   0.704  0.165
+  door                 0   175   486     0   702   331.7   336.0   4.455  0.669
+  door                 1     0   285     7   784   127.3   397.4    5.14  0.669
+  door                 2   377   645     0   719   517.3   341.6   4.366  0.493
+  door                 3  1380  1664     0   209  1521.8    94.9   1.882  0.371
+  door                 4  1813  1919     0   204  1870.5   106.1   0.721  0.317
+  door                 5  1654  1897     0   209  1774.8    95.0   0.698  0.237
+  door                 6     0   118   302   808    39.9   632.5   1.088  0.159
+
+
+
+
+
+CONTAINMENT (plug inside the FILLED mask of each lamp):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  lamp #0   x[ 787, 906] cx   849.2 cy   345.1 w= 119 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "plug" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: plug #<id>[, #<id> ...]

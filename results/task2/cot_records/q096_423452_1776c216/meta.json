@@ -1,0 +1,183 @@
+{
+ "q": 96,
+ "visit": "423452",
+ "desc_id": "1776c216-9131-4dc1-abb1-2f88f99b139e",
+ "text": "Turn on the ceiling light",
+ "parse": {
+  "text": "Turn on the ceiling light",
+  "target": {
+   "concept": "light switch",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897434",
+  "fid": "104165.343",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42897434",
+    "104165.343"
+   ],
+   [
+    "42897422",
+    "104037.146"
+   ],
+   [
+    "42897434",
+    "104198.146"
+   ],
+   [
+    "42897426",
+    "104089.641"
+   ],
+   [
+    "42897426",
+    "104090.640"
+   ],
+   [
+    "42897422",
+    "103999.145"
+   ],
+   [
+    "42897434",
+    "104197.146"
+   ],
+   [
+    "42897426",
+    "104097.638"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 309,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch"
+ ],
+ "roles": {
+  "light switch": "target"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 933,
+    "x1": 959,
+    "y0": 715,
+    "y1": 749,
+    "cx": 947.5,
+    "cy": 733.1,
+    "npix": 812,
+    "area_pct": 0.029,
+    "score": 0.733
+   },
+   {
+    "x0": 820,
+    "x1": 832,
+    "y0": 765,
+    "y1": 789,
+    "cx": 825.9,
+    "cy": 777.3,
+    "npix": 306,
+    "area_pct": 0.011,
+    "score": 0.188
+   },
+   {
+    "x0": 846,
+    "x1": 852,
+    "y0": 730,
+    "y1": 754,
+    "cx": 849.2,
+    "cy": 742.2,
+    "npix": 154,
+    "area_pct": 0.006,
+    "score": 0.175
+   },
+   {
+    "x0": 913,
+    "x1": 987,
+    "y0": 1337,
+    "y1": 1439,
+    "cx": 951.2,
+    "cy": 1395.3,
+    "npix": 3705,
+    "area_pct": 0.134,
+    "score": 0.155
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0",
+   "light switch|1",
+   "light switch|2",
+   "light switch|3"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   3
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

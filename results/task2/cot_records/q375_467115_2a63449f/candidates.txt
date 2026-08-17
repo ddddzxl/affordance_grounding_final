@@ -1,0 +1,42 @@
+TASK: "Turn on the TV using the remote on the dining table"
+
+PARSE:
+  target concept = "remote control button"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'remote control button'  role=target
+  entity  : 'dining table'  role=container
+  relation: on_top(a='remote control button', b='dining table')
+  residual: independent check on the train split (val untouched): handheld-device GT has a median of 478 points while fixed-furniture handles have 87-108, a factor of 4.4-5.5 -- the annotation covers the whole device, not just a part
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  remote control button   0   275   284   513   526   279.5   519.5   0.005  0.198
+  remote control button   1   300   319   533   552   309.5   544.1   0.011  0.173
+  remote control button   2   306   325   553   573   316.0   563.6   0.011  0.167
+  remote control button   3   260   279   534   553   269.3   545.3   0.011  0.164
+  remote control button   4   295   314   513   526   305.2   519.1   0.009  0.162
+  remote control button   5   255   269   513   532   261.8   521.0   0.008   0.16
+  remote control button   6   260   274   513   526   267.2   519.3   0.007  0.158
+  remote control button   7   305   319   507   526   312.7   515.6   0.009  0.158
+  remote control button   8   305   320   547   566   312.3   556.2    0.01  0.153
+  remote control button   9   300   314   553   578   307.3   565.9   0.011  0.152
+  remote control button  10   269   284   547   566   276.8   556.4   0.011   0.15
+  dining table         0     0  1149   413  1624   568.9   925.8  27.634   0.94
+
+QUESTION: which "remote control button" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: remote control button #<id>[, #<id> ...]

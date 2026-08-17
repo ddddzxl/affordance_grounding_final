@@ -1,0 +1,239 @@
+{
+ "q": 413,
+ "visit": "467139",
+ "desc_id": "90693ddd-91cc-47f9-a6c7-b7972399aabe",
+ "text": "Open the right door of the sink cabinet",
+ "parse": {
+  "text": "Open the right door of the sink cabinet",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "sink cabinet",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "sink cabinet",
+    "b": "cabinet door"
+   }
+  ],
+  "select": [
+   {
+    "on": "cabinet door",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333292",
+  "fid": "26410.354",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333292",
+    "26410.354"
+   ],
+   [
+    "47333293",
+    "26476.060"
+   ],
+   [
+    "47333298",
+    "26596.943"
+   ],
+   [
+    "47333293",
+    "26478.059"
+   ],
+   [
+    "47333292",
+    "26417.351"
+   ],
+   [
+    "47333293",
+    "26481.058"
+   ],
+   [
+    "47333292",
+    "26411.353"
+   ],
+   [
+    "47333293",
+    "26479.059"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 366,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "sink cabinet"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "sink cabinet": "container"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 406,
+    "x1": 712,
+    "y0": 520,
+    "y1": 664,
+    "cx": 556.2,
+    "cy": 599.9,
+    "npix": 16661,
+    "area_pct": 0.603,
+    "score": 0.681
+   },
+   {
+    "x0": 100,
+    "x1": 339,
+    "y0": 423,
+    "y1": 534,
+    "cx": 218.6,
+    "cy": 483.0,
+    "npix": 11073,
+    "area_pct": 0.4,
+    "score": 0.671
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 44,
+    "x1": 569,
+    "y0": 244,
+    "y1": 1114,
+    "cx": 316.9,
+    "cy": 657.1,
+    "npix": 169493,
+    "area_pct": 6.13,
+    "score": 0.962
+   },
+   {
+    "x0": 338,
+    "x1": 878,
+    "y0": 317,
+    "y1": 1282,
+    "cx": 637.5,
+    "cy": 769.2,
+    "npix": 259555,
+    "area_pct": 9.388,
+    "score": 0.958
+   }
+  ],
+  "sink cabinet": [
+   {
+    "x0": 0,
+    "x1": 1183,
+    "y0": 0,
+    "y1": 1389,
+    "cx": 687.7,
+    "cy": 611.7,
+    "npix": 1030541,
+    "area_pct": 37.274,
+    "score": 0.833
+   },
+   {
+    "x0": 74,
+    "x1": 816,
+    "y0": 0,
+    "y1": 109,
+    "cx": 444.9,
+    "cy": 43.7,
+    "npix": 54586,
+    "area_pct": 1.974,
+    "score": 0.168
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

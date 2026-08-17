@@ -1,0 +1,135 @@
+{
+ "q": 427,
+ "visit": "468282",
+ "desc_id": "9b5e7fa7-c7d2-4692-a2f5-8b337552c2ed",
+ "text": "Activate the socket between the mirrors",
+ "parse": {
+  "text": "Activate the socket between the mirrors",
+  "target": {
+   "concept": "socket",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "socket",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "mirror",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "between",
+    "a": "socket",
+    "b": "mirror"
+   }
+  ],
+  "select": [],
+  "residual": "'between the mirrors' — both anchors are the same concept 'mirror', so the relation cannot separate them",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331279",
+  "fid": "14259.708",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "47331279",
+    "14259.708"
+   ],
+   [
+    "47331281",
+    "14165.013"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 215,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 13
+ },
+ "concepts": [
+  "socket",
+  "mirror"
+ ],
+ "roles": {
+  "socket": "target",
+  "mirror": "landmark"
+ },
+ "candidates": {
+  "socket": [
+   {
+    "x0": 957,
+    "x1": 1013,
+    "y0": 1880,
+    "y1": 1919,
+    "cx": 983.9,
+    "cy": 1902.1,
+    "npix": 1757,
+    "area_pct": 0.064,
+    "score": 0.193
+   }
+  ],
+  "mirror": [
+   {
+    "x0": 1406,
+    "x1": 1439,
+    "y0": 179,
+    "y1": 1486,
+    "cx": 1426.7,
+    "cy": 893.7,
+    "npix": 32424,
+    "area_pct": 1.173,
+    "score": 0.455
+   }
+  ]
+ },
+ "mask_keys": {
+  "socket": [
+   "socket|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

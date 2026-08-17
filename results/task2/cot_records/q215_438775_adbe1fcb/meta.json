@@ -1,0 +1,265 @@
+{
+ "q": 215,
+ "visit": "438775",
+ "desc_id": "adbe1fcb-3c5e-4709-9e0d-d059dbd91781",
+ "text": "Open the right window door behind the leather ottoman",
+ "parse": {
+  "text": "Open the right window door behind the leather ottoman",
+  "target": {
+   "concept": "window handle",
+   "host": "window door"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "ottoman",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "behind",
+    "a": "window door",
+    "b": "ottoman"
+   }
+  ],
+  "select": [
+   {
+    "on": "window door",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358173",
+  "fid": "62470.957",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44358173",
+    "62470.957"
+   ],
+   [
+    "44358170",
+    "62328.147"
+   ],
+   [
+    "44358173",
+    "62472.956"
+   ],
+   [
+    "44358170",
+    "62358.352"
+   ],
+   [
+    "44358176",
+    "62280.449"
+   ],
+   [
+    "44358173",
+    "62471.957"
+   ],
+   [
+    "44358176",
+    "62261.457"
+   ],
+   [
+    "44358170",
+    "62334.561"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.816,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.608,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.2
+   }
+  ],
+  "n_frames": 266,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window door",
+  "ottoman"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window door": "host",
+  "ottoman": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 213,
+    "x1": 379,
+    "y0": 210,
+    "y1": 449,
+    "cx": 260.7,
+    "cy": 311.1,
+    "npix": 10999,
+    "area_pct": 0.398,
+    "score": 0.676
+   },
+   {
+    "x0": 699,
+    "x1": 779,
+    "y0": 195,
+    "y1": 248,
+    "cx": 739.3,
+    "cy": 220.4,
+    "npix": 3647,
+    "area_pct": 0.132,
+    "score": 0.356
+   },
+   {
+    "x0": 325,
+    "x1": 357,
+    "y0": 60,
+    "y1": 89,
+    "cx": 339.2,
+    "cy": 73.6,
+    "npix": 784,
+    "area_pct": 0.028,
+    "score": 0.169
+   },
+   {
+    "x0": 53,
+    "x1": 85,
+    "y0": 172,
+    "y1": 249,
+    "cx": 68.4,
+    "cy": 212.9,
+    "npix": 1516,
+    "area_pct": 0.055,
+    "score": 0.157
+   }
+  ],
+  "window door": [
+   {
+    "x0": 121,
+    "x1": 997,
+    "y0": 0,
+    "y1": 1174,
+    "cx": 460.1,
+    "cy": 399.7,
+    "npix": 438687,
+    "area_pct": 15.867,
+    "score": 0.699
+   },
+   {
+    "x0": 0,
+    "x1": 259,
+    "y0": 0,
+    "y1": 1369,
+    "cx": 94.0,
+    "cy": 731.0,
+    "npix": 219690,
+    "area_pct": 7.946,
+    "score": 0.15
+   }
+  ],
+  "ottoman": [
+   {
+    "x0": 456,
+    "x1": 1279,
+    "y0": 554,
+    "y1": 1358,
+    "cx": 869.4,
+    "cy": 917.4,
+    "npix": 431711,
+    "area_pct": 15.615,
+    "score": 0.573
+   },
+   {
+    "x0": 0,
+    "x1": 478,
+    "y0": 597,
+    "y1": 1180,
+    "cx": 166.5,
+    "cy": 832.2,
+    "npix": 94014,
+    "area_pct": 3.4,
+    "score": 0.406
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2",
+   "window handle|3"
+  ],
+  "window door": [
+   "window door|0",
+   "window door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1,
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(3)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

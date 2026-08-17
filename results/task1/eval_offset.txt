@@ -1,0 +1,51 @@
+
+################################################################
+what           :             AP         AP_50%         AP_25%
+################################################################
+rotate         :         76.554         86.207         86.207
+key_press      :         99.367        100.000        100.000
+tip_push       :         92.521         96.078         96.078
+hook_pull      :         96.453         97.931         97.931
+pinch_pull     :         91.945         96.599         96.599
+hook_turn      :         75.995         91.679         93.939
+foot_push      :        100.000        100.000        100.000
+plug_in        :         73.471         88.889         88.889
+unplug         :         96.774         96.774         96.774
+----------------------------------------------------------------
+average        :         89.231         94.906         95.157
+
+
+=== stderr ===
+
+evaluate instances:   0%|          | 0/30 [00:00<?, ?it/s]
+evaluate instances:   3%|▎         | 1/30 [00:00<00:22,  1.31it/s]
+evaluate instances:   7%|▋         | 2/30 [00:01<00:13,  2.13it/s]
+evaluate instances:  10%|█         | 3/30 [00:01<00:10,  2.47it/s]
+evaluate instances:  13%|█▎        | 4/30 [00:02<00:13,  1.99it/s]
+evaluate instances:  17%|█▋        | 5/30 [00:04<00:32,  1.30s/it]
+evaluate instances:  20%|██        | 6/30 [00:05<00:24,  1.02s/it]
+evaluate instances:  23%|██▎       | 7/30 [00:06<00:23,  1.03s/it]
+evaluate instances:  27%|██▋       | 8/30 [00:06<00:19,  1.16it/s]
+evaluate instances:  30%|███       | 9/30 [00:07<00:17,  1.21it/s]
+evaluate instances:  33%|███▎      | 10/30 [00:08<00:16,  1.22it/s]
+evaluate instances:  37%|███▋      | 11/30 [00:08<00:14,  1.33it/s]
+evaluate instances:  40%|████      | 12/30 [00:09<00:12,  1.43it/s]
+evaluate instances:  43%|████▎     | 13/30 [00:10<00:11,  1.53it/s]
+evaluate instances:  47%|████▋     | 14/30 [00:10<00:10,  1.46it/s]
+evaluate instances:  50%|█████     | 15/30 [00:11<00:09,  1.62it/s]
+evaluate instances:  53%|█████▎    | 16/30 [00:12<00:11,  1.27it/s]
+evaluate instances:  57%|█████▋    | 17/30 [00:13<00:10,  1.30it/s]
+evaluate instances:  60%|██████    | 18/30 [00:14<00:12,  1.03s/it]
+evaluate instances:  63%|██████▎   | 19/30 [00:15<00:09,  1.21it/s]
+evaluate instances:  67%|██████▋   | 20/30 [00:16<00:11,  1.10s/it]
+evaluate instances:  70%|███████   | 21/30 [00:18<00:10,  1.19s/it]
+evaluate instances:  73%|███████▎  | 22/30 [00:18<00:08,  1.04s/it]
+evaluate instances:  77%|███████▋  | 23/30 [00:19<00:05,  1.22it/s]
+evaluate instances:  80%|████████  | 24/30 [00:20<00:05,  1.02it/s]
+evaluate instances:  83%|████████▎ | 25/30 [00:21<00:05,  1.04s/it]
+evaluate instances:  87%|████████▋ | 26/30 [00:27<00:09,  2.36s/it]
+evaluate instances:  90%|█████████ | 27/30 [00:27<00:05,  1.75s/it]
+evaluate instances:  93%|█████████▎| 28/30 [00:28<00:02,  1.36s/it]
+evaluate instances:  97%|█████████▋| 29/30 [00:28<00:01,  1.09s/it]
+evaluate instances: 100%|██████████| 30/30 [00:29<00:00,  1.08s/it]
+evaluate instances: 100%|██████████| 30/30 [00:29<00:00,  1.02it/s]

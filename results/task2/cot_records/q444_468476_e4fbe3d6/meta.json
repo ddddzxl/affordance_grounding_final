@@ -1,0 +1,240 @@
+{
+ "q": 444,
+ "visit": "468476",
+ "desc_id": "e4fbe3d6-7c64-4516-8d08-967690035814",
+ "text": "Open the left door of the cabinet located to the right of the mirror",
+ "parse": {
+  "text": "Open the left door of the cabinet located to the right of the mirror",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "mirror",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "right_of",
+    "a": "cabinet",
+    "b": "mirror"
+   }
+  ],
+  "select": [
+   {
+    "on": "cabinet door",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45261682",
+  "fid": "3555.567",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 5,
+  "topk": [
+   [
+    "45261682",
+    "3555.567"
+   ],
+   [
+    "45261681",
+    "3608.062"
+   ],
+   [
+    "45261682",
+    "3535.475"
+   ],
+   [
+    "45261682",
+    "3556.566"
+   ],
+   [
+    "45261681",
+    "3611.677"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 222,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "cabinet",
+  "mirror"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "cabinet": "container",
+  "mirror": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 600,
+    "x1": 624,
+    "y0": 1080,
+    "y1": 1106,
+    "cx": 612.5,
+    "cy": 1092.3,
+    "npix": 607,
+    "area_pct": 0.022,
+    "score": 0.221
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 712,
+    "x1": 924,
+    "y0": 1050,
+    "y1": 1463,
+    "cx": 827.3,
+    "cy": 1245.0,
+    "npix": 70494,
+    "area_pct": 2.55,
+    "score": 0.765
+   },
+   {
+    "x0": 461,
+    "x1": 641,
+    "y0": 1021,
+    "y1": 1239,
+    "cx": 564.0,
+    "cy": 1103.7,
+    "npix": 24143,
+    "area_pct": 0.873,
+    "score": 0.645
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 432,
+    "x1": 1003,
+    "y0": 952,
+    "y1": 1569,
+    "cx": 792.6,
+    "cy": 1186.4,
+    "npix": 184578,
+    "area_pct": 6.676,
+    "score": 0.873
+   }
+  ],
+  "mirror": [
+   {
+    "x0": 0,
+    "x1": 219,
+    "y0": 207,
+    "y1": 912,
+    "cx": 91.3,
+    "cy": 578.6,
+    "npix": 124831,
+    "area_pct": 4.515,
+    "score": 0.918
+   },
+   {
+    "x0": 1266,
+    "x1": 1439,
+    "y0": 62,
+    "y1": 753,
+    "cx": 1360.4,
+    "cy": 425.2,
+    "npix": 107412,
+    "area_pct": 3.885,
+    "score": 0.834
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

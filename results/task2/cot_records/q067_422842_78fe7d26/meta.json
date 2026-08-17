@@ -1,0 +1,459 @@
+{
+ "q": 67,
+ "visit": "422842",
+ "desc_id": "78fe7d26-ecfe-4d16-9c8d-9fbdcc723b78",
+ "text": "Open the top left drawer of the white cabinet in front of the radiator",
+ "parse": {
+  "text": "Open the top left drawer of the white cabinet in front of the radiator",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "radiator",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "in_front_of",
+    "a": "cabinet",
+    "b": "radiator"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   },
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "left",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897547",
+  "fid": "473181.818",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42897547",
+    "473181.818"
+   ],
+   [
+    "42897547",
+    "473186.816"
+   ],
+   [
+    "42897547",
+    "473256.604"
+   ],
+   [
+    "42897560",
+    "473386.917"
+   ],
+   [
+    "42897560",
+    "473393.614"
+   ],
+   [
+    "42897547",
+    "473187.816"
+   ],
+   [
+    "42897547",
+    "473188.815"
+   ],
+   [
+    "42897547",
+    "473189.815"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.507,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.763,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 236,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "radiator"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "radiator": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 690,
+    "x1": 804,
+    "y0": 609,
+    "y1": 632,
+    "cx": 747.0,
+    "cy": 622.0,
+    "npix": 2331,
+    "area_pct": 0.084,
+    "score": 0.875
+   },
+   {
+    "x0": 115,
+    "x1": 229,
+    "y0": 660,
+    "y1": 679,
+    "cx": 167.5,
+    "cy": 671.5,
+    "npix": 1769,
+    "area_pct": 0.064,
+    "score": 0.87
+   },
+   {
+    "x0": 375,
+    "x1": 489,
+    "y0": 607,
+    "y1": 626,
+    "cx": 428.7,
+    "cy": 617.7,
+    "npix": 1961,
+    "area_pct": 0.071,
+    "score": 0.868
+   },
+   {
+    "x0": 690,
+    "x1": 799,
+    "y0": 720,
+    "y1": 732,
+    "cx": 744.5,
+    "cy": 726.0,
+    "npix": 1419,
+    "area_pct": 0.051,
+    "score": 0.861
+   },
+   {
+    "x0": 95,
+    "x1": 214,
+    "y0": 554,
+    "y1": 572,
+    "cx": 152.1,
+    "cy": 564.5,
+    "npix": 1802,
+    "area_pct": 0.065,
+    "score": 0.86
+   },
+   {
+    "x0": 72,
+    "x1": 194,
+    "y0": 440,
+    "y1": 459,
+    "cx": 133.3,
+    "cy": 449.6,
+    "npix": 2387,
+    "area_pct": 0.086,
+    "score": 0.859
+   },
+   {
+    "x0": 390,
+    "x1": 499,
+    "y0": 712,
+    "y1": 727,
+    "cx": 444.5,
+    "cy": 719.5,
+    "npix": 1532,
+    "area_pct": 0.055,
+    "score": 0.838
+   },
+   {
+    "x0": 1035,
+    "x1": 1089,
+    "y0": 193,
+    "y1": 452,
+    "cx": 1057.9,
+    "cy": 320.8,
+    "npix": 5537,
+    "area_pct": 0.2,
+    "score": 0.322
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 591,
+    "x1": 904,
+    "y0": 582,
+    "y1": 761,
+    "cx": 748.3,
+    "cy": 670.7,
+    "npix": 51145,
+    "area_pct": 1.85,
+    "score": 0.922
+   },
+   {
+    "x0": 273,
+    "x1": 592,
+    "y0": 562,
+    "y1": 746,
+    "cx": 437.4,
+    "cy": 652.6,
+    "npix": 49298,
+    "area_pct": 1.783,
+    "score": 0.915
+   },
+   {
+    "x0": 69,
+    "x1": 289,
+    "y0": 628,
+    "y1": 727,
+    "cx": 179.5,
+    "cy": 678.3,
+    "npix": 18943,
+    "area_pct": 0.685,
+    "score": 0.901
+   },
+   {
+    "x0": 25,
+    "x1": 249,
+    "y0": 411,
+    "y1": 542,
+    "cx": 138.0,
+    "cy": 469.4,
+    "npix": 24240,
+    "area_pct": 0.877,
+    "score": 0.682
+   },
+   {
+    "x0": 46,
+    "x1": 269,
+    "y0": 516,
+    "y1": 632,
+    "cx": 159.3,
+    "cy": 575.6,
+    "npix": 21638,
+    "area_pct": 0.783,
+    "score": 0.668
+   },
+   {
+    "x0": 0,
+    "x1": 24,
+    "y0": 413,
+    "y1": 452,
+    "cx": 11.6,
+    "cy": 433.3,
+    "npix": 950,
+    "area_pct": 0.034,
+    "score": 0.232
+   },
+   {
+    "x0": 241,
+    "x1": 323,
+    "y0": 354,
+    "y1": 499,
+    "cx": 272.2,
+    "cy": 434.2,
+    "npix": 5286,
+    "area_pct": 0.191,
+    "score": 0.174
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 271,
+    "x1": 904,
+    "y0": 560,
+    "y1": 761,
+    "cx": 595.4,
+    "cy": 660.8,
+    "npix": 102108,
+    "area_pct": 3.693,
+    "score": 0.7
+   },
+   {
+    "x0": 24,
+    "x1": 301,
+    "y0": 354,
+    "y1": 726,
+    "cx": 164.4,
+    "cy": 539.7,
+    "npix": 79043,
+    "area_pct": 2.859,
+    "score": 0.687
+   },
+   {
+    "x0": 999,
+    "x1": 1386,
+    "y0": 0,
+    "y1": 751,
+    "cx": 1167.5,
+    "cy": 337.3,
+    "npix": 200696,
+    "area_pct": 7.259,
+    "score": 0.63
+   },
+   {
+    "x0": 0,
+    "x1": 169,
+    "y0": 40,
+    "y1": 346,
+    "cx": 75.6,
+    "cy": 180.3,
+    "npix": 33716,
+    "area_pct": 1.219,
+    "score": 0.561
+   },
+   {
+    "x0": 1281,
+    "x1": 1439,
+    "y0": 0,
+    "y1": 564,
+    "cx": 1378.2,
+    "cy": 323.6,
+    "npix": 56647,
+    "area_pct": 2.049,
+    "score": 0.225
+   },
+   {
+    "x0": 0,
+    "x1": 79,
+    "y0": 414,
+    "y1": 714,
+    "cx": 30.2,
+    "cy": 574.9,
+    "npix": 12083,
+    "area_pct": 0.437,
+    "score": 0.155
+   }
+  ],
+  "radiator": [
+   {
+    "x0": 361,
+    "x1": 957,
+    "y0": 340,
+    "y1": 480,
+    "cx": 634.4,
+    "cy": 398.1,
+    "npix": 53352,
+    "area_pct": 1.93,
+    "score": 0.914
+   },
+   {
+    "x0": 0,
+    "x1": 79,
+    "y0": 413,
+    "y1": 737,
+    "cx": 30.4,
+    "cy": 575.6,
+    "npix": 12005,
+    "area_pct": 0.434,
+    "score": 0.198
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4",
+   "drawer handle|5",
+   "drawer handle|6",
+   "drawer handle|7"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5",
+   "drawer|6"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2,
+   6
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

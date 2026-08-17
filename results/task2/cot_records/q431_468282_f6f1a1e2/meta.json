@@ -1,0 +1,195 @@
+{
+ "q": 431,
+ "visit": "468282",
+ "desc_id": "f6f1a1e2-ca3c-4526-b56b-bdf4a1e3eead",
+ "text": "Control some functions on the washing machine using the button panel",
+ "parse": {
+  "text": "Control some functions on the washing machine using the button panel",
+  "target": {
+   "concept": "button panel",
+   "host": "washing machine"
+  },
+  "entities": [
+   {
+    "name": "button panel",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "washing machine",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331279",
+  "fid": "14319.317",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331279",
+    "14319.317"
+   ],
+   [
+    "47331279",
+    "14320.316"
+   ],
+   [
+    "47331279",
+    "14307.705"
+   ],
+   [
+    "47331279",
+    "14242.715"
+   ],
+   [
+    "47331279",
+    "14236.717"
+   ],
+   [
+    "47331279",
+    "14238.716"
+   ],
+   [
+    "47331279",
+    "14239.716"
+   ],
+   [
+    "47331279",
+    "14241.715"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 215,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "button panel",
+  "washing machine"
+ ],
+ "roles": {
+  "button panel": "target",
+  "washing machine": "host"
+ },
+ "candidates": {
+  "button panel": [
+   {
+    "x0": 647,
+    "x1": 1352,
+    "y0": 498,
+    "y1": 809,
+    "cx": 979.8,
+    "cy": 645.8,
+    "npix": 169636,
+    "area_pct": 6.136,
+    "score": 0.657
+   },
+   {
+    "x0": 320,
+    "x1": 459,
+    "y0": 770,
+    "y1": 828,
+    "cx": 390.3,
+    "cy": 799.3,
+    "npix": 5972,
+    "area_pct": 0.216,
+    "score": 0.406
+   },
+   {
+    "x0": 790,
+    "x1": 884,
+    "y0": 575,
+    "y1": 705,
+    "cx": 836.0,
+    "cy": 656.2,
+    "npix": 7302,
+    "area_pct": 0.264,
+    "score": 0.319
+   }
+  ],
+  "washing machine": [
+   {
+    "x0": 106,
+    "x1": 1352,
+    "y0": 318,
+    "y1": 1761,
+    "cx": 690.1,
+    "cy": 963.3,
+    "npix": 1342822,
+    "area_pct": 48.569,
+    "score": 0.98
+   }
+  ]
+ },
+ "mask_keys": {
+  "button panel": [
+   "button panel|0",
+   "button panel|1",
+   "button panel|2"
+  ],
+  "washing machine": [
+   "washing machine|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

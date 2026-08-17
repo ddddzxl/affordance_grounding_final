@@ -1,0 +1,245 @@
+{
+ "q": 313,
+ "visit": "466841",
+ "desc_id": "d38c204c-a080-4bcd-adbf-597de990d63e",
+ "text": "Open the middle drawer of the cabinet with the printer on top",
+ "parse": {
+  "text": "Open the middle drawer of the cabinet with the printer on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "printer",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "printer"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "middle",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331589",
+  "fid": "15956.993",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L3",
+  "n_top": 4,
+  "topk": [
+   [
+    "47331589",
+    "15956.993"
+   ],
+   [
+    "47331587",
+    "16007.206"
+   ],
+   [
+    "47331591",
+    "16063.300"
+   ],
+   [
+    "47331589",
+    "15954.994"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.05,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 0.05,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 135,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "printer"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "printer": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 780,
+    "x1": 832,
+    "y0": 545,
+    "y1": 594,
+    "cx": 804.9,
+    "cy": 568.7,
+    "npix": 2088,
+    "area_pct": 0.076,
+    "score": 0.481
+   },
+   {
+    "x0": 1708,
+    "x1": 1885,
+    "y0": 1290,
+    "y1": 1439,
+    "cx": 1793.6,
+    "cy": 1367.8,
+    "npix": 9127,
+    "area_pct": 0.33,
+    "score": 0.394
+   },
+   {
+    "x0": 493,
+    "x1": 666,
+    "y0": 1340,
+    "y1": 1439,
+    "cx": 577.0,
+    "cy": 1374.4,
+    "npix": 5686,
+    "area_pct": 0.206,
+    "score": 0.201
+   }
+  ],
+  "drawer": [],
+  "cabinet": [
+   {
+    "x0": 123,
+    "x1": 1377,
+    "y0": 0,
+    "y1": 1436,
+    "cx": 1001.3,
+    "cy": 650.6,
+    "npix": 911350,
+    "area_pct": 32.963,
+    "score": 0.687
+   },
+   {
+    "x0": 1345,
+    "x1": 1919,
+    "y0": 0,
+    "y1": 1439,
+    "cx": 1567.5,
+    "cy": 704.5,
+    "npix": 321885,
+    "area_pct": 11.642,
+    "score": 0.651
+   },
+   {
+    "x0": 1420,
+    "x1": 1485,
+    "y0": 1395,
+    "y1": 1439,
+    "cx": 1444.6,
+    "cy": 1423.5,
+    "npix": 1781,
+    "area_pct": 0.064,
+    "score": 0.158
+   }
+  ],
+  "printer": [
+   {
+    "x0": 1650,
+    "x1": 1919,
+    "y0": 1047,
+    "y1": 1439,
+    "cx": 1795.7,
+    "cy": 1258.9,
+    "npix": 92517,
+    "area_pct": 3.346,
+    "score": 0.449
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2"
+  ],
+  "drawer": []
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

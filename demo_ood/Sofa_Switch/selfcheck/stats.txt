@@ -1,0 +1,6 @@
+=== Sofa_Switch ===
+cloud 117,530 points   frames 40   coordinate system EXIF-corrected upright
+cloud bounding box (m): min=[-1.61, -0.51, -2.1]  max=[2.0, 1.13, 2.43]  size=[3.61, 1.64, 4.53]
+visible points per frame: median 32289  max 52902  min 15264  (27.5% of the cloud)
+z-buffer (tol=0.05 m) rejected 3.7% of in-frustum points as occluded
+all frames together cover 94.4% of the points -- a low value means the scan has blind spots; those points project into no frame at all and lifting cannot reach them

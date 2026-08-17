@@ -1,0 +1,43 @@
+TASK: "Open the door of the pantry to the left of the refrigerator"
+
+PARSE:
+  target concept = "door handle"   <- the thing that must be output
+  host           = 'door'   <- countable object the target sits on
+  entity  : 'door handle'  role=target
+  entity  : 'door'  role=host
+  entity  : 'pantry'  role=container   (not instanceable: not a countable object in the image)
+  entity  : 'refrigerator'  role=landmark
+  relation: left_of(a='door', b='refrigerator')
+  residual: pantry is not instanceable (it is a space, not an object), so the relation attaches to the door
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  y increases DOWNWARD.
+  => "top" = SMALL y,  "bottom" = LARGE y,  "left" = SMALL x,  "right" = LARGE x
+  => "A above B" means A.cy < B.cy.
+  area% = mask pixels as % of the whole image.  score = SAM3 confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class                      id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  door handle                 0   840   959   534  1546   909.2  1040.2   2.027  0.930
+  door handle                 1   755   889   546  1572   836.8  1038.6   1.823  0.929
+  door handle                 2     0    44  1413  1506    18.5  1454.0   0.114  0.887
+  door handle                 3  1405  1434   500   532  1419.5   516.9   0.025  0.735
+  door handle                 4  1365  1394   507   538  1380.7   522.4   0.023  0.726
+  door                        0     0   214  1108  1919    73.9  1650.5   3.123  0.919
+  door                        1   800  1310   130  1919  1060.1   986.7  20.883  0.851
+  door                        2   144   909   123  1919   579.8   963.4  34.017  0.794
+  door                        3  1395  1439     0   540  1419.9   293.3   0.726  0.529
+  door                        4  1332  1439  1140  1586  1388.0  1366.0   1.424  0.420
+  refrigerator                0   142  1311   122  1919   746.1   972.0  58.950  0.963
+
+CONTAINMENT (door handle ids inside each door):
+  door #0  contains door handle [2]  [via bbox]
+  door #1  contains door handle [0]
+  door #2  contains door handle [1]
+  door #3  contains door handle [3]
+  door #4  contains door handle []  [via bbox]
+
+QUESTION: which "door handle" id(s) does the instruction refer to?

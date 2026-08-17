@@ -1,0 +1,231 @@
+{
+ "q": 126,
+ "visit": "434888",
+ "desc_id": "72b1df3a-93c3-4704-981e-fb193218c09d",
+ "text": "Open the window to the left of the vanity table",
+ "parse": {
+  "text": "Open the window to the left of the vanity table",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "vanity table",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "left_of",
+    "a": "window",
+    "b": "vanity table"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899185",
+  "fid": "184290.602",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899185",
+    "184290.602"
+   ],
+   [
+    "42899185",
+    "184281.606"
+   ],
+   [
+    "42899184",
+    "184437.808"
+   ],
+   [
+    "42899184",
+    "184455.300"
+   ],
+   [
+    "42899184",
+    "184438.807"
+   ],
+   [
+    "42899184",
+    "184456.300"
+   ],
+   [
+    "42899185",
+    "184291.602"
+   ],
+   [
+    "42899187",
+    "184382.614"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 105,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "vanity table"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "vanity table": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 1305,
+    "x1": 1364,
+    "y0": 1340,
+    "y1": 1386,
+    "cx": 1333.2,
+    "cy": 1364.8,
+    "npix": 1770,
+    "area_pct": 0.064,
+    "score": 0.703
+   },
+   {
+    "x0": 1350,
+    "x1": 1404,
+    "y0": 1383,
+    "y1": 1432,
+    "cx": 1373.8,
+    "cy": 1408.6,
+    "npix": 1827,
+    "area_pct": 0.066,
+    "score": 0.657
+   },
+   {
+    "x0": 979,
+    "x1": 989,
+    "y0": 1233,
+    "y1": 1276,
+    "cx": 984.4,
+    "cy": 1254.0,
+    "npix": 415,
+    "area_pct": 0.015,
+    "score": 0.224
+   }
+  ],
+  "window": [
+   {
+    "x0": 36,
+    "x1": 608,
+    "y0": 544,
+    "y1": 1056,
+    "cx": 336.0,
+    "cy": 779.6,
+    "npix": 246441,
+    "area_pct": 8.914,
+    "score": 0.892
+   }
+  ],
+  "vanity table": [
+   {
+    "x0": 960,
+    "x1": 1084,
+    "y0": 1156,
+    "y1": 1406,
+    "cx": 1028.3,
+    "cy": 1253.0,
+    "npix": 20431,
+    "area_pct": 0.739,
+    "score": 0.514
+   },
+   {
+    "x0": 989,
+    "x1": 1439,
+    "y0": 321,
+    "y1": 1919,
+    "cx": 1263.5,
+    "cy": 1198.9,
+    "npix": 539889,
+    "area_pct": 19.527,
+    "score": 0.278
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2"
+  ],
+  "window": [
+   "window|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

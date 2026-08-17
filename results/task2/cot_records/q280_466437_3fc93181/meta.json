@@ -1,0 +1,146 @@
+{
+ "q": 280,
+ "visit": "466437",
+ "desc_id": "3fc93181-1936-46ce-bbff-9b65838e9462",
+ "text": "Dial a number on the telephone on the nightstand",
+ "parse": {
+  "text": "Dial a number on the telephone on the nightstand",
+  "target": {
+   "concept": "telephone",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "telephone",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "nightstand",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "telephone",
+    "b": "nightstand"
+   }
+  ],
+  "select": [],
+  "residual": "independent check on the train split (val untouched): handheld-device GT has a median of 478 points while fixed-furniture handles have 87-108, a factor of 4.4-5.5. The annotation therefore covers the whole device rather than an individual key: what a person grasps is the whole remote or controller, and which key the press lands on does not constitute a separate interactable entity. Fixed furniture is the opposite -- there you operate the handle itself.",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45260951",
+  "fid": "6177.106",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "45260951",
+    "6177.106"
+   ],
+   [
+    "45260952",
+    "6037.112"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "telephone",
+  "nightstand"
+ ],
+ "roles": {
+  "telephone": "target",
+  "nightstand": "container"
+ },
+ "candidates": {
+  "telephone": [
+   {
+    "x0": 788,
+    "x1": 909,
+    "y0": 620,
+    "y1": 691,
+    "cx": 849.8,
+    "cy": 653.3,
+    "npix": 6694,
+    "area_pct": 0.242,
+    "score": 0.393
+   }
+  ],
+  "nightstand": [
+   {
+    "x0": 681,
+    "x1": 940,
+    "y0": 647,
+    "y1": 853,
+    "cx": 830.3,
+    "cy": 741.3,
+    "npix": 27255,
+    "area_pct": 0.986,
+    "score": 0.948
+   },
+   {
+    "x0": 0,
+    "x1": 29,
+    "y0": 607,
+    "y1": 686,
+    "cx": 10.3,
+    "cy": 654.9,
+    "npix": 1503,
+    "area_pct": 0.054,
+    "score": 0.191
+   }
+  ]
+ },
+ "mask_keys": {
+  "telephone": [
+   "telephone|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

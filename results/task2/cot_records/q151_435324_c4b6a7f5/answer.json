@@ -1,0 +1,9 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "low",
+ "kind": "conflicting_evidence",
+ "flaw": "unanswerable",
+ "solver": "frontier-llm, manual CoT"
+}

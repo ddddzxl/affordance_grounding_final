@@ -1,0 +1,277 @@
+{
+ "q": 260,
+ "visit": "466162",
+ "desc_id": "1d048572-5096-4285-9319-7d6390d99c87",
+ "text": "Open the bottom drawer of the blue closet near the window",
+ "parse": {
+  "text": "Open the bottom drawer of the blue closet near the window",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "drawer"
+   },
+   {
+    "rel": "near",
+    "a": "closet",
+    "b": "window"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796576",
+  "fid": "16714.287",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44796576",
+    "16714.287"
+   ],
+   [
+    "44796575",
+    "16888.181"
+   ],
+   [
+    "44796579",
+    "16782.592"
+   ],
+   [
+    "44796579",
+    "16781.592"
+   ],
+   [
+    "44796579",
+    "16779.593"
+   ],
+   [
+    "44796576",
+    "16711.288"
+   ],
+   [
+    "44796579",
+    "16787.590"
+   ],
+   [
+    "44796579",
+    "16777.594"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "closet",
+  "window"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "closet": "container",
+  "window": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 993,
+    "x1": 1026,
+    "y0": 965,
+    "y1": 994,
+    "cx": 1010.1,
+    "cy": 980.7,
+    "npix": 826,
+    "area_pct": 0.03,
+    "score": 0.87
+   },
+   {
+    "x0": 887,
+    "x1": 912,
+    "y0": 890,
+    "y1": 914,
+    "cx": 899.9,
+    "cy": 901.7,
+    "npix": 567,
+    "area_pct": 0.021,
+    "score": 0.854
+   },
+   {
+    "x0": 919,
+    "x1": 952,
+    "y0": 460,
+    "y1": 489,
+    "cx": 933.6,
+    "cy": 476.1,
+    "npix": 794,
+    "area_pct": 0.029,
+    "score": 0.639
+   },
+   {
+    "x0": 893,
+    "x1": 919,
+    "y0": 460,
+    "y1": 484,
+    "cx": 905.3,
+    "cy": 471.3,
+    "npix": 501,
+    "area_pct": 0.018,
+    "score": 0.623
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 867,
+    "x1": 1072,
+    "y0": 839,
+    "y1": 1056,
+    "cx": 971.6,
+    "cy": 946.4,
+    "npix": 18872,
+    "area_pct": 0.683,
+    "score": 0.914
+   }
+  ],
+  "closet": [
+   {
+    "x0": 785,
+    "x1": 1297,
+    "y0": 0,
+    "y1": 1127,
+    "cx": 1066.6,
+    "cy": 513.8,
+    "npix": 484650,
+    "area_pct": 17.529,
+    "score": 0.812
+   }
+  ],
+  "window": [
+   {
+    "x0": 145,
+    "x1": 597,
+    "y0": 194,
+    "y1": 619,
+    "cx": 357.7,
+    "cy": 401.1,
+    "npix": 163601,
+    "area_pct": 5.917,
+    "score": 0.933
+   },
+   {
+    "x0": 1679,
+    "x1": 1726,
+    "y0": 25,
+    "y1": 369,
+    "cx": 1701.3,
+    "cy": 207.9,
+    "npix": 11109,
+    "area_pct": 0.402,
+    "score": 0.354
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3"
+  ],
+  "drawer": [
+   "drawer|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

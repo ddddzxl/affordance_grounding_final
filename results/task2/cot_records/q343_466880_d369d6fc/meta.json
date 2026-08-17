@@ -1,0 +1,277 @@
+{
+ "q": 343,
+ "visit": "466880",
+ "desc_id": "d369d6fc-8ce8-41ce-9435-408584ee07ef",
+ "text": "Open the kitchen counter door with the coffee machine on top",
+ "parse": {
+  "text": "Open the kitchen counter door with the coffee machine on top",
+  "target": {
+   "concept": "door handle",
+   "host": "counter door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "counter door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "counter",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "coffee machine",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "counter",
+    "b": "counter door"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "counter",
+    "b": "coffee machine"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331710",
+  "fid": "11239.335",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L3",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331710",
+    "11239.335"
+   ],
+   [
+    "47331711",
+    "11254.729"
+   ],
+   [
+    "47331707",
+    "11137.826"
+   ],
+   [
+    "47331711",
+    "11318.836"
+   ],
+   [
+    "47331710",
+    "11215.228"
+   ],
+   [
+    "47331711",
+    "11247.748"
+   ],
+   [
+    "47331707",
+    "11125.831"
+   ],
+   [
+    "47331707",
+    "11132.828"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "counter door",
+  "counter",
+  "coffee machine"
+ ],
+ "roles": {
+  "door handle": "target",
+  "counter door": "host",
+  "counter": "container",
+  "coffee machine": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 720,
+    "x1": 919,
+    "y0": 1190,
+    "y1": 1304,
+    "cx": 815.4,
+    "cy": 1247.1,
+    "npix": 12145,
+    "area_pct": 0.439,
+    "score": 0.908
+   },
+   {
+    "x0": 39,
+    "x1": 192,
+    "y0": 10,
+    "y1": 109,
+    "cx": 109.6,
+    "cy": 62.3,
+    "npix": 10015,
+    "area_pct": 0.362,
+    "score": 0.905
+   },
+   {
+    "x0": 707,
+    "x1": 859,
+    "y0": 1360,
+    "y1": 1439,
+    "cx": 778.7,
+    "cy": 1404.7,
+    "npix": 6319,
+    "area_pct": 0.229,
+    "score": 0.891
+   },
+   {
+    "x0": 733,
+    "x1": 976,
+    "y0": 1030,
+    "y1": 1159,
+    "cx": 845.3,
+    "cy": 1099.6,
+    "npix": 14785,
+    "area_pct": 0.535,
+    "score": 0.881
+   },
+   {
+    "x0": 1439,
+    "x1": 1586,
+    "y0": 1400,
+    "y1": 1439,
+    "cx": 1511.6,
+    "cy": 1421.0,
+    "npix": 3982,
+    "area_pct": 0.144,
+    "score": 0.333
+   }
+  ],
+  "counter door": [],
+  "counter": [
+   {
+    "x0": 168,
+    "x1": 1919,
+    "y0": 0,
+    "y1": 1439,
+    "cx": 1160.7,
+    "cy": 617.6,
+    "npix": 1000162,
+    "area_pct": 36.175,
+    "score": 0.834
+   },
+   {
+    "x0": 139,
+    "x1": 811,
+    "y0": 0,
+    "y1": 192,
+    "cx": 521.7,
+    "cy": 66.6,
+    "npix": 66038,
+    "area_pct": 2.389,
+    "score": 0.54
+   }
+  ],
+  "coffee machine": [
+   {
+    "x0": 626,
+    "x1": 745,
+    "y0": 0,
+    "y1": 28,
+    "cx": 694.6,
+    "cy": 10.1,
+    "npix": 2147,
+    "area_pct": 0.078,
+    "score": 0.236
+   },
+   {
+    "x0": 1327,
+    "x1": 1731,
+    "y0": 1336,
+    "y1": 1439,
+    "cx": 1514.3,
+    "cy": 1404.1,
+    "npix": 21871,
+    "area_pct": 0.791,
+    "score": 0.168
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4"
+  ],
+  "counter door": []
+ },
+ "geom_pick": {
+  "target": [
+   3
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

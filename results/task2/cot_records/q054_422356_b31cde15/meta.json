@@ -1,0 +1,174 @@
+{
+ "q": 54,
+ "visit": "422356",
+ "desc_id": "b31cde15-2683-41ab-8cb0-adea078cb888",
+ "text": "Turn on the fan",
+ "parse": {
+  "text": "Turn on the fan",
+  "target": {
+   "concept": "fan button",
+   "host": "fan"
+  },
+  "entities": [
+   {
+    "name": "fan button",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "fan",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42446579",
+  "fid": "205802.468",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 3,
+  "topk": [
+   [
+    "42446579",
+    "205802.468"
+   ],
+   [
+    "42446579",
+    "205834.655"
+   ],
+   [
+    "42446579",
+    "205801.469"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 115,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "fan button",
+  "fan"
+ ],
+ "roles": {
+  "fan button": "target",
+  "fan": "host"
+ },
+ "candidates": {
+  "fan button": [
+   {
+    "x0": 1240,
+    "x1": 1252,
+    "y0": 700,
+    "y1": 717,
+    "cx": 1245.8,
+    "cy": 707.7,
+    "npix": 200,
+    "area_pct": 0.007,
+    "score": 0.226
+   },
+   {
+    "x0": 1200,
+    "x1": 1226,
+    "y0": 705,
+    "y1": 719,
+    "cx": 1214.2,
+    "cy": 711.5,
+    "npix": 297,
+    "area_pct": 0.011,
+    "score": 0.188
+   },
+   {
+    "x0": 1149,
+    "x1": 1272,
+    "y0": 574,
+    "y1": 644,
+    "cx": 1212.4,
+    "cy": 608.9,
+    "npix": 6996,
+    "area_pct": 0.253,
+    "score": 0.186
+   }
+  ],
+  "fan": [
+   {
+    "x0": 1041,
+    "x1": 1411,
+    "y0": 385,
+    "y1": 779,
+    "cx": 1221.8,
+    "cy": 582.8,
+    "npix": 93890,
+    "area_pct": 3.396,
+    "score": 0.965
+   }
+  ]
+ },
+ "mask_keys": {
+  "fan button": [
+   "fan button|0",
+   "fan button|1",
+   "fan button|2"
+  ],
+  "fan": [
+   "fan|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1,
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(3)"
+ },
+ "concept_fallback": {
+  "orig": "fan switch",
+  "used": "fan button",
+  "probe_hits": 1,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,180 @@
+{
+ "q": 266,
+ "visit": "466162",
+ "desc_id": "8ede1872-defa-4599-924f-e9d41ac64c09",
+ "text": "Adjust the lighting using the dimmer switch next to the door",
+ "parse": {
+  "text": "Adjust the lighting using the dimmer switch next to the door",
+  "target": {
+   "concept": "dimmer switch",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "dimmer switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "dimmer switch",
+    "b": "door"
+   }
+  ],
+  "select": [],
+  "residual": "reverted: 'dimmer dial' is semantically right (GT label is rotate) but SAM3 detects it in 0/5 descriptions, while 'dimmer switch' at least builds a candidate pool. Retrieval failure is a harder failure than a form mismatch — you score 0 either way, but with no pool there is nothing to reason over.",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796575",
+  "fid": "16856.994",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "44796575",
+    "16856.994"
+   ],
+   [
+    "44796576",
+    "16704.291"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 2
+ },
+ "concepts": [
+  "dimmer switch",
+  "door"
+ ],
+ "roles": {
+  "dimmer switch": "target",
+  "door": "landmark"
+ },
+ "candidates": {
+  "dimmer switch": [
+   {
+    "x0": 1690,
+    "x1": 1919,
+    "y0": 1224,
+    "y1": 1423,
+    "cx": 1786.1,
+    "cy": 1323.1,
+    "npix": 35066,
+    "area_pct": 1.268,
+    "score": 0.311
+   },
+   {
+    "x0": 1874,
+    "x1": 1919,
+    "y0": 1225,
+    "y1": 1414,
+    "cx": 1899.2,
+    "cy": 1317.0,
+    "npix": 7671,
+    "area_pct": 0.277,
+    "score": 0.215
+   }
+  ],
+  "door": [
+   {
+    "x0": 0,
+    "x1": 256,
+    "y0": 154,
+    "y1": 1439,
+    "cx": 120.8,
+    "cy": 852.7,
+    "npix": 294394,
+    "area_pct": 10.648,
+    "score": 0.95
+   },
+   {
+    "x0": 749,
+    "x1": 880,
+    "y0": 725,
+    "y1": 1257,
+    "cx": 808.9,
+    "cy": 955.0,
+    "npix": 49600,
+    "area_pct": 1.794,
+    "score": 0.827
+   },
+   {
+    "x0": 880,
+    "x1": 1026,
+    "y0": 724,
+    "y1": 963,
+    "cx": 943.2,
+    "cy": 841.5,
+    "npix": 28879,
+    "area_pct": 1.045,
+    "score": 0.762
+   },
+   {
+    "x0": 842,
+    "x1": 1637,
+    "y0": 1015,
+    "y1": 1439,
+    "cx": 1026.8,
+    "cy": 1270.1,
+    "npix": 108315,
+    "area_pct": 3.918,
+    "score": 0.153
+   }
+  ]
+ },
+ "mask_keys": {
+  "dimmer switch": [
+   "dimmer switch|0",
+   "dimmer switch|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

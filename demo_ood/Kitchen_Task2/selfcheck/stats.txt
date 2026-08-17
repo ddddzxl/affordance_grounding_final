@@ -1,0 +1,6 @@
+=== Kitchen_Task2 ===
+cloud 163,335 points   frames 89   coordinate system EXIF-corrected upright
+cloud bounding box (m): min=[-1.31, -1.29, -1.52]  max=[2.01, 1.42, 1.52]  size=[3.32, 2.72, 3.04]
+visible points per frame: median 31505  max 53930  min 10114  (19.3% of the cloud)
+z-buffer (tol=0.05 m) rejected 4.5% of in-frustum points as occluded
+all frames together cover 90.3% of the points -- a low value means the scan has blind spots; those points project into no frame at all and lifting cannot reach them

@@ -1,0 +1,219 @@
+{
+ "q": 378,
+ "visit": "467115",
+ "desc_id": "3ef56c7b-a26b-4d86-a6cc-17ed76d9edd8",
+ "text": "Open the freezer",
+ "parse": {
+  "text": "Open the freezer",
+  "target": {
+   "concept": "freezer handle",
+   "host": "freezer"
+  },
+  "entities": [
+   {
+    "name": "freezer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "freezer",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333308",
+  "fid": "28013.164",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333308",
+    "28013.164"
+   ],
+   [
+    "47333319",
+    "28348.660"
+   ],
+   [
+    "47333308",
+    "28011.164"
+   ],
+   [
+    "47333308",
+    "28098.362"
+   ],
+   [
+    "47333319",
+    "28344.662"
+   ],
+   [
+    "47333310",
+    "28221.562"
+   ],
+   [
+    "47333308",
+    "28016.162"
+   ],
+   [
+    "47333308",
+    "28015.163"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "freezer handle",
+  "freezer"
+ ],
+ "roles": {
+  "freezer handle": "target",
+  "freezer": "host"
+ },
+ "candidates": {
+  "freezer handle": [
+   {
+    "x0": 1190,
+    "x1": 1254,
+    "y0": 686,
+    "y1": 919,
+    "cx": 1224.2,
+    "cy": 800.9,
+    "npix": 8083,
+    "area_pct": 0.292,
+    "score": 0.698
+   },
+   {
+    "x0": 1204,
+    "x1": 1234,
+    "y0": 940,
+    "y1": 1172,
+    "cx": 1218.9,
+    "cy": 1056.6,
+    "npix": 3916,
+    "area_pct": 0.142,
+    "score": 0.685
+   },
+   {
+    "x0": 1315,
+    "x1": 1439,
+    "y0": 1220,
+    "y1": 1246,
+    "cx": 1375.1,
+    "cy": 1231.8,
+    "npix": 2967,
+    "area_pct": 0.107,
+    "score": 0.406
+   },
+   {
+    "x0": 1175,
+    "x1": 1203,
+    "y0": 947,
+    "y1": 1159,
+    "cx": 1186.6,
+    "cy": 1054.4,
+    "npix": 3107,
+    "area_pct": 0.112,
+    "score": 0.267
+   }
+  ],
+  "freezer": [
+   {
+    "x0": 729,
+    "x1": 1227,
+    "y0": 940,
+    "y1": 1804,
+    "cx": 962.6,
+    "cy": 1360.5,
+    "npix": 387846,
+    "area_pct": 14.028,
+    "score": 0.688
+   },
+   {
+    "x0": 739,
+    "x1": 1265,
+    "y0": 487,
+    "y1": 924,
+    "cx": 991.3,
+    "cy": 703.3,
+    "npix": 212640,
+    "area_pct": 7.691,
+    "score": 0.663
+   }
+  ]
+ },
+ "mask_keys": {
+  "freezer handle": [
+   "freezer handle|0",
+   "freezer handle|1",
+   "freezer handle|2",
+   "freezer handle|3"
+  ],
+  "freezer": [
+   "freezer|0",
+   "freezer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1,
+   3
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

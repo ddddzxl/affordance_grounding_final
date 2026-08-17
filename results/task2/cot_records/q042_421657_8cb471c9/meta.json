@@ -1,0 +1,203 @@
+{
+ "q": 42,
+ "visit": "421657",
+ "desc_id": "8cb471c9-04c6-4e2f-8c1a-3a70f060ae6f",
+ "text": "Plug the device in the socket next to the door",
+ "parse": {
+  "text": "Plug the device in the socket next to the door",
+  "target": {
+   "concept": "socket",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "socket",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "socket",
+    "b": "door"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42445639",
+  "fid": "58314.291",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 4,
+  "topk": [
+   [
+    "42445639",
+    "58314.291"
+   ],
+   [
+    "42445642",
+    "58249.484"
+   ],
+   [
+    "42445633",
+    "58090.300"
+   ],
+   [
+    "42445633",
+    "58121.487"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 165,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "socket",
+  "door"
+ ],
+ "roles": {
+  "socket": "target",
+  "door": "landmark"
+ },
+ "candidates": {
+  "socket": [
+   {
+    "x0": 1059,
+    "x1": 1126,
+    "y0": 915,
+    "y1": 970,
+    "cx": 1091.1,
+    "cy": 941.5,
+    "npix": 3486,
+    "area_pct": 0.126,
+    "score": 0.91
+   },
+   {
+    "x0": 160,
+    "x1": 199,
+    "y0": 455,
+    "y1": 489,
+    "cx": 179.3,
+    "cy": 473.8,
+    "npix": 1185,
+    "area_pct": 0.043,
+    "score": 0.773
+   },
+   {
+    "x0": 1053,
+    "x1": 1066,
+    "y0": 415,
+    "y1": 434,
+    "cx": 1059.6,
+    "cy": 424.4,
+    "npix": 259,
+    "area_pct": 0.009,
+    "score": 0.21
+   }
+  ],
+  "door": [
+   {
+    "x0": 267,
+    "x1": 1063,
+    "y0": 0,
+    "y1": 1190,
+    "cx": 695.8,
+    "cy": 563.4,
+    "npix": 823334,
+    "area_pct": 29.779,
+    "score": 0.969
+   },
+   {
+    "x0": 1539,
+    "x1": 1919,
+    "y0": 0,
+    "y1": 1439,
+    "cx": 1755.0,
+    "cy": 705.7,
+    "npix": 395845,
+    "area_pct": 14.317,
+    "score": 0.36
+   },
+   {
+    "x0": 1794,
+    "x1": 1919,
+    "y0": 942,
+    "y1": 1435,
+    "cx": 1876.1,
+    "cy": 1255.1,
+    "npix": 34854,
+    "area_pct": 1.261,
+    "score": 0.193
+   }
+  ]
+ },
+ "mask_keys": {
+  "socket": [
+   "socket|0",
+   "socket|1",
+   "socket|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

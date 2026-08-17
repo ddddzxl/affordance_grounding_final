@@ -1,0 +1,299 @@
+{
+ "q": 438,
+ "visit": "468476",
+ "desc_id": "71f6bcb4-67d6-4743-bdd8-39ebeeb03698",
+ "text": "Open the right cabinet door under the TV",
+ "parse": {
+  "text": "Open the right cabinet door under the TV",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "TV",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "under",
+    "a": "cabinet door",
+    "b": "TV"
+   }
+  ],
+  "select": [
+   {
+    "on": "cabinet door",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45261686",
+  "fid": "3806.463",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "45261686",
+    "3806.463"
+   ],
+   [
+    "45261681",
+    "3607.062"
+   ],
+   [
+    "45261686",
+    "3805.463"
+   ],
+   [
+    "45261681",
+    "3608.062"
+   ],
+   [
+    "45261686",
+    "3807.462"
+   ],
+   [
+    "45261682",
+    "3535.475"
+   ],
+   [
+    "45261681",
+    "3603.064"
+   ],
+   [
+    "45261686",
+    "3828.470"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 222,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "cabinet",
+  "TV"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "cabinet": "container",
+  "TV": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 680,
+    "x1": 833,
+    "y0": 947,
+    "y1": 1112,
+    "cx": 755.4,
+    "cy": 1031.0,
+    "npix": 17497,
+    "area_pct": 0.633,
+    "score": 0.462
+   },
+   {
+    "x0": 825,
+    "x1": 943,
+    "y0": 914,
+    "y1": 1059,
+    "cx": 888.9,
+    "cy": 991.8,
+    "npix": 11491,
+    "area_pct": 0.416,
+    "score": 0.45
+   },
+   {
+    "x0": 745,
+    "x1": 789,
+    "y0": 780,
+    "y1": 819,
+    "cx": 767.4,
+    "cy": 800.0,
+    "npix": 1372,
+    "area_pct": 0.05,
+    "score": 0.363
+   },
+   {
+    "x0": 885,
+    "x1": 923,
+    "y0": 760,
+    "y1": 799,
+    "cx": 903.0,
+    "cy": 778.7,
+    "npix": 1135,
+    "area_pct": 0.041,
+    "score": 0.361
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 831,
+    "x1": 1130,
+    "y0": 662,
+    "y1": 1145,
+    "cx": 981.6,
+    "cy": 880.0,
+    "npix": 100336,
+    "area_pct": 3.629,
+    "score": 0.945
+   },
+   {
+    "x0": 445,
+    "x1": 832,
+    "y0": 708,
+    "y1": 1293,
+    "cx": 615.3,
+    "cy": 974.2,
+    "npix": 163641,
+    "area_pct": 5.919,
+    "score": 0.934
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 301,
+    "x1": 1162,
+    "y0": 610,
+    "y1": 1443,
+    "cx": 689.7,
+    "cy": 960.8,
+    "npix": 491264,
+    "area_pct": 17.769,
+    "score": 0.746
+   },
+   {
+    "x0": 443,
+    "x1": 743,
+    "y0": 0,
+    "y1": 146,
+    "cx": 599.8,
+    "cy": 85.8,
+    "npix": 19960,
+    "area_pct": 0.722,
+    "score": 0.17
+   },
+   {
+    "x0": 0,
+    "x1": 160,
+    "y0": 466,
+    "y1": 711,
+    "cx": 74.4,
+    "cy": 591.4,
+    "npix": 34799,
+    "area_pct": 1.259,
+    "score": 0.156
+   }
+  ],
+  "TV": [
+   {
+    "x0": 473,
+    "x1": 1190,
+    "y0": 147,
+    "y1": 623,
+    "cx": 830.4,
+    "cy": 374.4,
+    "npix": 300875,
+    "area_pct": 10.882,
+    "score": 0.967
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   3
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

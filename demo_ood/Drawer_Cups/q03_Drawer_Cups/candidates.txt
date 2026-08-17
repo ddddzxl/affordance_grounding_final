@@ -1,0 +1,53 @@
+TASK: "Open the third drawer from the top of the cabinet with cups directly on top"
+
+PARSE:
+  target concept = "drawer handle"   <- the thing that must be output
+  host           = 'drawer'   <- countable object the target sits on
+  entity  : 'drawer handle'  role=target
+  entity  : 'drawer'  role=host
+  entity  : 'cabinet'  role=container
+  entity  : 'cup'  role=landmark
+  relation: contains(a='cabinet', b='drawer')
+  relation: has_on_top(a='cabinet', b='cup')
+  select  : on='drawer' axis=ordinal value=None index=3 from='top'
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  y increases DOWNWARD.
+  => "top" = SMALL y,  "bottom" = LARGE y,  "left" = SMALL x,  "right" = LARGE x
+  => "A above B" means A.cy < B.cy.
+  area% = mask pixels as % of the whole image.  score = SAM3 confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class                      id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  drawer handle               0   865   914  1360  1412   889.0  1387.3   0.071  0.923
+  drawer handle               1   870   919  1167  1219   894.1  1190.7   0.070  0.921
+  drawer handle               2   860   909  1527  1579   883.9  1554.2   0.061  0.918
+  drawer handle               3   855   897  1733  1786   874.5  1758.9   0.058  0.916
+  drawer handle               4  1200  1249  1207  1258  1225.9  1231.1   0.064  0.912
+  drawer handle               5   925   979    33    86   954.0    61.6   0.081  0.553
+  drawer handle               6  1430  1439  1027  1046  1435.4  1037.1   0.005  0.525
+  drawer handle               7   827   879    33    86   854.2    59.1   0.081  0.516
+  drawer                      0   525  1184  1012  1368   844.5  1183.8   4.547  0.974
+  drawer                      1   545  1159  1207  1558   843.3  1378.9   3.726  0.971
+  drawer                      2   566  1139  1378  1718   844.9  1546.5   2.986  0.958
+  drawer                      3   580  1114  1528  1919   848.0  1736.6   4.147  0.957
+  drawer                      4  1185  1439   947  1185  1314.5  1065.1   1.581  0.951
+  cabinet                     0   897  1439     0   132  1172.1    62.7   2.446  0.787
+  cabinet                     1     0   882     0   123   436.0    57.3   3.539  0.748
+  cabinet                     2  1111  1439   951  1739  1294.2  1351.0   6.785  0.674
+  cabinet                     3   471  1185  1011  1919   822.5  1455.2  17.458  0.533
+  cup                         0   640   824   787   959   725.5   873.1   0.962  0.968
+  cup                         1   900  1039   755   953   969.9   852.9   0.896  0.963
+  cup                         2   485   529   720   812   507.9   765.4   0.109  0.657
+
+CONTAINMENT (drawer handle ids inside each drawer):
+  drawer #0  contains drawer handle [1]  [via bbox]
+  drawer #1  contains drawer handle [0]  [via bbox]
+  drawer #2  contains drawer handle [2]  [via bbox]
+  drawer #3  contains drawer handle [2, 3]  [via bbox]
+  drawer #4  contains drawer handle [6]
+
+QUESTION: which "drawer handle" id(s) does the instruction refer to?

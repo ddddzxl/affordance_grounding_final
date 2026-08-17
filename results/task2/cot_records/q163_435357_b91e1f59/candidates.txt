@@ -1,0 +1,41 @@
+TASK: "Turn on the cylindrical white lamp in front of the window"
+
+PARSE:
+  target concept = "light panel"   <- the thing that must be output
+  host           = 'lamp'   <- countable object the target sits on
+  entity  : 'light panel'  role=target
+  entity  : 'lamp'  role=host
+  entity  : 'window'  role=landmark
+  relation: in_front_of(a='lamp', b='window')
+  residual: unified with val8's 'light switch'; which lamp it is, is carried by `host`, not by the search term
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  light panel          0   302  1042   464  1179   692.2   806.4  16.407  0.295
+  lamp                 0   301  1042   462  1623   701.6   934.3  21.213  0.951
+  window              (0 detections)
+
+
+CONTAINMENT (light panel inside the FILLED mask of each lamp):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  lamp #0   x[ 301,1042] cx   701.6 cy   934.3 w= 741 contains #0
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "light panel" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: light panel #<id>[, #<id> ...]

@@ -1,0 +1,208 @@
+{
+ "q": 213,
+ "visit": "438775",
+ "desc_id": "71d4f099-ec8f-49ab-8f29-94f98366a493",
+ "text": "Open the drawer of the wooden table with the picture frame and lamp on top",
+ "parse": {
+  "text": "Open the drawer of the wooden table with the picture frame and lamp on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "table",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "picture frame",
+    "role": "landmark",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "table",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "table",
+    "b": "picture frame"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "table",
+    "b": "lamp"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358173",
+  "fid": "62402.751",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "44358173",
+    "62402.751"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 266,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "table",
+  "picture frame",
+  "lamp"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "table": "container",
+  "picture frame": "landmark",
+  "lamp": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1220,
+    "x1": 1392,
+    "y0": 880,
+    "y1": 979,
+    "cx": 1303.4,
+    "cy": 939.9,
+    "npix": 4948,
+    "area_pct": 0.179,
+    "score": 0.948
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 953,
+    "x1": 1589,
+    "y0": 715,
+    "y1": 1080,
+    "cx": 1260.1,
+    "cy": 895.3,
+    "npix": 114210,
+    "area_pct": 4.131,
+    "score": 0.884
+   }
+  ],
+  "table": [
+   {
+    "x0": 612,
+    "x1": 1680,
+    "y0": 333,
+    "y1": 1371,
+    "cx": 1162.2,
+    "cy": 797.3,
+    "npix": 600148,
+    "area_pct": 21.707,
+    "score": 0.942
+   },
+   {
+    "x0": 205,
+    "x1": 905,
+    "y0": 595,
+    "y1": 1439,
+    "cx": 541.7,
+    "cy": 1012.5,
+    "npix": 247517,
+    "area_pct": 8.952,
+    "score": 0.939
+   }
+  ],
+  "picture frame": [
+   {
+    "x0": 1160,
+    "x1": 1405,
+    "y0": 155,
+    "y1": 464,
+    "cx": 1282.0,
+    "cy": 308.2,
+    "npix": 70405,
+    "area_pct": 2.546,
+    "score": 0.951
+   }
+  ],
+  "lamp": [
+   {
+    "x0": 846,
+    "x1": 1312,
+    "y0": 0,
+    "y1": 474,
+    "cx": 1069.2,
+    "cy": 205.1,
+    "npix": 75211,
+    "area_pct": 2.72,
+    "score": 0.961
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0"
+  ],
+  "drawer": [
+   "drawer|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

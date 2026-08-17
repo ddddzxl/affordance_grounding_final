@@ -1,0 +1,10 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "low",
+ "kind": "detection_quality",
+ "note": "blender detected once at score 0.466 - unreliable; socket 0 is nearer (276 vs 428 px) IF trusted",
+ "solver": "frontier-llm, manual CoT",
+ "based_on_frame": "0039"
+}

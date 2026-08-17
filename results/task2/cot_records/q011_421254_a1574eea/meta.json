@@ -1,0 +1,586 @@
+{
+ "q": 11,
+ "visit": "421254",
+ "desc_id": "a1574eea-bccd-42dd-b97c-88767f7f3f84",
+ "text": "Open the fifth drawer of the cabinet located to the left of the TV",
+ "parse": {
+  "text": "Open the fifth drawer of the cabinet located to the left of the TV",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "TV",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "left_of",
+    "a": "cabinet",
+    "b": "TV"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "ordinal",
+    "value": null,
+    "index": 5,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42444754",
+  "fid": "81017.476",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 3,
+  "topk": [
+   [
+    "42444754",
+    "81017.476"
+   ],
+   [
+    "42444754",
+    "81016.477"
+   ],
+   [
+    "42444755",
+    "80879.483"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.287,
+    "s2": 0.767,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.287,
+    "s2": 0.654,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.186,
+    "s2": 0.627,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 170,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "TV"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "TV": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1185,
+    "x1": 1229,
+    "y0": 693,
+    "y1": 739,
+    "cx": 1206.6,
+    "cy": 715.3,
+    "npix": 1586,
+    "area_pct": 0.057,
+    "score": 0.912
+   },
+   {
+    "x0": 1220,
+    "x1": 1274,
+    "y0": 353,
+    "y1": 404,
+    "cx": 1246.7,
+    "cy": 377.4,
+    "npix": 1938,
+    "area_pct": 0.07,
+    "score": 0.905
+   },
+   {
+    "x0": 730,
+    "x1": 769,
+    "y0": 267,
+    "y1": 306,
+    "cx": 748.7,
+    "cy": 284.5,
+    "npix": 1293,
+    "area_pct": 0.047,
+    "score": 0.905
+   },
+   {
+    "x0": 1125,
+    "x1": 1164,
+    "y0": 1167,
+    "y1": 1206,
+    "cx": 1144.3,
+    "cy": 1185.8,
+    "npix": 1110,
+    "area_pct": 0.04,
+    "score": 0.904
+   },
+   {
+    "x0": 1150,
+    "x1": 1194,
+    "y0": 953,
+    "y1": 992,
+    "cx": 1173.0,
+    "cy": 974.0,
+    "npix": 1216,
+    "area_pct": 0.044,
+    "score": 0.897
+   },
+   {
+    "x0": 375,
+    "x1": 414,
+    "y0": 200,
+    "y1": 232,
+    "cx": 395.1,
+    "cy": 215.5,
+    "npix": 1114,
+    "area_pct": 0.04,
+    "score": 0.894
+   },
+   {
+    "x0": 755,
+    "x1": 789,
+    "y0": 787,
+    "y1": 819,
+    "cx": 772.9,
+    "cy": 800.4,
+    "npix": 819,
+    "area_pct": 0.03,
+    "score": 0.89
+   },
+   {
+    "x0": 745,
+    "x1": 779,
+    "y0": 553,
+    "y1": 586,
+    "cx": 761.9,
+    "cy": 570.0,
+    "npix": 1006,
+    "area_pct": 0.036,
+    "score": 0.888
+   },
+   {
+    "x0": 435,
+    "x1": 469,
+    "y0": 533,
+    "y1": 566,
+    "cx": 452.3,
+    "cy": 550.9,
+    "npix": 879,
+    "area_pct": 0.032,
+    "score": 0.886
+   },
+   {
+    "x0": 405,
+    "x1": 439,
+    "y0": 380,
+    "y1": 412,
+    "cx": 423.0,
+    "cy": 394.6,
+    "npix": 962,
+    "area_pct": 0.035,
+    "score": 0.883
+   },
+   {
+    "x0": 480,
+    "x1": 514,
+    "y0": 800,
+    "y1": 826,
+    "cx": 498.1,
+    "cy": 813.1,
+    "npix": 712,
+    "area_pct": 0.026,
+    "score": 0.879
+   },
+   {
+    "x0": 500,
+    "x1": 529,
+    "y0": 913,
+    "y1": 939,
+    "cx": 515.7,
+    "cy": 926.5,
+    "npix": 597,
+    "area_pct": 0.022,
+    "score": 0.87
+   },
+   {
+    "x0": 225,
+    "x1": 259,
+    "y0": 460,
+    "y1": 486,
+    "cx": 241.7,
+    "cy": 470.7,
+    "npix": 670,
+    "area_pct": 0.024,
+    "score": 0.868
+   },
+   {
+    "x0": 155,
+    "x1": 189,
+    "y0": 160,
+    "y1": 192,
+    "cx": 171.7,
+    "cy": 175.0,
+    "npix": 857,
+    "area_pct": 0.031,
+    "score": 0.867
+   },
+   {
+    "x0": 190,
+    "x1": 224,
+    "y0": 313,
+    "y1": 339,
+    "cx": 207.9,
+    "cy": 326.0,
+    "npix": 703,
+    "area_pct": 0.025,
+    "score": 0.866
+   },
+   {
+    "x0": 260,
+    "x1": 289,
+    "y0": 587,
+    "y1": 612,
+    "cx": 275.3,
+    "cy": 597.7,
+    "npix": 590,
+    "area_pct": 0.021,
+    "score": 0.866
+   },
+   {
+    "x0": 290,
+    "x1": 319,
+    "y0": 700,
+    "y1": 726,
+    "cx": 303.8,
+    "cy": 712.3,
+    "npix": 559,
+    "area_pct": 0.02,
+    "score": 0.862
+   },
+   {
+    "x0": 768,
+    "x1": 799,
+    "y0": 979,
+    "y1": 1006,
+    "cx": 784.8,
+    "cy": 992.3,
+    "npix": 697,
+    "area_pct": 0.025,
+    "score": 0.858
+   },
+   {
+    "x0": 315,
+    "x1": 339,
+    "y0": 807,
+    "y1": 832,
+    "cx": 327.4,
+    "cy": 817.1,
+    "npix": 447,
+    "area_pct": 0.016,
+    "score": 0.856
+   },
+   {
+    "x0": 460,
+    "x1": 494,
+    "y0": 678,
+    "y1": 706,
+    "cx": 478.2,
+    "cy": 691.7,
+    "npix": 769,
+    "area_pct": 0.028,
+    "score": 0.849
+   },
+   {
+    "x0": 661,
+    "x1": 719,
+    "y0": 133,
+    "y1": 161,
+    "cx": 687.9,
+    "cy": 148.3,
+    "npix": 1177,
+    "area_pct": 0.043,
+    "score": 0.269
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 560,
+    "x1": 979,
+    "y0": 222,
+    "y1": 592,
+    "cx": 780.5,
+    "cy": 395.5,
+    "npix": 108929,
+    "area_pct": 3.94,
+    "score": 0.968
+   },
+   {
+    "x0": 975,
+    "x1": 1439,
+    "y0": 300,
+    "y1": 732,
+    "cx": 1215.2,
+    "cy": 501.8,
+    "npix": 149322,
+    "area_pct": 5.401,
+    "score": 0.964
+   },
+   {
+    "x0": 159,
+    "x1": 595,
+    "y0": 390,
+    "y1": 673,
+    "cx": 389.6,
+    "cy": 527.4,
+    "npix": 52800,
+    "area_pct": 1.91,
+    "score": 0.958
+   },
+   {
+    "x0": 253,
+    "x1": 640,
+    "y0": 740,
+    "y1": 1039,
+    "cx": 455.4,
+    "cy": 888.9,
+    "npix": 32318,
+    "area_pct": 1.169,
+    "score": 0.955
+   },
+   {
+    "x0": 592,
+    "x1": 1439,
+    "y0": 487,
+    "y1": 1039,
+    "cx": 1049.5,
+    "cy": 752.5,
+    "npix": 208542,
+    "area_pct": 7.543,
+    "score": 0.949
+   },
+   {
+    "x0": 80,
+    "x1": 295,
+    "y0": 101,
+    "y1": 279,
+    "cx": 190.5,
+    "cy": 185.7,
+    "npix": 27206,
+    "area_pct": 0.984,
+    "score": 0.946
+   },
+   {
+    "x0": 129,
+    "x1": 584,
+    "y0": 253,
+    "y1": 525,
+    "cx": 368.2,
+    "cy": 379.5,
+    "npix": 63346,
+    "area_pct": 2.291,
+    "score": 0.944
+   },
+   {
+    "x0": 194,
+    "x1": 614,
+    "y0": 518,
+    "y1": 813,
+    "cx": 414.0,
+    "cy": 662.3,
+    "npix": 46058,
+    "area_pct": 1.666,
+    "score": 0.943
+   },
+   {
+    "x0": 226,
+    "x1": 628,
+    "y0": 634,
+    "y1": 931,
+    "cx": 434.5,
+    "cy": 781.6,
+    "npix": 38438,
+    "area_pct": 1.39,
+    "score": 0.943
+   },
+   {
+    "x0": 278,
+    "x1": 564,
+    "y0": 128,
+    "y1": 345,
+    "cx": 423.8,
+    "cy": 230.5,
+    "npix": 43967,
+    "area_pct": 1.59,
+    "score": 0.943
+   },
+   {
+    "x0": 646,
+    "x1": 1404,
+    "y0": 897,
+    "y1": 1460,
+    "cx": 1038.0,
+    "cy": 1183.3,
+    "npix": 127586,
+    "area_pct": 4.615,
+    "score": 0.942
+   },
+   {
+    "x0": 627,
+    "x1": 1439,
+    "y0": 714,
+    "y1": 1285,
+    "cx": 1057.5,
+    "cy": 993.3,
+    "npix": 166946,
+    "area_pct": 6.038,
+    "score": 0.933
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 561,
+    "x1": 1439,
+    "y0": 221,
+    "y1": 1501,
+    "cx": 1044.1,
+    "cy": 791.9,
+    "npix": 805678,
+    "area_pct": 29.141,
+    "score": 0.718
+   },
+   {
+    "x0": 81,
+    "x1": 663,
+    "y0": 50,
+    "y1": 1091,
+    "cx": 392.4,
+    "cy": 523.9,
+    "npix": 327146,
+    "area_pct": 11.833,
+    "score": 0.613
+   }
+  ],
+  "TV": [
+   {
+    "x0": 645,
+    "x1": 1402,
+    "y0": 0,
+    "y1": 211,
+    "cx": 1018.2,
+    "cy": 86.7,
+    "npix": 113807,
+    "area_pct": 4.116,
+    "score": 0.924
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4",
+   "drawer handle|5",
+   "drawer handle|6",
+   "drawer handle|7",
+   "drawer handle|8",
+   "drawer handle|9",
+   "drawer handle|10",
+   "drawer handle|11",
+   "drawer handle|12",
+   "drawer handle|13",
+   "drawer handle|14",
+   "drawer handle|15",
+   "drawer handle|16",
+   "drawer handle|17",
+   "drawer handle|18",
+   "drawer handle|19",
+   "drawer handle|20"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5",
+   "drawer|6",
+   "drawer|7",
+   "drawer|8",
+   "drawer|9",
+   "drawer|10",
+   "drawer|11"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   15,
+   19
+  ],
+  "host": 7,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

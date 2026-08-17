@@ -1,0 +1,27 @@
+TASK: "Plug in the air fryer using the nearest socket"
+
+PARSE:
+  target concept = "socket"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'socket'  role=target
+  entity  : 'air fryer'  role=landmark
+  relation: near(a='socket', b='air fryer')
+  residual: 'nearest' requires taking the closest socket by distance to the air fryer -- the schema has no distance axis, so this is left to the reasoning stage
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  y increases DOWNWARD.
+  => "top" = SMALL y,  "bottom" = LARGE y,  "left" = SMALL x,  "right" = LARGE x
+  => "A above B" means A.cy < B.cy.
+  area% = mask pixels as % of the whole image.  score = SAM3 confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class                      id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  socket                      0  1235  1359   740   906  1295.3   823.5   0.647  0.878
+  socket                      1   335   439   800   873   389.5   830.9   0.227  0.798
+  air fryer                   0     0   477   861  1524   227.4  1185.6  10.363  0.546
+  air fryer                   1   667   978   688  1491   827.7  1056.7   7.003  0.455
+
+QUESTION: which "socket" id(s) does the instruction refer to?

@@ -1,0 +1,9 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "forced",
+ "kind": "unique",
+ "excluded": "the question is unsuitable for evaluation: 'turn on the ceiling light' does not refer uniquely, and the ground truth is implausibly placed (behind a wall). Excluded from the statistics",
+ "solver": "frontier-llm, manual CoT"
+}

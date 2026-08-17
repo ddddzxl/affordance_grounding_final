@@ -1,0 +1,230 @@
+{
+ "q": 59,
+ "visit": "422842",
+ "desc_id": "28af664b-ce46-46b9-bfc2-30ca11afe869",
+ "text": "Close the door that leads to the stairway",
+ "parse": {
+  "text": "Close the door that leads to the stairway",
+  "target": {
+   "concept": "door handle",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'leads to the stairway' is a semantic/room-level locator - ignored",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897547",
+  "fid": "473306.217",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42897547",
+    "473306.217"
+   ],
+   [
+    "42897547",
+    "473241.610"
+   ],
+   [
+    "42897547",
+    "473255.605"
+   ],
+   [
+    "42897547",
+    "473308.216"
+   ],
+   [
+    "42897560",
+    "473383.802"
+   ],
+   [
+    "42897547",
+    "473265.717"
+   ],
+   [
+    "42897547",
+    "473271.715"
+   ],
+   [
+    "42897547",
+    "473148.815"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.844,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.514,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.939,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 236,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "door"
+ ],
+ "roles": {
+  "door handle": "target",
+  "door": "host"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 35,
+    "x1": 64,
+    "y0": 853,
+    "y1": 1091,
+    "cx": 47.9,
+    "cy": 974.1,
+    "npix": 3404,
+    "area_pct": 0.123,
+    "score": 0.854
+   },
+   {
+    "x0": 70,
+    "x1": 99,
+    "y0": 853,
+    "y1": 1086,
+    "cx": 83.9,
+    "cy": 968.5,
+    "npix": 3689,
+    "area_pct": 0.133,
+    "score": 0.768
+   },
+   {
+    "x0": 265,
+    "x1": 352,
+    "y0": 980,
+    "y1": 1072,
+    "cx": 292.4,
+    "cy": 1024.1,
+    "npix": 4141,
+    "area_pct": 0.15,
+    "score": 0.659
+   },
+   {
+    "x0": 830,
+    "x1": 874,
+    "y0": 700,
+    "y1": 792,
+    "cx": 853.1,
+    "cy": 744.7,
+    "npix": 3311,
+    "area_pct": 0.12,
+    "score": 0.277
+   }
+  ],
+  "door": [
+   {
+    "x0": 223,
+    "x1": 730,
+    "y0": 237,
+    "y1": 1491,
+    "cx": 476.6,
+    "cy": 840.4,
+    "npix": 566278,
+    "area_pct": 20.482,
+    "score": 0.97
+   },
+   {
+    "x0": 0,
+    "x1": 94,
+    "y0": 33,
+    "y1": 1445,
+    "cx": 31.5,
+    "cy": 927.5,
+    "npix": 73628,
+    "area_pct": 2.663,
+    "score": 0.817
+   },
+   {
+    "x0": 0,
+    "x1": 393,
+    "y0": 0,
+    "y1": 1469,
+    "cx": 163.6,
+    "cy": 622.4,
+    "npix": 289976,
+    "area_pct": 10.488,
+    "score": 0.383
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3"
+  ],
+  "door": [
+   "door|0",
+   "door|1",
+   "door|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

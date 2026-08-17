@@ -1,0 +1,254 @@
+{
+ "q": 98,
+ "visit": "423452",
+ "desc_id": "24ced3e5-4f59-4bf1-90df-08b0bb0714b9",
+ "text": "Unplug the floor lamp next to the dining table",
+ "parse": {
+  "text": "Unplug the floor lamp next to the dining table",
+  "target": {
+   "concept": "plug",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "plug",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "floor lamp",
+    "role": "landmark",
+    "instanceable": true
+   },
+   {
+    "name": "dining table",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "near",
+    "a": "plug",
+    "b": "floor lamp"
+   },
+   {
+    "rel": "next_to",
+    "a": "floor lamp",
+    "b": "dining table"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897426",
+  "fid": "104088.641",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "42897426",
+    "104088.641"
+   ],
+   [
+    "42897426",
+    "104101.636"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 309,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "plug",
+  "floor lamp",
+  "dining table"
+ ],
+ "roles": {
+  "plug": "target",
+  "floor lamp": "landmark",
+  "dining table": "landmark"
+ },
+ "candidates": {
+  "plug": [
+   {
+    "x0": 847,
+    "x1": 924,
+    "y0": 1155,
+    "y1": 1219,
+    "cx": 881.2,
+    "cy": 1188.0,
+    "npix": 3108,
+    "area_pct": 0.112,
+    "score": 0.741
+   },
+   {
+    "x0": 906,
+    "x1": 932,
+    "y0": 1195,
+    "y1": 1219,
+    "cx": 919.1,
+    "cy": 1208.7,
+    "npix": 486,
+    "area_pct": 0.018,
+    "score": 0.335
+   },
+   {
+    "x0": 0,
+    "x1": 888,
+    "y0": 0,
+    "y1": 1214,
+    "cx": 831.6,
+    "cy": 1161.8,
+    "npix": 6343,
+    "area_pct": 0.229,
+    "score": 0.278
+   },
+   {
+    "x0": 1422,
+    "x1": 1512,
+    "y0": 980,
+    "y1": 1015,
+    "cx": 1462.9,
+    "cy": 1000.9,
+    "npix": 1462,
+    "area_pct": 0.053,
+    "score": 0.265
+   },
+   {
+    "x0": 0,
+    "x1": 66,
+    "y0": 478,
+    "y1": 674,
+    "cx": 27.7,
+    "cy": 581.4,
+    "npix": 10544,
+    "area_pct": 0.381,
+    "score": 0.226
+   },
+   {
+    "x0": 1503,
+    "x1": 1606,
+    "y0": 995,
+    "y1": 1039,
+    "cx": 1551.1,
+    "cy": 1020.7,
+    "npix": 2428,
+    "area_pct": 0.088,
+    "score": 0.21
+   },
+   {
+    "x0": 935,
+    "x1": 1446,
+    "y0": 983,
+    "y1": 1354,
+    "cx": 1282.3,
+    "cy": 1156.5,
+    "npix": 4970,
+    "area_pct": 0.18,
+    "score": 0.196
+   }
+  ],
+  "floor lamp": [
+   {
+    "x0": 1747,
+    "x1": 1919,
+    "y0": 50,
+    "y1": 624,
+    "cx": 1845.3,
+    "cy": 353.2,
+    "npix": 21184,
+    "area_pct": 0.766,
+    "score": 0.461
+   },
+   {
+    "x0": 1533,
+    "x1": 1632,
+    "y0": 15,
+    "y1": 204,
+    "cx": 1591.9,
+    "cy": 82.7,
+    "npix": 4090,
+    "area_pct": 0.148,
+    "score": 0.455
+   },
+   {
+    "x0": 1630,
+    "x1": 1672,
+    "y0": 0,
+    "y1": 180,
+    "cx": 1650.9,
+    "cy": 81.1,
+    "npix": 3136,
+    "area_pct": 0.113,
+    "score": 0.194
+   }
+  ],
+  "dining table": [
+   {
+    "x0": 1260,
+    "x1": 1919,
+    "y0": 585,
+    "y1": 1276,
+    "cx": 1698.9,
+    "cy": 910.7,
+    "npix": 155857,
+    "area_pct": 5.637,
+    "score": 0.789
+   }
+  ]
+ },
+ "mask_keys": {
+  "plug": [
+   "plug|0",
+   "plug|1",
+   "plug|2",
+   "plug|3",
+   "plug|4",
+   "plug|5",
+   "plug|6"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

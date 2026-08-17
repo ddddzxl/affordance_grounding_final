@@ -1,0 +1,413 @@
+{
+ "q": 323,
+ "visit": "466880",
+ "desc_id": "278fb43c-0af7-4729-b4b2-2c3b0e2e4269",
+ "text": "Open the cabinet door directly above and to the left of the oven",
+ "parse": {
+  "text": "Open the cabinet door directly above and to the left of the oven",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "oven",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "above",
+    "a": "cabinet door",
+    "b": "oven"
+   },
+   {
+    "rel": "left_of",
+    "a": "cabinet door",
+    "b": "oven"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331707",
+  "fid": "11127.830",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 3,
+  "topk": [
+   [
+    "47331707",
+    "11127.830"
+   ],
+   [
+    "47331710",
+    "11229.239"
+   ],
+   [
+    "47331711",
+    "11260.726"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 0.506,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.83,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "cabinet",
+  "oven"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "cabinet": "container",
+  "oven": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1483,
+    "x1": 1830,
+    "y0": 1307,
+    "y1": 1439,
+    "cx": 1620.5,
+    "cy": 1391.2,
+    "npix": 25616,
+    "area_pct": 0.927,
+    "score": 0.756
+   },
+   {
+    "x0": 927,
+    "x1": 1087,
+    "y0": 895,
+    "y1": 989,
+    "cx": 1006.5,
+    "cy": 942.6,
+    "npix": 8938,
+    "area_pct": 0.323,
+    "score": 0.736
+   },
+   {
+    "x0": 899,
+    "x1": 1039,
+    "y0": 1094,
+    "y1": 1184,
+    "cx": 968.5,
+    "cy": 1138.2,
+    "npix": 8157,
+    "area_pct": 0.295,
+    "score": 0.715
+   },
+   {
+    "x0": 860,
+    "x1": 979,
+    "y0": 1345,
+    "y1": 1429,
+    "cx": 917.4,
+    "cy": 1386.7,
+    "npix": 6458,
+    "area_pct": 0.234,
+    "score": 0.704
+   },
+   {
+    "x0": 447,
+    "x1": 579,
+    "y0": 910,
+    "y1": 1004,
+    "cx": 513.0,
+    "cy": 956.4,
+    "npix": 7473,
+    "area_pct": 0.27,
+    "score": 0.354
+   },
+   {
+    "x0": 0,
+    "x1": 65,
+    "y0": 262,
+    "y1": 314,
+    "cx": 27.6,
+    "cy": 288.1,
+    "npix": 1757,
+    "area_pct": 0.064,
+    "score": 0.167
+   },
+   {
+    "x0": 1876,
+    "x1": 1919,
+    "y0": 321,
+    "y1": 399,
+    "cx": 1900.0,
+    "cy": 361.8,
+    "npix": 1723,
+    "area_pct": 0.062,
+    "score": 0.152
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 741,
+    "x1": 1231,
+    "y0": 1025,
+    "y1": 1363,
+    "cx": 978.5,
+    "cy": 1189.3,
+    "npix": 85155,
+    "area_pct": 3.08,
+    "score": 0.416
+   },
+   {
+    "x0": 724,
+    "x1": 1156,
+    "y0": 1216,
+    "y1": 1439,
+    "cx": 902.5,
+    "cy": 1354.8,
+    "npix": 60500,
+    "area_pct": 2.188,
+    "score": 0.414
+   },
+   {
+    "x0": 1147,
+    "x1": 1446,
+    "y0": 1000,
+    "y1": 1439,
+    "cx": 1297.1,
+    "cy": 1219.2,
+    "npix": 59884,
+    "area_pct": 2.166,
+    "score": 0.341
+   },
+   {
+    "x0": 754,
+    "x1": 1305,
+    "y0": 802,
+    "y1": 1085,
+    "cx": 1027.9,
+    "cy": 943.4,
+    "npix": 59411,
+    "area_pct": 2.149,
+    "score": 0.339
+   },
+   {
+    "x0": 638,
+    "x1": 741,
+    "y0": 970,
+    "y1": 1432,
+    "cx": 687.0,
+    "cy": 1198.7,
+    "npix": 40218,
+    "area_pct": 1.455,
+    "score": 0.336
+   },
+   {
+    "x0": 747,
+    "x1": 1270,
+    "y0": 924,
+    "y1": 1201,
+    "cx": 1005.5,
+    "cy": 1051.7,
+    "npix": 56871,
+    "area_pct": 2.057,
+    "score": 0.322
+   },
+   {
+    "x0": 1353,
+    "x1": 1538,
+    "y0": 1303,
+    "y1": 1439,
+    "cx": 1442.3,
+    "cy": 1381.6,
+    "npix": 14919,
+    "area_pct": 0.54,
+    "score": 0.265
+   },
+   {
+    "x0": 1360,
+    "x1": 1919,
+    "y0": 228,
+    "y1": 1439,
+    "cx": 1739.5,
+    "cy": 1047.8,
+    "npix": 308353,
+    "area_pct": 11.153,
+    "score": 0.203
+   },
+   {
+    "x0": 0,
+    "x1": 634,
+    "y0": 1032,
+    "y1": 1433,
+    "cx": 330.0,
+    "cy": 1238.0,
+    "npix": 46278,
+    "area_pct": 1.674,
+    "score": 0.19
+   },
+   {
+    "x0": 646,
+    "x1": 765,
+    "y0": 756,
+    "y1": 990,
+    "cx": 698.7,
+    "cy": 869.6,
+    "npix": 22395,
+    "area_pct": 0.81,
+    "score": 0.162
+   },
+   {
+    "x0": 829,
+    "x1": 1472,
+    "y0": 0,
+    "y1": 572,
+    "cx": 1129.1,
+    "cy": 324.5,
+    "npix": 167257,
+    "area_pct": 6.05,
+    "score": 0.155
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 638,
+    "x1": 1446,
+    "y0": 755,
+    "y1": 1439,
+    "cx": 977.6,
+    "cy": 1146.3,
+    "npix": 400824,
+    "area_pct": 14.497,
+    "score": 0.852
+   },
+   {
+    "x0": 0,
+    "x1": 635,
+    "y0": 1031,
+    "y1": 1421,
+    "cx": 331.3,
+    "cy": 1238.0,
+    "npix": 45822,
+    "area_pct": 1.657,
+    "score": 0.191
+   }
+  ],
+  "oven": [
+   {
+    "x0": 0,
+    "x1": 644,
+    "y0": 538,
+    "y1": 1388,
+    "cx": 408.1,
+    "cy": 881.8,
+    "npix": 188327,
+    "area_pct": 6.812,
+    "score": 0.797
+   },
+   {
+    "x0": 828,
+    "x1": 1639,
+    "y0": 0,
+    "y1": 631,
+    "cx": 1225.1,
+    "cy": 296.0,
+    "npix": 374413,
+    "area_pct": 13.542,
+    "score": 0.772
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4",
+   "door handle|5",
+   "door handle|6"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1",
+   "cabinet door|2",
+   "cabinet door|3",
+   "cabinet door|4",
+   "cabinet door|5",
+   "cabinet door|6",
+   "cabinet door|7",
+   "cabinet door|8",
+   "cabinet door|9",
+   "cabinet door|10"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

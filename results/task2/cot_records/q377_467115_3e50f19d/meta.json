@@ -1,0 +1,217 @@
+{
+ "q": 377,
+ "visit": "467115",
+ "desc_id": "3e50f19d-d1e5-4cfd-845e-48022a4f0202",
+ "text": "Unplug the stereo system on the shelf",
+ "parse": {
+  "text": "Unplug the stereo system on the shelf",
+  "target": {
+   "concept": "plug",
+   "host": "stereo system"
+  },
+  "entities": [
+   {
+    "name": "plug",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "stereo system",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "shelf",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "stereo system",
+    "b": "shelf"
+   }
+  ],
+  "select": [],
+  "residual": "the plug sits at the socket end, not on the stereo system",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333319",
+  "fid": "28418.765",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "47333319",
+    "28418.765"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "plug",
+  "stereo system",
+  "shelf"
+ ],
+ "roles": {
+  "plug": "target",
+  "stereo system": "host",
+  "shelf": "container"
+ },
+ "candidates": {
+  "plug": [
+   {
+    "x0": 744,
+    "x1": 814,
+    "y0": 594,
+    "y1": 653,
+    "cx": 775.6,
+    "cy": 623.2,
+    "npix": 2313,
+    "area_pct": 0.084,
+    "score": 0.491
+   },
+   {
+    "x0": 1055,
+    "x1": 1144,
+    "y0": 813,
+    "y1": 899,
+    "cx": 1100.5,
+    "cy": 856.8,
+    "npix": 6046,
+    "area_pct": 0.219,
+    "score": 0.395
+   },
+   {
+    "x0": 700,
+    "x1": 805,
+    "y0": 507,
+    "y1": 668,
+    "cx": 746.6,
+    "cy": 575.0,
+    "npix": 12616,
+    "area_pct": 0.456,
+    "score": 0.388
+   },
+   {
+    "x0": 495,
+    "x1": 619,
+    "y0": 1440,
+    "y1": 1546,
+    "cx": 554.8,
+    "cy": 1493.0,
+    "npix": 6815,
+    "area_pct": 0.246,
+    "score": 0.174
+   }
+  ],
+  "stereo system": [
+   {
+    "x0": 1176,
+    "x1": 1439,
+    "y0": 567,
+    "y1": 1038,
+    "cx": 1320.7,
+    "cy": 779.5,
+    "npix": 98670,
+    "area_pct": 3.569,
+    "score": 0.728
+   },
+   {
+    "x0": 1165,
+    "x1": 1439,
+    "y0": 940,
+    "y1": 1086,
+    "cx": 1292.9,
+    "cy": 1012.7,
+    "npix": 21278,
+    "area_pct": 0.77,
+    "score": 0.191
+   }
+  ],
+  "shelf": [
+   {
+    "x0": 660,
+    "x1": 1439,
+    "y0": 828,
+    "y1": 1192,
+    "cx": 1088.4,
+    "cy": 993.5,
+    "npix": 115911,
+    "area_pct": 4.192,
+    "score": 0.921
+   },
+   {
+    "x0": 0,
+    "x1": 824,
+    "y0": 1190,
+    "y1": 1733,
+    "cx": 315.8,
+    "cy": 1427.8,
+    "npix": 211315,
+    "area_pct": 7.643,
+    "score": 0.787
+   },
+   {
+    "x0": 650,
+    "x1": 1335,
+    "y0": 1432,
+    "y1": 1919,
+    "cx": 1006.3,
+    "cy": 1695.8,
+    "npix": 80475,
+    "area_pct": 2.911,
+    "score": 0.765
+   }
+  ]
+ },
+ "mask_keys": {
+  "plug": [
+   "plug|0",
+   "plug|1",
+   "plug|2",
+   "plug|3"
+  ],
+  "stereo system": [
+   "stereo system|0",
+   "stereo system|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

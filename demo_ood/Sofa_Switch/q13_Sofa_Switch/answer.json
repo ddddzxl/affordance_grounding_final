@@ -1,0 +1,12 @@
+{
+ "final": [
+  0,
+  1,
+  2
+ ],
+ "confidence": "medium",
+ "kind": "relation",
+ "note": "three detections form one 3-gang switch plate; no in-plate cue to single one out",
+ "solver": "frontier-llm, manual CoT",
+ "based_on_frame": "0014"
+}

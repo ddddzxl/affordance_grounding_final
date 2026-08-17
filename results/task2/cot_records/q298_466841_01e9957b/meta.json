@@ -1,0 +1,156 @@
+{
+ "q": 298,
+ "visit": "466841",
+ "desc_id": "01e9957b-df01-4fc7-83b4-bd5f05537f1e",
+ "text": "Open the window door that leads to the balcony",
+ "parse": {
+  "text": "Open the window door that leads to the balcony",
+  "target": {
+   "concept": "window handle",
+   "host": "window door"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window door",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'leads to the balcony' is an area-level locator, not groundable",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331587",
+  "fid": "15968.006",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331587",
+    "15968.006"
+   ],
+   [
+    "47331587",
+    "15989.197"
+   ],
+   [
+    "47331587",
+    "15990.197"
+   ],
+   [
+    "47331589",
+    "15924.406"
+   ],
+   [
+    "47331587",
+    "16001.192"
+   ],
+   [
+    "47331587",
+    "16010.205"
+   ],
+   [
+    "47331589",
+    "15935.002"
+   ],
+   [
+    "47331589",
+    "15934.003"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 135,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window door"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window door": "host"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 907,
+    "x1": 1040,
+    "y0": 277,
+    "y1": 409,
+    "cx": 981.7,
+    "cy": 351.3,
+    "npix": 11547,
+    "area_pct": 0.418,
+    "score": 0.201
+   }
+  ],
+  "window door": []
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0"
+  ],
+  "window door": []
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

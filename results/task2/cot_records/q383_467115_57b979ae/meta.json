@@ -1,0 +1,377 @@
+{
+ "q": 383,
+ "visit": "467115",
+ "desc_id": "57b979ae-aef9-4e32-9ef7-7ae07c7c6c4e",
+ "text": "Open the bottom, right cabinet drawer located to the left of the dining table",
+ "parse": {
+  "text": "Open the bottom, right cabinet drawer located to the left of the dining table",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "dining table",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "left_of",
+    "a": "cabinet",
+    "b": "dining table"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   },
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28241.654",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "47333310",
+    "28241.654"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.457,
+    "s2": 0.617,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "dining table"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "dining table": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 590,
+    "x1": 643,
+    "y0": 1093,
+    "y1": 1179,
+    "cx": 615.2,
+    "cy": 1140.3,
+    "npix": 1569,
+    "area_pct": 0.057,
+    "score": 0.918
+   },
+   {
+    "x0": 580,
+    "x1": 634,
+    "y0": 880,
+    "y1": 946,
+    "cx": 605.8,
+    "cy": 914.2,
+    "npix": 1407,
+    "area_pct": 0.051,
+    "score": 0.909
+   },
+   {
+    "x0": 530,
+    "x1": 569,
+    "y0": 993,
+    "y1": 1059,
+    "cx": 549.0,
+    "cy": 1030.5,
+    "npix": 1151,
+    "area_pct": 0.042,
+    "score": 0.895
+   },
+   {
+    "x0": 511,
+    "x1": 554,
+    "y0": 800,
+    "y1": 859,
+    "cx": 532.8,
+    "cy": 830.8,
+    "npix": 1036,
+    "area_pct": 0.037,
+    "score": 0.872
+   },
+   {
+    "x0": 560,
+    "x1": 609,
+    "y0": 807,
+    "y1": 866,
+    "cx": 584.2,
+    "cy": 836.3,
+    "npix": 1294,
+    "area_pct": 0.047,
+    "score": 0.813
+   },
+   {
+    "x0": 445,
+    "x1": 469,
+    "y0": 722,
+    "y1": 766,
+    "cx": 457.3,
+    "cy": 744.2,
+    "npix": 640,
+    "area_pct": 0.023,
+    "score": 0.766
+   },
+   {
+    "x0": 460,
+    "x1": 494,
+    "y0": 893,
+    "y1": 939,
+    "cx": 476.8,
+    "cy": 918.8,
+    "npix": 844,
+    "area_pct": 0.031,
+    "score": 0.763
+   },
+   {
+    "x0": 490,
+    "x1": 524,
+    "y0": 733,
+    "y1": 779,
+    "cx": 507.9,
+    "cy": 754.7,
+    "npix": 738,
+    "area_pct": 0.027,
+    "score": 0.712
+   },
+   {
+    "x0": 450,
+    "x1": 484,
+    "y0": 692,
+    "y1": 732,
+    "cx": 467.3,
+    "cy": 711.9,
+    "npix": 714,
+    "area_pct": 0.026,
+    "score": 0.542
+   },
+   {
+    "x0": 456,
+    "x1": 489,
+    "y0": 480,
+    "y1": 512,
+    "cx": 477.5,
+    "cy": 495.6,
+    "npix": 628,
+    "area_pct": 0.023,
+    "score": 0.175
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 578,
+    "x1": 682,
+    "y0": 862,
+    "y1": 1166,
+    "cx": 632.7,
+    "cy": 1003.7,
+    "npix": 18419,
+    "area_pct": 0.666,
+    "score": 0.888
+   },
+   {
+    "x0": 447,
+    "x1": 584,
+    "y0": 728,
+    "y1": 1012,
+    "cx": 522.1,
+    "cy": 862.2,
+    "npix": 19346,
+    "area_pct": 0.7,
+    "score": 0.855
+   },
+   {
+    "x0": 569,
+    "x1": 698,
+    "y0": 1074,
+    "y1": 1384,
+    "cx": 640.9,
+    "cy": 1225.4,
+    "npix": 19763,
+    "area_pct": 0.715,
+    "score": 0.79
+   },
+   {
+    "x0": 466,
+    "x1": 589,
+    "y0": 906,
+    "y1": 1178,
+    "cx": 531.8,
+    "cy": 1036.8,
+    "npix": 14953,
+    "area_pct": 0.541,
+    "score": 0.726
+   },
+   {
+    "x0": 540,
+    "x1": 683,
+    "y0": 191,
+    "y1": 919,
+    "cx": 613.9,
+    "cy": 528.6,
+    "npix": 71867,
+    "area_pct": 2.599,
+    "score": 0.515
+   },
+   {
+    "x0": 341,
+    "x1": 570,
+    "y0": 6,
+    "y1": 797,
+    "cx": 519.8,
+    "cy": 478.5,
+    "npix": 38113,
+    "area_pct": 1.379,
+    "score": 0.153
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 414,
+    "x1": 1023,
+    "y0": 136,
+    "y1": 1385,
+    "cx": 702.1,
+    "cy": 608.1,
+    "npix": 483426,
+    "area_pct": 17.485,
+    "score": 0.875
+   },
+   {
+    "x0": 254,
+    "x1": 470,
+    "y0": 481,
+    "y1": 1050,
+    "cx": 368.0,
+    "cy": 740.1,
+    "npix": 82373,
+    "area_pct": 2.979,
+    "score": 0.433
+   }
+  ],
+  "dining table": [
+   {
+    "x0": 961,
+    "x1": 1439,
+    "y0": 840,
+    "y1": 1852,
+    "cx": 1230.5,
+    "cy": 1262.5,
+    "npix": 306939,
+    "area_pct": 11.102,
+    "score": 0.872
+   },
+   {
+    "x0": 225,
+    "x1": 289,
+    "y0": 666,
+    "y1": 759,
+    "cx": 259.6,
+    "cy": 709.4,
+    "npix": 4405,
+    "area_pct": 0.159,
+    "score": 0.186
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4",
+   "drawer handle|5",
+   "drawer handle|6",
+   "drawer handle|7",
+   "drawer handle|8",
+   "drawer handle|9"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 2,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

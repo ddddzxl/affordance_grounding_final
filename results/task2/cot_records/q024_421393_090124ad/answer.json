@@ -1,0 +1,8 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "forced",
+ "kind": "select-degenerate",
+ "solver": "frontier-llm, manual CoT"
+}

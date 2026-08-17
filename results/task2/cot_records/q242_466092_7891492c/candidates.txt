@@ -1,0 +1,60 @@
+TASK: "Open the window behind the table with the flower vase"
+
+PARSE:
+  target concept = "window handle"   <- the thing that must be output
+  host           = 'window'   <- countable object the target sits on
+  entity  : 'window handle'  role=target
+  entity  : 'window'  role=host
+  entity  : 'table'  role=landmark
+  entity  : 'flower vase'  role=landmark
+  relation: behind(a='window', b='table')
+  relation: has_on_top(a='table', b='flower vase')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  window handle        0  1907  1919   865   909  1913.1   886.6   0.021   0.38
+  window handle        1  1159  1186   858   899  1171.2   878.4    0.03  0.379
+  window handle        2  1507  1532   895   909  1518.1   903.4    0.01  0.246
+  window handle        3  1280  1313   859   904  1296.9   880.6   0.045  0.238
+  window handle        4  1699  1911   871  1399  1718.0  1374.3   0.019  0.229
+  window               0  1302  1764   540  1383  1534.2   918.2  11.294   0.73
+  window               1  1114  1166   551  1328  1141.3   932.0    1.06  0.701
+  window               2  1674  1751  1175  1325  1711.3  1250.3   0.366  0.322
+  window               3  1873  1919   505  1263  1903.6   744.1   0.589   0.23
+  window               4  1528  1570  1150  1244  1547.3  1195.7     0.1   0.22
+  table                0  1254  1766  1365  1439  1497.7  1414.0   0.826  0.796
+  table                1     0   450  1248  1439   243.6  1362.3   2.181  0.337
+  flower vase          0  1501  1566  1301  1409  1533.7  1354.6   0.222  0.786
+  flower vase          1  1280  1306  1271  1377  1291.2  1340.3   0.059  0.188
+
+
+
+
+
+CONTAINMENT (window handle inside the FILLED mask of each window):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  window #0   x[1302,1764] cx  1534.2 cy   918.2 w= 462 contains #2
+  window #1   x[1114,1166] cx  1141.3 cy   932.0 w=  52 contains (none)
+  window #2   x[1674,1751] cx  1711.3 cy  1250.3 w=  77 contains (none)
+  window #3   x[1873,1919] cx  1903.6 cy   744.1 w=  46 contains #0
+  window #4   x[1528,1570] cx  1547.3 cy  1195.7 w=  42 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "window handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: window handle #<id>[, #<id> ...]

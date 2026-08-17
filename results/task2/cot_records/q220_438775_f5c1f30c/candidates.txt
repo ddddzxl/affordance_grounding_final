@@ -1,0 +1,67 @@
+TASK: "Open the left window door behind the leather ottoman"
+
+PARSE:
+  target concept = "window handle"   <- the thing that must be output
+  host           = 'window door'   <- countable object the target sits on
+  entity  : 'window handle'  role=target
+  entity  : 'window door'  role=host
+  entity  : 'ottoman'  role=landmark
+  relation: behind(a='window door', b='ottoman')
+  select  : on='window door' axis=horizontal value='left' index=None from=None
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  window handle        0   427   526   900  1044   450.8   965.8   0.153  0.636
+  window handle        1   713   726   530   579   718.3   556.5   0.019  0.489
+  window handle        2   687   699   760   814   692.7   788.2   0.024  0.471
+  window handle        3   720   732   429   479   726.5   454.0    0.02   0.44
+  window handle        4   700   712   760   814   703.4   789.0   0.015   0.44
+  window handle        5   667   679   530   579   672.8   554.0   0.022  0.439
+  window handle        6   573   586   725   770   579.5   747.1   0.022  0.434
+  window handle        7   767   831   350   419   801.4   374.5   0.094  0.431
+  window handle        8   779   842   849   894   810.4   873.4    0.08  0.415
+  window handle        9   726   739   490   576   731.1   540.3   0.026  0.407
+  window handle       10   673   686   530   579   679.8   553.4   0.023  0.394
+  window handle       11   909   939   781   804   925.5   793.1   0.021  0.297
+  window handle       12   620   646   511   590   634.1   560.5   0.039  0.249
+  window handle       13   680   692   529   579   685.8   552.9   0.022  0.239
+  window handle       14   660   672   532   579   667.9   560.0   0.014  0.235
+  window handle       15   127   146   671   704   136.7   688.8    0.02  0.223
+  window handle       16   940   957   785   814   949.0   797.7   0.011  0.214
+  window handle       17   635   672   540   579   661.5   563.7   0.014   0.19
+  window handle       18  1480  1553   916   929  1517.5   923.5   0.027  0.155
+  window door          0   355   834   225  1439   574.8   666.3  13.194  0.756
+  window door          1   829  1052   266   914   940.7   585.9   4.883  0.426
+  window door          2  1419  1620  1010  1326  1519.2  1161.8   1.902  0.202
+  ottoman              0   267   566  1125  1439   384.7  1273.3   1.492  0.599
+  ottoman              1   559  1238  1115  1439   926.2  1304.1    6.34  0.384
+
+
+
+
+
+CONTAINMENT (window handle inside the FILLED mask of each window door):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  window door #0   x[ 355, 834] cx   574.8 cy   666.3 w= 479 contains #0, #1, #2, #3, #4, #5, #6, #7, #9, #10, #12, #13, #14, #17
+  window door #1   x[ 829,1052] cx   940.7 cy   585.9 w= 223 contains #11, #16
+  window door #2   x[1419,1620] cx  1519.2 cy  1161.8 w= 201 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "window handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: window handle #<id>[, #<id> ...]

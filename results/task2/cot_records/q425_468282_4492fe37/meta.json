@@ -1,0 +1,170 @@
+{
+ "q": 425,
+ "visit": "468282",
+ "desc_id": "4492fe37-fdca-4e6b-bdbd-94708157267e",
+ "text": "Open the washing machine door",
+ "parse": {
+  "text": "Open the washing machine door",
+  "target": {
+   "concept": "washing machine door",
+   "host": "washing machine"
+  },
+  "entities": [
+   {
+    "name": "washing machine door",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "washing machine",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "the drum door is opened by its rim/recess, there is no separate handle noun in the sentence",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331279",
+  "fid": "14319.317",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331279",
+    "14319.317"
+   ],
+   [
+    "47331279",
+    "14320.316"
+   ],
+   [
+    "47331279",
+    "14307.705"
+   ],
+   [
+    "47331279",
+    "14254.710"
+   ],
+   [
+    "47331279",
+    "14237.717"
+   ],
+   [
+    "47331279",
+    "14236.717"
+   ],
+   [
+    "47331279",
+    "14238.716"
+   ],
+   [
+    "47331279",
+    "14239.716"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 215,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "washing machine door",
+  "washing machine"
+ ],
+ "roles": {
+  "washing machine door": "target",
+  "washing machine": "host"
+ },
+ "candidates": {
+  "washing machine door": [
+   {
+    "x0": 383,
+    "x1": 1138,
+    "y0": 813,
+    "y1": 1470,
+    "cx": 762.1,
+    "cy": 1142.3,
+    "npix": 377233,
+    "area_pct": 13.644,
+    "score": 0.982
+   }
+  ],
+  "washing machine": [
+   {
+    "x0": 106,
+    "x1": 1352,
+    "y0": 318,
+    "y1": 1761,
+    "cx": 690.1,
+    "cy": 963.3,
+    "npix": 1342822,
+    "area_pct": 48.569,
+    "score": 0.98
+   }
+  ]
+ },
+ "mask_keys": {
+  "washing machine door": [
+   "washing machine door|0"
+  ],
+  "washing machine": [
+   "washing machine|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

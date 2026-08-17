@@ -1,0 +1,364 @@
+{
+ "q": 329,
+ "visit": "466880",
+ "desc_id": "57f1817c-6e51-4cc5-8074-c06115543580",
+ "text": "Open the second drawer of the counter to the right of the oven",
+ "parse": {
+  "text": "Open the second drawer of the counter to the right of the oven",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "counter",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "oven",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "counter",
+    "b": "drawer"
+   },
+   {
+    "rel": "right_of",
+    "a": "counter",
+    "b": "oven"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "ordinal",
+    "value": null,
+    "index": 2,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331707",
+  "fid": "11127.830",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L2",
+  "n_top": 6,
+  "topk": [
+   [
+    "47331707",
+    "11127.830"
+   ],
+   [
+    "47331711",
+    "11259.727"
+   ],
+   [
+    "47331707",
+    "11126.831"
+   ],
+   [
+    "47331707",
+    "11125.831"
+   ],
+   [
+    "47331711",
+    "11272.338"
+   ],
+   [
+    "47331711",
+    "11263.742"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.186,
+    "s2": 0.527,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "counter",
+  "oven"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "counter": "container",
+  "oven": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 860,
+    "x1": 978,
+    "y0": 1345,
+    "y1": 1429,
+    "cx": 917.2,
+    "cy": 1386.6,
+    "npix": 6317,
+    "area_pct": 0.228,
+    "score": 0.933
+   },
+   {
+    "x0": 927,
+    "x1": 1086,
+    "y0": 897,
+    "y1": 989,
+    "cx": 1006.7,
+    "cy": 943.0,
+    "npix": 8730,
+    "area_pct": 0.316,
+    "score": 0.932
+   },
+   {
+    "x0": 899,
+    "x1": 1039,
+    "y0": 1095,
+    "y1": 1184,
+    "cx": 968.1,
+    "cy": 1138.4,
+    "npix": 8042,
+    "area_pct": 0.291,
+    "score": 0.925
+   },
+   {
+    "x0": 1481,
+    "x1": 1910,
+    "y0": 1306,
+    "y1": 1439,
+    "cx": 1615.1,
+    "cy": 1390.8,
+    "npix": 25246,
+    "area_pct": 0.913,
+    "score": 0.185
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 740,
+    "x1": 1228,
+    "y0": 1025,
+    "y1": 1361,
+    "cx": 978.3,
+    "cy": 1188.0,
+    "npix": 85486,
+    "area_pct": 3.092,
+    "score": 0.908
+   },
+   {
+    "x0": 755,
+    "x1": 1304,
+    "y0": 801,
+    "y1": 1079,
+    "cx": 1031.5,
+    "cy": 940.3,
+    "npix": 50311,
+    "area_pct": 1.82,
+    "score": 0.9
+   },
+   {
+    "x0": 727,
+    "x1": 1153,
+    "y0": 1217,
+    "y1": 1439,
+    "cx": 900.3,
+    "cy": 1356.5,
+    "npix": 58079,
+    "area_pct": 2.101,
+    "score": 0.896
+   },
+   {
+    "x0": 747,
+    "x1": 1271,
+    "y0": 923,
+    "y1": 1204,
+    "cx": 1003.8,
+    "cy": 1051.7,
+    "npix": 60854,
+    "area_pct": 2.201,
+    "score": 0.868
+   },
+   {
+    "x0": 640,
+    "x1": 743,
+    "y0": 968,
+    "y1": 1217,
+    "cx": 687.9,
+    "cy": 1094.6,
+    "npix": 21523,
+    "area_pct": 0.778,
+    "score": 0.29
+   },
+   {
+    "x0": 1154,
+    "x1": 1453,
+    "y0": 1214,
+    "y1": 1439,
+    "cx": 1252.7,
+    "cy": 1331.2,
+    "npix": 27533,
+    "area_pct": 0.996,
+    "score": 0.233
+   },
+   {
+    "x0": 1241,
+    "x1": 1447,
+    "y0": 1000,
+    "y1": 1252,
+    "cx": 1341.6,
+    "cy": 1120.4,
+    "npix": 30932,
+    "area_pct": 1.119,
+    "score": 0.201
+   },
+   {
+    "x0": 646,
+    "x1": 761,
+    "y0": 755,
+    "y1": 985,
+    "cx": 698.1,
+    "cy": 867.3,
+    "npix": 21757,
+    "area_pct": 0.787,
+    "score": 0.193
+   },
+   {
+    "x0": 634,
+    "x1": 734,
+    "y0": 1204,
+    "y1": 1435,
+    "cx": 685.2,
+    "cy": 1317.5,
+    "npix": 20089,
+    "area_pct": 0.727,
+    "score": 0.172
+   }
+  ],
+  "counter": [
+   {
+    "x0": 0,
+    "x1": 1553,
+    "y0": 26,
+    "y1": 1048,
+    "cx": 877.5,
+    "cy": 643.1,
+    "npix": 418090,
+    "area_pct": 15.122,
+    "score": 0.73
+   }
+  ],
+  "oven": [
+   {
+    "x0": 0,
+    "x1": 644,
+    "y0": 538,
+    "y1": 1388,
+    "cx": 408.1,
+    "cy": 881.8,
+    "npix": 188327,
+    "area_pct": 6.812,
+    "score": 0.797
+   },
+   {
+    "x0": 828,
+    "x1": 1639,
+    "y0": 0,
+    "y1": 631,
+    "cx": 1225.1,
+    "cy": 296.0,
+    "npix": 374413,
+    "area_pct": 13.542,
+    "score": 0.772
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5",
+   "drawer|6",
+   "drawer|7",
+   "drawer|8"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 1,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,188 @@
+{
+ "q": 237,
+ "visit": "466092",
+ "desc_id": "2663c719-ec5c-49c5-a49e-95a651b4ff45",
+ "text": "Turn on the table lamp on the desk",
+ "parse": {
+  "text": "Turn on the table lamp on the desk",
+  "target": {
+   "concept": "light switch",
+   "host": "table lamp"
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "table lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "desk",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "table lamp",
+    "b": "desk"
+   }
+  ],
+  "select": [],
+  "residual": "unified with val8's 'light switch'; which lamp it is, is carried by `host`, not by the search term",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796568",
+  "fid": "16109.994",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "44796568",
+    "16109.994"
+   ],
+   [
+    "44796568",
+    "16141.198"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 0.02,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch",
+  "table lamp",
+  "desk"
+ ],
+ "roles": {
+  "light switch": "target",
+  "table lamp": "host",
+  "desk": "container"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 1527,
+    "x1": 1559,
+    "y0": 200,
+    "y1": 224,
+    "cx": 1543.2,
+    "cy": 211.5,
+    "npix": 649,
+    "area_pct": 0.023,
+    "score": 0.17
+   }
+  ],
+  "table lamp": [],
+  "desk": [
+   {
+    "x0": 1473,
+    "x1": 1919,
+    "y0": 0,
+    "y1": 1007,
+    "cx": 1810.3,
+    "cy": 347.8,
+    "npix": 102297,
+    "area_pct": 3.7,
+    "score": 0.85
+   },
+   {
+    "x0": 800,
+    "x1": 819,
+    "y0": 0,
+    "y1": 144,
+    "cx": 809.4,
+    "cy": 72.0,
+    "npix": 1871,
+    "area_pct": 0.068,
+    "score": 0.27
+   },
+   {
+    "x0": 0,
+    "x1": 39,
+    "y0": 50,
+    "y1": 94,
+    "cx": 16.2,
+    "cy": 70.9,
+    "npix": 1363,
+    "area_pct": 0.049,
+    "score": 0.254
+   },
+   {
+    "x0": 0,
+    "x1": 238,
+    "y0": 0,
+    "y1": 87,
+    "cx": 98.7,
+    "cy": 30.9,
+    "npix": 12044,
+    "area_pct": 0.436,
+    "score": 0.246
+   },
+   {
+    "x0": 1133,
+    "x1": 1418,
+    "y0": 0,
+    "y1": 214,
+    "cx": 1281.3,
+    "cy": 64.1,
+    "npix": 21535,
+    "area_pct": 0.779,
+    "score": 0.175
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0"
+  ],
+  "table lamp": []
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

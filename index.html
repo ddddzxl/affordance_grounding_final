@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instruction-Level 3D Affordance Grounding</title>
+<style>
+  :root{
+    --paper:#F6F7F9; --card:#FFFFFF; --ink:#1C2733; --muted:#5B6B7C; --line:#E2E7EE;
+    --cobalt:#2B59C3; --ok:#1F7A5C; --warn:#9A6B15; --bad:#B3402E; --violet:#6B4FA3;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.62;padding:0 0 56px}
+  .wrap{max-width:900px;margin:0 auto;padding:22px 14px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-bottom:7px}
+  h1{font-size:23px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+  .lead{font-size:13.5px;color:#3B4956;margin-bottom:14px}
+  .lead b{color:var(--ink)}
+  code{font-family:var(--mono);font-size:11.5px;background:rgba(43,89,195,.06);padding:1px 4px;border-radius:3px}
+
+  .tip{background:rgba(43,89,195,.05);border:1px solid rgba(43,89,195,.20);border-left:4px solid var(--cobalt);border-radius:8px;padding:11px 14px;font-size:12.5px;margin-bottom:16px}
+  .tip .h{font-family:var(--mono);font-size:10px;letter-spacing:.07em;color:var(--cobalt);text-transform:uppercase;font-weight:700;margin-bottom:5px}
+  .tip b{color:var(--ink)}
+
+  h2.sec{font-size:15px;font-weight:700;margin:26px 0 9px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+  h3.sub{font-size:13px;font-weight:700;margin:16px 0 6px;color:#33414E}
+  p.story{font-size:13px;margin-bottom:10px}
+
+  .stages{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:12px 0}
+  @media(max-width:640px){.stages{grid-template-columns:1fr}}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stage .n{font-family:var(--mono);font-size:10px;color:var(--ok);font-weight:700;margin-bottom:4px;letter-spacing:.05em}
+  .stage .st{font-size:12.5px;font-weight:700;margin-bottom:4px}
+  .stage .sd{font-size:11.5px;color:var(--muted);line-height:1.55}
+  .stage .sd b{color:var(--ink)}
+
+  table{width:100%;border-collapse:collapse;font-size:11.5px;margin:10px 0;background:var(--card)}
+  th,td{border:1px solid var(--line);padding:6px 9px;text-align:left}
+  th{background:#EEF2F7;font-weight:700;font-size:11px}
+  td.num,th.num{text-align:right;font-family:var(--mono)}
+  tr.us td{background:rgba(31,122,92,.07);font-weight:700}
+  tr.dim td{color:var(--muted)}
+
+  .formula{background:var(--card);border:1px solid var(--line);border-radius:7px;padding:9px 12px;font-size:11.5px;margin:8px 0;line-height:1.75;font-family:var(--mono);color:#2c3a47;overflow-x:auto;white-space:pre}
+  .formula .lbl{color:var(--cobalt);font-weight:700}
+  .formula b{color:var(--ink)}
+
+  .trap{background:rgba(107,79,163,.06);border:1px solid rgba(107,79,163,.22);border-left:3px solid var(--violet);border-radius:7px;padding:10px 13px;font-size:12px;margin:14px 0;line-height:1.62}
+  .trap .h{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--violet);text-transform:uppercase;font-weight:700;margin-bottom:5px}
+  .trap b{color:var(--ink)} .trap ul{padding-left:18px;margin-top:4px} .trap li{margin-bottom:5px}
+
+  .caution{background:rgba(179,64,46,.045);border:1px solid rgba(179,64,46,.22);border-left:3px solid var(--bad);border-radius:7px;padding:10px 13px;font-size:12px;margin:14px 0;line-height:1.62}
+  .caution .h{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--bad);text-transform:uppercase;font-weight:700;margin-bottom:5px}
+  .caution b{color:var(--ink)} .caution ul{padding-left:18px;margin-top:4px} .caution li{margin-bottom:5px}
+
+  .cascade{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:11px 13px;margin:10px 0 12px}
+  .cascade svg{display:block;width:100%;height:auto}
+  .cascade .cap{font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+  .cascade .cap b{color:var(--ink)}
+
+  .deepnav{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:640px){.deepnav{grid-template-columns:1fr}}
+  .deepnav a{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--cobalt);border-radius:9px;padding:11px 13px;color:var(--ink)}
+  .deepnav a .k{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--cobalt);text-transform:uppercase;font-weight:700;margin-bottom:4px}
+  .deepnav a .tt{font-size:13px;font-weight:700}
+  .deepnav a .d{font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:4px}
+  .foot{margin-top:24px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">SceneFun3D &middot; instruction-level affordance grounding &middot; independent research project &middot; 7 weeks &middot; single GPU</div>
+  <h1>Replacing fifty visual inferences with one text-only inference</h1>
+  <div class="lead">
+    Given one sentence &mdash; <i>"open the top left drawer of the cabinet to the left of the TV"</i> &mdash; and a scanned 3D room,
+    output the 3D mask of <b>the part a hand would actually touch</b>. The hard part is not finding the cabinet;
+    it is deciding <b>which of the four identical handles on it</b> is meant.
+    Mainstream methods answer this by running a 7B vision-language model <b>once per frame across 50 frames</b>.
+    This project replaces that with <b>a symbolic bottleneck</b>: one frame becomes a text-only candidate table,
+    and disambiguation becomes <b>a single inference that never sees an image</b>.
+  </div>
+
+  <div class="tip">
+    <div class="h">What this project claims &mdash; and what it does not</div>
+    The claim is <b>a structurally cheaper pipeline plus two diagnoses the literature had not stated clearly</b>,
+    not a score. AP50 edges past the strongest concurrent training-free method; <b>AP25 does not</b>,
+    and the language model used here is larger than the one it is compared against.
+    Both are stated in the results table below rather than left to be discovered.
+  </div>
+
+  <h2 class="sec">The method, against the baseline it replaces</h2>
+
+  <div class="cascade">
+    <svg viewBox="0 0 860 168" role="img" aria-label="Pipeline comparison: Fun3DU per-frame VLM pointing versus a symbolic candidate table with one inference">
+      <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 2L8 5L2 8" fill="none" stroke="#5B6B7C" stroke-width="1.3"/></marker></defs>
+      <g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="9">
+        <text x="6" y="14" font-size="10" font-weight="700" fill="#B3402E">Fun3DU (mainstream route)</text>
+        <rect x="6" y="22" width="96" height="34" rx="6" fill="#EEF2F7" stroke="#5B6B7C"/><text x="54" y="36" text-anchor="middle" fill="#1C2733">instruction</text><text x="54" y="48" text-anchor="middle" fill="#5B6B7C">LLM CoT &times;1</text>
+        <line x1="102" y1="39" x2="122" y2="39" stroke="#5B6B7C" marker-end="url(#ar)"/>
+        <rect x="124" y="22" width="118" height="34" rx="6" fill="#FBEEEA" stroke="#D85A30"/><text x="183" y="36" text-anchor="middle" fill="#712B13">OWLv2+SAM frames</text><text x="183" y="48" text-anchor="middle" fill="#5B6B7C">polar KL &rarr; top-50</text>
+        <line x1="242" y1="39" x2="262" y2="39" stroke="#5B6B7C" marker-end="url(#ar)"/>
+        <rect x="264" y="18" width="182" height="42" rx="6" fill="#F6DCD4" stroke="#B3402E" stroke-width="1.6"/><text x="355" y="34" text-anchor="middle" font-weight="700" fill="#7A1F12">Molmo-7B pointing &times; 50 frames</text><text x="355" y="46" text-anchor="middle" fill="#7A1F12">one 1920&times;1440 image read per frame</text><text x="355" y="56" text-anchor="middle" fill="#5B6B7C">+ SAM &times; 50</text>
+        <line x1="446" y1="39" x2="466" y2="39" stroke="#5B6B7C" marker-end="url(#ar)"/>
+        <rect x="468" y="22" width="104" height="34" rx="6" fill="#EEF2F7" stroke="#5B6B7C"/><text x="520" y="36" text-anchor="middle" fill="#1C2733">accumulate + thresh</text><text x="520" y="48" text-anchor="middle" fill="#5B6B7C">lift &rarr; 3D mask</text>
+        <rect x="596" y="18" width="258" height="42" rx="6" fill="#FBEEEA" stroke="#D85A30"/><text x="725" y="33" text-anchor="middle" font-weight="700" fill="#7A1F12">8.8 G vision params &middot; 273 s / instruction</text><text x="725" y="50" text-anchor="middle" fill="#5B6B7C">50 image reads &middot; re-run for every instruction</text>
+
+        <text x="6" y="96" font-size="10" font-weight="700" fill="#1F7A5C">This work</text>
+        <rect x="6" y="104" width="96" height="34" rx="6" fill="#EEF2F7" stroke="#5B6B7C"/><text x="54" y="118" text-anchor="middle" fill="#1C2733">instruction</text><text x="54" y="130" text-anchor="middle" fill="#5B6B7C">LLM parse &times;1</text>
+        <line x1="102" y1="121" x2="122" y2="121" stroke="#5B6B7C" marker-end="url(#ar)"/>
+        <rect x="124" y="104" width="118" height="34" rx="6" fill="#E1F5EE" stroke="#1D9E75"/><text x="183" y="118" text-anchor="middle" fill="#085041">open-vocab segmenter</text><text x="183" y="130" text-anchor="middle" fill="#5B6B7C">cached by (scene, concept)</text>
+        <line x1="242" y1="121" x2="262" y2="121" stroke="#5B6B7C" marker-end="url(#ar)"/>
+        <rect x="264" y="100" width="182" height="42" rx="6" fill="#DFF3EA" stroke="#1F7A5C" stroke-width="1.6"/><text x="355" y="116" text-anchor="middle" font-weight="700" fill="#0A5240">candidate table &rarr; LLM &times; 1</text><text x="355" y="128" text-anchor="middle" fill="#0A5240">text only: bbox / area / conf / containment</text><text x="355" y="138" text-anchor="middle" fill="#5B6B7C">no image input</text>
+        <line x1="446" y1="121" x2="466" y2="121" stroke="#5B6B7C" marker-end="url(#ar)"/>
+        <rect x="468" y="104" width="104" height="34" rx="6" fill="#E9EFFB" stroke="#2B59C3"/><text x="520" y="118" text-anchor="middle" fill="#0C447C">lift + refine</text><text x="520" y="130" text-anchor="middle" fill="#5B6B7C">erode / front layer / vote</text>
+        <rect x="596" y="100" width="258" height="42" rx="6" fill="#E1F5EE" stroke="#1D9E75"/><text x="725" y="115" text-anchor="middle" font-weight="700" fill="#0A5240">860 M vision params &middot; 28.4 s / instruction</text><text x="725" y="132" text-anchor="middle" fill="#5B6B7C">0 image reads &middot; instructions share detections</text>
+      </g>
+    </svg>
+    <div class="cap"><b>The core proposition:</b> the information spatial disambiguation needs &mdash; who is left of whom, who is inside whom, which is topmost &mdash;
+    <b>is geometric, and does not require pixels</b>. Compress a frame into a purely symbolic candidate table
+    (each detection's bbox, centre, area, confidence, plus containment relations) and the reasoning collapses into a text task.
+    Fifty 7B-VLM image reads become one text inference, and the vision side reduces to a single 860 M open-vocabulary segmenter.
+    <b>The side effect is worth more than the main effect: detections are cached by (scene, concept), so asking a room ten questions costs almost what asking it one does.</b></div>
+  </div>
+
+  <div class="stages">
+    <div class="stage"><div class="n">Pillar 1 &middot; method</div><div class="st">The symbolic bottleneck</div><div class="sd">One frame &rarr; candidate table &rarr; <b>one text-only inference</b>. Vision side <b>860 M vs 8.8 G</b>, <b>28.4 s vs 273 s</b> (same machine, 9.6&times;); <b>more instructions do not mean more vision compute</b> &mdash; the demo's 13 instructions share 1365 segmentation calls where per-instruction re-running needs 2728.</div></div>
+    <div class="stage"><div class="n">Pillar 2 &middot; diagnosis</div><div class="st">Two things not stated clearly elsewhere</div><div class="sd"><b>(1) The official AP50 is precision &ge; 0.5, not IoU &gt; 0.5</b> (obtained from the evaluation source) &rArr; the correct strategy is to tighten masks, not recall more. <b>(2) Granularity mismatch is the real AP50 ceiling</b> &mdash; ground truth labels the switch button while the segmenter outlines the whole plate; better candidate coverage cannot fix it.</div></div>
+    <div class="stage"><div class="n">Pillar 3 &middot; execution</div><div class="st">Whole chain, with the failures kept</div><div class="sd">Baseline reproduction &rarr; stratified oracle diagnosis &rarr; method &rarr; <b>full 445-instruction evaluation</b> &rarr; two model-scale ablations &rarr; <b>OOD demo on three self-scanned rooms</b>. <b>Twenty rejected routes are documented individually</b>, five of them self-refutations.</div></div>
+  </div>
+
+  <h2 class="sec">Results</h2>
+  <p class="story">SceneFun3D val split0, all 442 instructions (445 minus 3 with disputed ground truth, each with a written reason).</p>
+  <table>
+    <tr><th>Method</th><th>Type</th><th class="num">AP50</th><th class="num">AP25</th><th>Note</th></tr>
+    <tr class="us"><td>This work &middot; multi-frame th0.7</td><td>training-free</td><td class="num">34.8</td><td class="num">44.1</td><td>headline configuration</td></tr>
+    <tr><td>This work &middot; single frame + refinement</td><td>training-free</td><td class="num">29.9</td><td class="num">44.3</td><td>same reasoning, no voting</td></tr>
+    <tr><td>This work &middot; single frame, no refinement</td><td>training-free</td><td class="num">19.5</td><td class="num">38.0</td><td>selection only</td></tr>
+    <tr><td>UniFunc3D-30B</td><td>training-free</td><td class="num">31.24</td><td class="num">51.01</td><td><b>AP25 is 6.9 ahead of this work</b></td></tr>
+    <tr><td>UniFunc3D-8B</td><td>training-free</td><td class="num">23.82</td><td class="num">44.04</td><td>AP25 level with this work</td></tr>
+    <tr><td>AffordMEM</td><td>training-free</td><td class="num">20.13</td><td class="num">41.66</td><td>explicit 3D scene graph</td></tr>
+    <tr><td>Fun3DU (self-reported)</td><td>training-free</td><td class="num">16.90</td><td class="num">33.30</td><td>probably optimistic, see below</td></tr>
+    <tr class="dim"><td>Fun3DU (reproduced here)</td><td>&mdash;</td><td class="num">13.71</td><td class="num">26.29</td><td>AffordBot reproduces it at 12.6</td></tr>
+    <tr class="dim"><td>Oracle (perfect selection, no refinement)</td><td>&mdash;</td><td class="num">21.3</td><td class="num">&mdash;</td><td>the turning point, see below</td></tr>
+  </table>
+
+  <div class="caution">
+    <div class="h">Stated limitations</div>
+    <ul>
+      <li><b>AP25 is worse than UniFunc3D-30B (44.1 vs 51.01).</b> The cause is the granularity ceiling diagnosed below: the masks here are tighter, which is why AP50 is higher, but there is no advantage at the "found the right object" layer. This column is not a win.</li>
+      <li><b>The language model used here is larger than 30B.</b> Part of the 34.8 is bought. The only near-size-matched data point is the 25.7 extrapolation from swapping the reasoning stage to a 9B model &mdash; and even that is not a pure 9B system, since parsing still comes from the frontier model. Measurement on the parsing stage says a genuine size-matched system would degrade badly.</li>
+      <li><b>The method is not a new paradigm.</b> "Candidate generation + selector" is an existing idea; the differentiation originally intended here (explicit 3D spatial disambiguation) was found already occupied by AffordMEM and UniFunc3D in week two, and was demoted then.</li>
+      <li><b>The reported reasoning was executed interactively, one instruction at a time, not by a batch script.</b> The fully scripted counterpart is the open-model ablation below.</li>
+    </ul>
+  </div>
+
+  <h2 class="sec">The finding that inverted the optimisation direction</h2>
+  <p class="story">From reading the official evaluation source:</p>
+  <div class="formula"><span class="lbl">precision</span> = |gt &amp; pred| / |pred|        &larr; denominator is pred
+<span class="lbl">AP50</span>      = fraction(precision &gt;= 0.50)   &larr; <b>not IoU &gt; 0.5</b>
+<span class="lbl">recall</span>    = |gt &amp; pred| / |gt|          &rarr; AR50 / AR25
+<span class="lbl">mIoU</span>      = the only column that truly uses IoU</div>
+  <p class="story">
+    The consequence is that the metric is <b>precision-only</b>. Selecting one extra candidate adds to the denominator without necessarily adding to the numerator;
+    a large mask covering a small ground truth has high recall but low precision, so AP gets <i>worse</i>.
+    The correct strategy is therefore <b>prefer fewer over more, and tighten the mask</b> &mdash; whereas an IoU reading pushes toward "recall a bit more", exactly backwards.
+    This invalidated every self-evaluation protocol used before it, all of which were redone.
+  </p>
+
+  <h2 class="sec">The turning point: a perfect-selection oracle scores only 21.3</h2>
+  <p class="story">
+    The first oracle implementation returned 29.9 &mdash; <b>identical to the actual score</b> &mdash; and its AR50 was <i>below</i> the bound it was supposed to define. That is not consistent.
+    Rebuilt as "<b>enumerate every candidate, run a full lift for each, take the best by 3D precision</b>":
+  </p>
+  <div class="formula"><span class="lbl">meaning</span>  optimal candidate on every question, but no refinement &rarr; only 21.3
+         what was actually achieved                     &rarr; 34.8
+         &rArr; <b>refinement contributes more than the entire potential of perfect selection</b>
+         &rArr; disambiguation is saturated; the remaining effort belongs on the mask side</div>
+  <p class="story">This judgement decided how the last two weeks of the project were spent.</p>
+
+  <h2 class="sec">Three tiers of gain on the mask side</h2>
+  <p class="story">All three rows use the same reasoning results with instance selection held completely fixed; only post-projection processing changes.</p>
+  <div class="formula">no refinement                            AP50 19.5   AP25 38.0   AR50 ~30   median
++ 2D erosion 5px + camera front layer         29.9 (+10.4)  44.3       18.6      117 pts
++ multi-frame parallax voting th0.7           34.8 (+4.9)   44.1       11.8       58 pts</div>
+  <p class="story">
+    <b>A counter-intuitive and quantified result: the bulk of the precision loss is the 2D mask edge (+9.2), not depth bleed-through (+1.2).</b>
+    Intuition blames points punching into the background; measurement says the segmenter's mask is about 5 px fatter than the true object,
+    and that rim projects onto <b>the cabinet face behind the handle</b>.
+  </p>
+  <p class="story">
+    <b>Multi-frame voting fixes precision but cannot fix a wrongly selected instance</b>, and there is direct evidence &mdash; stratified by the reasoning's self-reported confidence,
+    the high group goes 47.0 &rarr; 55.7 (+8.7) while the low group goes 9.6 &rarr; 11.0 (<b>+1.4, barely moving</b>).
+    The threshold is 0.7 rather than 0.9 because th0.9 buys 0.7 more AP50 at the cost of 1.6 AP25 and 5.0 AR50, leaving a median of 23 points &mdash; a mask that thin does not stand up.
+  </p>
+
+  <h3 class="sub">Where the 9.3 points between AP50 and AP25 go</h3>
+  <p class="story">
+    Diagnosed early by per-image manual review: ground truth annotates the <b>switch button</b> while the segmenter outlines the <b>whole switch plate</b>;
+    ground truth annotates the <b>whole remote control</b> while the segmenter extracts <b>one button</b> on it;
+    ground truth annotates <b>part of a socket</b> while the segmenter outlines the <b>entire white plate</b> (recall 1.0, precision &asymp; 1/3).
+    <b>This is not failure to find, it is outlining at a granularity inconsistent with the annotation convention.</b>
+    It also explains why every training-free method has AP25 crammed into 44&ndash;51: finding the right object is near-saturated for everyone, and the spread is granularity &mdash;
+    which is a labelling convention, and can be learned but not inferred.
+  </p>
+
+  <h2 class="sec">Ablation: a 9B open model, with opposite conclusions for the two stages</h2>
+  <table>
+    <tr><th>Stage swapped</th><th class="num">Cost</th><th>Conclusion</th></tr>
+    <tr><td>Reasoning only (candidate table &rarr; instance)</td><td class="num">&minus;4.1 AP50</td><td>Holds up (28.9 &rarr; 24.7 over 97 side-by-side questions; the 9B model is never uniquely correct)</td></tr>
+    <tr><td>Parsing only (instruction &rarr; constraint graph)</td><td class="num">collapses</td><td>Target concept correct at part level only 49.5% &rArr; wrong retrieval term &rArr; candidate-pool hit rate 64.3% &rarr; ~32%</td></tr>
+  </table>
+  <p class="story">
+    <b>The counter-intuitive part:</b> the common assumption is that structured extraction is easy and reasoning is hard. Measurement says the reverse.
+    Within the same prompt, <code>select</code> (turning "top left" into an ordering constraint) is <b>transcription</b> and the 9B model reaches <b>91.7%</b>;
+    <code>concept</code> requires <b>inferring against the literal reading</b> &mdash; the target of "open the drawer" is the <b>handle</b>, not the drawer front &mdash; and reaches only <b>49.5%</b>.
+    The errors are structured too: <code>socket &rarr; plug</code> is wrong in <b>all 24 cases, in the same direction</b>. "Plug" is perfectly good English;
+    that this dataset labels the socket on the wall is an annotation convention, unguessable without training.
+  </p>
+  <p class="story">
+    The two arms use different prompts, so this is <b>not a pure model comparison</b> and is not presented as one.
+  </p>
+
+  <h2 class="sec">Out-of-distribution demo: three self-scanned rooms</h2>
+  <p class="story">
+    Three household scenes scanned on site with an iPhone (a chest of drawers, a kitchen, a sofa corner), 13 instructions.
+    <b>Fully out of distribution</b> &mdash; different capture device, scenes, lighting, objects.
+    <b>All 13 are correct under per-question manual review</b>; there is no ground truth, so nothing is scored automatically and what is presented is the reasoning chain itself.
+    Two are deliberately marked low-confidence: one where the segmenter cannot recognise a branded, oddly shaped appliance, and one where a three-gang switch plate cannot be resolved from the instruction at all.
+  </p>
+
+  <div class="trap">
+    <div class="h">A geometry trap worth stating separately</div>
+    The iPhone exports 1920&times;1440 jpgs stored <b>landscape</b> with EXIF orientation=6, while the intrinsics are given relative to the landscape original.
+    The first version tried to fold the orientation <b>into the intrinsics matrix</b> &mdash; which is wrong:
+    <b>K expresses per-axis scaling and translation, but cannot express an axis swap.</b>
+    The result is that 3D points still project in the landscape frame while the image has been rotated upright, a 90&deg; discrepancy &mdash;
+    yet the projected points "look like they land on the image" and the visible-point statistics look normal.
+    <br><br>
+    What caught it: <b>correlating the point cloud's own colour against the colour sampled at its projected pixel</b> &mdash;
+    <b>&minus;0.23 before the fix, +0.89 after</b>. The correct approach is to project in the original landscape frame first, then apply a pure 2D transform to the pixel coordinates.
+  </div>
+
+  <h2 class="sec">A second line: supervised closed-set functional-part segmentation</h2>
+  <p class="story">
+    Before the training-free line, the same data was attacked as a 9-class supervised segmentation problem with no language involved:
+    lifted DINOv2 features &rarr; PointTransformerV3 with a semantic head and an offset head.
+  </p>
+  <div class="formula">per-point MLP on lifted features     mAP  3.13   AP50  8.25   AP25 28.1
+PointTransformerV3, dual-head             18.25        32.2        44.5   (5.8&times;)</div>
+  <p class="story">
+    Two enhancement routes failed and are reported as failures. The offset head is the more instructive one:
+    an oracle measured it as worth +18 AP, but the trained head never delivered it &mdash;
+    <b>an upper bound tells you where the ceiling is, not whether it is reachable.</b>
+    This line is also the evidence behind the first future-work item: training <i>does</i> learn the functional-part granularity
+    that the training-free line structurally cannot reach, which makes
+    "training-free front end + trained granularity refinement head" the clearest next step.
+  </p>
+
+  <div class="deepnav">
+    <a href="REPORT.md">
+      <div class="k">Full report</div>
+      <div class="tt">REPORT.md</div>
+      <div class="d">Method, results, ablations, limitations, future work, and the complete list of twenty rejected routes with the measurement that killed each.</div>
+    </a>
+    <a href="docs/method.md">
+      <div class="k">Method detail</div>
+      <div class="tt">docs/method.md</div>
+      <div class="d">Candidate table format, frame selection, the three refinement tiers and why each is configured as it is.</div>
+    </a>
+    <a href="docs/metrics_and_cost.md">
+      <div class="k">Metric &amp; cost protocol</div>
+      <div class="tt">docs/metrics_and_cost.md</div>
+      <div class="d">How the official metric actually reads, and how call counts (exact) and wall-clock seconds (measured) are kept separate &mdash; including why the conversion must use the mean, not the median.</div>
+    </a>
+    <a href="demo_ood/">
+      <div class="k">OOD demo</div>
+      <div class="tt">demo_ood/</div>
+      <div class="d">13 instructions on three self-scanned rooms. Per question: the selected frame, the candidate table that was the sole reasoning input, two visualisations, the parse, the reasoning transcript, the answer.</div>
+    </a>
+    <a href="results/task2/cot_records/">
+      <div class="k">Reasoning records</div>
+      <div class="tt">results/task2/cot_records/</div>
+      <div class="d">Structured records for all 445 questions, plus full reasoning transcripts for a curated set covering every concept type, every confidence tier, and the instructive failures.</div>
+    </a>
+    <a href="docs/task1_closed_set.md">
+      <div class="k">Second line</div>
+      <div class="tt">docs/task1_closed_set.md</div>
+      <div class="d">Closed-set functional-part segmentation in full: architecture constraints, the three-segment gap decomposition, per-class results, and two documented negative results.</div>
+    </a>
+  </div>
+
+  <div class="foot">
+    Every number on this page traces back to a raw <code>.jsonl</code> under <code>results/</code> and can be recomputed offline without the dataset:
+    <code>python code/task2/eval/mf_agg.py</code>.
+  </div>
+
+</div>
+</body>
+</html>

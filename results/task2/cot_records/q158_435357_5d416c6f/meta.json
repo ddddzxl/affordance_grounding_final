@@ -1,0 +1,212 @@
+{
+ "q": 158,
+ "visit": "435357",
+ "desc_id": "5d416c6f-7266-4d74-9a22-c647eb994a22",
+ "text": "Turn on the lamp on the side table next to the Christmas tree",
+ "parse": {
+  "text": "Turn on the lamp on the side table next to the Christmas tree",
+  "target": {
+   "concept": "light button",
+   "host": "lamp"
+  },
+  "entities": [
+   {
+    "name": "light button",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "side table",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "Christmas tree",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "lamp",
+    "b": "side table"
+   },
+   {
+    "rel": "next_to",
+    "a": "side table",
+    "b": "Christmas tree"
+   }
+  ],
+  "select": [],
+  "residual": "unified with val8's 'light switch'; which lamp it is, is carried by `host`, not by the search term",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899624",
+  "fid": "230107.282",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL-T",
+  "n_top": 2,
+  "topk": [
+   [
+    "42899624",
+    "230107.282"
+   ],
+   [
+    "42899624",
+    "230109.281"
+   ]
+  ],
+  "consistency": [
+   null,
+   null
+  ],
+  "n_frames": 191,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_target_visible",
+   "n_pool": 50,
+   "n_vis": 2
+  },
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light button",
+  "lamp",
+  "side table",
+  "Christmas tree"
+ ],
+ "roles": {
+  "light button": "target",
+  "lamp": "host",
+  "side table": "container",
+  "Christmas tree": "landmark"
+ },
+ "candidates": {
+  "light button": [
+   {
+    "x0": 720,
+    "x1": 734,
+    "y0": 673,
+    "y1": 692,
+    "cx": 726.3,
+    "cy": 681.4,
+    "npix": 184,
+    "area_pct": 0.007,
+    "score": 0.26
+   },
+   {
+    "x0": 730,
+    "x1": 744,
+    "y0": 687,
+    "y1": 699,
+    "cx": 737.0,
+    "cy": 693.0,
+    "npix": 184,
+    "area_pct": 0.007,
+    "score": 0.212
+   },
+   {
+    "x0": 700,
+    "x1": 714,
+    "y0": 660,
+    "y1": 672,
+    "cx": 708.0,
+    "cy": 665.4,
+    "npix": 154,
+    "area_pct": 0.006,
+    "score": 0.202
+   },
+   {
+    "x0": 710,
+    "x1": 724,
+    "y0": 667,
+    "y1": 679,
+    "cx": 717.0,
+    "cy": 673.0,
+    "npix": 184,
+    "area_pct": 0.007,
+    "score": 0.181
+   },
+   {
+    "x0": 1005,
+    "x1": 1019,
+    "y0": 627,
+    "y1": 639,
+    "cx": 1012.0,
+    "cy": 632.9,
+    "npix": 185,
+    "area_pct": 0.007,
+    "score": 0.172
+   },
+   {
+    "x0": 815,
+    "x1": 884,
+    "y0": 633,
+    "y1": 666,
+    "cx": 849.1,
+    "cy": 650.7,
+    "npix": 1854,
+    "area_pct": 0.067,
+    "score": 0.161
+   }
+  ],
+  "lamp": [],
+  "side table": [
+   {
+    "x0": 92,
+    "x1": 1439,
+    "y0": 153,
+    "y1": 1551,
+    "cx": 776.2,
+    "cy": 931.9,
+    "npix": 939455,
+    "area_pct": 33.979,
+    "score": 0.175
+   }
+  ],
+  "Christmas tree": []
+ },
+ "mask_keys": {
+  "light button": [
+   "light button|0",
+   "light button|1",
+   "light button|2",
+   "light button|3",
+   "light button|4",
+   "light button|5"
+  ],
+  "lamp": []
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "landmark 'Christmas tree' unusable",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "light switch",
+  "used": "light button",
+  "probe_hits": 1,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

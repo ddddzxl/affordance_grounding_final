@@ -1,0 +1,8 @@
+{
+ "final": [
+  4
+ ],
+ "confidence": "low",
+ "kind": "fallback",
+ "solver": "frontier-llm, manual CoT"
+}

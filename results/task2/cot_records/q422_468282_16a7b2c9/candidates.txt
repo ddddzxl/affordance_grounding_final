@@ -1,0 +1,42 @@
+TASK: "Flush the toilet"
+
+PARSE:
+  target concept = "flush button"   <- the thing that must be output
+  host           = 'toilet'   <- countable object the target sits on
+  entity  : 'flush button'  role=target
+  entity  : 'toilet'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  flush button         0   787   814  1327  1352   800.4  1339.6   0.021  0.389
+  flush button         1   830   875   840   947   856.9   889.9   0.078  0.255
+  flush button         2  1270  1369   100   218  1319.3   165.9   0.281  0.157
+  toilet               0    80  1053    77  1651   634.5   824.0   30.93  0.983
+
+
+
+
+
+CONTAINMENT (flush button inside the FILLED mask of each toilet):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  toilet #0   x[  80,1053] cx   634.5 cy   824.0 w= 973 contains #0, #1
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "flush button" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: flush button #<id>[, #<id> ...]

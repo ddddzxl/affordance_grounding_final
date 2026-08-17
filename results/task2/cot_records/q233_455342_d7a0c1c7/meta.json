@@ -1,0 +1,218 @@
+{
+ "q": 233,
+ "visit": "455342",
+ "desc_id": "d7a0c1c7-0b98-4475-aa3c-ca7ca2d38dc9",
+ "text": "Play a game using the joystick on the TV stand",
+ "parse": {
+  "text": "Play a game using the joystick on the TV stand",
+  "target": {
+   "concept": "joystick",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "joystick",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "TV stand",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "joystick",
+    "b": "TV stand"
+   }
+  ],
+  "select": [],
+  "residual": "train: 'play a game' is a key_press affordance, so the target is a button on the joystick, not the joystick body | independent check on the train split (val untouched): handheld-device GT has a median of 478 points while fixed-furniture handles have 87-108, a factor of 4.4-5.5. The annotation therefore covers the whole device rather than an individual key: what a person grasps is the whole remote or controller, and which key the press lands on does not constitute a separate interactable entity. Fixed furniture is the opposite -- there you operate the handle itself.",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358472",
+  "fid": "46626.101",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44358472",
+    "46626.101"
+   ],
+   [
+    "44358472",
+    "46629.100"
+   ],
+   [
+    "44358472",
+    "46652.391"
+   ],
+   [
+    "44358471",
+    "46592.298"
+   ],
+   [
+    "44358472",
+    "46630.199"
+   ],
+   [
+    "44358472",
+    "46638.096"
+   ],
+   [
+    "44358472",
+    "46655.389"
+   ],
+   [
+    "44358472",
+    "46627.101"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 97,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "joystick",
+  "TV stand"
+ ],
+ "roles": {
+  "joystick": "target",
+  "TV stand": "container"
+ },
+ "candidates": {
+  "joystick": [
+   {
+    "x0": 960,
+    "x1": 1110,
+    "y0": 475,
+    "y1": 534,
+    "cx": 1033.0,
+    "cy": 506.7,
+    "npix": 6677,
+    "area_pct": 0.242,
+    "score": 0.62
+   },
+   {
+    "x0": 313,
+    "x1": 372,
+    "y0": 1080,
+    "y1": 1179,
+    "cx": 344.1,
+    "cy": 1130.5,
+    "npix": 5337,
+    "area_pct": 0.193,
+    "score": 0.178
+   }
+  ],
+  "TV stand": [
+   {
+    "x0": 484,
+    "x1": 1768,
+    "y0": 440,
+    "y1": 1239,
+    "cx": 1167.9,
+    "cy": 732.4,
+    "npix": 549694,
+    "area_pct": 19.882,
+    "score": 0.928
+   },
+   {
+    "x0": 1300,
+    "x1": 1352,
+    "y0": 465,
+    "y1": 479,
+    "cx": 1326.8,
+    "cy": 471.3,
+    "npix": 686,
+    "area_pct": 0.025,
+    "score": 0.339
+   },
+   {
+    "x0": 913,
+    "x1": 946,
+    "y0": 435,
+    "y1": 454,
+    "cx": 929.3,
+    "cy": 446.2,
+    "npix": 503,
+    "area_pct": 0.018,
+    "score": 0.242
+   },
+   {
+    "x0": 700,
+    "x1": 846,
+    "y0": 810,
+    "y1": 905,
+    "cx": 759.1,
+    "cy": 861.1,
+    "npix": 8595,
+    "area_pct": 0.311,
+    "score": 0.192
+   }
+  ]
+ },
+ "mask_keys": {
+  "joystick": [
+   "joystick|0",
+   "joystick|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

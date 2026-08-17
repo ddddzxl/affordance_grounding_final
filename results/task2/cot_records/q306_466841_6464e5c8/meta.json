@@ -1,0 +1,523 @@
+{
+ "q": 306,
+ "visit": "466841",
+ "desc_id": "6464e5c8-a8d9-4b6a-a795-413276690ddf",
+ "text": "Open the fourth drawer of the cabinet with the bird cage and the toys on top",
+ "parse": {
+  "text": "Open the fourth drawer of the cabinet with the bird cage and the toys on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "bird cage",
+    "role": "landmark",
+    "instanceable": true
+   },
+   {
+    "name": "toys",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "bird cage"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "toys"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "ordinal",
+    "value": null,
+    "index": 4,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331589",
+  "fid": "15931.004",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 1,
+  "topk": [
+   [
+    "47331589",
+    "15931.004"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.367,
+    "s2": 0.903,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.2
+   }
+  ],
+  "n_frames": 135,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "bird cage",
+  "toys"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "bird cage": "landmark",
+  "toys": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 1827,
+    "x1": 1879,
+    "y0": 1075,
+    "y1": 1139,
+    "cx": 1852.3,
+    "cy": 1105.6,
+    "npix": 2912,
+    "area_pct": 0.105,
+    "score": 0.904
+   },
+   {
+    "x0": 1781,
+    "x1": 1832,
+    "y0": 1225,
+    "y1": 1284,
+    "cx": 1806.7,
+    "cy": 1255.3,
+    "npix": 2473,
+    "area_pct": 0.089,
+    "score": 0.902
+   },
+   {
+    "x0": 1747,
+    "x1": 1792,
+    "y0": 1365,
+    "y1": 1424,
+    "cx": 1768.2,
+    "cy": 1395.1,
+    "npix": 2335,
+    "area_pct": 0.084,
+    "score": 0.88
+   },
+   {
+    "x0": 1060,
+    "x1": 1113,
+    "y0": 651,
+    "y1": 714,
+    "cx": 1086.7,
+    "cy": 682.9,
+    "npix": 2907,
+    "area_pct": 0.105,
+    "score": 0.865
+   },
+   {
+    "x0": 1880,
+    "x1": 1919,
+    "y0": 900,
+    "y1": 964,
+    "cx": 1900.9,
+    "cy": 930.3,
+    "npix": 2318,
+    "area_pct": 0.084,
+    "score": 0.862
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 1647,
+    "x1": 1919,
+    "y0": 1166,
+    "y1": 1312,
+    "cx": 1788.8,
+    "cy": 1240.9,
+    "npix": 35631,
+    "area_pct": 1.289,
+    "score": 0.927
+   },
+   {
+    "x0": 1679,
+    "x1": 1919,
+    "y0": 1001,
+    "y1": 1170,
+    "cx": 1807.1,
+    "cy": 1087.8,
+    "npix": 36600,
+    "area_pct": 1.324,
+    "score": 0.924
+   },
+   {
+    "x0": 1715,
+    "x1": 1919,
+    "y0": 816,
+    "y1": 1002,
+    "cx": 1825.7,
+    "cy": 912.3,
+    "npix": 34190,
+    "area_pct": 1.237,
+    "score": 0.919
+   },
+   {
+    "x0": 1760,
+    "x1": 1919,
+    "y0": 596,
+    "y1": 814,
+    "cx": 1847.5,
+    "cy": 710.4,
+    "npix": 30926,
+    "area_pct": 1.119,
+    "score": 0.907
+   },
+   {
+    "x0": 1613,
+    "x1": 1919,
+    "y0": 1309,
+    "y1": 1439,
+    "cx": 1771.9,
+    "cy": 1375.6,
+    "npix": 35780,
+    "area_pct": 1.294,
+    "score": 0.895
+   },
+   {
+    "x0": 1807,
+    "x1": 1919,
+    "y0": 334,
+    "y1": 591,
+    "cx": 1871.7,
+    "cy": 474.3,
+    "npix": 23633,
+    "area_pct": 0.855,
+    "score": 0.885
+   },
+   {
+    "x0": 669,
+    "x1": 1843,
+    "y0": 0,
+    "y1": 1432,
+    "cx": 1375.9,
+    "cy": 847.4,
+    "npix": 736234,
+    "area_pct": 26.629,
+    "score": 0.166
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 1006,
+    "x1": 1841,
+    "y0": 333,
+    "y1": 1430,
+    "cx": 1380.0,
+    "cy": 842.5,
+    "npix": 743799,
+    "area_pct": 26.902,
+    "score": 0.915
+   },
+   {
+    "x0": 1615,
+    "x1": 1919,
+    "y0": 334,
+    "y1": 1435,
+    "cx": 1810.7,
+    "cy": 1007.9,
+    "npix": 205220,
+    "area_pct": 7.423,
+    "score": 0.586
+   },
+   {
+    "x0": 0,
+    "x1": 1046,
+    "y0": 329,
+    "y1": 1439,
+    "cx": 638.4,
+    "cy": 835.9,
+    "npix": 408382,
+    "area_pct": 14.771,
+    "score": 0.511
+   },
+   {
+    "x0": 0,
+    "x1": 268,
+    "y0": 916,
+    "y1": 1439,
+    "cx": 86.4,
+    "cy": 1209.2,
+    "npix": 38042,
+    "area_pct": 1.376,
+    "score": 0.234
+   },
+   {
+    "x0": 1751,
+    "x1": 1919,
+    "y0": 184,
+    "y1": 329,
+    "cx": 1856.0,
+    "cy": 248.8,
+    "npix": 12469,
+    "area_pct": 0.451,
+    "score": 0.167
+   }
+  ],
+  "bird cage": [
+   {
+    "x0": 0,
+    "x1": 1253,
+    "y0": 0,
+    "y1": 358,
+    "cx": 611.7,
+    "cy": 161.7,
+    "npix": 378205,
+    "area_pct": 13.679,
+    "score": 0.921
+   },
+   {
+    "x0": 1426,
+    "x1": 1526,
+    "y0": 0,
+    "y1": 149,
+    "cx": 1480.7,
+    "cy": 82.2,
+    "npix": 10369,
+    "area_pct": 0.375,
+    "score": 0.266
+   }
+  ],
+  "toys": [
+   {
+    "x0": 1553,
+    "x1": 1764,
+    "y0": 0,
+    "y1": 104,
+    "cx": 1653.7,
+    "cy": 48.3,
+    "npix": 19950,
+    "area_pct": 0.722,
+    "score": 0.676
+   },
+   {
+    "x0": 1827,
+    "x1": 1919,
+    "y0": 80,
+    "y1": 199,
+    "cx": 1880.4,
+    "cy": 145.2,
+    "npix": 7949,
+    "area_pct": 0.288,
+    "score": 0.583
+   },
+   {
+    "x0": 400,
+    "x1": 606,
+    "y0": 315,
+    "y1": 374,
+    "cx": 514.1,
+    "cy": 351.0,
+    "npix": 8744,
+    "area_pct": 0.316,
+    "score": 0.509
+   },
+   {
+    "x0": 1527,
+    "x1": 1761,
+    "y0": 100,
+    "y1": 189,
+    "cx": 1641.9,
+    "cy": 142.5,
+    "npix": 17081,
+    "area_pct": 0.618,
+    "score": 0.454
+   },
+   {
+    "x0": 1394,
+    "x1": 1551,
+    "y0": 150,
+    "y1": 219,
+    "cx": 1472.0,
+    "cy": 183.9,
+    "npix": 9368,
+    "area_pct": 0.339,
+    "score": 0.438
+   },
+   {
+    "x0": 1850,
+    "x1": 1919,
+    "y0": 10,
+    "y1": 124,
+    "cx": 1885.5,
+    "cy": 60.8,
+    "npix": 5157,
+    "area_pct": 0.187,
+    "score": 0.414
+   },
+   {
+    "x0": 297,
+    "x1": 339,
+    "y0": 390,
+    "y1": 423,
+    "cx": 320.8,
+    "cy": 407.3,
+    "npix": 1047,
+    "area_pct": 0.038,
+    "score": 0.294
+   },
+   {
+    "x0": 1353,
+    "x1": 1525,
+    "y0": 0,
+    "y1": 173,
+    "cx": 1443.9,
+    "cy": 83.4,
+    "npix": 22407,
+    "area_pct": 0.81,
+    "score": 0.291
+   },
+   {
+    "x0": 1249,
+    "x1": 1360,
+    "y0": 0,
+    "y1": 199,
+    "cx": 1305.7,
+    "cy": 107.7,
+    "npix": 18356,
+    "area_pct": 0.664,
+    "score": 0.284
+   },
+   {
+    "x0": 880,
+    "x1": 987,
+    "y0": 1220,
+    "y1": 1414,
+    "cx": 937.7,
+    "cy": 1310.0,
+    "npix": 16166,
+    "area_pct": 0.585,
+    "score": 0.281
+   },
+   {
+    "x0": 0,
+    "x1": 1337,
+    "y0": 0,
+    "y1": 387,
+    "cx": 609.1,
+    "cy": 162.8,
+    "npix": 386777,
+    "area_pct": 13.989,
+    "score": 0.201
+   },
+   {
+    "x0": 346,
+    "x1": 896,
+    "y0": 1335,
+    "y1": 1439,
+    "cx": 616.6,
+    "cy": 1394.8,
+    "npix": 43853,
+    "area_pct": 1.586,
+    "score": 0.193
+   },
+   {
+    "x0": 8,
+    "x1": 889,
+    "y0": 812,
+    "y1": 1439,
+    "cx": 342.5,
+    "cy": 1127.6,
+    "npix": 101514,
+    "area_pct": 3.672,
+    "score": 0.164
+   },
+   {
+    "x0": 694,
+    "x1": 879,
+    "y0": 1041,
+    "y1": 1359,
+    "cx": 809.5,
+    "cy": 1327.3,
+    "npix": 7488,
+    "area_pct": 0.271,
+    "score": 0.156
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5",
+   "drawer|6"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": 4,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

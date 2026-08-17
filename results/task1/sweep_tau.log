@@ -1,0 +1,17 @@
+# prob_thresh (τ) sweep — v0mlp_s0 (inv_sqrt) MODEL cls, no logit_adjust, eps=0.05, min_cluster=20
+# STATUS: SUPERSEDED by the prior-shift diagnosis. Kept as evidence.
+# VERDICT: τ helps monotonically but CEILINGS at AP~2.1 (τ=0.95) << oracle 71. Even keeping only
+#          prob>0.95 points can't recover it -> the false positives are HIGH-confidence -> the
+#          model is over-confident on background -> prior shift (a TRAINING problem, not postproc).
+#
+#   τ      AP      AP50    AP25
+   0.50   1.090   1.980   22.751
+   0.70   1.304   2.302   25.805
+   0.80   1.873   3.355   27.407
+   0.90   1.806   3.677   29.644
+   0.95   2.106   4.171   31.465
+#
+# per-class @ τ=0.95 (AP / AP50 / AP25):
+#   rotate 3.198/7.799/24.763   key_press 8.572/14.100/43.668   tip_push 2.652/4.196/28.876
+#   hook_pull 0.297/1.227/14.819   pinch_pull 3.265/7.398/37.539   hook_turn 0.180/0.934/8.252
+#   foot_push 0/0/100 (1 val inst)   plug_in 0.632/0.830/12.653   unplug 0.161/1.049/12.613

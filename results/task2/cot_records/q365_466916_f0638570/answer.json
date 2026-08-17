@@ -1,0 +1,8 @@
+{
+ "final": [
+  3
+ ],
+ "confidence": "low",
+ "kind": "giant_false_positive",
+ "solver": "frontier-llm, manual CoT"
+}

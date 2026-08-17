@@ -1,0 +1,324 @@
+{
+ "q": 201,
+ "visit": "438102",
+ "desc_id": "cd9901ab-17c3-4fe8-aff5-d75b5b873266",
+ "text": "Open the top right cabinet drawer with the globe on top",
+ "parse": {
+  "text": "Open the top right cabinet drawer with the globe on top",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "globe",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "drawer"
+   },
+   {
+    "rel": "has_on_top",
+    "a": "cabinet",
+    "b": "globe"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   },
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43896244",
+  "fid": "7649.300",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 6,
+  "topk": [
+   [
+    "43896244",
+    "7649.300"
+   ],
+   [
+    "43896247",
+    "7616.597"
+   ],
+   [
+    "43896247",
+    "7615.598"
+   ],
+   [
+    "43896249",
+    "7566.102"
+   ],
+   [
+    "43896247",
+    "7608.601"
+   ],
+   [
+    "43896244",
+    "7648.301"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.525,
+    "s2": 0.97,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.762,
+    "s2": 0.663,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.525,
+    "s2": 0.591,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.208,
+    "s2": 0.845,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 193,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "cabinet",
+  "globe"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "cabinet": "container",
+  "globe": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 660,
+    "x1": 712,
+    "y0": 1250,
+    "y1": 1299,
+    "cx": 683.6,
+    "cy": 1272.1,
+    "npix": 2071,
+    "area_pct": 0.075,
+    "score": 0.89
+   },
+   {
+    "x0": 646,
+    "x1": 699,
+    "y0": 1028,
+    "y1": 1079,
+    "cx": 670.6,
+    "cy": 1051.0,
+    "npix": 2142,
+    "area_pct": 0.077,
+    "score": 0.888
+   },
+   {
+    "x0": 313,
+    "x1": 364,
+    "y0": 815,
+    "y1": 851,
+    "cx": 336.3,
+    "cy": 831.8,
+    "npix": 1511,
+    "area_pct": 0.055,
+    "score": 0.845
+   },
+   {
+    "x0": 334,
+    "x1": 386,
+    "y0": 1000,
+    "y1": 1034,
+    "cx": 361.1,
+    "cy": 1015.6,
+    "npix": 1529,
+    "area_pct": 0.055,
+    "score": 0.82
+   },
+   {
+    "x0": 367,
+    "x1": 415,
+    "y0": 1220,
+    "y1": 1254,
+    "cx": 391.1,
+    "cy": 1235.4,
+    "npix": 1385,
+    "area_pct": 0.05,
+    "score": 0.811
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 499,
+    "x1": 919,
+    "y0": 866,
+    "y1": 1286,
+    "cx": 716.6,
+    "cy": 1069.8,
+    "npix": 73728,
+    "area_pct": 2.667,
+    "score": 0.928
+   },
+   {
+    "x0": 208,
+    "x1": 495,
+    "y0": 702,
+    "y1": 983,
+    "cx": 356.8,
+    "cy": 840.7,
+    "npix": 39317,
+    "area_pct": 1.422,
+    "score": 0.89
+   },
+   {
+    "x0": 245,
+    "x1": 917,
+    "y0": 854,
+    "y1": 1439,
+    "cx": 588.1,
+    "cy": 1175.2,
+    "npix": 112768,
+    "area_pct": 4.079,
+    "score": 0.878
+   },
+   {
+    "x0": 307,
+    "x1": 763,
+    "y0": 1067,
+    "y1": 1439,
+    "cx": 484.9,
+    "cy": 1285.1,
+    "npix": 63645,
+    "area_pct": 2.302,
+    "score": 0.809
+   },
+   {
+    "x0": 300,
+    "x1": 534,
+    "y0": 1258,
+    "y1": 1439,
+    "cx": 388.1,
+    "cy": 1369.8,
+    "npix": 23402,
+    "area_pct": 0.846,
+    "score": 0.789
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 186,
+    "x1": 1422,
+    "y0": 524,
+    "y1": 1439,
+    "cx": 780.9,
+    "cy": 1021.9,
+    "npix": 890315,
+    "area_pct": 32.202,
+    "score": 0.5
+   }
+  ],
+  "globe": [
+   {
+    "x0": 828,
+    "x1": 1412,
+    "y0": 31,
+    "y1": 632,
+    "cx": 1130.4,
+    "cy": 332.7,
+    "npix": 256714,
+    "area_pct": 9.285,
+    "score": 0.943
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

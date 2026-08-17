@@ -1,0 +1,38 @@
+TASK: "Turn on the ceiling light using the switch next to the door"
+
+PARSE:
+  target concept = "light switch"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'light switch'  role=target
+  entity  : 'door'  role=landmark
+  relation: next_to(a='light switch', b='door')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  light switch         0   710   729   953  1006   719.5   979.5   0.038  0.829
+  light switch         1   685   714  1233  1306   699.6  1269.0   0.064  0.337
+  light switch         2   700   719  1407  1446   709.3  1422.8   0.022  0.262
+  door                 0   223   582   511  1919   404.6  1229.0   13.93  0.975
+  door                 1  1006  1439     0  1919  1242.2   963.5  26.813  0.965
+  door                 2   791   874   708  1557   832.7  1126.3   1.434  0.824
+  door                 3   835   893   707  1514   864.0  1089.8   0.545   0.53
+  door                 4   995  1044   926  1346  1021.6  1129.4   0.482  0.405
+  door                 5   968  1022   933  1396   993.4  1164.6   0.533  0.374
+
+QUESTION: which "light switch" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: light switch #<id>[, #<id> ...]

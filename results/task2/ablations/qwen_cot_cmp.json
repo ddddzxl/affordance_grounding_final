@@ -1,0 +1,2540 @@
+[
+ {
+  "q": "q003_421254_471d04be",
+  "text": "Open the top left drawer of the cabinet located to the left of the TV",
+  "concept": "drawer handle",
+  "n_cand": 21,
+  "pool_ok": true,
+  "gt_ids": [
+   12
+  ],
+  "pick_c": [
+   12
+  ],
+  "pick_q": [
+   12
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "vert+horiz",
+  "kind_q": "select",
+  "n_out": 4603,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q009_421254_809a07a1",
+  "text": "Open the fourth drawer of the cabinet located to the left of the TV",
+  "concept": "drawer handle",
+  "n_cand": 21,
+  "pool_ok": true,
+  "gt_ids": [
+   15,
+   19
+  ],
+  "pick_c": [
+   15,
+   19
+  ],
+  "pick_q": [
+   8,
+   12
+  ],
+  "ok_c": true,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "ordinal",
+  "kind_q": "ordinal",
+  "n_out": 7324,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q014_421254_af0b7790",
+  "text": "Open the bottom drawer of the cabinet located to the left of the TV",
+  "concept": "drawer handle",
+  "n_cand": 20,
+  "pool_ok": true,
+  "gt_ids": [
+   12,
+   17
+  ],
+  "pick_c": [
+   12,
+   17
+  ],
+  "pick_q": [
+   12,
+   17
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 7928,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q018_421254_c9cde8d0",
+  "text": "Turn on the TV using the left remote on the nightstand",
+  "concept": "remote control",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select_on_target",
+  "kind_q": "select",
+  "n_out": 2440,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q029_421393_561310ae",
+  "text": "Turn on the ceiling light using the switch next to the door",
+  "concept": "light switch",
+  "n_cand": 3,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "rel-only",
+  "kind_q": "relation",
+  "n_out": 3870,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q030_421393_729dc0d8",
+  "text": "Adjust the room's temperature using the radiator dial",
+  "concept": "radiator knob",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   2
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "containment_incomplete",
+  "kind_q": "containment",
+  "n_out": 2832,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q035_421393_d481bb45",
+  "text": "Open the second drawer of the nightstand",
+  "concept": "drawer handle",
+  "n_cand": 6,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "ordinal",
+  "kind_q": "select",
+  "n_out": 4500,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q036_421393_e252b557",
+  "text": "Open the third drawer of the nightstand",
+  "concept": "drawer handle",
+  "n_cand": 6,
+  "pool_ok": true,
+  "gt_ids": [
+   2
+  ],
+  "pick_c": [
+   2
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "ordinal",
+  "kind_q": "ordinal",
+  "n_out": 7051,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q038_421657_2a801632",
+  "text": "Turn on the ceiling light",
+  "concept": "light switch",
+  "n_cand": 1,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "detection_quality",
+  "n_out": 1430,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q040_421657_6acfa99e",
+  "text": "Close the bedroom door",
+  "concept": "door handle",
+  "n_cand": 1,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "containment",
+  "n_out": 1248,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q042_421657_8cb471c9",
+  "text": "Plug the device in the socket next to the door",
+  "concept": "socket",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "relation",
+  "kind_q": "relation",
+  "n_out": 3704,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q044_421657_a96dd129",
+  "text": "Open the right door of the wooden closet",
+  "concept": "door handle",
+  "n_cand": 4,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 3380,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q047_422356_0169fc47",
+  "text": "Open the window",
+  "concept": "window handle",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "non_equivalent_targets",
+  "kind_q": "detection_quality",
+  "n_out": 4758,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q055_422356_bd016cae",
+  "text": "Turn on the TV using the remote control on the table",
+  "concept": "remote control",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "container",
+  "kind_q": "detection_quality",
+  "n_out": 3567,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q056_422356_e41bf377",
+  "text": "Open the right drawer of the center table",
+  "concept": "drawer handle",
+  "n_cand": 1,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "medium",
+  "kind_c": "unique",
+  "kind_q": "select",
+  "n_out": 6979,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q060_422842_36b1ac56",
+  "text": "Open the left door of the closet next to the radiator",
+  "concept": "door handle",
+  "n_cand": 12,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 3979,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q064_422842_5e1d5350",
+  "text": "Open the left door of the wall cabinet located above the glass cabinet decorated with pictures",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 11210,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q068_422842_7d66ed4b",
+  "text": "Open the top left drawer of the dressing table",
+  "concept": "drawer handle",
+  "n_cand": 9,
+  "pool_ok": true,
+  "gt_ids": [
+   5
+  ],
+  "pick_c": [
+   3,
+   5
+  ],
+  "pick_q": [
+   3,
+   5
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "vert+horiz",
+  "kind_q": "select",
+  "n_out": 5835,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q071_422842_882cd1ac",
+  "text": "Open the right door of the closet located to the right of the mirror",
+  "concept": "door handle",
+  "n_cand": 6,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "relation",
+  "kind_q": "containment",
+  "n_out": 7854,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q074_422842_a5e1f137",
+  "text": "Open the right door of the white closet between the doors",
+  "concept": "door handle",
+  "n_cand": 5,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 4147,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q075_422842_a66e915b",
+  "text": "Open the right door of the wall cabinet located above the bed and near the door",
+  "concept": "door handle",
+  "n_cand": 5,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   4
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 3831,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q076_422842_ae2ef847",
+  "text": "Open the left door of the white closet between the doors",
+  "concept": "door handle",
+  "n_cand": 5,
+  "pool_ok": true,
+  "gt_ids": [
+   3
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 2905,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q082_422842_def5de81",
+  "text": "Open the top right drawer of the dressing table",
+  "concept": "drawer handle",
+  "n_cand": 4,
+  "pool_ok": true,
+  "gt_ids": [
+   3
+  ],
+  "pick_c": [
+   2
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 8988,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q084_422842_f11ad045",
+  "text": "Open the top drawer of the nightstand with the books on top",
+  "concept": "drawer handle",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   0,
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "host_merged_two_layers",
+  "kind_q": "select",
+  "n_out": 7334,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q095_423452_10829eca",
+  "text": "Close the door located between the armchair and the small table",
+  "concept": "door handle",
+  "n_cand": 6,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "rel-only",
+  "kind_q": "containment",
+  "n_out": 5744,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q098_423452_24ced3e5",
+  "text": "Unplug the floor lamp next to the dining table",
+  "concept": "plug",
+  "n_cand": 7,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   3,
+   5
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "broken_relation",
+  "kind_q": "relation",
+  "n_out": 9275,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q101_423452_78fb6192",
+  "text": "Adjust the intensity of the floor lamp light next to the dining table",
+  "concept": "dimmer switch",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   2
+  ],
+  "pick_c": [
+   2
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "containment",
+  "kind_q": "containment",
+  "n_out": 3141,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q104_423452_fad84426",
+  "text": "Open the right window above the couch",
+  "concept": "window handle",
+  "n_cand": 1,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "containment",
+  "n_out": 6005,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q108_423957_50a5dee6",
+  "text": "Open the top drawer of the nightstand",
+  "concept": "drawer handle",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 1706,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q111_423957_76768416",
+  "text": "Adjust the light intensity using the dial next to the door",
+  "concept": "dimmer dial",
+  "n_cand": 0,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [],
+  "pick_q": [],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "none",
+  "conf_q": "low",
+  "kind_c": "no_candidate",
+  "kind_q": "fallback",
+  "n_out": 4292,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q115_423957_cc2257dd",
+  "text": "Open the top window above the nightstand",
+  "concept": "window handle",
+  "n_cand": 4,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "relation_weak",
+  "kind_q": "select",
+  "n_out": 3081,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q118_434888_07242cd1",
+  "text": "Open the bottom left drawer of the closet next to the door",
+  "concept": "drawer handle",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   2
+  ],
+  "pick_c": [
+   2
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "vert+horiz",
+  "kind_q": "select",
+  "n_out": 4880,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q119_434888_2444d176",
+  "text": "Open the drawer of the white vanity table",
+  "concept": "drawer handle",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0,
+   1
+  ],
+  "pick_c": [
+   0,
+   1
+  ],
+  "pick_q": [
+   0,
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "host_unique_give_all",
+  "kind_q": "containment",
+  "n_out": 4610,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q120_434888_35e916d1",
+  "text": "Open the drawer of the nightstand located to the left of the bed",
+  "concept": "drawer handle",
+  "n_cand": 1,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "containment",
+  "n_out": 3443,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q132_434888_f62a4c49",
+  "text": "Open the right closet door next to the door",
+  "concept": "door handle",
+  "n_cand": 4,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 3660,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q139_434897_a38225ed",
+  "text": "Open the left door of the wooden closet",
+  "concept": "door handle",
+  "n_cand": 5,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [],
+  "ok_c": true,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": null,
+  "kind_c": "select",
+  "kind_q": null,
+  "n_out": 2716,
+  "trunc": false,
+  "fail": true
+ },
+ {
+  "q": "q140_434897_b596c932",
+  "text": "Plug the device in the one of the sockets next to the wooden closet",
+  "concept": "socket",
+  "n_cand": 1,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "relation",
+  "n_out": 2417,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q143_434897_e9b99bb3",
+  "text": "Open the second drawer of the wooden closet",
+  "concept": "drawer handle",
+  "n_cand": 5,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": null,
+  "kind_c": "ordinal",
+  "kind_q": null,
+  "n_out": 5614,
+  "trunc": false,
+  "fail": true
+ },
+ {
+  "q": "q149_435324_bc4fb328",
+  "text": "Open the closet door between the cabinet and the door",
+  "concept": "door handle",
+  "n_cand": 7,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   6
+  ],
+  "ok_c": true,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "rel-only",
+  "kind_q": "relation",
+  "n_out": 10555,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q157_435357_3de35405",
+  "text": "Turn on the ceiling light",
+  "concept": "light button",
+  "n_cand": 1,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "low",
+  "kind_c": "unique",
+  "kind_q": "detection_quality",
+  "n_out": 3499,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q161_435357_8582201f",
+  "text": "Unplug the space heater under the window",
+  "concept": "plug",
+  "n_cand": 1,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "low",
+  "kind_c": "unique",
+  "kind_q": "relation",
+  "n_out": 7033,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q170_437157_163b76b3",
+  "text": "Open the drawer of the bedside table with the telephone on top",
+  "concept": "drawer handle",
+  "n_cand": 1,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "containment",
+  "n_out": 1195,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q175_437157_f5c001bd",
+  "text": "Open the top drawer of the closet next to the nightstand",
+  "concept": "drawer handle",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": true,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 6471,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q176_437294_037f432a",
+  "text": "Open the top drawer of the nightstand with the lamp on top",
+  "concept": "drawer handle",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 3250,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q179_437294_2f45cfc1",
+  "text": "Open the left chest on the vanity table",
+  "concept": "chest knob",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0,
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "no_host_detected",
+  "kind_q": "detection_quality",
+  "n_out": 6408,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q186_437294_890e4a9d",
+  "text": "Open the bottom drawer of the nightstand to the right of the bed",
+  "concept": "drawer handle",
+  "n_cand": 1,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "select",
+  "n_out": 4213,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q187_437294_894d5f8e",
+  "text": "Open the left door of the closet near the window",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "only_candidate",
+  "kind_q": "select",
+  "n_out": 4161,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q190_437294_c5361095",
+  "text": "Control the temperature using the dial under the window",
+  "concept": "radiator knob",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "low",
+  "conf_q": "high",
+  "kind_c": "broken_relation",
+  "kind_q": "relation",
+  "n_out": 2663,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q211_438775_67506381",
+  "text": "Close the left glass door under the TV screen",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "low",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 7521,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q212_438775_6b24fa0c",
+  "text": "Open the bottom drawer of the cabinet located on the left side of the couch",
+  "concept": "drawer handle",
+  "n_cand": 5,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 3473,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q217_438775_e514e1d8",
+  "text": "Open the middle drawer of the cabinet located on the left side of the couch",
+  "concept": "drawer handle",
+  "n_cand": 5,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 2272,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q218_438775_f16e4f87",
+  "text": "Lock the white door next to the radiator",
+  "concept": "door lock",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "containment",
+  "kind_q": "containment",
+  "n_out": 1428,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q219_438775_f4c143ab",
+  "text": "Lock the glass door that leads to the kitchen",
+  "concept": "door lock",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "containment",
+  "kind_q": "containment",
+  "n_out": 4151,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q222_455342_0798e456",
+  "text": "Unplug the table lamp to the right of the couch",
+  "concept": "plug",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   2
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": false,
+  "ok_q": true,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "relation",
+  "kind_q": "detection_quality",
+  "n_out": 4534,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q229_455342_94cdad0f",
+  "text": "Open the glass door that leads to the terrace",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "containment",
+  "kind_q": "containment",
+  "n_out": 3886,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q233_455342_d7a0c1c7",
+  "text": "Play a game using the joystick on the TV stand",
+  "concept": "joystick",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "rel-only",
+  "kind_q": "relation",
+  "n_out": 1450,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q238_466092_30834db4",
+  "text": "Close the door",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "containment",
+  "kind_q": "containment",
+  "n_out": 6694,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q240_466092_45c550d9",
+  "text": "Unplug the lamp on the desk",
+  "concept": "plug",
+  "n_cand": 3,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "broken_host",
+  "kind_q": "detection_quality",
+  "n_out": 6018,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q241_466092_476a19a0",
+  "text": "Open the right cabinet door with the picture frames on top",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   0,
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 7433,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q244_466092_91246d02",
+  "text": "Open the window on the right behind the chair",
+  "concept": "window handle",
+  "n_cand": 5,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   4
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "low",
+  "kind_c": "fallback",
+  "kind_q": "select",
+  "n_out": 9562,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q247_466092_c9166d96",
+  "text": "Turn on the lamp on the table to the left of the red couch",
+  "concept": "light switch",
+  "n_cand": 4,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "broken_host",
+  "kind_q": "detection_quality",
+  "n_out": 16384,
+  "trunc": true,
+  "fail": false
+ },
+ {
+  "q": "q250_466092_e8ef3dcd",
+  "text": "Control the temperature using the radiator dial next to the office desk",
+  "concept": "radiator knob",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "relation",
+  "kind_q": "relation",
+  "n_out": 4788,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q258_466112_efca65bc",
+  "text": "Open the right window part",
+  "concept": "window handle",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "host_merged",
+  "kind_q": "select",
+  "n_out": 7384,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q270_466162_b10c9ab9",
+  "text": "Open the second drawer of the cabinet with the beauty products on top",
+  "concept": "drawer handle",
+  "n_cand": 12,
+  "pool_ok": true,
+  "gt_ids": [
+   2,
+   5
+  ],
+  "pick_c": [
+   2,
+   5
+  ],
+  "pick_q": [
+   7
+  ],
+  "ok_c": true,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "ordinal",
+  "kind_q": "ordinal",
+  "n_out": 8634,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q276_466437_00da900a",
+  "text": "Open the top right drawer of the cabinet with the mirror and beauty products on top",
+  "concept": "drawer handle",
+  "n_cand": 21,
+  "pool_ok": true,
+  "gt_ids": [
+   7,
+   8
+  ],
+  "pick_c": [
+   7,
+   8,
+   16
+  ],
+  "pick_q": [
+   1,
+   9
+  ],
+  "ok_c": true,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "vert+horiz",
+  "kind_q": "select",
+  "n_out": 8910,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q278_466437_1501d8e7",
+  "text": "Open the rightmost closet door with the built-in mirror",
+  "concept": "door handle",
+  "n_cand": 7,
+  "pool_ok": true,
+  "gt_ids": [
+   3
+  ],
+  "pick_c": [
+   3
+  ],
+  "pick_q": [
+   0,
+   6
+  ],
+  "ok_c": true,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 9026,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q279_466437_1bca5d90",
+  "text": "Open the bottom drawer of the wooden nightstand with the books on top",
+  "concept": "drawer handle",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 1690,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q281_466437_40aa288f",
+  "text": "Open the leftmost closet door",
+  "concept": "door handle",
+  "n_cand": 7,
+  "pool_ok": true,
+  "gt_ids": [
+   2
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 4762,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q287_466437_9c1810fb",
+  "text": "Open the nightstand door with the tablet on top",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "containment",
+  "kind_q": "containment",
+  "n_out": 3860,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q295_466437_e0fe364b",
+  "text": "Open the window next to the nightstand",
+  "concept": "window handle",
+  "n_cand": 4,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "broken_host",
+  "kind_q": "containment",
+  "n_out": 7128,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q297_466437_e7121d04",
+  "text": "Open the bottom right drawer of the cabinet with the mirror and beauty products on top",
+  "concept": "drawer handle",
+  "n_cand": 5,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 6181,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q299_466841_1423ac46",
+  "text": "Open the fifth drawer of the cabinet with the bird cage and the toys on top",
+  "concept": "drawer handle",
+  "n_cand": 5,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "ordinal",
+  "kind_q": "select",
+  "n_out": 13094,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q301_466841_254df729",
+  "text": "Turn on the ceiling light",
+  "concept": "light switch",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "detection_strength",
+  "kind_q": "detection_quality",
+  "n_out": 2424,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q311_466841_a692a916",
+  "text": "Open the top drawer of the cabinet with the printer on top",
+  "concept": "drawer handle",
+  "n_cand": 3,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "no_host_detected",
+  "kind_q": "select",
+  "n_out": 4676,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q312_466841_ccfd1713",
+  "text": "Open the middle window behind the potted plant",
+  "concept": "window handle",
+  "n_cand": 3,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   0,
+   1,
+   2
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "broken_host",
+  "kind_q": "select",
+  "n_out": 8241,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q323_466880_278fb43c",
+  "text": "Open the cabinet door directly above and to the left of the oven",
+  "concept": "door handle",
+  "n_cand": 7,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   2
+  ],
+  "pick_q": [
+   5
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "rel-only",
+  "kind_q": "relation",
+  "n_out": 11884,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q340_466880_a8e1ee54",
+  "text": "Open the left glass cabinet door above the coffee machine",
+  "concept": "door handle",
+  "n_cand": 5,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "high",
+  "kind_c": "indistinguishable",
+  "kind_q": "select",
+  "n_out": 15683,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q344_466880_d5d26122",
+  "text": "Open the right kitchen counter door with the sink on top",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "broken_host",
+  "kind_q": "select",
+  "n_out": 6995,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q351_466916_74c4aa3d",
+  "text": "Open the left door of the TV stand",
+  "concept": "door handle",
+  "n_cand": 1,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "medium",
+  "kind_c": "unique",
+  "kind_q": "select",
+  "n_out": 9722,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q354_466916_85b96697",
+  "text": "Play a game using the right joystick on the shelf of the TV stand",
+  "concept": "joystick",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 7369,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q355_466916_937be5ad",
+  "text": "Turn on the ceiling light",
+  "concept": "light switch",
+  "n_cand": 1,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "detection_quality",
+  "n_out": 3221,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q362_466916_be3f2542",
+  "text": "Play a game using the left joystick on the shelf of the TV stand",
+  "concept": "joystick",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   1
+  ],
+  "pick_c": [
+   1
+  ],
+  "pick_q": [
+   0,
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": false,
+  "conf_c": "high",
+  "conf_q": "medium",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 14057,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q370_467115_0b94689e",
+  "text": "Control the temperature using the radiator dial under the kitchen window",
+  "concept": "radiator dial",
+  "n_cand": 1,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "relation",
+  "n_out": 4691,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q371_467115_1632fe22",
+  "text": "Open the cabinet door directly to the right of the range hood",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "relation",
+  "kind_q": "relation",
+  "n_out": 7998,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q375_467115_2a63449f",
+  "text": "Turn on the TV using the remote on the dining table",
+  "concept": "remote control button",
+  "n_cand": 11,
+  "pool_ok": true,
+  "gt_ids": [
+   3,
+   5,
+   6,
+   10
+  ],
+  "pick_c": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "pick_q": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "all_inside_gt",
+  "kind_q": "relation",
+  "n_out": 5420,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q379_467115_41789392",
+  "text": "Open the top right cabinet door located to the left of the dining table",
+  "concept": "door handle",
+  "n_cand": 10,
+  "pool_ok": true,
+  "gt_ids": [
+   4
+  ],
+  "pick_c": [
+   4
+  ],
+  "pick_q": [
+   4
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "vert+horiz",
+  "kind_q": "select",
+  "n_out": 5857,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q386_467115_621dd99a",
+  "text": "Turn on the tap in the sink",
+  "concept": "faucet handle",
+  "n_cand": 6,
+  "pool_ok": true,
+  "gt_ids": [
+   0,
+   1
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0,
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": false,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "over_detection",
+  "kind_q": "containment",
+  "n_out": 9190,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q387_467115_62e5927e",
+  "text": "Open the cabinet door above the microwave",
+  "concept": "door handle",
+  "n_cand": 5,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "relation",
+  "kind_q": "relation",
+  "n_out": 5247,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q395_467115_810d7db6",
+  "text": "Open the top counter drawer directly under the electric kettle",
+  "concept": "drawer handle",
+  "n_cand": 5,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "landmark_choice",
+  "kind_q": "select",
+  "n_out": 7300,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q396_467115_8a71e45f",
+  "text": "Plug the device in the top socket above the kitchen counter",
+  "concept": "socket",
+  "n_cand": 1,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "select",
+  "n_out": 2402,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q399_467115_ca4329e9",
+  "text": "Open the cabinet door above the sink",
+  "concept": "door handle",
+  "n_cand": 7,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   3
+  ],
+  "pick_q": [
+   3
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "relation",
+  "kind_q": "relation",
+  "n_out": 9191,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q400_467115_d0f6d4a8",
+  "text": "Plug the device in one of the sockets next to the dish drainer",
+  "concept": "socket",
+  "n_cand": 1,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "forced",
+  "conf_q": "high",
+  "kind_c": "unique",
+  "kind_q": "relation",
+  "n_out": 2732,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q410_467115_fde76007",
+  "text": "Open the cabinet door directly to the left of the range hood",
+  "concept": "door handle",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "relation",
+  "kind_q": "relation",
+  "n_out": 2293,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q423_468282_22835a86",
+  "text": "Select a washing machine program",
+  "concept": "program knob",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0,
+   1
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": false,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "detection_strength",
+  "kind_q": "containment",
+  "n_out": 5379,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q428_468282_9b8a00f3",
+  "text": "Close the shower door",
+  "concept": "door handle",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "containment",
+  "kind_q": "containment",
+  "n_out": 5032,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q429_468282_9f874491",
+  "text": "Lock the bathroom door",
+  "concept": "lock",
+  "n_cand": 2,
+  "pool_ok": false,
+  "gt_ids": [],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0,
+   1
+  ],
+  "ok_c": false,
+  "ok_q": false,
+  "same": false,
+  "conf_c": "low",
+  "conf_q": "medium",
+  "kind_c": "boundary_fix",
+  "kind_q": "relation",
+  "n_out": 6140,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q431_468282_f6f1a1e2",
+  "text": "Control some functions on the washing machine using the button panel",
+  "concept": "button panel",
+  "n_cand": 3,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "high",
+  "conf_q": "high",
+  "kind_c": "containment",
+  "kind_q": "detection_quality",
+  "n_out": 4769,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q437_468476_5b916b6b",
+  "text": "Unplug the power strip on the floor",
+  "concept": "plug",
+  "n_cand": 2,
+  "pool_ok": true,
+  "gt_ids": [
+   0
+  ],
+  "pick_c": [
+   0
+  ],
+  "pick_q": [
+   0
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "high",
+  "kind_c": "containment",
+  "kind_q": "relation",
+  "n_out": 1491,
+  "trunc": false,
+  "fail": false
+ },
+ {
+  "q": "q440_468476_90bbb7bd",
+  "text": "Open the left cabinet door under the TV",
+  "concept": "door handle",
+  "n_cand": 4,
+  "pool_ok": true,
+  "gt_ids": [
+   2
+  ],
+  "pick_c": [
+   2
+  ],
+  "pick_q": [
+   2
+  ],
+  "ok_c": true,
+  "ok_q": true,
+  "same": true,
+  "conf_c": "medium",
+  "conf_q": "medium",
+  "kind_c": "select",
+  "kind_q": "select",
+  "n_out": 9037,
+  "trunc": false,
+  "fail": false
+ }
+]

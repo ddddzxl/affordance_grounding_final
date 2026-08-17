@@ -1,0 +1,296 @@
+{
+ "q": 391,
+ "visit": "467115",
+ "desc_id": "7583eab9-291b-4ede-94d7-0d40730c7d65",
+ "text": "Open the bottom counter door directly under the electric kettle",
+ "parse": {
+  "text": "Open the bottom counter door directly under the electric kettle",
+  "target": {
+   "concept": "door handle",
+   "host": "counter door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "counter door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "counter",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "electric kettle",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "counter",
+    "b": "counter door"
+   },
+   {
+    "rel": "under",
+    "a": "counter door",
+    "b": "electric kettle"
+   }
+  ],
+  "select": [
+   {
+    "on": "counter door",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28303.762",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L3",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333310",
+    "28303.762"
+   ],
+   [
+    "47333310",
+    "28301.763"
+   ],
+   [
+    "47333308",
+    "28032.156"
+   ],
+   [
+    "47333319",
+    "28371.668"
+   ],
+   [
+    "47333310",
+    "28315.757"
+   ],
+   [
+    "47333319",
+    "28374.666"
+   ],
+   [
+    "47333319",
+    "28392.659"
+   ],
+   [
+    "47333319",
+    "28394.658"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "counter door",
+  "counter",
+  "electric kettle"
+ ],
+ "roles": {
+  "door handle": "target",
+  "counter door": "host",
+  "counter": "container",
+  "electric kettle": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 910,
+    "x1": 1141,
+    "y0": 1780,
+    "y1": 1919,
+    "cx": 1012.1,
+    "cy": 1858.1,
+    "npix": 8243,
+    "area_pct": 0.298,
+    "score": 0.884
+   },
+   {
+    "x0": 196,
+    "x1": 738,
+    "y0": 1447,
+    "y1": 1832,
+    "cx": 546.2,
+    "cy": 1720.8,
+    "npix": 8511,
+    "area_pct": 0.308,
+    "score": 0.843
+   },
+   {
+    "x0": 195,
+    "x1": 303,
+    "y0": 1447,
+    "y1": 1519,
+    "cx": 244.2,
+    "cy": 1486.9,
+    "npix": 3516,
+    "area_pct": 0.127,
+    "score": 0.255
+   },
+   {
+    "x0": 270,
+    "x1": 1152,
+    "y0": 1129,
+    "y1": 1446,
+    "cx": 303.3,
+    "cy": 1410.7,
+    "npix": 3514,
+    "area_pct": 0.127,
+    "score": 0.229
+   },
+   {
+    "x0": 530,
+    "x1": 588,
+    "y0": 1536,
+    "y1": 1619,
+    "cx": 557.9,
+    "cy": 1574.8,
+    "npix": 3806,
+    "area_pct": 0.138,
+    "score": 0.221
+   }
+  ],
+  "counter door": [],
+  "counter": [
+   {
+    "x0": 0,
+    "x1": 1439,
+    "y0": 794,
+    "y1": 1919,
+    "cx": 719.4,
+    "cy": 1405.3,
+    "npix": 338311,
+    "area_pct": 12.236,
+    "score": 0.811
+   },
+   {
+    "x0": 856,
+    "x1": 1439,
+    "y0": 1308,
+    "y1": 1913,
+    "cx": 1207.3,
+    "cy": 1594.8,
+    "npix": 207777,
+    "area_pct": 7.515,
+    "score": 0.325
+   }
+  ],
+  "electric kettle": [
+   {
+    "x0": 1304,
+    "x1": 1439,
+    "y0": 827,
+    "y1": 1379,
+    "cx": 1376.9,
+    "cy": 1095.1,
+    "npix": 66696,
+    "area_pct": 2.412,
+    "score": 0.749
+   },
+   {
+    "x0": 890,
+    "x1": 1196,
+    "y0": 791,
+    "y1": 1126,
+    "cx": 1041.9,
+    "cy": 988.8,
+    "npix": 65279,
+    "area_pct": 2.361,
+    "score": 0.584
+   },
+   {
+    "x0": 0,
+    "x1": 9,
+    "y0": 753,
+    "y1": 792,
+    "cx": 3.6,
+    "cy": 773.8,
+    "npix": 298,
+    "area_pct": 0.011,
+    "score": 0.236
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4"
+  ],
+  "counter door": []
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,45 @@
+TASK: "Open the small red jewelry box next to the mirror on the cabinet"
+
+PARSE:
+  target concept = "lid"   <- the thing that must be output
+  host           = 'jewelry box'   <- countable object the target sits on
+  entity  : 'lid'  role=target
+  entity  : 'jewelry box'  role=host
+  entity  : 'mirror'  role=landmark
+  entity  : 'cabinet'  role=container
+  relation: next_to(a='jewelry box', b='mirror')
+  relation: on_top(a='jewelry box', b='cabinet')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  lid                  0   406  1329   276   659   799.3   520.0   6.327  0.352
+  lid                  1   520   569   119   212   541.5   168.4    0.13  0.291
+  lid                  2   625  1260     0   451   937.7   216.0   9.084  0.274
+  jewelry box         (0 detections)
+  mirror              (0 detections)
+  cabinet              0   411  1323   318  1438   856.1   945.5  20.635  0.825
+  cabinet              1  1269  1439     0    89  1373.6    30.6     0.3  0.184
+
+
+CONTAINMENT (lid inside the FILLED mask of each jewelry box):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "lid" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: lid #<id>[, #<id> ...]

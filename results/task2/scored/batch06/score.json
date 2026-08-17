@@ -1,0 +1,613 @@
+[
+ {
+  "q": "q042_421657_8cb471c9",
+  "text": "Plug the device in the socket next to the door",
+  "concept": "socket",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "relation",
+  "best_frac": 1.0,
+  "n_cand": 3,
+  "pred_px": 3486,
+  "gt_px": 119,
+  "gt_bbox_px": 1056.5,
+  "prec2d": 0.034,
+  "coarse_ratio": 29.29,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q055_422356_bd016cae",
+  "text": "Turn on the TV using the remote control on the table",
+  "concept": "remote control",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "container",
+  "best_frac": 0.797,
+  "n_cand": 2,
+  "pred_px": 33453,
+  "gt_px": 1218,
+  "gt_bbox_px": 81494.5,
+  "prec2d": 0.029,
+  "coarse_ratio": 27.47,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q070_422842_8480581d",
+  "text": "Open the door located to the left of the closet",
+  "concept": "door handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 0.0,
+  "conf": "medium",
+  "kind": "relation",
+  "best_frac": 0.0,
+  "n_cand": 4,
+  "pred_px": 3590,
+  "gt_px": 0,
+  "gt_bbox_px": 0.0,
+  "prec2d": 0.0,
+  "coarse_ratio": NaN,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q083_422842_e6201b2d",
+  "text": "Open the right door of the wall cabinet located above the glass cabinet decorated with pictures",
+  "concept": "door handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 0.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.0,
+  "n_cand": 2,
+  "pred_px": 3757,
+  "gt_px": 0,
+  "gt_bbox_px": 0.0,
+  "prec2d": 0.0,
+  "coarse_ratio": NaN,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q086_423070_5e1f672d",
+  "text": "Control the water flow in the bathtub using the drain control dial",
+  "concept": "drain control dial",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "containment",
+  "best_frac": 1.0,
+  "n_cand": 2,
+  "pred_px": 2742,
+  "gt_px": 93,
+  "gt_bbox_px": 1330.2,
+  "prec2d": 0.034,
+  "coarse_ratio": 29.48,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q116_423957_e0fbbfe4",
+  "text": "Open the right door of the closet next to the radiator",
+  "concept": "door handle",
+  "pick": [
+   2
+  ],
+  "gt_ids": [
+   2
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.94,
+  "n_cand": 4,
+  "pred_px": 898,
+  "gt_px": 182,
+  "gt_bbox_px": 592.9,
+  "prec2d": 0.19,
+  "coarse_ratio": 4.93,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q178_437294_0f43291f",
+  "text": "Open to the left window above the radiator",
+  "concept": "window handle",
+  "pick": [
+   2
+  ],
+  "gt_ids": [
+   2
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 0.354,
+  "conf": "low",
+  "kind": "select_on_host",
+  "best_frac": 0.827,
+  "n_cand": 4,
+  "pred_px": 629,
+  "gt_px": 81,
+  "gt_bbox_px": 206.5,
+  "prec2d": 0.107,
+  "coarse_ratio": 7.77,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q209_438775_59dd30c8",
+  "text": "Unplug the lamp on the cabinet next to the glass door",
+  "concept": "plug",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": false,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "relation",
+  "best_frac": 0.958,
+  "n_cand": 2,
+  "pred_px": 738,
+  "gt_px": 191,
+  "gt_bbox_px": 308.7,
+  "prec2d": 0.0,
+  "coarse_ratio": 3.86,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q222_455342_0798e456",
+  "text": "Unplug the table lamp to the right of the couch",
+  "concept": "plug",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   2
+  ],
+  "correct": false,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "relation",
+  "best_frac": 0.765,
+  "n_cand": 3,
+  "pred_px": 4792,
+  "gt_px": 102,
+  "gt_bbox_px": 1440.3,
+  "prec2d": 0.0,
+  "coarse_ratio": 46.98,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q226_455342_59c59401",
+  "text": "Control the volume on the mini music system under the TV stand",
+  "concept": "volume knob",
+  "pick": [
+   0
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 1.0,
+  "conf": "low",
+  "kind": "non_equivalent_targets",
+  "best_frac": 0.0,
+  "n_cand": 3,
+  "pred_px": 1613,
+  "gt_px": 207,
+  "gt_bbox_px": 634.0,
+  "prec2d": 0.0,
+  "coarse_ratio": 7.79,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q235_455342_f591c7bc",
+  "text": "Open the right drawer of the wooden TV stand",
+  "concept": "drawer handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.618,
+  "n_cand": 2,
+  "pred_px": 5316,
+  "gt_px": 429,
+  "gt_bbox_px": 6568.1,
+  "prec2d": 0.05,
+  "coarse_ratio": 12.39,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q236_466092_1f30aca2",
+  "text": "Lock the door",
+  "concept": "door lock",
+  "pick": [
+   0
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 0.0,
+  "conf": "medium",
+  "kind": "containment",
+  "best_frac": 0.0,
+  "n_cand": 2,
+  "pred_px": 1650,
+  "gt_px": 0,
+  "gt_bbox_px": 0.0,
+  "prec2d": 0.0,
+  "coarse_ratio": NaN,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q263_466162_58d4ab4f",
+  "text": "Open the bottom blue closet drawer to the right of the fireplace",
+  "concept": "drawer handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.951,
+  "n_cand": 3,
+  "pred_px": 401,
+  "gt_px": 162,
+  "gt_bbox_px": 326.4,
+  "prec2d": 0.384,
+  "coarse_ratio": 2.48,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q265_466162_6e95f528",
+  "text": "Open the right blue closet door to the right of the fireplace",
+  "concept": "door handle",
+  "pick": [
+   2
+  ],
+  "gt_ids": [
+   2
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "select",
+  "best_frac": 0.55,
+  "n_cand": 3,
+  "pred_px": 253,
+  "gt_px": 149,
+  "gt_bbox_px": 347.9,
+  "prec2d": 0.324,
+  "coarse_ratio": 1.7,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q273_466162_dd35f90f",
+  "text": "Open the top right drawer of the cabinet with the beauty products on top",
+  "concept": "drawer handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 1.0,
+  "conf": "low",
+  "kind": "conflicting_select",
+  "best_frac": 0.0,
+  "n_cand": 2,
+  "pred_px": 6446,
+  "gt_px": 372,
+  "gt_bbox_px": 3333.2,
+  "prec2d": 0.0,
+  "coarse_ratio": 17.33,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q286_466437_9bf8909e",
+  "text": "Adjust the temperature using the radiator dial next to the bathroom door",
+  "concept": "radiator knob",
+  "pick": [
+   0
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 0.0,
+  "conf": "high",
+  "kind": "relation",
+  "best_frac": 0.0,
+  "n_cand": 2,
+  "pred_px": 1929,
+  "gt_px": 0,
+  "gt_bbox_px": 0.0,
+  "prec2d": 0.0,
+  "coarse_ratio": NaN,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q287_466437_9c1810fb",
+  "text": "Open the nightstand door with the tablet on top",
+  "concept": "door handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "containment",
+  "best_frac": 0.735,
+  "n_cand": 2,
+  "pred_px": 11883,
+  "gt_px": 155,
+  "gt_bbox_px": 25789.9,
+  "prec2d": 0.01,
+  "coarse_ratio": 76.66,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q312_466841_ccfd1713",
+  "text": "Open the middle window behind the potted plant",
+  "concept": "window handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 0.0,
+  "conf": "low",
+  "kind": "broken_host",
+  "best_frac": 0.0,
+  "n_cand": 3,
+  "pred_px": 4425,
+  "gt_px": 0,
+  "gt_bbox_px": 0.0,
+  "prec2d": 0.0,
+  "coarse_ratio": NaN,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q327_466880_3c54545b",
+  "text": "Turn on the kitchen light",
+  "concept": "light switch",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "unique_strong",
+  "best_frac": 0.459,
+  "n_cand": 2,
+  "pred_px": 21735,
+  "gt_px": 327,
+  "gt_bbox_px": 17714.6,
+  "prec2d": 0.007,
+  "coarse_ratio": 66.47,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q358_466916_a427fd7d",
+  "text": "Regulate the temperature using the radiator dial next to the glass door",
+  "concept": "radiator knob",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "relation",
+  "best_frac": 0.952,
+  "n_cand": 4,
+  "pred_px": 4069,
+  "gt_px": 314,
+  "gt_bbox_px": 3806.4,
+  "prec2d": 0.073,
+  "coarse_ratio": 12.96,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q378_467115_3ef56c7b",
+  "text": "Open the freezer",
+  "concept": "freezer handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "world_knowledge",
+  "best_frac": 0.664,
+  "n_cand": 4,
+  "pred_px": 8083,
+  "gt_px": 590,
+  "gt_bbox_px": 10538.4,
+  "prec2d": 0.048,
+  "coarse_ratio": 13.7,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q415_467139_eeb550dc",
+  "text": "Control the temperature using the bathroom radiator dial",
+  "concept": "radiator knob",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "no_host_detected",
+  "best_frac": 0.97,
+  "n_cand": 2,
+  "pred_px": 5112,
+  "gt_px": 361,
+  "gt_bbox_px": 6172.0,
+  "prec2d": 0.068,
+  "coarse_ratio": 14.16,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q417_467330_b310c4c3",
+  "text": "Close the door",
+  "concept": "door handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0,
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "non_equivalent_targets",
+  "best_frac": 0.607,
+  "n_cand": 2,
+  "pred_px": 2149,
+  "gt_px": 214,
+  "gt_bbox_px": 3893.0,
+  "prec2d": 0.06,
+  "coarse_ratio": 10.04,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q438_468476_71f6bcb4",
+  "text": "Open the right cabinet door under the TV",
+  "concept": "door handle",
+  "pick": [
+   3
+  ],
+  "gt_ids": [
+   3
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "select",
+  "best_frac": 0.993,
+  "n_cand": 4,
+  "pred_px": 1135,
+  "gt_px": 151,
+  "gt_bbox_px": 912.6,
+  "prec2d": 0.132,
+  "coarse_ratio": 7.52,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ }
+]

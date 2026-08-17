@@ -1,0 +1,170 @@
+{
+ "q": 421,
+ "visit": "468282",
+ "desc_id": "16725785-88e7-431f-9c56-ac8dad3c0fe2",
+ "text": "Open the detergent drawer of the washing machine",
+ "parse": {
+  "text": "Open the detergent drawer of the washing machine",
+  "target": {
+   "concept": "detergent drawer",
+   "host": "washing machine"
+  },
+  "entities": [
+   {
+    "name": "detergent drawer",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "washing machine",
+    "role": "host",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "the detergent tray has no separate handle; the tray front itself is the interactable surface",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331279",
+  "fid": "14319.317",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47331279",
+    "14319.317"
+   ],
+   [
+    "47331279",
+    "14307.705"
+   ],
+   [
+    "47331279",
+    "14238.716"
+   ],
+   [
+    "47331279",
+    "14239.716"
+   ],
+   [
+    "47331279",
+    "14241.715"
+   ],
+   [
+    "47331279",
+    "14240.716"
+   ],
+   [
+    "47331279",
+    "14321.316"
+   ],
+   [
+    "47331279",
+    "14322.316"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 215,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "detergent drawer",
+  "washing machine"
+ ],
+ "roles": {
+  "detergent drawer": "target",
+  "washing machine": "host"
+ },
+ "candidates": {
+  "detergent drawer": [
+   {
+    "x0": 126,
+    "x1": 645,
+    "y0": 527,
+    "y1": 838,
+    "cx": 391.2,
+    "cy": 677.3,
+    "npix": 149380,
+    "area_pct": 5.403,
+    "score": 0.216
+   }
+  ],
+  "washing machine": [
+   {
+    "x0": 106,
+    "x1": 1352,
+    "y0": 318,
+    "y1": 1761,
+    "cx": 690.1,
+    "cy": 963.3,
+    "npix": 1342822,
+    "area_pct": 48.569,
+    "score": 0.98
+   }
+  ]
+ },
+ "mask_keys": {
+  "detergent drawer": [
+   "detergent drawer|0"
+  ],
+  "washing machine": [
+   "washing machine|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

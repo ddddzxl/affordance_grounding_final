@@ -1,0 +1,439 @@
+{
+ "q": 77,
+ "visit": "422842",
+ "desc_id": "c29120db-bb18-4749-8f99-f0a179e402c6",
+ "text": "Open the right middle drawer of the dressing table",
+ "parse": {
+  "text": "Open the right middle drawer of the dressing table",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "dressing table",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "dressing table",
+    "b": "drawer"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "middle",
+    "index": null,
+    "from": null
+   },
+   {
+    "on": "drawer",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897547",
+  "fid": "473258.703",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 5,
+  "topk": [
+   [
+    "42897547",
+    "473258.703"
+   ],
+   [
+    "42897547",
+    "473254.605"
+   ],
+   [
+    "42897547",
+    "473185.817"
+   ],
+   [
+    "42897547",
+    "473186.816"
+   ],
+   [
+    "42897547",
+    "473260.719"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 0.62,
+    "s2": 0.65,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.43,
+    "s2": 0.748,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.321,
+    "s2": 0.467,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 0.287,
+    "s2": 0.414,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 236,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "dressing table"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "dressing table": "container"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 580,
+    "x1": 709,
+    "y0": 507,
+    "y1": 579,
+    "cx": 644.6,
+    "cy": 541.8,
+    "npix": 2505,
+    "area_pct": 0.091,
+    "score": 0.942
+   },
+   {
+    "x0": 0,
+    "x1": 104,
+    "y0": 987,
+    "y1": 1059,
+    "cx": 49.8,
+    "cy": 1019.4,
+    "npix": 2577,
+    "area_pct": 0.093,
+    "score": 0.939
+   },
+   {
+    "x0": 850,
+    "x1": 949,
+    "y0": 459,
+    "y1": 519,
+    "cx": 898.2,
+    "cy": 487.3,
+    "npix": 1809,
+    "area_pct": 0.065,
+    "score": 0.937
+   },
+   {
+    "x0": 570,
+    "x1": 704,
+    "y0": 340,
+    "y1": 406,
+    "cx": 636.9,
+    "cy": 374.5,
+    "npix": 2905,
+    "area_pct": 0.105,
+    "score": 0.936
+   },
+   {
+    "x0": 1080,
+    "x1": 1159,
+    "y0": 353,
+    "y1": 406,
+    "cx": 1117.8,
+    "cy": 376.1,
+    "npix": 1595,
+    "area_pct": 0.058,
+    "score": 0.929
+   },
+   {
+    "x0": 1090,
+    "x1": 1144,
+    "y0": 467,
+    "y1": 506,
+    "cx": 1116.6,
+    "cy": 487.8,
+    "npix": 921,
+    "area_pct": 0.033,
+    "score": 0.904
+   },
+   {
+    "x0": 0,
+    "x1": 47,
+    "y0": 808,
+    "y1": 852,
+    "cx": 20.8,
+    "cy": 828.0,
+    "npix": 1217,
+    "area_pct": 0.044,
+    "score": 0.894
+   },
+   {
+    "x0": 650,
+    "x1": 709,
+    "y0": 653,
+    "y1": 692,
+    "cx": 680.7,
+    "cy": 674.7,
+    "npix": 940,
+    "area_pct": 0.034,
+    "score": 0.87
+   },
+   {
+    "x0": 1309,
+    "x1": 1334,
+    "y0": 0,
+    "y1": 112,
+    "cx": 1321.7,
+    "cy": 59.0,
+    "npix": 1706,
+    "area_pct": 0.062,
+    "score": 0.469
+   },
+   {
+    "x0": 1335,
+    "x1": 1369,
+    "y0": 0,
+    "y1": 119,
+    "cx": 1352.0,
+    "cy": 61.2,
+    "npix": 2081,
+    "area_pct": 0.075,
+    "score": 0.458
+   },
+   {
+    "x0": 0,
+    "x1": 34,
+    "y0": 587,
+    "y1": 699,
+    "cx": 18.4,
+    "cy": 646.7,
+    "npix": 1637,
+    "area_pct": 0.059,
+    "score": 0.425
+   },
+   {
+    "x0": 14,
+    "x1": 104,
+    "y0": 1367,
+    "y1": 1432,
+    "cx": 62.3,
+    "cy": 1392.7,
+    "npix": 1249,
+    "area_pct": 0.045,
+    "score": 0.217
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 0,
+    "x1": 209,
+    "y0": 900,
+    "y1": 1239,
+    "cx": 90.4,
+    "cy": 1062.3,
+    "npix": 46940,
+    "area_pct": 1.698,
+    "score": 0.947
+   },
+   {
+    "x0": 504,
+    "x1": 739,
+    "y0": 280,
+    "y1": 532,
+    "cx": 627.5,
+    "cy": 409.0,
+    "npix": 41075,
+    "area_pct": 1.486,
+    "score": 0.945
+   },
+   {
+    "x0": 0,
+    "x1": 144,
+    "y0": 724,
+    "y1": 966,
+    "cx": 61.7,
+    "cy": 843.2,
+    "npix": 24924,
+    "area_pct": 0.901,
+    "score": 0.942
+   },
+   {
+    "x0": 530,
+    "x1": 739,
+    "y0": 593,
+    "y1": 717,
+    "cx": 667.7,
+    "cy": 662.7,
+    "npix": 10501,
+    "area_pct": 0.38,
+    "score": 0.928
+   },
+   {
+    "x0": 516,
+    "x1": 739,
+    "y0": 480,
+    "y1": 692,
+    "cx": 623.9,
+    "cy": 575.3,
+    "npix": 31625,
+    "area_pct": 1.144,
+    "score": 0.919
+   },
+   {
+    "x0": 0,
+    "x1": 95,
+    "y0": 527,
+    "y1": 759,
+    "cx": 38.8,
+    "cy": 647.3,
+    "npix": 15213,
+    "area_pct": 0.55,
+    "score": 0.913
+   },
+   {
+    "x0": 1062,
+    "x1": 1204,
+    "y0": 311,
+    "y1": 440,
+    "cx": 1136.0,
+    "cy": 383.6,
+    "npix": 11669,
+    "area_pct": 0.422,
+    "score": 0.812
+   },
+   {
+    "x0": 1071,
+    "x1": 1189,
+    "y0": 414,
+    "y1": 559,
+    "cx": 1138.4,
+    "cy": 485.1,
+    "npix": 8432,
+    "area_pct": 0.305,
+    "score": 0.764
+   },
+   {
+    "x0": 745,
+    "x1": 1073,
+    "y0": 376,
+    "y1": 634,
+    "cx": 887.2,
+    "cy": 500.6,
+    "npix": 38026,
+    "area_pct": 1.375,
+    "score": 0.714
+   },
+   {
+    "x0": 745,
+    "x1": 814,
+    "y0": 620,
+    "y1": 692,
+    "cx": 770.5,
+    "cy": 649.8,
+    "npix": 2024,
+    "area_pct": 0.073,
+    "score": 0.547
+   }
+  ],
+  "dressing table": [
+   {
+    "x0": 0,
+    "x1": 743,
+    "y0": 222,
+    "y1": 1278,
+    "cx": 329.4,
+    "cy": 651.0,
+    "npix": 391554,
+    "area_pct": 14.162,
+    "score": 0.751
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4",
+   "drawer handle|5",
+   "drawer handle|6",
+   "drawer handle|7",
+   "drawer handle|8",
+   "drawer handle|9",
+   "drawer handle|10",
+   "drawer handle|11"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1",
+   "drawer|2",
+   "drawer|3",
+   "drawer|4",
+   "drawer|5",
+   "drawer|6",
+   "drawer|7",
+   "drawer|8",
+   "drawer|9"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   7
+  ],
+  "host": 3,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

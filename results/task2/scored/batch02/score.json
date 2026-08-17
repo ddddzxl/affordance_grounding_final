@@ -1,0 +1,178 @@
+[
+ {
+  "q": "q003_421254_471d04be",
+  "text": "Open the top left drawer of the cabinet located to the left of the TV",
+  "concept": "drawer handle",
+  "pick": [
+   12
+  ],
+  "gt_ids": [
+   12
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "vert+horiz",
+  "best_frac": 0.988,
+  "n_cand": 21,
+  "pred_px": 626,
+  "gt_px": 80,
+  "gt_bbox_px": 469.0,
+  "prec2d": 0.126,
+  "coarse_ratio": 7.83,
+  "caveat": null
+ },
+ {
+  "q": "q004_421254_52d91158",
+  "text": "Open the top left drawer of the cabinet with the TV on top",
+  "concept": "drawer handle",
+  "pick": [
+   5
+  ],
+  "gt_ids": [
+   5
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "vert+horiz",
+  "best_frac": 0.382,
+  "n_cand": 20,
+  "pred_px": 1090,
+  "gt_px": 55,
+  "gt_bbox_px": 963.3,
+  "prec2d": 0.019,
+  "coarse_ratio": 19.82,
+  "caveat": null
+ },
+ {
+  "q": "q008_421254_71e753ae",
+  "text": "Open the top right drawer of the cabinet with the TV on top",
+  "concept": "drawer handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "low",
+  "kind": "vert+horiz",
+  "best_frac": 0.926,
+  "n_cand": 16,
+  "pred_px": 1246,
+  "gt_px": 54,
+  "gt_bbox_px": 1285.2,
+  "prec2d": 0.04,
+  "coarse_ratio": 23.07,
+  "caveat": null
+ },
+ {
+  "q": "q009_421254_809a07a1",
+  "text": "Open the fourth drawer of the cabinet located to the left of the TV",
+  "concept": "drawer handle",
+  "pick": [
+   15,
+   19
+  ],
+  "gt_ids": [
+   15,
+   19
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "ordinal",
+  "best_frac": 0.467,
+  "n_cand": 21,
+  "pred_px": 1359,
+  "gt_px": 165,
+  "gt_bbox_px": 26301.6,
+  "prec2d": 0.109,
+  "coarse_ratio": 8.24,
+  "caveat": null
+ },
+ {
+  "q": "q010_421254_9773cbd7",
+  "text": "Open the third drawer of the cabinet located to the left of the TV",
+  "concept": "drawer handle",
+  "pick": [
+   8,
+   12
+  ],
+  "gt_ids": [
+   8,
+   12
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "ordinal",
+  "best_frac": 0.526,
+  "n_cand": 21,
+  "pred_px": 1549,
+  "gt_px": 133,
+  "gt_bbox_px": 22787.0,
+  "prec2d": 0.085,
+  "coarse_ratio": 11.65,
+  "caveat": null
+ },
+ {
+  "q": "q012_421254_ae0b0b18",
+  "text": "Open the second drawer of the cabinet with the TV on top",
+  "concept": "drawer handle",
+  "pick": [
+   3,
+   6
+  ],
+  "gt_ids": [
+   3,
+   6
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "ordinal",
+  "best_frac": 0.448,
+  "n_cand": 17,
+  "pred_px": 2191,
+  "gt_px": 87,
+  "gt_bbox_px": 89175.1,
+  "prec2d": 0.035,
+  "coarse_ratio": 25.18,
+  "caveat": null
+ },
+ {
+  "q": "q014_421254_af0b7790",
+  "text": "Open the bottom drawer of the cabinet located to the left of the TV",
+  "concept": "drawer handle",
+  "pick": [
+   17,
+   12
+  ],
+  "gt_ids": [
+   12,
+   17
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.229,
+  "n_cand": 20,
+  "pred_px": 1196,
+  "gt_px": 48,
+  "gt_bbox_px": 29447.7,
+  "prec2d": 0.012,
+  "coarse_ratio": 24.92,
+  "caveat": null
+ }
+]

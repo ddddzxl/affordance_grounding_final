@@ -1,0 +1,9 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "medium",
+ "kind": "residual_overrides_containment",
+ "flaw": "unanswerable",
+ "solver": "frontier-llm, manual CoT"
+}

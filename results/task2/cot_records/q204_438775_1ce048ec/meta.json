@@ -1,0 +1,184 @@
+{
+ "q": 204,
+ "visit": "438775",
+ "desc_id": "1ce048ec-3d03-4fa6-ba71-8f6e6aa9639d",
+ "text": "Dial a number using the telephone next to the table lamp",
+ "parse": {
+  "text": "Dial a number using the telephone next to the table lamp",
+  "target": {
+   "concept": "telephone",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "telephone",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "table lamp",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "telephone",
+    "b": "table lamp"
+   }
+  ],
+  "select": [],
+  "residual": "independent check on the train split (val untouched): handheld-device GT has a median of 478 points while fixed-furniture handles have 87-108, a factor of 4.4-5.5. The annotation therefore covers the whole device rather than an individual key: what a person grasps is the whole remote or controller, and which key the press lands on does not constitute a separate interactable entity. Fixed furniture is the opposite -- there you operate the handle itself.",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358173",
+  "fid": "62406.749",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44358173",
+    "62406.749"
+   ],
+   [
+    "44358173",
+    "62407.749"
+   ],
+   [
+    "44358173",
+    "62403.751"
+   ],
+   [
+    "44358173",
+    "62405.750"
+   ],
+   [
+    "44358173",
+    "62404.750"
+   ],
+   [
+    "44358170",
+    "62337.560"
+   ],
+   [
+    "44358173",
+    "62402.751"
+   ],
+   [
+    "44358170",
+    "62336.561"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 266,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "telephone",
+  "table lamp"
+ ],
+ "roles": {
+  "telephone": "target",
+  "table lamp": "landmark"
+ },
+ "candidates": {
+  "telephone": [
+   {
+    "x0": 883,
+    "x1": 1039,
+    "y0": 730,
+    "y1": 1009,
+    "cx": 977.3,
+    "cy": 892.9,
+    "npix": 22847,
+    "area_pct": 0.826,
+    "score": 0.772
+   }
+  ],
+  "table lamp": [
+   {
+    "x0": 940,
+    "x1": 1539,
+    "y0": 196,
+    "y1": 1140,
+    "cx": 1236.9,
+    "cy": 550.8,
+    "npix": 327055,
+    "area_pct": 11.829,
+    "score": 0.977
+   },
+   {
+    "x0": 0,
+    "x1": 26,
+    "y0": 219,
+    "y1": 389,
+    "cx": 9.7,
+    "cy": 307.8,
+    "npix": 3150,
+    "area_pct": 0.114,
+    "score": 0.185
+   }
+  ]
+ },
+ "mask_keys": {
+  "telephone": [
+   "telephone|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,194 @@
+{
+ "q": 101,
+ "visit": "423452",
+ "desc_id": "78fb6192-02b3-4ca2-a4e7-44cf5842d529",
+ "text": "Adjust the intensity of the floor lamp light next to the dining table",
+ "parse": {
+  "text": "Adjust the intensity of the floor lamp light next to the dining table",
+  "target": {
+   "concept": "dimmer switch",
+   "host": "floor lamp"
+  },
+  "entities": [
+   {
+    "name": "dimmer switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "floor lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "dining table",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "floor lamp",
+    "b": "dining table"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897434",
+  "fid": "104193.148",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 2,
+  "topk": [
+   [
+    "42897434",
+    "104193.148"
+   ],
+   [
+    "42897426",
+    "104144.735"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 309,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "dimmer switch",
+  "floor lamp",
+  "dining table"
+ ],
+ "roles": {
+  "dimmer switch": "target",
+  "floor lamp": "host",
+  "dining table": "landmark"
+ },
+ "candidates": {
+  "dimmer switch": [
+   {
+    "x0": 1833,
+    "x1": 1885,
+    "y0": 948,
+    "y1": 994,
+    "cx": 1858.4,
+    "cy": 970.8,
+    "npix": 2282,
+    "area_pct": 0.083,
+    "score": 0.533
+   },
+   {
+    "x0": 1882,
+    "x1": 1919,
+    "y0": 950,
+    "y1": 994,
+    "cx": 1902.5,
+    "cy": 972.4,
+    "npix": 1526,
+    "area_pct": 0.055,
+    "score": 0.512
+   },
+   {
+    "x0": 373,
+    "x1": 412,
+    "y0": 906,
+    "y1": 979,
+    "cx": 392.9,
+    "cy": 943.0,
+    "npix": 2600,
+    "area_pct": 0.094,
+    "score": 0.236
+   }
+  ],
+  "floor lamp": [
+   {
+    "x0": 327,
+    "x1": 479,
+    "y0": 549,
+    "y1": 1129,
+    "cx": 395.3,
+    "cy": 784.3,
+    "npix": 22685,
+    "area_pct": 0.82,
+    "score": 0.886
+   },
+   {
+    "x0": 0,
+    "x1": 72,
+    "y0": 521,
+    "y1": 719,
+    "cx": 31.3,
+    "cy": 613.2,
+    "npix": 2807,
+    "area_pct": 0.102,
+    "score": 0.281
+   }
+  ],
+  "dining table": [
+   {
+    "x0": 0,
+    "x1": 793,
+    "y0": 1177,
+    "y1": 1439,
+    "cx": 433.5,
+    "cy": 1330.8,
+    "npix": 132561,
+    "area_pct": 4.795,
+    "score": 0.96
+   }
+  ]
+ },
+ "mask_keys": {
+  "dimmer switch": [
+   "dimmer switch|0",
+   "dimmer switch|1",
+   "dimmer switch|2"
+  ],
+  "floor lamp": [
+   "floor lamp|0",
+   "floor lamp|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

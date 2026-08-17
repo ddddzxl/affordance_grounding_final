@@ -1,0 +1,272 @@
+{
+ "q": 209,
+ "visit": "438775",
+ "desc_id": "59dd30c8-1474-4eb9-a39e-8f9137632af9",
+ "text": "Unplug the lamp on the cabinet next to the glass door",
+ "parse": {
+  "text": "Unplug the lamp on the cabinet next to the glass door",
+  "target": {
+   "concept": "plug",
+   "host": "lamp"
+  },
+  "entities": [
+   {
+    "name": "plug",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "lamp",
+    "b": "cabinet"
+   },
+   {
+    "rel": "next_to",
+    "a": "cabinet",
+    "b": "door"
+   }
+  ],
+  "select": [],
+  "residual": "the plug sits at the socket end, not on the lamp",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44358170",
+  "fid": "62311.154",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "44358170",
+    "62311.154"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 266,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "plug",
+  "lamp",
+  "cabinet",
+  "door"
+ ],
+ "roles": {
+  "plug": "target",
+  "lamp": "host",
+  "cabinet": "container",
+  "door": "landmark"
+ },
+ "candidates": {
+  "plug": [
+   {
+    "x0": 980,
+    "x1": 999,
+    "y0": 520,
+    "y1": 549,
+    "cx": 989.5,
+    "cy": 534.5,
+    "npix": 587,
+    "area_pct": 0.021,
+    "score": 0.383
+   },
+   {
+    "x0": 927,
+    "x1": 952,
+    "y0": 515,
+    "y1": 544,
+    "cx": 939.1,
+    "cy": 530.0,
+    "npix": 738,
+    "area_pct": 0.027,
+    "score": 0.36
+   }
+  ],
+  "lamp": [
+   {
+    "x0": 787,
+    "x1": 906,
+    "y0": 269,
+    "y1": 479,
+    "cx": 849.2,
+    "cy": 345.1,
+    "npix": 13661,
+    "area_pct": 0.494,
+    "score": 0.968
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 722,
+    "x1": 951,
+    "y0": 470,
+    "y1": 759,
+    "cx": 838.0,
+    "cy": 616.5,
+    "npix": 48727,
+    "area_pct": 1.762,
+    "score": 0.842
+   },
+   {
+    "x0": 0,
+    "x1": 306,
+    "y0": 795,
+    "y1": 1433,
+    "cx": 130.8,
+    "cy": 994.0,
+    "npix": 102643,
+    "area_pct": 3.712,
+    "score": 0.294
+   },
+   {
+    "x0": 967,
+    "x1": 1152,
+    "y0": 630,
+    "y1": 849,
+    "cx": 1055.6,
+    "cy": 728.0,
+    "npix": 19455,
+    "area_pct": 0.704,
+    "score": 0.165
+   }
+  ],
+  "door": [
+   {
+    "x0": 175,
+    "x1": 486,
+    "y0": 0,
+    "y1": 702,
+    "cx": 331.7,
+    "cy": 336.0,
+    "npix": 123164,
+    "area_pct": 4.455,
+    "score": 0.669
+   },
+   {
+    "x0": 0,
+    "x1": 285,
+    "y0": 7,
+    "y1": 784,
+    "cx": 127.3,
+    "cy": 397.4,
+    "npix": 142121,
+    "area_pct": 5.14,
+    "score": 0.669
+   },
+   {
+    "x0": 377,
+    "x1": 645,
+    "y0": 0,
+    "y1": 719,
+    "cx": 517.3,
+    "cy": 341.6,
+    "npix": 120701,
+    "area_pct": 4.366,
+    "score": 0.493
+   },
+   {
+    "x0": 1380,
+    "x1": 1664,
+    "y0": 0,
+    "y1": 209,
+    "cx": 1521.8,
+    "cy": 94.9,
+    "npix": 52039,
+    "area_pct": 1.882,
+    "score": 0.371
+   },
+   {
+    "x0": 1813,
+    "x1": 1919,
+    "y0": 0,
+    "y1": 204,
+    "cx": 1870.5,
+    "cy": 106.1,
+    "npix": 19929,
+    "area_pct": 0.721,
+    "score": 0.317
+   },
+   {
+    "x0": 1654,
+    "x1": 1897,
+    "y0": 0,
+    "y1": 209,
+    "cx": 1774.8,
+    "cy": 95.0,
+    "npix": 19287,
+    "area_pct": 0.698,
+    "score": 0.237
+   },
+   {
+    "x0": 0,
+    "x1": 118,
+    "y0": 302,
+    "y1": 808,
+    "cx": 39.9,
+    "cy": 632.5,
+    "npix": 30078,
+    "area_pct": 1.088,
+    "score": 0.159
+   }
+  ]
+ },
+ "mask_keys": {
+  "plug": [
+   "plug|0",
+   "plug|1"
+  ],
+  "lamp": [
+   "lamp|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

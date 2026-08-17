@@ -1,0 +1,276 @@
+{
+ "q": 80,
+ "visit": "422842",
+ "desc_id": "d7f5d984-f045-4b11-88bf-817e85a29007",
+ "text": "Open the bottom drawer of the nightstand to the left of the bed",
+ "parse": {
+  "text": "Open the bottom drawer of the nightstand to the left of the bed",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "nightstand",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "bed",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "nightstand",
+    "b": "drawer"
+   },
+   {
+    "rel": "left_of",
+    "a": "nightstand",
+    "b": "bed"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897547",
+  "fid": "473203.909",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "42897547",
+    "473203.909"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 236,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "nightstand",
+  "bed"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "nightstand": "container",
+  "bed": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 30,
+    "x1": 139,
+    "y0": 973,
+    "y1": 999,
+    "cx": 85.3,
+    "cy": 987.9,
+    "npix": 1555,
+    "area_pct": 0.056,
+    "score": 0.891
+   },
+   {
+    "x0": 10,
+    "x1": 124,
+    "y0": 881,
+    "y1": 906,
+    "cx": 66.8,
+    "cy": 894.5,
+    "npix": 1736,
+    "area_pct": 0.063,
+    "score": 0.872
+   },
+   {
+    "x0": 1165,
+    "x1": 1204,
+    "y0": 500,
+    "y1": 679,
+    "cx": 1188.4,
+    "cy": 588.1,
+    "npix": 2343,
+    "area_pct": 0.085,
+    "score": 0.561
+   },
+   {
+    "x0": 875,
+    "x1": 893,
+    "y0": 53,
+    "y1": 158,
+    "cx": 884.2,
+    "cy": 106.8,
+    "npix": 1198,
+    "area_pct": 0.043,
+    "score": 0.561
+   },
+   {
+    "x0": 215,
+    "x1": 234,
+    "y0": 27,
+    "y1": 145,
+    "cx": 225.9,
+    "cy": 84.7,
+    "npix": 1492,
+    "area_pct": 0.054,
+    "score": 0.541
+   },
+   {
+    "x0": 904,
+    "x1": 919,
+    "y0": 53,
+    "y1": 152,
+    "cx": 913.2,
+    "cy": 104.6,
+    "npix": 1198,
+    "area_pct": 0.043,
+    "score": 0.538
+   },
+   {
+    "x0": 182,
+    "x1": 199,
+    "y0": 20,
+    "y1": 139,
+    "cx": 191.1,
+    "cy": 82.8,
+    "npix": 1474,
+    "area_pct": 0.053,
+    "score": 0.53
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 0,
+    "x1": 162,
+    "y0": 855,
+    "y1": 1052,
+    "cx": 76.7,
+    "cy": 956.2,
+    "npix": 27974,
+    "area_pct": 1.012,
+    "score": 0.721
+   },
+   {
+    "x0": 1035,
+    "x1": 1105,
+    "y0": 773,
+    "y1": 826,
+    "cx": 1078.3,
+    "cy": 794.6,
+    "npix": 2375,
+    "area_pct": 0.086,
+    "score": 0.563
+   }
+  ],
+  "nightstand": [
+   {
+    "x0": 0,
+    "x1": 168,
+    "y0": 794,
+    "y1": 1058,
+    "cx": 82.0,
+    "cy": 935.4,
+    "npix": 35183,
+    "area_pct": 1.273,
+    "score": 0.862
+   },
+   {
+    "x0": 975,
+    "x1": 1109,
+    "y0": 747,
+    "y1": 826,
+    "cx": 1055.4,
+    "cy": 780.6,
+    "npix": 5141,
+    "area_pct": 0.186,
+    "score": 0.756
+   }
+  ],
+  "bed": [
+   {
+    "x0": 112,
+    "x1": 1439,
+    "y0": 537,
+    "y1": 1698,
+    "cx": 744.1,
+    "cy": 1180.1,
+    "npix": 947616,
+    "area_pct": 34.274,
+    "score": 0.951
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4",
+   "drawer handle|5",
+   "drawer handle|6"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

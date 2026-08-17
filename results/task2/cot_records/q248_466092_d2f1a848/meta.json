@@ -1,0 +1,173 @@
+{
+ "q": 248,
+ "visit": "466092",
+ "desc_id": "d2f1a848-eda8-485d-a6b5-59f866df12e1",
+ "text": "Turn on the TV using one of the remotes on the coffee table",
+ "parse": {
+  "text": "Turn on the TV using one of the remotes on the coffee table",
+  "target": {
+   "concept": "remote control",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "remote control",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "coffee table",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "on_top",
+    "a": "remote control",
+    "b": "coffee table"
+   }
+  ],
+  "select": [],
+  "residual": "'one of the remotes' — any instance satisfying the relation is acceptable | independent check on the train split (val untouched): handheld-device GT has a median of 478 points while fixed-furniture handles have 87-108, a factor of 4.4-5.5. The annotation therefore covers the whole device rather than an individual key: what a person grasps is the whole remote or controller, and which key the press lands on does not constitute a separate interactable entity. Fixed furniture is the opposite -- there you operate the handle itself.",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796568",
+  "fid": "16149.195",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44796568",
+    "16149.195"
+   ],
+   [
+    "44796568",
+    "16150.194"
+   ],
+   [
+    "44796568",
+    "16148.195"
+   ],
+   [
+    "44796568",
+    "16151.194"
+   ],
+   [
+    "44796562",
+    "15962.405"
+   ],
+   [
+    "44796562",
+    "15951.293"
+   ],
+   [
+    "44796568",
+    "16152.193"
+   ],
+   [
+    "44796562",
+    "16003.405"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "remote control",
+  "coffee table"
+ ],
+ "roles": {
+  "remote control": "target",
+  "coffee table": "container"
+ },
+ "candidates": {
+  "remote control": [
+   {
+    "x0": 721,
+    "x1": 1033,
+    "y0": 85,
+    "y1": 171,
+    "cx": 881.8,
+    "cy": 125.4,
+    "npix": 17130,
+    "area_pct": 0.62,
+    "score": 0.927
+   }
+  ],
+  "coffee table": [
+   {
+    "x0": 349,
+    "x1": 1681,
+    "y0": 54,
+    "y1": 1393,
+    "cx": 933.7,
+    "cy": 550.1,
+    "npix": 817811,
+    "area_pct": 29.579,
+    "score": 0.956
+   }
+  ]
+ },
+ "mask_keys": {
+  "remote control": [
+   "remote control|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

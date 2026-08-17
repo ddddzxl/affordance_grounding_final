@@ -1,0 +1,219 @@
+{
+ "q": 162,
+ "visit": "435357",
+ "desc_id": "ae4a0b1c-acdc-413a-a929-47cc7fd5bb0c",
+ "text": "Close the door next to the blue couch",
+ "parse": {
+  "text": "Close the door next to the blue couch",
+  "target": {
+   "concept": "door handle",
+   "host": "door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "couch",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "door",
+    "b": "couch"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899632",
+  "fid": "229993.177",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899632",
+    "229993.177"
+   ],
+   [
+    "42899630",
+    "229881.688"
+   ],
+   [
+    "42899632",
+    "229954.892"
+   ],
+   [
+    "42899624",
+    "230008.388"
+   ],
+   [
+    "42899632",
+    "229953.793"
+   ],
+   [
+    "42899624",
+    "230094.287"
+   ],
+   [
+    "42899630",
+    "229937.283"
+   ],
+   [
+    "42899630",
+    "229884.687"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 191,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "door",
+  "couch"
+ ],
+ "roles": {
+  "door handle": "target",
+  "door": "host",
+  "couch": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1285,
+    "x1": 1334,
+    "y0": 1080,
+    "y1": 1132,
+    "cx": 1318.5,
+    "cy": 1102.8,
+    "npix": 1298,
+    "area_pct": 0.047,
+    "score": 0.878
+   }
+  ],
+  "door": [
+   {
+    "x0": 1134,
+    "x1": 1364,
+    "y0": 689,
+    "y1": 1445,
+    "cx": 1242.5,
+    "cy": 1026.7,
+    "npix": 145542,
+    "area_pct": 5.264,
+    "score": 0.966
+   },
+   {
+    "x0": 986,
+    "x1": 1129,
+    "y0": 708,
+    "y1": 1372,
+    "cx": 1046.0,
+    "cy": 1031.9,
+    "npix": 73418,
+    "area_pct": 2.655,
+    "score": 0.307
+   }
+  ],
+  "couch": [
+   {
+    "x0": 0,
+    "x1": 941,
+    "y0": 1310,
+    "y1": 1919,
+    "cx": 427.8,
+    "cy": 1684.6,
+    "npix": 392353,
+    "area_pct": 14.191,
+    "score": 0.957
+   },
+   {
+    "x0": 1222,
+    "x1": 1439,
+    "y0": 1191,
+    "y1": 1665,
+    "cx": 1341.3,
+    "cy": 1463.6,
+    "npix": 63908,
+    "area_pct": 2.311,
+    "score": 0.911
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0"
+  ],
+  "door": [
+   "door|0",
+   "door|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

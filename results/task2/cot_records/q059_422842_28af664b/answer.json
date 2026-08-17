@@ -1,0 +1,8 @@
+{
+ "final": [
+  2
+ ],
+ "confidence": "medium",
+ "kind": "detection_strength",
+ "solver": "frontier-llm, manual CoT"
+}

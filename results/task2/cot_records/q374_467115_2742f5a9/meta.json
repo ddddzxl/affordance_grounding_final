@@ -1,0 +1,184 @@
+{
+ "q": 374,
+ "visit": "467115",
+ "desc_id": "2742f5a9-d7a9-408f-b314-ec22601b73ad",
+ "text": "Open the counter drawer directly under the dish drainer",
+ "parse": {
+  "text": "Open the counter drawer directly under the dish drainer",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "counter",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "dish drainer",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "counter",
+    "b": "drawer"
+   },
+   {
+    "rel": "under",
+    "a": "drawer",
+    "b": "dish drainer"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333319",
+  "fid": "28399.656",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 1,
+  "topk": [
+   [
+    "47333319",
+    "28399.656"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.2
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "counter",
+  "dish drainer"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "counter": "container",
+  "dish drainer": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 865,
+    "x1": 1289,
+    "y0": 1427,
+    "y1": 1679,
+    "cx": 1070.2,
+    "cy": 1550.0,
+    "npix": 23163,
+    "area_pct": 0.838,
+    "score": 0.978
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 521,
+    "x1": 1439,
+    "y0": 1306,
+    "y1": 1919,
+    "cx": 1046.5,
+    "cy": 1700.4,
+    "npix": 304024,
+    "area_pct": 10.996,
+    "score": 0.373
+   },
+   {
+    "x0": 224,
+    "x1": 519,
+    "y0": 1780,
+    "y1": 1919,
+    "cx": 406.9,
+    "cy": 1870.7,
+    "npix": 22526,
+    "area_pct": 0.815,
+    "score": 0.293
+   }
+  ],
+  "counter": [
+   {
+    "x0": 0,
+    "x1": 1439,
+    "y0": 730,
+    "y1": 1919,
+    "cx": 577.2,
+    "cy": 1485.9,
+    "npix": 313016,
+    "area_pct": 11.321,
+    "score": 0.708
+   }
+  ],
+  "dish drainer": [
+   {
+    "x0": 335,
+    "x1": 1327,
+    "y0": 683,
+    "y1": 1392,
+    "cx": 867.2,
+    "cy": 1008.7,
+    "npix": 288670,
+    "area_pct": 10.441,
+    "score": 0.391
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

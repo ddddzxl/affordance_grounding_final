@@ -1,0 +1,147 @@
+{
+ "q": 359,
+ "visit": "466916",
+ "desc_id": "b2802405-e3fa-47bf-a519-46741c3719b1",
+ "text": "Turn on the table lamp next to the printer",
+ "parse": {
+  "text": "Turn on the table lamp next to the printer",
+  "target": {
+   "concept": "light switch",
+   "host": "table lamp"
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "table lamp",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "printer",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "table lamp",
+    "b": "printer"
+   }
+  ],
+  "select": [],
+  "residual": "unified with val8's 'light switch'; which lamp it is, is carried by `host`, not by the search term",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331617",
+  "fid": "18145.591",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "47331617",
+    "18145.591"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 0.02,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 306,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch",
+  "table lamp",
+  "printer"
+ ],
+ "roles": {
+  "light switch": "target",
+  "table lamp": "host",
+  "printer": "landmark"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 978,
+    "x1": 1177,
+    "y0": 1290,
+    "y1": 1439,
+    "cx": 1077.2,
+    "cy": 1365.8,
+    "npix": 28760,
+    "area_pct": 1.04,
+    "score": 0.196
+   }
+  ],
+  "table lamp": [
+   {
+    "x0": 1167,
+    "x1": 1332,
+    "y0": 735,
+    "y1": 1052,
+    "cx": 1248.5,
+    "cy": 847.0,
+    "npix": 25447,
+    "area_pct": 0.92,
+    "score": 0.474
+   }
+  ],
+  "printer": [
+   {
+    "x0": 1698,
+    "x1": 1919,
+    "y0": 227,
+    "y1": 529,
+    "cx": 1808.8,
+    "cy": 433.1,
+    "npix": 38874,
+    "area_pct": 1.406,
+    "score": 0.719
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0"
+  ],
+  "table lamp": [
+   "table lamp|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "q": 72,
+ "visit": "422842",
+ "desc_id": "8e0dad90-05e3-4434-a8aa-98ec80214bd6",
+ "text": "Control the light intensity using the dimmer on the wall",
+ "parse": {
+  "text": "Control the light intensity using the dimmer on the wall",
+  "target": {
+   "concept": "switch",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "switch",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "wall",
+    "role": "landmark",
+    "instanceable": false
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'wall' not instanceable; no disambiguation cue",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897547",
+  "fid": "473311.215",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42897547",
+    "473311.215"
+   ],
+   [
+    "42897547",
+    "473314.214"
+   ],
+   [
+    "42897547",
+    "473306.217"
+   ],
+   [
+    "42897547",
+    "473313.214"
+   ],
+   [
+    "42897547",
+    "473317.212"
+   ],
+   [
+    "42897547",
+    "473312.215"
+   ],
+   [
+    "42897547",
+    "473322.210"
+   ],
+   [
+    "42897547",
+    "473308.216"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 236,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 37
+ },
+ "concepts": [
+  "switch"
+ ],
+ "roles": {
+  "switch": "target"
+ },
+ "candidates": {
+  "switch": [
+   {
+    "x0": 785,
+    "x1": 854,
+    "y0": 874,
+    "y1": 954,
+    "cx": 818.0,
+    "cy": 915.7,
+    "npix": 4032,
+    "area_pct": 0.146,
+    "score": 0.42
+   },
+   {
+    "x0": 0,
+    "x1": 919,
+    "y0": 0,
+    "y1": 938,
+    "cx": 839.8,
+    "cy": 864.9,
+    "npix": 6895,
+    "area_pct": 0.249,
+    "score": 0.205
+   },
+   {
+    "x0": 865,
+    "x1": 934,
+    "y0": 859,
+    "y1": 959,
+    "cx": 901.6,
+    "cy": 902.9,
+    "npix": 5093,
+    "area_pct": 0.184,
+    "score": 0.185
+   }
+  ]
+ },
+ "mask_keys": {
+  "switch": [
+   "switch|0",
+   "switch|1",
+   "switch|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "dimmer switch",
+  "used": "switch",
+  "probe_hits": 2,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

@@ -1,0 +1,264 @@
+{
+ "q": 114,
+ "visit": "423957",
+ "desc_id": "aff7d288-59a2-409d-a5da-fd78f38271ef",
+ "text": "Open the bottom window above the radiator",
+ "parse": {
+  "text": "Open the bottom window above the radiator",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "radiator",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "above",
+    "a": "window",
+    "b": "radiator"
+   }
+  ],
+  "select": [
+   {
+    "on": "window",
+    "axis": "vertical",
+    "value": "bottom",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42898343",
+  "fid": "508273.525",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42898343",
+    "508273.525"
+   ],
+   [
+    "42898343",
+    "508318.823"
+   ],
+   [
+    "42898340",
+    "508436.825"
+   ],
+   [
+    "42898340",
+    "508401.323"
+   ],
+   [
+    "42898343",
+    "508278.523"
+   ],
+   [
+    "42898343",
+    "508319.823"
+   ],
+   [
+    "42898343",
+    "508303.413"
+   ],
+   [
+    "42898340",
+    "508402.322"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 106,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "radiator"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "radiator": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 60,
+    "x1": 236,
+    "y0": 1250,
+    "y1": 1371,
+    "cx": 130.4,
+    "cy": 1311.2,
+    "npix": 7448,
+    "area_pct": 0.269,
+    "score": 0.679
+   },
+   {
+    "x0": 933,
+    "x1": 995,
+    "y0": 795,
+    "y1": 814,
+    "cx": 966.2,
+    "cy": 806.0,
+    "npix": 984,
+    "area_pct": 0.036,
+    "score": 0.615
+   },
+   {
+    "x0": 1093,
+    "x1": 1159,
+    "y0": 795,
+    "y1": 809,
+    "cx": 1127.2,
+    "cy": 801.8,
+    "npix": 892,
+    "area_pct": 0.032,
+    "score": 0.518
+   },
+   {
+    "x0": 1180,
+    "x1": 1226,
+    "y0": 861,
+    "y1": 940,
+    "cx": 1210.1,
+    "cy": 896.7,
+    "npix": 1851,
+    "area_pct": 0.067,
+    "score": 0.314
+   }
+  ],
+  "window": [
+   {
+    "x0": 638,
+    "x1": 767,
+    "y0": 395,
+    "y1": 721,
+    "cx": 703.8,
+    "cy": 561.5,
+    "npix": 37076,
+    "area_pct": 1.341,
+    "score": 0.796
+   },
+   {
+    "x0": 633,
+    "x1": 806,
+    "y0": 235,
+    "y1": 394,
+    "cx": 721.1,
+    "cy": 317.7,
+    "npix": 25953,
+    "area_pct": 0.939,
+    "score": 0.216
+   },
+   {
+    "x0": 633,
+    "x1": 672,
+    "y0": 395,
+    "y1": 439,
+    "cx": 654.1,
+    "cy": 416.5,
+    "npix": 1636,
+    "area_pct": 0.059,
+    "score": 0.16
+   }
+  ],
+  "radiator": [
+   {
+    "x0": 655,
+    "x1": 785,
+    "y0": 892,
+    "y1": 1059,
+    "cx": 720.0,
+    "cy": 976.4,
+    "npix": 19944,
+    "area_pct": 0.721,
+    "score": 0.934
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2",
+   "window handle|3"
+  ],
+  "window": [
+   "window|0",
+   "window|1",
+   "window|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

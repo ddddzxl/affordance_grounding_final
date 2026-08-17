@@ -1,0 +1,190 @@
+{
+ "q": 341,
+ "visit": "466880",
+ "desc_id": "c3403fd1-80eb-4844-878e-1c09cd4eb661",
+ "text": "Open the bread bin next to the water bottles",
+ "parse": {
+  "text": "Open the bread bin next to the water bottles",
+  "target": {
+   "concept": "bread bin lid",
+   "host": "bread bin"
+  },
+  "entities": [
+   {
+    "name": "bread bin lid",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "bread bin",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "water bottles",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "bread bin",
+    "b": "water bottles"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331707",
+  "fid": "11132.828",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 2,
+  "topk": [
+   [
+    "47331707",
+    "11132.828"
+   ],
+   [
+    "47331707",
+    "11143.540"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 179,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "bread bin lid",
+  "bread bin",
+  "water bottles"
+ ],
+ "roles": {
+  "bread bin lid": "target",
+  "bread bin": "host",
+  "water bottles": "landmark"
+ },
+ "candidates": {
+  "bread bin lid": [
+   {
+    "x0": 405,
+    "x1": 684,
+    "y0": 270,
+    "y1": 408,
+    "cx": 529.6,
+    "cy": 328.2,
+    "npix": 25590,
+    "area_pct": 0.926,
+    "score": 0.307
+   },
+   {
+    "x0": 753,
+    "x1": 846,
+    "y0": 305,
+    "y1": 339,
+    "cx": 799.1,
+    "cy": 321.8,
+    "npix": 2496,
+    "area_pct": 0.09,
+    "score": 0.194
+   },
+   {
+    "x0": 47,
+    "x1": 205,
+    "y0": 244,
+    "y1": 279,
+    "cx": 122.9,
+    "cy": 261.4,
+    "npix": 4830,
+    "area_pct": 0.175,
+    "score": 0.187
+   }
+  ],
+  "bread bin": [],
+  "water bottles": [
+   {
+    "x0": 334,
+    "x1": 406,
+    "y0": 155,
+    "y1": 404,
+    "cx": 367.9,
+    "cy": 291.7,
+    "npix": 12418,
+    "area_pct": 0.449,
+    "score": 0.886
+   },
+   {
+    "x0": 271,
+    "x1": 346,
+    "y0": 160,
+    "y1": 413,
+    "cx": 310.6,
+    "cy": 293.5,
+    "npix": 13317,
+    "area_pct": 0.482,
+    "score": 0.865
+   },
+   {
+    "x0": 213,
+    "x1": 286,
+    "y0": 227,
+    "y1": 419,
+    "cx": 249.9,
+    "cy": 322.6,
+    "npix": 12462,
+    "area_pct": 0.451,
+    "score": 0.721
+   }
+  ]
+ },
+ "mask_keys": {
+  "bread bin lid": [
+   "bread bin lid|0",
+   "bread bin lid|1",
+   "bread bin lid|2"
+  ],
+  "bread bin": []
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

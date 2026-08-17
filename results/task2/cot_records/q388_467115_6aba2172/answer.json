@@ -1,0 +1,11 @@
+{
+ "final": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "confidence": "medium",
+ "kind": "all_inside_gt",
+ "solver": "frontier-llm, manual CoT"
+}

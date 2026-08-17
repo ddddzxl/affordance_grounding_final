@@ -1,0 +1,184 @@
+{
+ "q": 435,
+ "visit": "468476",
+ "desc_id": "11b11fcf-3179-4fde-b601-9999992b5b5e",
+ "text": "Open the door of the wood stove",
+ "parse": {
+  "text": "Open the door of the wood stove",
+  "target": {
+   "concept": "door handle",
+   "host": "stove door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "stove door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "wood stove",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "wood stove",
+    "b": "stove door"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "45261681",
+  "fid": "3608.062",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL-T",
+  "n_top": 8,
+  "topk": [
+   [
+    "45261681",
+    "3608.062"
+   ],
+   [
+    "45261682",
+    "3553.568"
+   ],
+   [
+    "45261682",
+    "3536.475"
+   ],
+   [
+    "45261682",
+    "3535.475"
+   ],
+   [
+    "45261686",
+    "3829.470"
+   ],
+   [
+    "45261686",
+    "3835.467"
+   ],
+   [
+    "45261686",
+    "3839.466"
+   ],
+   [
+    "45261686",
+    "3788.470"
+   ]
+  ],
+  "consistency": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "n_frames": 222,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_target_visible",
+   "n_pool": 25,
+   "n_vis": 13
+  },
+  "pool": "fun3du",
+  "n_pool": 25
+ },
+ "concepts": [
+  "door handle",
+  "stove door",
+  "wood stove"
+ ],
+ "roles": {
+  "door handle": "target",
+  "stove door": "host",
+  "wood stove": "container"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 895,
+    "x1": 934,
+    "y0": 1193,
+    "y1": 1232,
+    "cx": 914.4,
+    "cy": 1212.0,
+    "npix": 1189,
+    "area_pct": 0.043,
+    "score": 0.345
+   },
+   {
+    "x0": 745,
+    "x1": 784,
+    "y0": 1207,
+    "y1": 1239,
+    "cx": 764.7,
+    "cy": 1222.9,
+    "npix": 1066,
+    "area_pct": 0.039,
+    "score": 0.332
+   },
+   {
+    "x0": 861,
+    "x1": 986,
+    "y0": 1348,
+    "y1": 1505,
+    "cx": 925.2,
+    "cy": 1424.8,
+    "npix": 15640,
+    "area_pct": 0.566,
+    "score": 0.188
+   }
+  ],
+  "stove door": [],
+  "wood stove": [
+   {
+    "x0": 0,
+    "x1": 251,
+    "y0": 970,
+    "y1": 1919,
+    "cx": 83.9,
+    "cy": 1398.6,
+    "npix": 87355,
+    "area_pct": 3.16,
+    "score": 0.5
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2"
+  ],
+  "stove door": []
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "relation landmark 'stove door' missing",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

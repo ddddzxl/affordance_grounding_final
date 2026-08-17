@@ -1,0 +1,43 @@
+TASK: "Control the water flow in the bathtub using the drain control dial"
+
+PARSE:
+  target concept = "drain control dial"   <- the thing that must be output
+  host           = 'bathtub'   <- countable object the target sits on
+  entity  : 'drain control dial'  role=target
+  entity  : 'bathtub'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  drain control dial   0  1427  1494  1290  1333  1460.4  1310.9   0.085  0.229
+  drain control dial   1   607   666  1310  1369   634.4  1338.2   0.099  0.181
+  bathtub              0   151   772  1220  1439   497.3  1351.4   3.395  0.928
+  bathtub              1     0   337  1149  1439   125.2  1291.4   2.384  0.633
+
+
+
+
+
+CONTAINMENT (drain control dial inside the FILLED mask of each bathtub):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  bathtub #0   x[ 151, 772] cx   497.3 cy  1351.4 w= 621 contains #1
+  bathtub #1   x[   0, 337] cx   125.2 cy  1291.4 w= 337 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "drain control dial" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: drain control dial #<id>[, #<id> ...]

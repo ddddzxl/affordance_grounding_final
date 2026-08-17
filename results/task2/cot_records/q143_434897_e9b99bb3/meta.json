@@ -1,0 +1,264 @@
+{
+ "q": 143,
+ "visit": "434897",
+ "desc_id": "e9b99bb3-24db-4af5-a663-66c5dd4fa7ce",
+ "text": "Open the second drawer of the wooden closet",
+ "parse": {
+  "text": "Open the second drawer of the wooden closet",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "drawer"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "ordinal",
+    "value": null,
+    "index": 2,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42899165",
+  "fid": "182817.441",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L2",
+  "n_top": 8,
+  "topk": [
+   [
+    "42899165",
+    "182817.441"
+   ],
+   [
+    "42899165",
+    "182850.544"
+   ],
+   [
+    "42899163",
+    "182724.146"
+   ],
+   [
+    "42899163",
+    "182725.146"
+   ],
+   [
+    "42899163",
+    "182723.147"
+   ],
+   [
+    "42899165",
+    "182807.545"
+   ],
+   [
+    "42899163",
+    "182719.132"
+   ],
+   [
+    "42899165",
+    "182867.137"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.999,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 0.99,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 94,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "closet"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "closet": "container"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 200,
+    "x1": 302,
+    "y0": 1353,
+    "y1": 1919,
+    "cx": 223.5,
+    "cy": 1401.9,
+    "npix": 1284,
+    "area_pct": 0.046,
+    "score": 0.667
+   },
+   {
+    "x0": 280,
+    "x1": 304,
+    "y0": 1900,
+    "y1": 1919,
+    "cx": 293.3,
+    "cy": 1911.4,
+    "npix": 361,
+    "area_pct": 0.013,
+    "score": 0.632
+   },
+   {
+    "x0": 301,
+    "x1": 324,
+    "y0": 1900,
+    "y1": 1919,
+    "cx": 313.6,
+    "cy": 1911.4,
+    "npix": 355,
+    "area_pct": 0.013,
+    "score": 0.617
+   },
+   {
+    "x0": 395,
+    "x1": 419,
+    "y0": 1487,
+    "y1": 1512,
+    "cx": 405.9,
+    "cy": 1499.6,
+    "npix": 577,
+    "area_pct": 0.021,
+    "score": 0.447
+   },
+   {
+    "x0": 770,
+    "x1": 864,
+    "y0": 1264,
+    "y1": 1319,
+    "cx": 817.8,
+    "cy": 1293.8,
+    "npix": 1869,
+    "area_pct": 0.068,
+    "score": 0.153
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 213,
+    "x1": 402,
+    "y0": 1740,
+    "y1": 1919,
+    "cx": 327.9,
+    "cy": 1855.3,
+    "npix": 16762,
+    "area_pct": 0.606,
+    "score": 0.835
+   },
+   {
+    "x0": 225,
+    "x1": 377,
+    "y0": 1635,
+    "y1": 1864,
+    "cx": 301.1,
+    "cy": 1757.0,
+    "npix": 11458,
+    "area_pct": 0.414,
+    "score": 0.16
+   }
+  ],
+  "closet": [
+   {
+    "x0": 0,
+    "x1": 581,
+    "y0": 409,
+    "y1": 1919,
+    "cx": 249.2,
+    "cy": 1234.8,
+    "npix": 700472,
+    "area_pct": 25.335,
+    "score": 0.905
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0",
+   "drawer handle|1",
+   "drawer handle|2",
+   "drawer handle|3",
+   "drawer handle|4"
+  ],
+  "drawer": [
+   "drawer|0",
+   "drawer|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

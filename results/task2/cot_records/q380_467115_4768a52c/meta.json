@@ -1,0 +1,171 @@
+{
+ "q": 380,
+ "visit": "467115",
+ "desc_id": "4768a52c-544e-4dcc-a599-75e6e77a3b0b",
+ "text": "Turn on the kitchen light",
+ "parse": {
+  "text": "Turn on the kitchen light",
+  "target": {
+   "concept": "light switch",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "light switch",
+    "role": "target",
+    "instanceable": true
+   }
+  ],
+  "relations": [],
+  "select": [],
+  "residual": "'kitchen' is a room-level locator, not groundable",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28318.756",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "47333310",
+    "28318.756"
+   ],
+   [
+    "47333310",
+    "28317.756"
+   ],
+   [
+    "47333310",
+    "28322.754"
+   ],
+   [
+    "47333310",
+    "28324.753"
+   ],
+   [
+    "47333310",
+    "28325.753"
+   ],
+   [
+    "47333319",
+    "28351.659"
+   ],
+   [
+    "47333319",
+    "28352.659"
+   ],
+   [
+    "47333310",
+    "28282.754"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "light switch"
+ ],
+ "roles": {
+  "light switch": "target"
+ },
+ "candidates": {
+  "light switch": [
+   {
+    "x0": 515,
+    "x1": 709,
+    "y0": 535,
+    "y1": 905,
+    "cx": 611.3,
+    "cy": 731.6,
+    "npix": 59760,
+    "area_pct": 2.161,
+    "score": 0.879
+   },
+   {
+    "x0": 1339,
+    "x1": 1439,
+    "y0": 926,
+    "y1": 1913,
+    "cx": 1394.3,
+    "cy": 1359.7,
+    "npix": 80319,
+    "area_pct": 2.905,
+    "score": 0.338
+   },
+   {
+    "x0": 1372,
+    "x1": 1439,
+    "y0": 1820,
+    "y1": 1919,
+    "cx": 1406.0,
+    "cy": 1871.4,
+    "npix": 6037,
+    "area_pct": 0.218,
+    "score": 0.27
+   }
+  ]
+ },
+ "mask_keys": {
+  "light switch": [
+   "light switch|0",
+   "light switch|1",
+   "light switch|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

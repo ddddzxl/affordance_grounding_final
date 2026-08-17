@@ -1,0 +1,10 @@
+{
+ "final": [
+  2
+ ],
+ "confidence": "high",
+ "kind": "relation",
+ "note": "the only independent door left of the fridge (x 0-214) -> handle 2",
+ "solver": "frontier-llm, manual CoT",
+ "based_on_frame": "0011"
+}

@@ -1,0 +1,8 @@
+{
+ "final": [
+  3
+ ],
+ "confidence": "medium",
+ "kind": "relation",
+ "solver": "frontier-llm, manual CoT"
+}

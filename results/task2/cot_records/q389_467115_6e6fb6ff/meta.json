@@ -1,0 +1,251 @@
+{
+ "q": 389,
+ "visit": "467115",
+ "desc_id": "6e6fb6ff-7cdd-41c5-8d21-05dd30ca3e0f",
+ "text": "Open the cabinet door above the teacups",
+ "parse": {
+  "text": "Open the cabinet door above the teacups",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "teacups",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "above",
+    "a": "cabinet door",
+    "b": "teacups"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333310",
+  "fid": "28294.766",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 3,
+  "topk": [
+   [
+    "47333310",
+    "28294.766"
+   ],
+   [
+    "47333319",
+    "28396.657"
+   ],
+   [
+    "47333319",
+    "28362.655"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "cabinet",
+  "teacups"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "cabinet": "container",
+  "teacups": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 0,
+    "x1": 349,
+    "y0": 719,
+    "y1": 812,
+    "cx": 175.0,
+    "cy": 776.5,
+    "npix": 20733,
+    "area_pct": 0.75,
+    "score": 0.778
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 0,
+    "x1": 1300,
+    "y0": 660,
+    "y1": 1470,
+    "cx": 607.1,
+    "cy": 1055.2,
+    "npix": 878893,
+    "area_pct": 31.789,
+    "score": 0.963
+   },
+   {
+    "x0": 1053,
+    "x1": 1439,
+    "y0": 669,
+    "y1": 1478,
+    "cx": 1300.8,
+    "cy": 1163.9,
+    "npix": 193632,
+    "area_pct": 7.003,
+    "score": 0.93
+   },
+   {
+    "x0": 0,
+    "x1": 81,
+    "y0": 1367,
+    "y1": 1452,
+    "cx": 30.2,
+    "cy": 1421.9,
+    "npix": 4022,
+    "area_pct": 0.145,
+    "score": 0.646
+   }
+  ],
+  "cabinet": [
+   {
+    "x0": 0,
+    "x1": 1302,
+    "y0": 658,
+    "y1": 1470,
+    "cx": 606.0,
+    "cy": 1053.9,
+    "npix": 884618,
+    "area_pct": 31.996,
+    "score": 0.925
+   },
+   {
+    "x0": 1052,
+    "x1": 1439,
+    "y0": 668,
+    "y1": 1478,
+    "cx": 1300.2,
+    "cy": 1162.3,
+    "npix": 195421,
+    "area_pct": 7.068,
+    "score": 0.894
+   },
+   {
+    "x0": 0,
+    "x1": 80,
+    "y0": 1370,
+    "y1": 1452,
+    "cx": 30.1,
+    "cy": 1422.6,
+    "npix": 3855,
+    "area_pct": 0.139,
+    "score": 0.581
+   },
+   {
+    "x0": 5,
+    "x1": 76,
+    "y0": 0,
+    "y1": 39,
+    "cx": 38.9,
+    "cy": 16.2,
+    "npix": 2257,
+    "area_pct": 0.082,
+    "score": 0.152
+   }
+  ],
+  "teacups": [
+   {
+    "x0": 690,
+    "x1": 935,
+    "y0": 93,
+    "y1": 344,
+    "cx": 806.9,
+    "cy": 207.3,
+    "npix": 46176,
+    "area_pct": 1.67,
+    "score": 0.88
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1",
+   "cabinet door|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "bbox_fallback(1 candidates, kept 1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

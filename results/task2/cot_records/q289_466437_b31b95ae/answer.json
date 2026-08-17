@@ -1,0 +1,9 @@
+{
+ "final": [
+  0
+ ],
+ "confidence": "low",
+ "kind": "ordinal",
+ "excluded": "ground truth disputed: on manual review the door ordering from the right and from the left disagrees with the annotation, and the right side of the frame is cut off by a mirror",
+ "solver": "frontier-llm, manual CoT"
+}

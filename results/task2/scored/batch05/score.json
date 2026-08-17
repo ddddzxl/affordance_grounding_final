@@ -1,0 +1,471 @@
+[
+ {
+  "q": "q021_421254_f4312213",
+  "text": "Open the bottom drawer of the cabinet with the TV on top",
+  "concept": "drawer handle",
+  "pick": [
+   2,
+   7
+  ],
+  "gt_ids": [
+   2,
+   7
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.468,
+  "n_cand": 17,
+  "pred_px": 1803,
+  "gt_px": 94,
+  "gt_bbox_px": 90611.5,
+  "prec2d": 0.044,
+  "coarse_ratio": 19.18,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q031_421393_76c3cde8",
+  "text": "Open the right part of the window",
+  "concept": "window handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "low",
+  "kind": "select",
+  "best_frac": 0.293,
+  "n_cand": 6,
+  "pred_px": 419,
+  "gt_px": 82,
+  "gt_bbox_px": 877.4,
+  "prec2d": 0.057,
+  "coarse_ratio": 5.11,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q032_421393_8887be5e",
+  "text": "Open the top drawer of the nightstand",
+  "concept": "drawer handle",
+  "pick": [
+   3
+  ],
+  "gt_ids": [
+   3
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "select",
+  "best_frac": 0.967,
+  "n_cand": 6,
+  "pred_px": 10970,
+  "gt_px": 120,
+  "gt_bbox_px": 6414.4,
+  "prec2d": 0.011,
+  "coarse_ratio": 91.42,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q039_421657_50a1bfc1",
+  "text": "Open the top drawer of the blue nightstand to the right of the bed",
+  "concept": "drawer handle",
+  "pick": [
+   3
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "select",
+  "best_frac": 0.0,
+  "n_cand": 5,
+  "pred_px": 372,
+  "gt_px": 49,
+  "gt_bbox_px": 87.9,
+  "prec2d": 0.0,
+  "coarse_ratio": 7.59,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q041_421657_80f7ad39",
+  "text": "Open the top drawer of the nightstand next to the closet",
+  "concept": "drawer handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "select",
+  "best_frac": 0.922,
+  "n_cand": 6,
+  "pred_px": 1022,
+  "gt_px": 51,
+  "gt_bbox_px": 479.1,
+  "prec2d": 0.046,
+  "coarse_ratio": 20.04,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q073_422842_a3b6fdc0",
+  "text": "Open the bottom left drawer of the dressing table",
+  "concept": "drawer handle",
+  "pick": [
+   7
+  ],
+  "gt_ids": [
+   7
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "vert+horiz",
+  "best_frac": 0.817,
+  "n_cand": 8,
+  "pred_px": 2529,
+  "gt_px": 180,
+  "gt_bbox_px": 7099.9,
+  "prec2d": 0.058,
+  "coarse_ratio": 14.05,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q079_422842_cf2bfe33",
+  "text": "Open the middle left drawer of the dressing table",
+  "concept": "drawer handle",
+  "pick": [
+   5
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "vert+horiz",
+  "best_frac": 0.0,
+  "n_cand": 8,
+  "pred_px": 765,
+  "gt_px": 209,
+  "gt_bbox_px": 1790.0,
+  "prec2d": 0.0,
+  "coarse_ratio": 3.66,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q099_423452_3d6028fe",
+  "text": "Close the door next to the red armchair",
+  "concept": "door handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "rel-only",
+  "best_frac": 1.0,
+  "n_cand": 6,
+  "pred_px": 2935,
+  "gt_px": 160,
+  "gt_bbox_px": 1018.5,
+  "prec2d": 0.055,
+  "coarse_ratio": 18.34,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q150_435324_c435f10b",
+  "text": "Open the top right window part between the two beds",
+  "concept": "window handle",
+  "pick": [
+   1
+  ],
+  "gt_ids": [
+   1
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "vert+horiz",
+  "best_frac": 0.969,
+  "n_cand": 7,
+  "pred_px": 1209,
+  "gt_px": 128,
+  "gt_bbox_px": 949.6,
+  "prec2d": 0.103,
+  "coarse_ratio": 9.45,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q172_437157_9d54a7cc",
+  "text": "Turn on the ceiling light using the switch near the blue coats",
+  "concept": "light switch",
+  "pick": [
+   3
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": false,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "rel-only",
+  "best_frac": 1.0,
+  "n_cand": 5,
+  "pred_px": 5421,
+  "gt_px": 57,
+  "gt_bbox_px": 1074.8,
+  "prec2d": 0.0,
+  "coarse_ratio": 95.11,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q199_438102_a73433ed",
+  "text": "Open the second cabinet drawer with the globe on top",
+  "concept": "drawer handle",
+  "pick": [
+   0,
+   3
+  ],
+  "gt_ids": [
+   0,
+   3
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "ordinal",
+  "best_frac": 0.459,
+  "n_cand": 9,
+  "pred_px": 785,
+  "gt_px": 148,
+  "gt_bbox_px": 11618.5,
+  "prec2d": 0.13,
+  "coarse_ratio": 5.3,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q200_438102_c505333e",
+  "text": "Open the third cabinet drawer with the globe on top",
+  "concept": "drawer handle",
+  "pick": [
+   1,
+   6,
+   8
+  ],
+  "gt_ids": [
+   1,
+   6
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "low",
+  "kind": "ordinal",
+  "best_frac": 0.5,
+  "n_cand": 9,
+  "pred_px": 1439,
+  "gt_px": 140,
+  "gt_bbox_px": 13029.8,
+  "prec2d": 0.08,
+  "coarse_ratio": 10.28,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q242_466092_7891492c",
+  "text": "Open the window behind the table with the flower vase",
+  "concept": "window handle",
+  "pick": [
+   2
+  ],
+  "gt_ids": [
+   4
+  ],
+  "correct": false,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "low",
+  "kind": "rel-only",
+  "best_frac": 0.08,
+  "n_cand": 5,
+  "pred_px": 266,
+  "gt_px": 50,
+  "gt_bbox_px": 19987.8,
+  "prec2d": 0.0,
+  "coarse_ratio": 5.32,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q309_466841_a227ff2b",
+  "text": "Open the small white storage box on the desk",
+  "concept": "storage box lid",
+  "pick": [
+   1
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 0.0,
+  "conf": "low",
+  "kind": "rel-only",
+  "best_frac": 0.0,
+  "n_cand": 5,
+  "pred_px": 7707,
+  "gt_px": 0,
+  "gt_bbox_px": 0.0,
+  "prec2d": 0.0,
+  "coarse_ratio": NaN,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q326_466880_38b931a3",
+  "text": "Open the second drawer of the counter to the left of the oven",
+  "concept": "drawer handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [
+   0
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "ordinal",
+  "best_frac": 0.934,
+  "n_cand": 8,
+  "pred_px": 1735,
+  "gt_px": 122,
+  "gt_bbox_px": 1286.4,
+  "prec2d": 0.066,
+  "coarse_ratio": 14.22,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q328_466880_4adc606e",
+  "text": "Open the cabinet door directly above the microwave",
+  "concept": "door handle",
+  "pick": [
+   0
+  ],
+  "gt_ids": [],
+  "correct": false,
+  "pool_ok": false,
+  "d_frame": 0.0,
+  "conf": "medium",
+  "kind": "rel-only",
+  "best_frac": 0.0,
+  "n_cand": 5,
+  "pred_px": 5647,
+  "gt_px": 0,
+  "gt_bbox_px": 0.0,
+  "prec2d": 0.0,
+  "coarse_ratio": NaN,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q405_467115_da7f5c2a",
+  "text": "Open the top left cabinet door located to the left of the dining table",
+  "concept": "door handle",
+  "pick": [
+   8,
+   9
+  ],
+  "gt_ids": [
+   8
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "high",
+  "kind": "vert+horiz",
+  "best_frac": 0.86,
+  "n_cand": 10,
+  "pred_px": 1472,
+  "gt_px": 129,
+  "gt_bbox_px": 972.6,
+  "prec2d": 0.075,
+  "coarse_ratio": 11.41,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ },
+ {
+  "q": "q406_467115_e0a55b57",
+  "text": "Open the top middle cabinet door located to the left of the dining table",
+  "concept": "door handle",
+  "pick": [
+   7,
+   9
+  ],
+  "gt_ids": [
+   7
+  ],
+  "correct": true,
+  "pool_ok": true,
+  "d_frame": 1.0,
+  "conf": "medium",
+  "kind": "vert+horiz",
+  "best_frac": 0.655,
+  "n_cand": 10,
+  "pred_px": 1510,
+  "gt_px": 142,
+  "gt_bbox_px": 1465.0,
+  "prec2d": 0.062,
+  "coarse_ratio": 10.63,
+  "caveat": null,
+  "excluded": false,
+  "excl_why": null
+ }
+]

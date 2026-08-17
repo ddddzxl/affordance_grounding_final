@@ -1,0 +1,124 @@
+{
+ "q": 6,
+ "visit": "421254",
+ "desc_id": "609f3c02-2a0f-4d49-b228-65a2abecc82f",
+ "text": "Unplug the TV from the power supply",
+ "parse": {
+  "text": "Unplug the TV from the power supply",
+  "target": {
+   "concept": "plug",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "plug",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "TV",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "near",
+    "a": "plug",
+    "b": "TV"
+   }
+  ],
+  "select": [],
+  "residual": "'power supply' is generic; the plug is inferred to be the TV's",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42444754",
+  "fid": "81018.476",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "42444754",
+    "81018.476"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 170,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 46
+ },
+ "concepts": [
+  "plug",
+  "TV"
+ ],
+ "roles": {
+  "plug": "target",
+  "TV": "landmark"
+ },
+ "candidates": {
+  "plug": [
+   {
+    "x0": 1329,
+    "x1": 1439,
+    "y0": 523,
+    "y1": 692,
+    "cx": 1390.5,
+    "cy": 615.2,
+    "npix": 15328,
+    "area_pct": 0.554,
+    "score": 0.256
+   }
+  ],
+  "TV": [
+   {
+    "x0": 180,
+    "x1": 847,
+    "y0": 92,
+    "y1": 763,
+    "cx": 532.3,
+    "cy": 409.0,
+    "npix": 381083,
+    "area_pct": 13.783,
+    "score": 0.983
+   }
+  ]
+ },
+ "mask_keys": {
+  "plug": [
+   "plug|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

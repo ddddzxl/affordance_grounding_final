@@ -1,0 +1,51 @@
+TASK: "Unplug the stereo system on the shelf"
+
+PARSE:
+  target concept = "plug"   <- the thing that must be output
+  host           = 'stereo system'   <- countable object the target sits on
+  entity  : 'plug'  role=target
+  entity  : 'stereo system'  role=host
+  entity  : 'shelf'  role=container
+  relation: on_top(a='stereo system', b='shelf')
+  residual: the plug sits at the socket end, not on the stereo system
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  plug                 0   744   814   594   653   775.6   623.2   0.084  0.491
+  plug                 1  1055  1144   813   899  1100.5   856.8   0.219  0.395
+  plug                 2   700   805   507   668   746.6   575.0   0.456  0.388
+  plug                 3   495   619  1440  1546   554.8  1493.0   0.246  0.174
+  stereo system        0  1176  1439   567  1038  1320.7   779.5   3.569  0.728
+  stereo system        1  1165  1439   940  1086  1292.9  1012.7    0.77  0.191
+  shelf                0   660  1439   828  1192  1088.4   993.5   4.192  0.921
+  shelf                1     0   824  1190  1733   315.8  1427.8   7.643  0.787
+  shelf                2   650  1335  1432  1919  1006.3  1695.8   2.911  0.765
+
+
+
+
+
+CONTAINMENT (plug inside the FILLED mask of each stereo system):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  stereo system #0   x[1176,1439] cx  1320.7 cy   779.5 w= 263 contains (none)
+  stereo system #1   x[1165,1439] cx  1292.9 cy  1012.7 w= 274 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "plug" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: plug #<id>[, #<id> ...]

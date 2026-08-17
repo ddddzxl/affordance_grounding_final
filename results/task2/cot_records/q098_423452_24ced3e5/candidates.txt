@@ -1,0 +1,42 @@
+TASK: "Unplug the floor lamp next to the dining table"
+
+PARSE:
+  target concept = "plug"   <- the thing that must be output
+  host           = None   <- countable object the target sits on
+  entity  : 'plug'  role=target
+  entity  : 'floor lamp'  role=landmark
+  entity  : 'dining table'  role=landmark
+  relation: near(a='plug', b='floor lamp')
+  relation: next_to(a='floor lamp', b='dining table')
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  plug                 0   847   924  1155  1219   881.2  1188.0   0.112  0.741
+  plug                 1   906   932  1195  1219   919.1  1208.7   0.018  0.335
+  plug                 2     0   888     0  1214   831.6  1161.8   0.229  0.278
+  plug                 3  1422  1512   980  1015  1462.9  1000.9   0.053  0.265
+  plug                 4     0    66   478   674    27.7   581.4   0.381  0.226
+  plug                 5  1503  1606   995  1039  1551.1  1020.7   0.088   0.21
+  plug                 6   935  1446   983  1354  1282.3  1156.5    0.18  0.196
+  floor lamp           0  1747  1919    50   624  1845.3   353.2   0.766  0.461
+  floor lamp           1  1533  1632    15   204  1591.9    82.7   0.148  0.455
+  floor lamp           2  1630  1672     0   180  1650.9    81.1   0.113  0.194
+  dining table         0  1260  1919   585  1276  1698.9   910.7   5.637  0.789
+
+QUESTION: which "plug" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: plug #<id>[, #<id> ...]

@@ -1,0 +1,44 @@
+TASK: "Turn on the faucet"
+
+PARSE:
+  target concept = "faucet handle"   <- the thing that must be output
+  host           = 'faucet'   <- countable object the target sits on
+  entity  : 'faucet handle'  role=target
+  entity  : 'faucet'  role=host
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1920 wide (x) by 1440 tall (y).  (LANDSCAPE)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1919 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1439 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  faucet handle        0   907   946   785   823   926.0   802.1   0.039  0.733
+  faucet handle        1   720   766   815   850   741.7   830.0   0.043  0.713
+  faucet handle        2   953   972   865   890   961.3   879.3   0.014  0.198
+  faucet               0   720   785   815   929   746.4   880.0   0.163  0.897
+  faucet               1   907   958   785   933   928.2   847.5   0.149  0.699
+
+
+
+
+
+CONTAINMENT (faucet handle inside the FILLED mask of each faucet):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  faucet #0   x[ 720, 785] cx   746.4 cy   880.0 w=  65 contains #1
+  faucet #1   x[ 907, 958] cx   928.2 cy   847.5 w=  51 contains #0
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "faucet handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: faucet handle #<id>[, #<id> ...]

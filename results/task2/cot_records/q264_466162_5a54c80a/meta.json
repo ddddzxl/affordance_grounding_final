@@ -1,0 +1,269 @@
+{
+ "q": 264,
+ "visit": "466162",
+ "desc_id": "5a54c80a-01ad-4d25-8902-ce990c39ae94",
+ "text": "Open the window above the radiator",
+ "parse": {
+  "text": "Open the window above the radiator",
+  "target": {
+   "concept": "window handle",
+   "host": "window"
+  },
+  "entities": [
+   {
+    "name": "window handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "window",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "radiator",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "above",
+    "a": "window",
+    "b": "radiator"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "44796576",
+  "fid": "16715.286",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "44796576",
+    "16715.286"
+   ],
+   [
+    "44796575",
+    "16892.180"
+   ],
+   [
+    "44796579",
+    "16831.788"
+   ],
+   [
+    "44796579",
+    "16788.589"
+   ],
+   [
+    "44796579",
+    "16782.592"
+   ],
+   [
+    "44796576",
+    "16726.282"
+   ],
+   [
+    "44796579",
+    "16787.590"
+   ],
+   [
+    "44796579",
+    "16783.591"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 257,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "window handle",
+  "window",
+  "radiator"
+ ],
+ "roles": {
+  "window handle": "target",
+  "window": "host",
+  "radiator": "landmark"
+ },
+ "candidates": {
+  "window handle": [
+   {
+    "x0": 1107,
+    "x1": 1126,
+    "y0": 820,
+    "y1": 834,
+    "cx": 1117.0,
+    "cy": 827.8,
+    "npix": 250,
+    "area_pct": 0.009,
+    "score": 0.589
+   },
+   {
+    "x0": 853,
+    "x1": 872,
+    "y0": 825,
+    "y1": 839,
+    "cx": 862.9,
+    "cy": 832.2,
+    "npix": 275,
+    "area_pct": 0.01,
+    "score": 0.582
+   },
+   {
+    "x0": 1480,
+    "x1": 1525,
+    "y0": 800,
+    "y1": 839,
+    "cx": 1501.6,
+    "cy": 822.0,
+    "npix": 1276,
+    "area_pct": 0.046,
+    "score": 0.248
+   },
+   {
+    "x0": 1421,
+    "x1": 1487,
+    "y0": 781,
+    "y1": 829,
+    "cx": 1473.1,
+    "cy": 813.7,
+    "npix": 551,
+    "area_pct": 0.02,
+    "score": 0.247
+   },
+   {
+    "x0": 1427,
+    "x1": 1466,
+    "y0": 1290,
+    "y1": 1319,
+    "cx": 1444.8,
+    "cy": 1305.2,
+    "npix": 1008,
+    "area_pct": 0.036,
+    "score": 0.243
+   },
+   {
+    "x0": 447,
+    "x1": 1597,
+    "y0": 820,
+    "y1": 873,
+    "cx": 467.9,
+    "cy": 845.5,
+    "npix": 937,
+    "area_pct": 0.034,
+    "score": 0.223
+   },
+   {
+    "x0": 1527,
+    "x1": 1566,
+    "y0": 1425,
+    "y1": 1439,
+    "cx": 1547.2,
+    "cy": 1434.1,
+    "npix": 424,
+    "area_pct": 0.015,
+    "score": 0.206
+   }
+  ],
+  "window": [
+   {
+    "x0": 804,
+    "x1": 1197,
+    "y0": 499,
+    "y1": 874,
+    "cx": 1000.8,
+    "cy": 689.6,
+    "npix": 130912,
+    "area_pct": 4.735,
+    "score": 0.908
+   }
+  ],
+  "radiator": [
+   {
+    "x0": 827,
+    "x1": 1192,
+    "y0": 904,
+    "y1": 1064,
+    "cx": 1011.1,
+    "cy": 983.7,
+    "npix": 52409,
+    "area_pct": 1.896,
+    "score": 0.823
+   }
+  ]
+ },
+ "mask_keys": {
+  "window handle": [
+   "window handle|0",
+   "window handle|1",
+   "window handle|2",
+   "window handle|3",
+   "window handle|4",
+   "window handle|5",
+   "window handle|6"
+  ],
+  "window": [
+   "window|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0,
+   1
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

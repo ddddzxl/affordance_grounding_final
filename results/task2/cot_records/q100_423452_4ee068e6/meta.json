@@ -1,0 +1,220 @@
+{
+ "q": 100,
+ "visit": "423452",
+ "desc_id": "4ee068e6-4e1a-4dbe-a0cf-231b00e34fb2",
+ "text": "Plug the device in the socket next to the dining table",
+ "parse": {
+  "text": "Plug the device in the socket next to the dining table",
+  "target": {
+   "concept": "socket",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "socket",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "dining table",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "socket",
+    "b": "dining table"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897426",
+  "fid": "104151.548",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 8,
+  "topk": [
+   [
+    "42897426",
+    "104151.548"
+   ],
+   [
+    "42897422",
+    "104038.146"
+   ],
+   [
+    "42897434",
+    "104214.139"
+   ],
+   [
+    "42897434",
+    "104213.139"
+   ],
+   [
+    "42897426",
+    "104147.833"
+   ],
+   [
+    "42897426",
+    "104097.638"
+   ],
+   [
+    "42897422",
+    "104039.145"
+   ],
+   [
+    "42897422",
+    "104045.143"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 309,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "socket",
+  "dining table"
+ ],
+ "roles": {
+  "socket": "target",
+  "dining table": "landmark"
+ },
+ "candidates": {
+  "socket": [
+   {
+    "x0": 1000,
+    "x1": 1079,
+    "y0": 684,
+    "y1": 729,
+    "cx": 1038.7,
+    "cy": 706.6,
+    "npix": 3550,
+    "area_pct": 0.128,
+    "score": 0.857
+   },
+   {
+    "x0": 413,
+    "x1": 449,
+    "y0": 525,
+    "y1": 564,
+    "cx": 429.1,
+    "cy": 543.7,
+    "npix": 1144,
+    "area_pct": 0.041,
+    "score": 0.665
+   },
+   {
+    "x0": 680,
+    "x1": 732,
+    "y0": 310,
+    "y1": 364,
+    "cx": 705.2,
+    "cy": 338.4,
+    "npix": 2683,
+    "area_pct": 0.097,
+    "score": 0.541
+   },
+   {
+    "x0": 260,
+    "x1": 286,
+    "y0": 300,
+    "y1": 349,
+    "cx": 272.7,
+    "cy": 325.1,
+    "npix": 1238,
+    "area_pct": 0.045,
+    "score": 0.438
+   }
+  ],
+  "dining table": [
+   {
+    "x0": 1143,
+    "x1": 1919,
+    "y0": 595,
+    "y1": 919,
+    "cx": 1512.0,
+    "cy": 703.1,
+    "npix": 92753,
+    "area_pct": 3.355,
+    "score": 0.604
+   },
+   {
+    "x0": 0,
+    "x1": 45,
+    "y0": 780,
+    "y1": 1120,
+    "cx": 14.2,
+    "cy": 1028.0,
+    "npix": 5636,
+    "area_pct": 0.204,
+    "score": 0.502
+   }
+  ]
+ },
+ "mask_keys": {
+  "socket": [
+   "socket|0",
+   "socket|1",
+   "socket|2",
+   "socket|3"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

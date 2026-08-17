@@ -1,0 +1,198 @@
+{
+ "q": 358,
+ "visit": "466916",
+ "desc_id": "a427fd7d-381e-454a-8343-1ec623ebde95",
+ "text": "Regulate the temperature using the radiator dial next to the glass door",
+ "parse": {
+  "text": "Regulate the temperature using the radiator dial next to the glass door",
+  "target": {
+   "concept": "radiator knob",
+   "host": null
+  },
+  "entities": [
+   {
+    "name": "radiator knob",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "door",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "next_to",
+    "a": "radiator knob",
+    "b": "door"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47331615",
+  "fid": "18094.096",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 1,
+  "topk": [
+   [
+    "47331615",
+    "18094.096"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 306,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "radiator knob",
+  "door"
+ ],
+ "roles": {
+  "radiator knob": "target",
+  "door": "landmark"
+ },
+ "candidates": {
+  "radiator knob": [
+   {
+    "x0": 1293,
+    "x1": 1376,
+    "y0": 411,
+    "y1": 474,
+    "cx": 1333.5,
+    "cy": 444.2,
+    "npix": 4069,
+    "area_pct": 0.147,
+    "score": 0.788
+   },
+   {
+    "x0": 1247,
+    "x1": 1306,
+    "y0": 205,
+    "y1": 259,
+    "cx": 1275.1,
+    "cy": 231.7,
+    "npix": 2702,
+    "area_pct": 0.098,
+    "score": 0.241
+   },
+   {
+    "x0": 1047,
+    "x1": 1099,
+    "y0": 569,
+    "y1": 738,
+    "cx": 1072.1,
+    "cy": 652.4,
+    "npix": 8498,
+    "area_pct": 0.307,
+    "score": 0.216
+   },
+   {
+    "x0": 833,
+    "x1": 872,
+    "y0": 439,
+    "y1": 499,
+    "cx": 853.1,
+    "cy": 469.1,
+    "npix": 1797,
+    "area_pct": 0.065,
+    "score": 0.152
+   }
+  ],
+  "door": [
+   {
+    "x0": 0,
+    "x1": 227,
+    "y0": 165,
+    "y1": 972,
+    "cx": 91.4,
+    "cy": 602.5,
+    "npix": 142983,
+    "area_pct": 5.172,
+    "score": 0.639
+   },
+   {
+    "x0": 1795,
+    "x1": 1919,
+    "y0": 595,
+    "y1": 1439,
+    "cx": 1877.6,
+    "cy": 1148.0,
+    "npix": 54355,
+    "area_pct": 1.966,
+    "score": 0.319
+   },
+   {
+    "x0": 0,
+    "x1": 409,
+    "y0": 52,
+    "y1": 1439,
+    "cx": 250.0,
+    "cy": 636.6,
+    "npix": 282906,
+    "area_pct": 10.232,
+    "score": 0.277
+   },
+   {
+    "x0": 0,
+    "x1": 301,
+    "y0": 960,
+    "y1": 1439,
+    "cx": 127.5,
+    "cy": 1214.6,
+    "npix": 119430,
+    "area_pct": 4.32,
+    "score": 0.234
+   }
+  ]
+ },
+ "mask_keys": {
+  "radiator knob": [
+   "radiator knob|0",
+   "radiator knob|1",
+   "radiator knob|2",
+   "radiator knob|3"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   2
+  ],
+  "host": null,
+  "why": "ok",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": {
+  "orig": "radiator dial",
+  "used": "radiator knob",
+  "probe_hits": 2,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

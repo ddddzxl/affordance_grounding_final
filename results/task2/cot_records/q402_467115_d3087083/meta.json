@@ -1,0 +1,325 @@
+{
+ "q": 402,
+ "visit": "467115",
+ "desc_id": "d3087083-5879-4c25-837e-38d7d1655556",
+ "text": "Open the kitchen counter door to the left of the oven",
+ "parse": {
+  "text": "Open the kitchen counter door to the left of the oven",
+  "target": {
+   "concept": "door handle",
+   "host": "counter door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "counter door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "counter",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "oven",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "counter",
+    "b": "counter door"
+   },
+   {
+    "rel": "left_of",
+    "a": "counter door",
+    "b": "oven"
+   }
+  ],
+  "select": [],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "47333308",
+  "fid": "28021.160",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 2,
+  "topk": [
+   [
+    "47333308",
+    "28021.160"
+   ],
+   [
+    "47333319",
+    "28355.657"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 608,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "counter door",
+  "counter",
+  "oven"
+ ],
+ "roles": {
+  "door handle": "target",
+  "counter door": "host",
+  "counter": "container",
+  "oven": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 955,
+    "x1": 1239,
+    "y0": 959,
+    "y1": 999,
+    "cx": 1096.8,
+    "cy": 982.6,
+    "npix": 8751,
+    "area_pct": 0.317,
+    "score": 0.848
+   },
+   {
+    "x0": 620,
+    "x1": 1089,
+    "y0": 772,
+    "y1": 819,
+    "cx": 855.7,
+    "cy": 799.0,
+    "npix": 13461,
+    "area_pct": 0.487,
+    "score": 0.841
+   },
+   {
+    "x0": 139,
+    "x1": 278,
+    "y0": 233,
+    "y1": 718,
+    "cx": 208.2,
+    "cy": 474.7,
+    "npix": 14186,
+    "area_pct": 0.513,
+    "score": 0.788
+   },
+   {
+    "x0": 81,
+    "x1": 205,
+    "y0": 0,
+    "y1": 147,
+    "cx": 143.3,
+    "cy": 72.0,
+    "npix": 13671,
+    "area_pct": 0.494,
+    "score": 0.617
+   },
+   {
+    "x0": 1041,
+    "x1": 1126,
+    "y0": 73,
+    "y1": 539,
+    "cx": 1086.5,
+    "cy": 297.3,
+    "npix": 26567,
+    "area_pct": 0.961,
+    "score": 0.331
+   },
+   {
+    "x0": 180,
+    "x1": 304,
+    "y0": 208,
+    "y1": 638,
+    "cx": 246.5,
+    "cy": 405.9,
+    "npix": 12661,
+    "area_pct": 0.458,
+    "score": 0.321
+   },
+   {
+    "x0": 360,
+    "x1": 479,
+    "y0": 439,
+    "y1": 712,
+    "cx": 422.6,
+    "cy": 597.2,
+    "npix": 17632,
+    "area_pct": 0.638,
+    "score": 0.195
+   }
+  ],
+  "counter door": [
+   {
+    "x0": 454,
+    "x1": 1064,
+    "y0": 131,
+    "y1": 514,
+    "cx": 767.2,
+    "cy": 322.9,
+    "npix": 207979,
+    "area_pct": 7.522,
+    "score": 0.363
+   },
+   {
+    "x0": 1250,
+    "x1": 1439,
+    "y0": 907,
+    "y1": 1209,
+    "cx": 1357.2,
+    "cy": 1066.2,
+    "npix": 48831,
+    "area_pct": 1.766,
+    "score": 0.319
+   },
+   {
+    "x0": 0,
+    "x1": 223,
+    "y0": 0,
+    "y1": 158,
+    "cx": 104.6,
+    "cy": 74.7,
+    "npix": 31400,
+    "area_pct": 1.136,
+    "score": 0.235
+   },
+   {
+    "x0": 433,
+    "x1": 1290,
+    "y0": 910,
+    "y1": 1445,
+    "cx": 861.7,
+    "cy": 1169.4,
+    "npix": 400603,
+    "area_pct": 14.489,
+    "score": 0.198
+   },
+   {
+    "x0": 0,
+    "x1": 513,
+    "y0": 209,
+    "y1": 1539,
+    "cx": 194.9,
+    "cy": 974.0,
+    "npix": 482455,
+    "area_pct": 17.45,
+    "score": 0.196
+   }
+  ],
+  "counter": [
+   {
+    "x0": 364,
+    "x1": 1439,
+    "y0": 378,
+    "y1": 761,
+    "cx": 957.2,
+    "cy": 623.2,
+    "npix": 236303,
+    "area_pct": 8.547,
+    "score": 0.751
+   },
+   {
+    "x0": 395,
+    "x1": 1429,
+    "y0": 579,
+    "y1": 1446,
+    "cx": 861.4,
+    "cy": 1070.6,
+    "npix": 565165,
+    "area_pct": 20.441,
+    "score": 0.151
+   }
+  ],
+  "oven": [
+   {
+    "x0": 424,
+    "x1": 1287,
+    "y0": 34,
+    "y1": 559,
+    "cx": 862.4,
+    "cy": 303.7,
+    "npix": 383525,
+    "area_pct": 13.872,
+    "score": 0.596
+   },
+   {
+    "x0": 1204,
+    "x1": 1439,
+    "y0": 735,
+    "y1": 1442,
+    "cx": 1342.8,
+    "cy": 1196.2,
+    "npix": 100942,
+    "area_pct": 3.651,
+    "score": 0.243
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4",
+   "door handle|5",
+   "door handle|6"
+  ],
+  "counter door": [
+   "counter door|0",
+   "counter door|1",
+   "counter door|2",
+   "counter door|3",
+   "counter door|4"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 3,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

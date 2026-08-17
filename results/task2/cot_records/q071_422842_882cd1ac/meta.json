@@ -1,0 +1,333 @@
+{
+ "q": 71,
+ "visit": "422842",
+ "desc_id": "882cd1ac-be01-435e-b81c-9321b361f7ca",
+ "text": "Open the right door of the closet located to the right of the mirror",
+ "parse": {
+  "text": "Open the right door of the closet located to the right of the mirror",
+  "target": {
+   "concept": "door handle",
+   "host": "closet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "closet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "closet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "mirror",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "closet",
+    "b": "closet door"
+   },
+   {
+    "rel": "right_of",
+    "a": "closet",
+    "b": "mirror"
+   }
+  ],
+  "select": [
+   {
+    "on": "closet door",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42897547",
+  "fid": "473149.815",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 3,
+  "topk": [
+   [
+    "42897547",
+    "473149.815"
+   ],
+   [
+    "42897547",
+    "473254.605"
+   ],
+   [
+    "42897547",
+    "473151.814"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 0.5
+   }
+  ],
+  "n_frames": 236,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "door handle",
+  "closet door",
+  "closet",
+  "mirror"
+ ],
+ "roles": {
+  "door handle": "target",
+  "closet door": "host",
+  "closet": "container",
+  "mirror": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 480,
+    "x1": 549,
+    "y0": 1173,
+    "y1": 1339,
+    "cx": 526.7,
+    "cy": 1255.2,
+    "npix": 5027,
+    "area_pct": 0.182,
+    "score": 0.892
+   },
+   {
+    "x0": 427,
+    "x1": 474,
+    "y0": 907,
+    "y1": 1006,
+    "cx": 458.2,
+    "cy": 944.3,
+    "npix": 1785,
+    "area_pct": 0.065,
+    "score": 0.84
+   },
+   {
+    "x0": 135,
+    "x1": 164,
+    "y0": 719,
+    "y1": 926,
+    "cx": 150.3,
+    "cy": 816.6,
+    "npix": 2785,
+    "area_pct": 0.101,
+    "score": 0.764
+   },
+   {
+    "x0": 0,
+    "x1": 109,
+    "y0": 1153,
+    "y1": 1179,
+    "cx": 53.9,
+    "cy": 1163.8,
+    "npix": 1858,
+    "area_pct": 0.067,
+    "score": 0.437
+   },
+   {
+    "x0": 0,
+    "x1": 104,
+    "y0": 1060,
+    "y1": 1079,
+    "cx": 50.5,
+    "cy": 1069.3,
+    "npix": 1597,
+    "area_pct": 0.058,
+    "score": 0.376
+   },
+   {
+    "x0": 472,
+    "x1": 499,
+    "y0": 907,
+    "y1": 1012,
+    "cx": 488.1,
+    "cy": 958.4,
+    "npix": 2265,
+    "area_pct": 0.082,
+    "score": 0.161
+   }
+  ],
+  "closet door": [
+   {
+    "x0": 80,
+    "x1": 432,
+    "y0": 0,
+    "y1": 1277,
+    "cx": 270.5,
+    "cy": 610.2,
+    "npix": 362906,
+    "area_pct": 13.126,
+    "score": 0.907
+   },
+   {
+    "x0": 0,
+    "x1": 94,
+    "y0": 0,
+    "y1": 353,
+    "cx": 42.7,
+    "cy": 184.8,
+    "npix": 30278,
+    "area_pct": 1.095,
+    "score": 0.412
+   },
+   {
+    "x0": 497,
+    "x1": 1127,
+    "y0": 0,
+    "y1": 1919,
+    "cx": 769.0,
+    "cy": 903.2,
+    "npix": 902343,
+    "area_pct": 32.637,
+    "score": 0.265
+   },
+   {
+    "x0": 400,
+    "x1": 479,
+    "y0": 0,
+    "y1": 106,
+    "cx": 430.8,
+    "cy": 36.9,
+    "npix": 4632,
+    "area_pct": 0.168,
+    "score": 0.203
+   },
+   {
+    "x0": 409,
+    "x1": 499,
+    "y0": 76,
+    "y1": 1460,
+    "cx": 457.9,
+    "cy": 701.2,
+    "npix": 87279,
+    "area_pct": 3.157,
+    "score": 0.162
+   }
+  ],
+  "closet": [
+   {
+    "x0": 0,
+    "x1": 432,
+    "y0": 0,
+    "y1": 1277,
+    "cx": 227.6,
+    "cy": 610.8,
+    "npix": 463294,
+    "area_pct": 16.757,
+    "score": 0.72
+   },
+   {
+    "x0": 0,
+    "x1": 163,
+    "y0": 358,
+    "y1": 1263,
+    "cx": 63.0,
+    "cy": 871.8,
+    "npix": 102871,
+    "area_pct": 3.721,
+    "score": 0.394
+   },
+   {
+    "x0": 406,
+    "x1": 542,
+    "y0": 0,
+    "y1": 1539,
+    "cx": 476.3,
+    "cy": 671.5,
+    "npix": 137535,
+    "area_pct": 4.975,
+    "score": 0.165
+   }
+  ],
+  "mirror": [
+   {
+    "x0": 0,
+    "x1": 102,
+    "y0": 447,
+    "y1": 985,
+    "cx": 40.2,
+    "cy": 710.1,
+    "npix": 37886,
+    "area_pct": 1.37,
+    "score": 0.462
+   }
+  ]
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2",
+   "door handle|3",
+   "door handle|4",
+   "door handle|5"
+  ],
+  "closet door": [
+   "closet door|0",
+   "closet door|1",
+   "closet door|2",
+   "closet door|3",
+   "closet door|4"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   1,
+   5
+  ],
+  "host": 4,
+  "why": "ok",
+  "attrib": "filled(2)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

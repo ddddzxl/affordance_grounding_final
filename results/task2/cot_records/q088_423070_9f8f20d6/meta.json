@@ -1,0 +1,164 @@
+{
+ "q": 88,
+ "visit": "423070",
+ "desc_id": "9f8f20d6-152a-4374-a21f-95819edffd65",
+ "text": "Open the trash bin below the sink",
+ "parse": {
+  "text": "Open the trash bin below the sink",
+  "target": {
+   "concept": "pedal",
+   "host": "trash bin"
+  },
+  "entities": [
+   {
+    "name": "pedal",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "trash bin",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "sink",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "under",
+    "a": "trash bin",
+    "b": "sink"
+   }
+  ],
+  "select": [],
+  "residual": "train: 'open the trash bin' is foot_push in 12/14 annotations — household bins are pedal-operated. 'lid' came from a generic open->pull inference that does not hold for this object class.",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42447202",
+  "fid": "209424.676",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L1",
+  "n_top": 1,
+  "topk": [
+   [
+    "42447202",
+    "209424.676"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 251,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "pedal",
+  "trash bin",
+  "sink"
+ ],
+ "roles": {
+  "pedal": "target",
+  "trash bin": "host",
+  "sink": "landmark"
+ },
+ "candidates": {
+  "pedal": [
+   {
+    "x0": 1260,
+    "x1": 1306,
+    "y0": 680,
+    "y1": 759,
+    "cx": 1281.9,
+    "cy": 720.6,
+    "npix": 2880,
+    "area_pct": 0.104,
+    "score": 0.232
+   }
+  ],
+  "trash bin": [
+   {
+    "x0": 1294,
+    "x1": 1572,
+    "y0": 435,
+    "y1": 810,
+    "cx": 1437.5,
+    "cy": 644.6,
+    "npix": 67076,
+    "area_pct": 2.426,
+    "score": 0.719
+   },
+   {
+    "x0": 1487,
+    "x1": 1792,
+    "y0": 1271,
+    "y1": 1439,
+    "cx": 1617.1,
+    "cy": 1357.7,
+    "npix": 35266,
+    "area_pct": 1.276,
+    "score": 0.187
+   }
+  ],
+  "sink": [
+   {
+    "x0": 1360,
+    "x1": 1919,
+    "y0": 164,
+    "y1": 1439,
+    "cx": 1722.4,
+    "cy": 768.1,
+    "npix": 443023,
+    "area_pct": 16.024,
+    "score": 0.78
+   }
+  ]
+ },
+ "mask_keys": {
+  "pedal": [
+   "pedal|0"
+  ],
+  "trash bin": [
+   "trash bin|0",
+   "trash bin|1"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "nearest"
+ },
+ "concept_fallback": {
+  "orig": "trash bin pedal",
+  "used": "pedal",
+  "probe_hits": 2,
+  "probe_frames": 12
+ },
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

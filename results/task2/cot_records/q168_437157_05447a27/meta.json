@@ -1,0 +1,217 @@
+{
+ "q": 168,
+ "visit": "437157",
+ "desc_id": "05447a27-9f00-4e0c-baf4-75b303461765",
+ "text": "Open the top drawer of the bedside table to the left of the bed",
+ "parse": {
+  "text": "Open the top drawer of the bedside table to the left of the bed",
+  "target": {
+   "concept": "drawer handle",
+   "host": "drawer"
+  },
+  "entities": [
+   {
+    "name": "drawer handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "drawer",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "bedside table",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "bed",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "bedside table",
+    "b": "drawer"
+   },
+   {
+    "rel": "left_of",
+    "a": "bedside table",
+    "b": "bed"
+   }
+  ],
+  "select": [
+   {
+    "on": "drawer",
+    "axis": "vertical",
+    "value": "top",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": null,
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "43649686",
+  "fid": "36206.280",
+  "W": 1440,
+  "H": 1920
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "L0",
+  "n_top": 5,
+  "topk": [
+   [
+    "43649686",
+    "36206.280"
+   ],
+   [
+    "43649686",
+    "36205.280"
+   ],
+   [
+    "43649686",
+    "36197.267"
+   ],
+   [
+    "43649686",
+    "36155.567"
+   ],
+   [
+    "43649686",
+    "36207.280"
+   ]
+  ],
+  "consistency": [
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   },
+   {
+    "s1": 1.0,
+    "s2": 1.0,
+    "s3": 1.0,
+    "s4": 1.0,
+    "s5": 1.0
+   }
+  ],
+  "n_frames": 239,
+  "stride": 10,
+  "global_fallback": null,
+  "pool": "fun3du",
+  "n_pool": 50
+ },
+ "concepts": [
+  "drawer handle",
+  "drawer",
+  "bedside table",
+  "bed"
+ ],
+ "roles": {
+  "drawer handle": "target",
+  "drawer": "host",
+  "bedside table": "container",
+  "bed": "landmark"
+ },
+ "candidates": {
+  "drawer handle": [
+   {
+    "x0": 515,
+    "x1": 569,
+    "y0": 592,
+    "y1": 646,
+    "cx": 543.1,
+    "cy": 618.0,
+    "npix": 2323,
+    "area_pct": 0.084,
+    "score": 0.928
+   }
+  ],
+  "drawer": [
+   {
+    "x0": 198,
+    "x1": 834,
+    "y0": 494,
+    "y1": 706,
+    "cx": 503.6,
+    "cy": 604.7,
+    "npix": 105669,
+    "area_pct": 3.822,
+    "score": 0.97
+   }
+  ],
+  "bedside table": [
+   {
+    "x0": 0,
+    "x1": 1019,
+    "y0": 364,
+    "y1": 1706,
+    "cx": 472.3,
+    "cy": 821.6,
+    "npix": 459529,
+    "area_pct": 16.621,
+    "score": 0.965
+   }
+  ],
+  "bed": [
+   {
+    "x0": 688,
+    "x1": 1439,
+    "y0": 150,
+    "y1": 1814,
+    "cx": 1061.0,
+    "cy": 921.8,
+    "npix": 330343,
+    "area_pct": 11.948,
+    "score": 0.932
+   }
+  ]
+ },
+ "mask_keys": {
+  "drawer handle": [
+   "drawer handle|0"
+  ],
+  "drawer": [
+   "drawer|0"
+  ]
+ },
+ "geom_pick": {
+  "target": [
+   0
+  ],
+  "host": 0,
+  "why": "ok",
+  "attrib": "filled(1)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

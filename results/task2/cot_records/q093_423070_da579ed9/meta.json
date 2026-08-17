@@ -1,0 +1,239 @@
+{
+ "q": 93,
+ "visit": "423070",
+ "desc_id": "da579ed9-4a66-440e-9fb0-1557285f4c55",
+ "text": "Open the right door of the wood and glass display cabinet next to the pet transport box",
+ "parse": {
+  "text": "Open the right door of the wood and glass display cabinet next to the pet transport box",
+  "target": {
+   "concept": "door handle",
+   "host": "cabinet door"
+  },
+  "entities": [
+   {
+    "name": "door handle",
+    "role": "target",
+    "instanceable": true
+   },
+   {
+    "name": "cabinet door",
+    "role": "host",
+    "instanceable": true
+   },
+   {
+    "name": "display cabinet",
+    "role": "container",
+    "instanceable": true
+   },
+   {
+    "name": "pet transport box",
+    "role": "landmark",
+    "instanceable": true
+   }
+  ],
+  "relations": [
+   {
+    "rel": "contains",
+    "a": "display cabinet",
+    "b": "cabinet door"
+   },
+   {
+    "rel": "next_to",
+    "a": "display cabinet",
+    "b": "pet transport box"
+   }
+  ],
+  "select": [
+   {
+    "on": "cabinet door",
+    "axis": "horizontal",
+    "value": "right",
+    "index": null,
+    "from": null
+   }
+  ],
+  "residual": "'wood and glass' material - ignored",
+  "_parse_src": "frontier"
+ },
+ "frame": {
+  "video": "42447210",
+  "fid": "209236.587",
+  "W": 1920,
+  "H": 1440
+ },
+ "framesel": {
+  "mode": "disc3",
+  "level": "POOL-T",
+  "n_top": 7,
+  "topk": [
+   [
+    "42447210",
+    "209236.587"
+   ],
+   [
+    "42447202",
+    "209406.984"
+   ],
+   [
+    "42447205",
+    "209286.883"
+   ],
+   [
+    "42447205",
+    "209284.884"
+   ],
+   [
+    "42447202",
+    "209427.675"
+   ],
+   [
+    "42447205",
+    "209315.788"
+   ],
+   [
+    "42447202",
+    "209428.675"
+   ]
+  ],
+  "consistency": [
+   null,
+   null,
+   null,
+   null
+  ],
+  "n_frames": 251,
+  "stride": 10,
+  "global_fallback": {
+   "kind": "pool_target_visible",
+   "n_pool": 12,
+   "n_vis": 7
+  },
+  "pool": "fun3du",
+  "n_pool": 12
+ },
+ "concepts": [
+  "door handle",
+  "cabinet door",
+  "display cabinet",
+  "pet transport box"
+ ],
+ "roles": {
+  "door handle": "target",
+  "cabinet door": "host",
+  "display cabinet": "container",
+  "pet transport box": "landmark"
+ },
+ "candidates": {
+  "door handle": [
+   {
+    "x0": 1613,
+    "x1": 1652,
+    "y0": 909,
+    "y1": 971,
+    "cx": 1632.5,
+    "cy": 941.2,
+    "npix": 2140,
+    "area_pct": 0.077,
+    "score": 0.716
+   },
+   {
+    "x0": 507,
+    "x1": 526,
+    "y0": 785,
+    "y1": 815,
+    "cx": 516.5,
+    "cy": 799.7,
+    "npix": 592,
+    "area_pct": 0.021,
+    "score": 0.65
+   },
+   {
+    "x0": 1453,
+    "x1": 1506,
+    "y0": 1325,
+    "y1": 1439,
+    "cx": 1481.0,
+    "cy": 1383.5,
+    "npix": 4121,
+    "area_pct": 0.149,
+    "score": 0.154
+   }
+  ],
+  "cabinet door": [
+   {
+    "x0": 434,
+    "x1": 866,
+    "y0": 0,
+    "y1": 1439,
+    "cx": 673.9,
+    "cy": 686.2,
+    "npix": 500141,
+    "area_pct": 18.09,
+    "score": 0.896
+   },
+   {
+    "x0": 347,
+    "x1": 551,
+    "y0": 0,
+    "y1": 1439,
+    "cx": 451.1,
+    "cy": 693.5,
+    "npix": 109504,
+    "area_pct": 3.961,
+    "score": 0.879
+   },
+   {
+    "x0": 987,
+    "x1": 1091,
+    "y0": 0,
+    "y1": 399,
+    "cx": 1027.0,
+    "cy": 196.9,
+    "npix": 31159,
+    "area_pct": 1.127,
+    "score": 0.375
+   }
+  ],
+  "display cabinet": [
+   {
+    "x0": 349,
+    "x1": 866,
+    "y0": 0,
+    "y1": 1439,
+    "cx": 633.8,
+    "cy": 686.7,
+    "npix": 629102,
+    "area_pct": 22.754,
+    "score": 0.251
+   }
+  ],
+  "pet transport box": []
+ },
+ "mask_keys": {
+  "door handle": [
+   "door handle|0",
+   "door handle|1",
+   "door handle|2"
+  ],
+  "cabinet door": [
+   "cabinet door|0",
+   "cabinet door|1",
+   "cabinet door|2"
+  ]
+ },
+ "geom_pick": {
+  "target": [],
+  "host": null,
+  "why": "landmark 'pet transport box' unusable",
+  "attrib": "solve_full(bbox level)"
+ },
+ "concept_fallback": null,
+ "cfg": {
+  "stride": 10,
+  "det_th": 0.15,
+  "nms": 0.75,
+  "framesel": "disc3",
+  "topk": 8,
+  "fallback": true
+ }
+}

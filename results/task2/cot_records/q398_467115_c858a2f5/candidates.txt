@@ -1,0 +1,60 @@
+TASK: "Open the middle counter drawer directly under the teacups"
+
+PARSE:
+  target concept = "drawer handle"   <- the thing that must be output
+  host           = 'drawer'   <- countable object the target sits on
+  entity  : 'drawer handle'  role=target
+  entity  : 'drawer'  role=host
+  entity  : 'counter'  role=container
+  entity  : 'teacups'  role=landmark
+  relation: contains(a='counter', b='drawer')
+  relation: under(a='drawer', b='teacups')
+  select  : on='drawer' axis=vertical value='middle' index=None from=None
+
+IMAGE COORDINATE SYSTEM (read carefully):
+  image is 1440 wide (x) by 1920 tall (y).  (PORTRAIT)
+  x increases to the RIGHT.  x=0 is the LEFT edge, x=1439 is the RIGHT edge.
+  y increases DOWNWARD.      y=0 is the TOP edge,  y=1919 is the BOTTOM edge.
+  => "top" = SMALL y,   "bottom" = LARGE y
+  => "left" = SMALL x,  "right"  = LARGE x
+  => "A above B" means A.cy < B.cy.  "A on top of B" means A.y1 <= B.y0.
+  area% = mask pixels as % of the whole image.
+  score = SAM3 detection confidence.
+  NOTE: detections are imperfect. A box covering a large fraction of the image
+        is usually several objects merged, not one piece of furniture.
+
+INSTANCES (after score-ranked NMS, sorted by score):
+  class               id  xmin  xmax  ymin  ymax      cx      cy   area%  score
+  drawer handle        0    35   339  1460  1573   187.9  1519.2    0.39  0.956
+  drawer handle        1   975  1439  1493  1639  1205.1  1570.4   0.618  0.949
+  drawer handle        2   960  1439  1693  1864  1191.8  1782.7   0.584   0.94
+  drawer handle        3     0   109  1260  1325    55.4  1295.3   0.143  0.917
+  drawer               0     0   409  1244  1478   206.0  1360.8   1.941  0.944
+  drawer               1   422  1439  1496  1919   903.6  1748.2   9.556  0.926
+  drawer               2   399  1439  1335  1737   926.2  1530.3   5.803  0.894
+  drawer               3     0   484  1387  1919   221.2  1677.5   7.485  0.762
+  drawer               4   485   828  1807  1919   613.7  1879.3   0.793  0.584
+  counter              0     0  1439   774  1472   811.6  1126.7  20.194  0.764
+  teacups              0   897  1089   800   952   994.3   865.0   0.704  0.959
+  teacups              1  1195  1389   845  1007  1292.8   922.1   0.881  0.943
+  teacups              2  1201  1389   753   855  1285.6   803.9   0.456  0.857
+
+
+
+
+
+CONTAINMENT (drawer handle inside the FILLED mask of each drawer):
+  (w = host width in px. A wide host spanning two handles is ONE drawer with two handles,
+   not two drawers — that is exactly what this table settles.)
+  drawer #0   x[   0, 409] cx   206.0 cy  1360.8 w= 409 contains #3
+  drawer #1   x[ 422,1439] cx   903.6 cy  1748.2 w=1017 contains #2
+  drawer #2   x[ 399,1439] cx   926.2 cy  1530.3 w=1040 contains #1
+  drawer #3   x[   0, 484] cx   221.2 cy  1677.5 w= 484 contains #0
+  drawer #4   x[ 485, 828] cx   613.7 cy  1879.3 w= 343 contains (none)
+  -> apply `select` to the HOST, then output EVERY target it contains.
+     (a narrow host covers 1 target, a wide one covers 2 — let the host decide, do not guess)
+QUESTION: which "drawer handle" instance id(s) does the task refer to?
+  Reason step by step: resolve container -> host -> target.
+  A single referred object may carry MORE THAN ONE target instance
+  (e.g. one wide drawer with two handles) — list all of them if so.
+  FINAL ANSWER FORMAT:  FINAL: drawer handle #<id>[, #<id> ...]
