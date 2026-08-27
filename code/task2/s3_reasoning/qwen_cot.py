@@ -2,9 +2,9 @@
 """Run the reasoning stage with Qwen3.5-9B on **exactly the same input**, as the scripted
 counterpart to the frontier-LLM arm.
 
-This is the fully automated arm of the model-scale ablation. The frontier arm was executed
-interactively (see REPORT.md section 3); this script is what makes the comparison a
-comparison rather than an anecdote.
+This is the fully scripted arm of the model-scale ablation; the frontier arm's driver is not
+part of this repository (see REPORT.md section 3). Running both over identical tables with
+identical rules is what makes the comparison a comparison rather than an anecdote.
 
 ## Three things that must match for the comparison to be fair
 

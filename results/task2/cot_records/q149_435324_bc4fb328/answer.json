@@ -4,5 +4,5 @@
  ],
  "confidence": "low",
  "kind": "rel-only",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

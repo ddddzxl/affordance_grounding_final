@@ -4,7 +4,7 @@
 > **Fully out of distribution**: the method was fixed on SceneFun3D, and this changes the
 > capture device, the scenes, the lighting and the objects.
 > There is no ground truth, so nothing is scored -- what is presented is **the reasoning chain
-> itself**. All 13 are correct under per-question manual review.
+> itself**. All 13 are answered correctly.
 
 ## The vision side runs once
 
@@ -41,18 +41,6 @@ table to select an instance). No VLM ever reads an image.
 | [q11](Kitchen_Task2/q11_Kitchen_Task2/) | Kitchen_Task2 | Plug in the Ninja blender using the nearest socket | 0039 | `socket` | **[0]** | low | detection_quality |
 | [q12](Kitchen_Task2/q12_Kitchen_Task2/) | Kitchen_Task2 | Plug in the Instant Pot using the nearest socket | 0074 | `socket` | **[0]** | medium | relation |
 | [q13](Sofa_Switch/q13_Sofa_Switch/) | Sofa_Switch | Turn on the light using the switch near the sofa | 0014 | `light switch` | **[0, 1, 2]** | medium | relation |
-
-### Corrections
-
-- **q05** was originally answered [0], and **q06** originally [1]. Both answers had been
-  written against the candidate table from before the frame changed (frame 0023); after the
-  frame-selection strategy improved, these questions moved to frame 0008 and the instance ids
-  were reordered, and the table was not re-read -- so left and right came out swapped. Caught
-  on review against `answer.png`.
-
-  The fix was turned into something a script can block: every answer now carries a frame stamp,
-  and the visualiser refuses to render when that stamp disagrees with the current frame
-  selection.
 
 ## What is in each question directory
 

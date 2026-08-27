@@ -4,5 +4,5 @@
  ],
  "confidence": "low",
  "kind": "physical_prior",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

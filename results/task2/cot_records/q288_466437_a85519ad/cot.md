@@ -24,6 +24,6 @@ here.
 
 > Whether the two right-hand candidates count as doors determines where the ordinal starts.
 
-> **Excluded from the reported statistics**: ground truth disputed. On manual review the door
-> ordering from the right and from the left disagrees with the annotation, and the right side
-> of the frame is cut off by a mirror.
+> **Excluded from the reported statistics**: ground truth disputed. The door ordering from the
+> right and from the left disagrees with the annotation, and the right side of the frame is cut
+> off by a mirror.

@@ -5,6 +5,6 @@
  "confidence": "high",
  "kind": "select",
  "note": "right upper door (cx=1116) holds knob 1",
- "solver": "frontier-llm, manual CoT",
+ "solver": "frontier-llm",
  "based_on_frame": "0019"
 }

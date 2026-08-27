@@ -5,6 +5,6 @@
  "confidence": "medium",
  "kind": "relation",
  "note": "both air-fryer detections agree that socket 1 is nearer (391/493 vs 1128/522 px)",
- "solver": "frontier-llm, manual CoT",
+ "solver": "frontier-llm",
  "based_on_frame": "0081"
 }

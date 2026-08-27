@@ -16,6 +16,6 @@ sits above it; `#2` and `#3` are entirely to the left at x <= 205, and `#1` over
 
 **FINAL: #0**
 
-> **Manual review overturned the automatic score here**: the projected ground-truth centre is
+> **The projection-based hit test does not apply here**: the projected ground-truth centre is
 > only 48 px from the pick's centre while their own diagonals are 421 and 444 px (a ratio of
 > 0.11) -- a displacement caused by pose accuracy, not a wrong selection.

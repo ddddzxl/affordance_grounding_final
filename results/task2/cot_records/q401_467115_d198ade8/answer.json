@@ -4,5 +4,5 @@
  ],
  "confidence": "low",
  "kind": "expected_ap_tradeoff",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

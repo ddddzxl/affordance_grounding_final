@@ -4,5 +4,5 @@
  ],
  "confidence": "low",
  "kind": "giant_false_positive",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

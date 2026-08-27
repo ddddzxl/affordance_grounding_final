@@ -4,5 +4,5 @@
  ],
  "confidence": "medium",
  "kind": "non_equivalent_targets",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

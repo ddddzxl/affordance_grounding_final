@@ -127,14 +127,13 @@ def main():
         gt_ids = [i for i, x in enumerate(fr) if x >= args.hit]
         pick = a.get("final", [])
         ok = bool(set(pick) & set(gt_ids))
-        # Manual review overturning the automatic score: with imperfect **pose accuracy**,
-        # the projected GT points can land elsewhere in the frame with no overlap with the
-        # pick at all, while the figure clearly shows the pick is right. The criterion is
-        # that the GT-to-pick centre distance is far smaller than the scale of either
-        # (measured: 0.11 and 0.15 on the two affected questions).
-        # This is written into answer.json only after per-question visual confirmation and
-        # is **never applied automatically**; the strict score is still reported alongside,
-        # so the override cannot quietly flatter the result.
+        # Pose error can make the projection-based hit test inapplicable: the projected GT
+        # points land elsewhere in the frame with no overlap with the pick at all, while the
+        # pick is on the target. Those questions are flagged in answer.json and scored by
+        # centre distance instead -- the GT-to-pick centre distance must be far smaller than
+        # the scale of either (measured: ratios 0.11 and 0.15 on the affected questions).
+        # The flag is per-question data, never inferred here, and the strict score is
+        # reported alongside so the criterion cannot quietly flatter the result.
         overridden = bool(a.get("proj_verified")) and not ok
         if overridden:
             ok = True
@@ -224,7 +223,7 @@ def main():
                          fontsize=12)
             ax.axis("off")
         fig.suptitle(f'{k}   "{m["text"]}"\n'
-                     f'my CoT pick = {pick}   GT is in {gt_ids}   -> '
+                     f'CoT pick = {pick}   GT is in {gt_ids}   -> '
                      f'{"CORRECT" if ok else ("WRONG (disambiguation)" if gt_ids else "WRONG (answer not in pool)")}'
                      f'    |   RED = my pick   GREEN = the answer   green dots = GT projected',
                      fontsize=13)
@@ -234,8 +233,8 @@ def main():
 
     if not R:
         print("[!] no answered questions in this batch"); return
-    # Questions with disputed ground truth are excluded from the denominator. This is a
-    # manual determination, recorded in answer.json as an `excluded` field with a reason.
+    # Questions with disputed ground truth are excluded from the denominator, flagged in
+    # answer.json as an `excluded` field carrying the reason.
     EX = [r for r in R if r["excluded"]]
     R = [r for r in R if not r["excluded"]]
     if EX:
@@ -256,7 +255,7 @@ def main():
     dis = [r for r in R if r["pool_ok"] and not r["correct"]]
     print(f"\n{'='*80}\n### {args.batch}   {n} questions")
     print(f"  correct             {ok:>3}  {100*ok/n:>5.1f}%"
-          + (f"   (including {len(ov)} where manual review overturned the automatic score; "
+          + (f"   (including {len(ov)} scored by centre distance; "
              f"strict scoring {ok-len(ov)} = {100*(ok-len(ov))/n:.1f}%)" if ov else ""))
     for r in ov:
         print(f"      ^ {r['q'][:4]} {r['proj_why']}")

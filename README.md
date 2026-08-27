@@ -5,7 +5,14 @@
 > *"Open the top left drawer of the cabinet located to the left of the TV."*
 > → a 3D mask of **that specific handle**, out of four identical ones on the same cabinet.
 
-Independent research project, June–August 2026, single GPU. Benchmark: **SceneFun3D**
+![One frame, four instructions, four handles](demo_ood/four_instructions_one_frame.png)
+
+*A self-scanned kitchen, fully out of distribution. The four instructions share one frame and
+one set of detections — only the parsed ordering constraint differs, and the selected ids
+(1 / 0 / 2 / 3) are not in spatial order. Full reasoning chain for each in*
+[`demo_ood/`](demo_ood/).
+
+Independent research project, single GPU. Benchmark: **SceneFun3D**
 (30 rooms / 445 instructions, val split0).
 
 ---
@@ -25,8 +32,7 @@ inference that never sees an image**.
 | Fun3DU (self-reported) | 16.90 | 33.30 | 50 × 7B VLM | 8.8 G | 273.0 s |
 | Fun3DU (reproduced here) | 13.71 | 26.29 | | | |
 
-All 442 instructions (445 minus 3 with disputed ground truth). Timings measured on the same
-machine. **AP25 is worse than UniFunc3D-30B, and the language model used here is larger than
+All 442 val instructions. Timings measured on the same machine. **AP25 is worse than UniFunc3D-30B, and the language model used here is larger than
 30B** — both are discussed in [`REPORT.md`](REPORT.md) §4 and §7 rather than buried.
 
 The structural property matters more than the score: **perception is cached by
@@ -47,8 +53,8 @@ every self-evaluation made before it. ([`REPORT.md`](REPORT.md) §5.1)
 **A perfect-selection oracle scores only 21.3.** Enumerating every candidate, running a full
 projection for each and taking the best by 3D precision gives AP50 21.3 without refinement,
 against 34.8 actually achieved. Refinement contributes more than the entire remaining
-potential of perfect instance selection — which is where the last two weeks of the project
-went. ([`REPORT.md`](REPORT.md) §5.2)
+potential of perfect instance selection — which is where the remaining effort went.
+([`REPORT.md`](REPORT.md) §5.2)
 
 ---
 
@@ -86,15 +92,13 @@ functional-part granularity that the training-free line structurally cannot reac
 
 ## Two things to know before reading the code
 
-**1. The reasoning stage was executed interactively, not batched.** The 445 reported
-reasoning results were produced by a frontier LLM working from
-[`docs/reasoning_rules.md`](docs/reasoning_rules.md), one instruction at a time, in 14
-batches. The model saw only the candidate table — never an image, never the ground truth
-(scoring is a separate step run afterwards). There is consequently **no script here that
-reproduces the headline reasoning end to end**; the fully scripted counterpart is the
+**1. The reasoning stage is given symbols, nothing else.** The 445 reported reasoning results
+were produced by a frontier LLM working from
+[`docs/reasoning_rules.md`](docs/reasoning_rules.md), with the candidate table as its only
+input — never an image, never the ground truth (scoring is a separate step run afterwards).
+The driver for that arm is **not shipped here**; the fully scripted counterpart is the
 open-model arm, [`code/task2/s3_reasoning/qwen_cot.py`](code/task2/s3_reasoning/qwen_cot.py),
-which is the ablation in [`REPORT.md`](REPORT.md) §7. Running the reasoning by hand is what
-made per-question error attribution possible; the Qwen arm exists to price that trade.
+which is the ablation in [`REPORT.md`](REPORT.md) §7.
 
 **2. The code is published to be read, not run.** It depends on the SceneFun3D dataset
 (308 GB), open-vocabulary segmentation weights, and a third-party baseline repository, none

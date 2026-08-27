@@ -5,7 +5,6 @@
  "confidence": "high",
  "kind": "select",
  "note": "left fridge door (cx=915) contains handle 1, at the left of the centre seam",
- "solver": "frontier-llm, manual CoT",
- "corrected": "Originally answered [0]. The answer was written against the candidate table from before the frame changed (frame 0023); after moving to frame 0008 the ids were reordered and the table was not re-read, which swapped left and right.",
+ "solver": "frontier-llm",
  "based_on_frame": "0008"
 }

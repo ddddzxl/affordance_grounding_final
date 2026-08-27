@@ -34,9 +34,9 @@ There are also only two handles in the whole frame (`#0` cy 653 and `#1` cy 1027
 right" implies a cabinet of at least 2x2 -- which suggests **the drawer corresponding to the
 ground truth probably had no handle detected at all**.
 
-## Problem with the previous version
+## Why the handle layer is not the place to compare
 
-Same conclusion, wrong path: I compared cy **between the two handles** to find the top one.
+Comparing cy **between the two handles** reaches the same answer by an invalid route.
 `select` may only apply to the host -- left/right and up/down have no meaning at the handle
 layer, only at the host layer.
 

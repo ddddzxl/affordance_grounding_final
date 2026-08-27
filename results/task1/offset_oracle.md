@@ -1,6 +1,6 @@
 # offset oracle — does skipping DBSCAN buy anything? (sprint §4 step0)
 
-> generated 2026-06-22T05:58:50 | val scenes 30 | eps=0.05 min_samples=10 min_cluster=20
+> val scenes 30 | eps=0.05 min_samples=10 min_cluster=20
 > ALL modes use GT per-point cls -> AP deltas are pure instancing-paradigm signal.
 
 ## Headline (AP / AP50 / AP25)

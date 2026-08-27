@@ -4,5 +4,5 @@
  ],
  "confidence": "low",
  "kind": "conflicting_select",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

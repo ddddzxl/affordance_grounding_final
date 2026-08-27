@@ -192,7 +192,7 @@ within reach of 18+.
 ### 6.2 Prior recalibration at inference — failed
 
 Motivated by the `plug_in` confusion above. Sweeping `pred = argmax(z + la·log π)`:
-**la = 1 (fully calibrated) is optimal at average AP 18.4, and lowering `la` decays
+**la = 1 (fully calibrated) is optimal at average AP 18.25, and lowering `la` decays
 monotonically to 2.4** as raw over-prediction destroys precision. `plug_in` instance AP stays
 at ~0 throughout — point-level recall comes back but never forms clean instances.
 
@@ -201,7 +201,7 @@ side.** Rescuing `plug_in` at the instance level requires training-side changes 
 focal loss) with uncertain return, so it was descoped.
 
 A related sanity check confirms the same thing from the other direction: on train scenes, raw
-average AP is **2.21 against 18.4 calibrated** — raw `argmax(z)` implicitly assumes a uniform
+average AP is **2.21 against 18.25 calibrated** — raw `argmax(z)` implicitly assumes a uniform
 prior, over-predicts a 1300:1 rare foreground, and collapses instance precision. Consequently
 **raw instance AP cannot be used to read off "the semantic ceiling"**; that has to be read at
 the point level.
@@ -320,6 +320,6 @@ points cannot be bought with a new backend, whereas a language link was an untou
 training-free line cannot do (see [`../REPORT.md`](../REPORT.md) §6.3), which is why
 "training-free front end + trained granularity refinement head" is the first future-work item.
 
-One honest regret, recorded in the main report as well: in week four, "the training-free line
-may not reuse this one" was set as a loss-cutting rule. It was correct at the time, and it
+One honest regret, recorded in the main report as well: "the training-free line may not
+reuse this one" was set as a loss-cutting rule. It was correct at the time, and it
 also closed that door.

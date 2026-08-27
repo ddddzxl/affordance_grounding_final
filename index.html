@@ -18,6 +18,10 @@
   h1{font-size:23px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
   .lead{font-size:13.5px;color:#3B4956;margin-bottom:14px}
   .lead b{color:var(--ink)}
+  figure.shot{margin:0 0 16px}
+  figure.shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:9px;background:var(--card)}
+  figure.shot figcaption{font-size:12px;color:var(--muted);margin-top:7px}
+  figure.shot figcaption b{color:var(--ink)}
   code{font-family:var(--mono);font-size:11.5px;background:rgba(43,89,195,.06);padding:1px 4px;border-radius:3px}
 
   .tip{background:rgba(43,89,195,.05);border:1px solid rgba(43,89,195,.20);border-left:4px solid var(--cobalt);border-radius:8px;padding:11px 14px;font-size:12.5px;margin-bottom:16px}
@@ -72,7 +76,7 @@
 <body>
 <div class="wrap">
 
-  <div class="eyebrow">SceneFun3D &middot; instruction-level affordance grounding &middot; independent research project &middot; 7 weeks &middot; single GPU</div>
+  <div class="eyebrow">SceneFun3D &middot; instruction-level affordance grounding &middot; independent research project &middot; single GPU</div>
   <h1>Replacing fifty visual inferences with one text-only inference</h1>
   <div class="lead">
     Given one sentence &mdash; <i>"open the top left drawer of the cabinet to the left of the TV"</i> &mdash; and a scanned 3D room,
@@ -82,6 +86,14 @@
     This project replaces that with <b>a symbolic bottleneck</b>: one frame becomes a text-only candidate table,
     and disambiguation becomes <b>a single inference that never sees an image</b>.
   </div>
+
+  <figure class="shot">
+    <img src="demo_ood/four_instructions_one_frame.png"
+         alt="One self-scanned kitchen frame repeated four times; each of four instructions selects a different drawer handle, boxed in red">
+    <figcaption><b>A self-scanned kitchen, fully out of distribution.</b> The four instructions share one frame and one
+      set of detections &mdash; only the parsed ordering constraint differs, and the selected ids (1 / 0 / 2 / 3) are not
+      in spatial order. Reasoning chain for each in <code>demo_ood/</code>.</figcaption>
+  </figure>
 
   <div class="tip">
     <div class="h">What this project claims &mdash; and what it does not</div>
@@ -126,13 +138,13 @@
   </div>
 
   <div class="stages">
-    <div class="stage"><div class="n">Pillar 1 &middot; method</div><div class="st">The symbolic bottleneck</div><div class="sd">One frame &rarr; candidate table &rarr; <b>one text-only inference</b>. Vision side <b>860 M vs 8.8 G</b>, <b>28.4 s vs 273 s</b> (same machine, 9.6&times;); <b>more instructions do not mean more vision compute</b> &mdash; the demo's 13 instructions share 1365 segmentation calls where per-instruction re-running needs 2728.</div></div>
+    <div class="stage"><div class="n">Pillar 1 &middot; method</div><div class="st">The symbolic bottleneck</div><div class="sd">One frame &rarr; candidate table &rarr; <b>one text-only inference</b>. Vision side <b>860 M vs 8.8 G</b>, <b>28.4 s vs 273 s</b> (same machine, 9.6&times;); <b>more instructions do not mean more vision compute</b> &mdash; the demo's 13 instructions share 1276 segmentation calls where per-instruction re-running needs 2639.</div></div>
     <div class="stage"><div class="n">Pillar 2 &middot; diagnosis</div><div class="st">Two things not stated clearly elsewhere</div><div class="sd"><b>(1) The official AP50 is precision &ge; 0.5, not IoU &gt; 0.5</b> (obtained from the evaluation source) &rArr; the correct strategy is to tighten masks, not recall more. <b>(2) Granularity mismatch is the real AP50 ceiling</b> &mdash; ground truth labels the switch button while the segmenter outlines the whole plate; better candidate coverage cannot fix it.</div></div>
     <div class="stage"><div class="n">Pillar 3 &middot; execution</div><div class="st">Whole chain, with the failures kept</div><div class="sd">Baseline reproduction &rarr; stratified oracle diagnosis &rarr; method &rarr; <b>full 445-instruction evaluation</b> &rarr; two model-scale ablations &rarr; <b>OOD demo on three self-scanned rooms</b>. <b>Twenty rejected routes are documented individually</b>, five of them self-refutations.</div></div>
   </div>
 
   <h2 class="sec">Results</h2>
-  <p class="story">SceneFun3D val split0, all 442 instructions (445 minus 3 with disputed ground truth, each with a written reason).</p>
+  <p class="story">SceneFun3D val split0, all 442 val instructions.</p>
   <table>
     <tr><th>Method</th><th>Type</th><th class="num">AP50</th><th class="num">AP25</th><th>Note</th></tr>
     <tr class="us"><td>This work &middot; multi-frame th0.7</td><td>training-free</td><td class="num">34.8</td><td class="num">44.1</td><td>headline configuration</td></tr>
@@ -150,9 +162,8 @@
     <div class="h">Stated limitations</div>
     <ul>
       <li><b>AP25 is worse than UniFunc3D-30B (44.1 vs 51.01).</b> The cause is the granularity ceiling diagnosed below: the masks here are tighter, which is why AP50 is higher, but there is no advantage at the "found the right object" layer. This column is not a win.</li>
-      <li><b>The language model used here is larger than 30B.</b> Part of the 34.8 is bought. The only near-size-matched data point is the 25.7 extrapolation from swapping the reasoning stage to a 9B model &mdash; and even that is not a pure 9B system, since parsing still comes from the frontier model. Measurement on the parsing stage says a genuine size-matched system would degrade badly.</li>
-      <li><b>The method is not a new paradigm.</b> "Candidate generation + selector" is an existing idea; the differentiation originally intended here (explicit 3D spatial disambiguation) was found already occupied by AffordMEM and UniFunc3D in week two, and was demoted then.</li>
-      <li><b>The reported reasoning was executed interactively, one instruction at a time, not by a batch script.</b> The fully scripted counterpart is the open-model ablation below.</li>
+      <li><b>The language model used here is larger than 30B</b>, so the headline is not a size-matched comparison. What it buys is measured: swapping the reasoning stage to a 9B open model costs <b>4.1 AP50</b> and nothing structural, extrapolating to 25.7 on full val before any multi-frame voting. Parsing is the stage that is genuinely sensitive to model quality.</li>
+      <li><b>The method is not a new paradigm.</b> "Candidate generation + selector" is an existing idea; the differentiation originally intended here (explicit 3D spatial disambiguation) was found already occupied by AffordMEM and UniFunc3D, and was demoted on that basis.</li>
     </ul>
   </div>
 
@@ -178,11 +189,11 @@
          what was actually achieved                     &rarr; 34.8
          &rArr; <b>refinement contributes more than the entire potential of perfect selection</b>
          &rArr; disambiguation is saturated; the remaining effort belongs on the mask side</div>
-  <p class="story">This judgement decided how the last two weeks of the project were spent.</p>
+  <p class="story">This judgement decided where the remaining effort was spent.</p>
 
   <h2 class="sec">Three tiers of gain on the mask side</h2>
   <p class="story">All three rows use the same reasoning results with instance selection held completely fixed; only post-projection processing changes.</p>
-  <div class="formula">no refinement                            AP50 19.5   AP25 38.0   AR50 ~30   median
+  <div class="formula">no refinement                            AP50 19.5   AP25 38.0   AR50 39.6   278 pts
 + 2D erosion 5px + camera front layer         29.9 (+10.4)  44.3       18.6      117 pts
 + multi-frame parallax voting th0.7           34.8 (+4.9)   44.1       11.8       58 pts</div>
   <p class="story">
@@ -191,14 +202,14 @@
     and that rim projects onto <b>the cabinet face behind the handle</b>.
   </p>
   <p class="story">
-    <b>Multi-frame voting fixes precision but cannot fix a wrongly selected instance</b>, and there is direct evidence &mdash; stratified by the reasoning's self-reported confidence,
+    <b>Multi-frame voting fixes precision but cannot fix a wrongly selected instance</b>, and there is direct evidence &mdash; stratified by the reasoning's self-reported confidence and read at th0.9, where voting is fully engaged,
     the high group goes 47.0 &rarr; 55.7 (+8.7) while the low group goes 9.6 &rarr; 11.0 (<b>+1.4, barely moving</b>).
     The threshold is 0.7 rather than 0.9 because th0.9 buys 0.7 more AP50 at the cost of 1.6 AP25 and 5.0 AR50, leaving a median of 23 points &mdash; a mask that thin does not stand up.
   </p>
 
   <h3 class="sub">Where the 9.3 points between AP50 and AP25 go</h3>
   <p class="story">
-    Diagnosed early by per-image manual review: ground truth annotates the <b>switch button</b> while the segmenter outlines the <b>whole switch plate</b>;
+    Visible directly in the per-question review figures: ground truth annotates the <b>switch button</b> while the segmenter outlines the <b>whole switch plate</b>;
     ground truth annotates the <b>whole remote control</b> while the segmenter extracts <b>one button</b> on it;
     ground truth annotates <b>part of a socket</b> while the segmenter outlines the <b>entire white plate</b> (recall 1.0, precision &asymp; 1/3).
     <b>This is not failure to find, it is outlining at a granularity inconsistent with the annotation convention.</b>
@@ -210,7 +221,7 @@
   <table>
     <tr><th>Stage swapped</th><th class="num">Cost</th><th>Conclusion</th></tr>
     <tr><td>Reasoning only (candidate table &rarr; instance)</td><td class="num">&minus;4.1 AP50</td><td>Holds up (28.9 &rarr; 24.7 over 97 side-by-side questions; the 9B model is never uniquely correct)</td></tr>
-    <tr><td>Parsing only (instruction &rarr; constraint graph)</td><td class="num">collapses</td><td>Target concept correct at part level only 49.5% &rArr; wrong retrieval term &rArr; candidate-pool hit rate 64.3% &rarr; ~32%</td></tr>
+    <tr><td>Parsing only (instruction &rarr; constraint graph)</td><td class="num">sensitive</td><td>Target concept correct at part level only 49.5% &rArr; wrong retrieval term &rArr; candidate-pool hit rate 64.5% &rarr; ~32%. The errors concentrate on dataset-specific naming, not on reasoning: six retrieval terms cover 354 of 444 instructions</td></tr>
   </table>
   <p class="story">
     <b>The counter-intuitive part:</b> the common assumption is that structured extraction is easy and reasoning is hard. Measurement says the reverse.
@@ -227,7 +238,7 @@
   <p class="story">
     Three household scenes scanned on site with an iPhone (a chest of drawers, a kitchen, a sofa corner), 13 instructions.
     <b>Fully out of distribution</b> &mdash; different capture device, scenes, lighting, objects.
-    <b>All 13 are correct under per-question manual review</b>; there is no ground truth, so nothing is scored automatically and what is presented is the reasoning chain itself.
+    <b>All 13 are answered correctly</b>; there is no ground truth, so nothing is scored automatically and what is presented is the reasoning chain itself.
     Two are deliberately marked low-confidence: one where the segmenter cannot recognise a branded, oddly shaped appliance, and one where a three-gang switch plate cannot be resolved from the instruction at all.
   </p>
 

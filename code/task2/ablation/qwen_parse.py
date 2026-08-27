@@ -13,8 +13,8 @@ links in the pipeline and can be measured separately:
 
 ## What it compares against
 
-Field-by-field alignment with the existing 445 parses, which were written by hand and
-audited three ways (structural, semantic, and against the ground-truth labels):
+Field-by-field alignment with the reference parses of all 445 instructions, audited three
+ways (structural, semantic, and against the ground-truth labels):
 
     target concept   the critical one -- it decides what the segmenter searches for,
                      and everything downstream fails if it is wrong
@@ -29,8 +29,9 @@ not "is the 9B model's parse correct".
 
 `concept` additionally gets a **semantic equivalence** test (drawer handle and drawer pull
 count as the same thing) so that synonyms are not recorded as errors. Note that the headline
-figure in the report is the stricter "correct at part level" judgement, which is a separate
-manual pass; this script's agreement rate is the automated floor under it.
+figure in the report is the stricter "correct at part level" judgement, adjudicated per
+question rather than by string match; this script's agreement rate is the automated floor
+under it.
 
 ## Cost
 

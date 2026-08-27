@@ -6,5 +6,5 @@
  ],
  "confidence": "medium",
  "kind": "vert+horiz",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

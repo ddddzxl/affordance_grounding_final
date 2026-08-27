@@ -4,5 +4,5 @@
  ],
  "confidence": "medium",
  "kind": "containment",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

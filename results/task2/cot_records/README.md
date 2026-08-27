@@ -17,19 +17,20 @@ scoring outcome, and whether a transcript is present.
 
 ## Why only 58 transcripts
 
-The reasoning was executed interactively, one instruction at a time, in 14 batches, and the
-transcripts were written as working notes rather than as a deliverable. The 58 published here
-were selected to cover:
+The structured fields are what every reported number is computed from; a transcript is there
+to show how the method behaves on one question. Publishing all 445 would bury that, so 58 were
+selected to cover:
 
 - **every excluded question and every flagged question defect**, since those carry the written
   reasons the exclusions rest on
-- **all four cases where manual review overturned the automatic score**, so the override and
-  its justification can be audited
-- **29 distinct criterion types**, including the instructive failure modes: a merged host, a
+- **the four questions where pose error displaces the projected ground truth away from a
+  correct pick**, so the criterion applied there can be audited
+- **30 distinct criterion types**, including the instructive failure modes: a merged host, a
   broken host chain, giant false detections, twin handles, indistinguishable candidates, and
   cases where the answer was never in the candidate pool
-- **21 concepts**, and both correct and incorrect outcomes (23 correct, 29 wrong — deliberately
-  weighted towards the failures, which are the more informative half)
+- **21 concepts**, and both outcomes in equal measure (27 correct, 29 wrong, plus the two
+  excluded questions, which carry no score), so the failures — the more informative half —
+  are as visible as the successes
 
 The structured fields (`final`, `confidence`, `kind`) are published for **all 445** and are what
 every reported number is computed from; the transcripts are supporting evidence for how the
@@ -37,13 +38,13 @@ method behaves on individual questions, not an input to any statistic.
 
 ## Reading a transcript
 
-Several transcripts contain a "where the previous version went wrong" section. Those are
-genuine revisions made during the work and are kept deliberately — they are the clearest record
-of how the rule set in [`../../../docs/reasoning_rules.md`](../../../docs/reasoning_rules.md)
-was arrived at. The most consequential one appears in q009: ordering constraints must apply to
-the **host**, never directly to the target, and every target inside the chosen host's filled
-mask must be emitted. That rule then resolves narrow-drawer and wide-drawer cabinets uniformly,
-with no need to decide in advance which layer splits left from right.
+Each transcript works from the candidate table alone and in the same order: fix the container,
+resolve the host layer, then apply the ordering constraint. The most consequential rule in
+[`../../../docs/reasoning_rules.md`](../../../docs/reasoning_rules.md) is the one worked
+through in q009: ordering constraints apply to the **host**, never directly to the target, and
+every target inside the chosen host's filled mask is emitted. That rule resolves narrow-drawer
+and wide-drawer cabinets uniformly, with no need to decide in advance which layer splits left
+from right.
 
 ## Provenance
 
@@ -53,6 +54,5 @@ separate step ([`../../../code/task2/eval/score_cot.py`](../../../code/task2/eva
 run after the answers were fixed, and the generation stage does not import the annotation
 loader at all.
 
-Questions marked `auto (no CoT)` in the original working set had exactly one candidate, where
-the ordering constraint can only resolve to `#0` and reasoning has zero information gain; they
-are marked as such in their transcripts.
+Questions with exactly one candidate carry no transcript: the ordering constraint can only
+resolve to `#0`, so reasoning has zero information gain there.

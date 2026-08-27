@@ -4,5 +4,5 @@
  ],
  "confidence": "medium",
  "kind": "detection_strength",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

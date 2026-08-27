@@ -4,6 +4,6 @@
  ],
  "confidence": "forced",
  "kind": "unique",
- "proj_verified": "manual review: GT and prediction have the same shape but the GT is displaced out of bounds -- a projection offset caused by pose accuracy, not a wrong selection (confirmed visually)",
- "solver": "frontier-llm, manual CoT"
+ "proj_verified": "GT and prediction have the same shape but the GT is displaced out of bounds -- a projection offset caused by pose accuracy, not a wrong selection",
+ "solver": "frontier-llm"
 }

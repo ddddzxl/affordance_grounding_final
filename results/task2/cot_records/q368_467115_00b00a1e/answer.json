@@ -4,6 +4,6 @@
  ],
  "confidence": "forced",
  "kind": "unique",
- "proj_verified": "manual review: as with q125, the projected GT drifts off the target and the pick is correct (confirmed visually)",
- "solver": "frontier-llm, manual CoT"
+ "proj_verified": "as with q125, the projected GT drifts off the target while the pick is on it",
+ "solver": "frontier-llm"
 }

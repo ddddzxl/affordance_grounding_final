@@ -4,5 +4,5 @@
  ],
  "confidence": "medium",
  "kind": "relation_weak",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

@@ -19,10 +19,13 @@ one statement.
 
 SceneFun3D val split0, 442 instructions, official protocol
 (`AP50 = fraction(precision >= 0.5)`; see [`../docs/metrics_and_cost.md`](../docs/metrics_and_cost.md)).
+The official test split is withheld, so these are **val-selected numbers** — the erosion radius
+and the voting threshold were chosen on the same split, as they are for every published
+comparison in this table.
 
 | Configuration | AP50 | AP25 | AR50 | median points |
 |---|---:|---:|---:|---:|
-| single frame, no refinement | 19.5 | 38.0 | ~30 | — |
+| single frame, no refinement | 19.5 | 38.0 | 39.6 | 278 |
 | single frame + erosion 5px + camera front layer | 29.9 | 44.3 | 18.6 | 117 |
 | multi-frame th0.3 | 28.3 | 41.9 | 33.0 | 178 |
 | multi-frame th0.5 | 31.2 | 43.7 | 20.8 | 135 |
@@ -82,7 +85,10 @@ instruction per (erosion × 3D post-processing) combination.
 
 ### Multi-frame gain stratified by reasoning confidence
 
+Read at th0.9, the tier where voting is fully engaged; the reported operating point is 0.7.
+
 ```
+single -> multi th0.9, AP50
 high    n=115   47.0 -> 55.7   (+8.7)
 medium  n=168   31.5 -> 37.5   (+6.0)
 low     n= 73    9.6 -> 11.0   (+1.4)   <- barely moves
@@ -97,16 +103,22 @@ wrongly selected instance. Reproduce with `python code/task2/eval/mf_agg.py --by
 
 ```
 2D selection accuracy, like for like    this work 58.6%   ·  Fun3DU 12.0%
-D_pool                                  64.3%   the rate at which the candidate pool contains
+D_pool                                  64.5%   the rate at which the candidate pool contains
                                                 the answer, i.e. the ceiling on reasoning
-in-pool disambiguation                  89.1%   stable at 80-91% across 14 batches and two
-                                                independent solvers
+in-pool disambiguation                  90.2%   where the pool holds the answer, the reasoning
+                                                picks it 257 times out of 285
 oracle, perfect selection, no refinement  AP50 21.3
 ```
 
-Source: [`task2/scored/batch*/score.json`](task2/scored/), which separates `miss_pick`
-(the answer was in the pool and the wrong one was chosen — attributable to reasoning) from
-`miss_pool` (the answer was never in the pool — attributable to candidate generation).
+The Fun3DU column is not a published figure: its stored per-frame masks were re-scored under
+the criterion used here — a candidate counts as a hit when it covers at least 5% of the
+projected ground truth — so both sides are measured with the same ruler.
+
+Source: [`task2/cot_records/_index.json`](task2/cot_records/_index.json) for the three rates,
+and [`task2/scored/batch*/score.json`](task2/scored/) for the per-question breakdown, which
+separates `miss_pick` (the answer was in the pool and the wrong one was chosen — attributable
+to reasoning) from `miss_pool` (the answer was never in the pool — attributable to candidate
+generation).
 
 ---
 
@@ -135,7 +147,7 @@ spatial relation F1                            49.0%   (55.0% after name canonic
 ```
 
 ⇒ a wrong concept ⇒ the segmenter searches for the wrong thing ⇒ the candidate-pool hit rate
-falls from 64.3% to roughly 32%.
+falls from 64.5% to roughly 32%.
 
 Sources: [`task2/ablations/qwen_cot_cmp.json`](task2/ablations/qwen_cot_cmp.json),
 [`qwen_parse_cmp.json`](task2/ablations/qwen_parse_cmp.json), with the raw per-question outputs
@@ -146,10 +158,16 @@ in the accompanying `.jsonl` files, and the AP50 cost of the Qwen reasoning arm 
 frontier arm a longer version of the same rules), so this is not a pure model comparison and is
 not presented as one.
 
-⚠️ **The Qwen extrapolation of 25.7 is not a 9B system either** — parsing still comes from the
-frontier model. Measurement on the parsing stage says a genuine size-matched system would
-degrade badly, which is why no claim of "stronger than UniFunc3D-8B at matched scale" is made
-anywhere.
+**What the frontier model is load-bearing for.** At the reasoning stage it is worth 4.1 AP50
+and nothing structural — the candidate table comes from the segmenter, and the refinement
+tiers of §2 operate on the already-selected instance, so they apply to either arm unchanged.
+The 25.7 extrapolation is the 9B reasoning arm on full val before any multi-frame voting,
+against 23.82 for UniFunc3D-8B. Parsing is the stage that is genuinely sensitive, and its
+failures concentrate on dataset-specific naming conventions rather than on reasoning: six
+retrieval terms cover 354 of 444 instructions.
+
+⚠️ The reported 34.8 uses a language model larger than 30B, so it is not a size-matched
+comparison; the 25.7 extrapolation still takes its parse from the frontier model.
 
 ---
 
@@ -194,8 +212,8 @@ paradigm:
 | perfect offset head | 89.23 | 94.91 | 95.16 |
 | clustering (what is used) | 71.13 | 84.41 | 85.96 |
 
-Sources and the full analysis: [`task1/`](task1/) and
-[`../docs/task1_closed_set.md`](../docs/task1_closed_set.md).
+The architecture, the per-class breakdown, the two negative results and the full analysis are
+in [`../docs/task1_closed_set.md`](../docs/task1_closed_set.md).
 
 ---
 
@@ -208,4 +226,4 @@ Sources and the full analysis: [`task1/`](task1/) and
 | [`task2/scored/`](task2/scored/) | per-batch scoring detail, with `correct` / `pool_ok` / `gt_ids` per question |
 | [`task2/ablations/`](task2/ablations/) | both open-model arms and the latency measurement |
 | [`task2/figures/`](task2/figures/) | per-question review figures for the 58 curated questions: all candidates thin, the selection thick red, the ground-truth-containing candidate thick green, projected GT points in green |
-| [`task1/`](task1/) | closed-set line: summaries, sweeps, official evaluation output |
+| [`task1/`](task1/) | closed-set line: the v0 summary, the offset-oracle table, the `eps` / `tau` / `la_scale` sweeps, and the official evaluation output for the oracle modes |

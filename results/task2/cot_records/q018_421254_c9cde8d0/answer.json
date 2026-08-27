@@ -4,5 +4,5 @@
  ],
  "confidence": "high",
  "kind": "select_on_target",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

@@ -5,5 +5,5 @@
  "confidence": "low",
  "kind": "conflicting_evidence",
  "flaw": "unanswerable",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

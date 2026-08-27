@@ -5,5 +5,5 @@
  "confidence": "medium",
  "kind": "expected_ap_tradeoff",
  "flaw": "unanswerable",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

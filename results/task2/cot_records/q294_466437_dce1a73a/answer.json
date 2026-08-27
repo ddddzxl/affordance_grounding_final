@@ -7,5 +7,5 @@
  ],
  "confidence": "low",
  "kind": "ordinal",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

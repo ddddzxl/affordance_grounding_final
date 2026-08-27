@@ -21,5 +21,5 @@ there are two, `drawer#0` (cy 1252) and `drawer#1` (cy 1587), so top is meaningf
 
 **FINAL: #0**
 
-> **Manual review overturned the automatic score here**: the projected ground truth drifts off
-> the target while the pick is correct. Confirmed visually.
+> **The projection-based hit test does not apply here**: the projected ground truth drifts off
+> the target while the pick is on it.

@@ -523,7 +523,7 @@
   "overridden": false,
   "proj_why": null,
   "flaw": "unanswerable",
-  "flaw_why": "'turn on the ceiling light' does not refer uniquely (the room has several switches, and which one drives the ceiling light depends on wiring inside the wall); moreover the ground truth's switch was never detected -- the selected #0 (60x79, score 0.879) genuinely is a light switch, confirmed on manual review, but not the one the ground truth means"
+  "flaw_why": "'turn on the ceiling light' does not refer uniquely (the room has several switches, and which one drives the ceiling light depends on wiring inside the wall); moreover the ground truth's switch was never detected -- the selected #0 (60x79, score 0.879) genuinely is a light switch, but not the one the ground truth means"
  },
  {
   "q": "q229_455342_94cdad0f",

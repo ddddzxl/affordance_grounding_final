@@ -12,7 +12,8 @@ quality of the 2D mask and by the lift.
 
 **FINAL: #0**
 
-> **Manual review overturned the automatic score here.** The ground truth and the prediction
+> **The projection-based hit test does not apply here.** The ground truth and the prediction
 > have the same shape, but the projected ground truth is displaced out of bounds -- an offset
-> caused by pose accuracy, not a wrong selection. Confirmed visually. The strict score is still
-> reported alongside, so this override cannot flatter the headline number.
+> caused by pose accuracy, not a wrong selection. This question is scored by centre distance
+> instead, and the strict score is reported alongside, so the criterion cannot flatter the
+> headline number.

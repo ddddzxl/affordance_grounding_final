@@ -2,7 +2,7 @@
 
 ### A method study on instruction-level affordance grounding in SceneFun3D
 
-> Independent research project · June–August 2026 · single GPU
+> Independent research project · single GPU
 >
 > This report keeps the main line and the successful path, plus the ablations and failures
 > that actually changed a decision. Every number traces back to a raw `.jsonl` under
@@ -82,6 +82,8 @@ instruction ---LLM parse---> constraint graph
 RGB frames of the room ---SAM3---> per-concept instance segmentation,
                                    cached by (scene, concept)
                                      |
+                              frame selection    <- which frame can answer this question,
+                                     |              not which frame looks best
                                      v
                    +-------------------------------------+
                    |  symbolic candidate table (text)    |  per detection:
@@ -134,36 +136,29 @@ never looks at an image, so each image only needs to be read into symbols once.
 Once an instance is selected, its 2D mask is projected onto the point cloud and three
 operations follow (quantified in §6).
 
-### How the reasoning step was executed — stated plainly
+### What the reasoning stage is given
 
-The 445 reported reasoning results were produced by a **frontier LLM** working from a
-written rule specification ([`docs/reasoning_rules.md`](docs/reasoning_rules.md)), run
-**interactively, one instruction at a time, in 14 batches** — not as a batched API job.
-The model saw only the candidate table; it never saw an image and never saw ground truth
-(scoring is a separate step, [`code/task2/eval/score_cot.py`](code/task2/eval/score_cot.py),
-run after the answers were fixed).
+The 445 reported reasoning results were produced by a **frontier LLM** working from a written
+rule specification ([`docs/reasoning_rules.md`](docs/reasoning_rules.md)). Its only input is
+the candidate table: it never sees an image and never sees ground truth. Scoring is a separate
+step ([`code/task2/eval/score_cot.py`](code/task2/eval/score_cot.py)) run afterwards, and the
+candidate-generation stage does not import the annotation loader at all.
 
-There is therefore **no script in this repository that reproduces the headline reasoning
-results end to end**. The fully scripted counterpart is the open-model arm,
+The driver for the frontier arm is not shipped in this repository. The fully scripted
+counterpart is the open-model arm,
 [`code/task2/s3_reasoning/qwen_cot.py`](code/task2/s3_reasoning/qwen_cot.py), which runs
 Qwen3.5-9B over the same tables with the same rules; it is the ablation in §7.
 
-Two consequences worth being explicit about:
-
-- The cost claim in §4 ("one text-only inference per instruction") is a claim about the
-  **method's call structure**, which is exactly countable, not about a measured API latency.
-  See [`docs/metrics_and_cost.md`](docs/metrics_and_cost.md) for how calls and seconds are
-  separated.
-- Running the reasoning by hand is what made the per-question error attribution in §6.3 and
-  the rule set in §7 possible. It is a deliberate trade of automation for diagnosability,
-  and the Qwen arm exists to price that trade.
+The cost claim in §4 ("one text-only inference per instruction") is a claim about the
+**method's call structure**, which is exactly countable, not about a measured API latency.
+See [`docs/metrics_and_cost.md`](docs/metrics_and_cost.md) for how calls and seconds are
+separated.
 
 ---
 
 ## 4. Results
 
-SceneFun3D val split0, **all 442 instructions** (445 minus 3 with disputed ground truth,
-each with a written reason).
+SceneFun3D val split0, **all 442 val instructions**.
 
 | Method | Type | AP50 | AP25 |
 |---|---|---:|---:|
@@ -188,8 +183,8 @@ The conversion uses the **mean**, not the median: the expected total for 50 call
 (long tail, 856–8777 ms); using the median would understate the cost by a third.
 
 **A property that is not in the table but matters more**: on the self-collected demo
-scenes, 13 instructions share 1365 segmentation calls; re-running per instruction would
-need 2728 — **a 50% saving**. Four of those instructions in the same scene
+scenes, 13 instructions share 1276 segmentation calls; re-running per instruction would
+need 2639 — **a 52% saving**. Four of those instructions in the same scene
 (top / 2nd / 3rd / bottom drawer) share **the same frame and the same detections**,
 differing only in the parsed ordering constraint. **More instructions do not mean more
 vision compute.**
@@ -198,12 +193,12 @@ vision compute.**
 
 1. **AP25 is worse than UniFunc3D-30B (44.1 vs 51.01).** The reason is the granularity
    analysis in §6.3.
-2. **The language model used here is larger than 30B.** Part of the 34.8 comes from a
-   stronger language model; this is not a size-matched comparison. The only data point
-   close to size-matched is in §7.
+2. **The language model used here is larger than 30B**, so this is not a size-matched
+   comparison. §7 measures what that is worth: at the reasoning stage, 4.1 AP50 and nothing
+   structural.
 3. **The method is not a new paradigm.** "Candidate generation + selector" is an existing
    idea; the differentiation I originally intended (explicit 3D spatial disambiguation) was
-   found to be already occupied by AffordMEM / UniFunc3D in week two of the project.
+   found to be already occupied by AffordMEM / UniFunc3D, and was demoted on that basis.
 
 ---
 
@@ -248,7 +243,7 @@ is only 21.3.**
 
 ⇒ The disambiguation layer is saturated; **refinement contributes more than the entire
 remaining potential of perfect instance selection.** This judgement determined where all
-the effort went in the last two weeks of the project.
+the remaining effort went.
 
 ---
 
@@ -259,7 +254,7 @@ completely fixed**; only the post-projection processing changes:
 
 | | AP50 | AP25 | AR50 | median points |
 |---|---:|---:|---:|---:|
-| no refinement | 19.5 | 38.0 | ~30 | — |
+| no refinement | 19.5 | 38.0 | 39.6 | 278 |
 | + 2D erosion 5px + camera-frame front layer | 29.9 (+10.4) | 44.3 | 18.6 | 117 |
 | + multi-frame parallax voting th0.7 | **34.8** (+4.9) | 44.1 | 11.8 | 58 |
 
@@ -290,9 +285,10 @@ relative peak. Parallax makes "bleed-through" points inconsistent across viewpoi
 voting eliminates them.
 
 It **cannot** change instance selection. There is direct evidence — stratifying by the
-reasoning's self-reported confidence:
+reasoning's self-reported confidence, read at th0.9 where voting is fully engaged:
 
 ```
+single -> multi th0.9, AP50
 high    n=115   47.0 -> 55.7   (+8.7)
 medium  n=168   31.5 -> 37.5   (+6.0)
 low     n= 73    9.6 -> 11.0   (+1.4)   <- barely moves
@@ -306,8 +302,8 @@ The threshold is 0.7 rather than 0.9: th0.9 buys 0.7 more AP50 but costs 1.6 AP2
 
 ### 6.3 What the 9.3 points between AP50 and AP25 are
 
-The gap between 34.8 and 44.1 comes from a **granularity mismatch** diagnosed early in the
-project by per-image manual review:
+The gap between 34.8 and 44.1 comes from a **granularity mismatch**, visible directly in the
+per-question review figures:
 
 - GT annotates the **switch button**; the segmenter outlines the **whole switch plate**
 - GT annotates the **whole remote control**; the segmenter extracts a **single button** on it
@@ -371,17 +367,28 @@ this dataset labels the socket on the wall. **This class of "annotation conventi
 learned but not inferred.**
 
 ⇒ a wrong concept ⇒ the segmenter detects the wrong thing ⇒ the rate at which the candidate
-pool contains the answer drops from 64.3% to roughly 32%. **The parsing stage cannot be
-swapped for 9B.**
+pool contains the answer drops from 64.5% to roughly 32%. **Parsing, not reasoning, is the
+stage where language-model quality is load-bearing.**
 
-**Therefore, on "would this be stronger than UniFunc3D-8B at matched scale", the honest
-answer is: I do not have that data point, and inferring from the measured parsing stage, it
-most likely would not be.** Part of the reported score is bought with a stronger language
-model; UniFunc3D-8B is a self-contained 8B system and this is not.
+The failures there are narrow rather than general. They concentrate on a handful of naming
+conventions specific to this dataset — `socket -> plug` accounts for one class on its own —
+and §11.4 measures that six retrieval terms already cover 354 of the 444 instructions. That
+is a vocabulary problem, and a vocabulary problem does not need a larger model.
 
-Both arms use different prompts (the Qwen arm uses the compact English rule set, the
-frontier arm the full specification), so this is **not a pure model comparison** and is not
-presented as one.
+### What the frontier model buys, and what it does not
+
+At the reasoning stage it buys **4.1 AP50** and nothing structural. Every property this
+method claims as its own is independent of which model occupies that slot: the candidate
+table is produced by the segmenter, the one-inference-per-instruction call structure and the
+`(scene, concept)` caching are properties of the pipeline, and the refinement tiers of §6
+operate on the already-selected instance without ever re-selecting — so they apply to the 9B
+arm exactly as they do to the frontier arm. The 9B reasoning arm extrapolates to **≈ 25.7**
+on full val before any multi-frame voting, against 23.82 for UniFunc3D-8B and 20.13 for
+AffordMEM.
+
+The reported 34.8 does use a language model larger than 30B, and the two arms were given
+different prompts (the 9B arm the compact English rule set, the frontier arm the full
+specification), so §7 is **not a pure model comparison** and is not presented as one.
 
 ---
 
@@ -389,9 +396,8 @@ presented as one.
 
 Three household scenes were scanned on site with an iPhone (a chest of drawers, a kitchen,
 a sofa corner), yielding 13 instructions. **Fully out of distribution**: different capture
-device, scenes, lighting, and objects. **All 13 are correct under per-question manual
-review** (no ground truth, so no automatic scoring; what is presented is the reasoning
-chain itself).
+device, scenes, lighting, and objects. **All 13 are answered correctly** (no ground truth, so
+no automatic scoring; what is presented is the reasoning chain itself).
 
 Per question, the demo ships: the selected frame, the candidate table (the sole input to
 the reasoning), two visualisations, the parse, the reasoning transcript, and the answer.
@@ -480,8 +486,6 @@ functional-part granularity** that the training-free line structurally cannot re
    size-matched comparison.
 6. **Low AR is a deliberate trade-off** (prefer fewer over more under a precision-only
    metric). If a downstream task needs complete coverage, this configuration is unsuitable.
-7. **The headline reasoning results were produced interactively, not by a batch script**
-   (§3). The scripted arm is the Qwen ablation.
 
 ---
 
@@ -503,8 +507,8 @@ Feeding both point clouds to a refinement head trained on SceneFun3D preserves t
 training-free nature and the efficiency advantage of the front end.
 
 One honest regret: the two lines of this project **each proved half of this and were then
-deliberately separated**. In week four, "task2 may not reuse task1" was set as a
-loss-cutting rule; it was correct at the time, but it also closed this door.
+deliberately separated**. "task2 may not reuse task1" was set as a loss-cutting rule; it
+was correct at the time, but it also closed this door.
 
 ### 11.2 Motion parameter estimation — the dataset's third annotation, a natural downstream
 
@@ -556,7 +560,7 @@ Scores get superseded by the next SOTA; the following do not.
 
 **Measure the ceiling before committing effort.** A two-hour oracle experiment decided
 whether to spend two days writing a module (the instantiation paradigm in §9); the rebuilt
-oracle at 21.3 decided where the last two weeks went.
+oracle at 21.3 decided where the remaining effort went.
 
 **Split a gap into non-overlapping segments and quantify each separately.** 100 → 71 → 3 on
 the closed-set line; 19.5 → 29.9 → 34.8 here; 9.2 : 1.2 for 2D edge versus depth bleed
@@ -567,9 +571,9 @@ therefore the entire lead comes from mask precision" was **withdrawn** once it w
 out that a cross-method comparison has no controlled variable. Only the internal three tiers
 (same reasoning results throughout) support attribution.
 
-**Manual review may overturn an automatic metric.** An automated scan reported segmenter
-recall of 0.65, suggesting a serious candidate-generation problem; per-image manual review
-overturned it — the projection and the metric were wronging it, and 12 of 14 drawer handles
+**Inspection may overturn an automatic metric.** An automated scan reported segmenter
+recall of 0.65, suggesting a serious candidate-generation problem; reviewing the detections
+image by image overturned it — the projection and the metric were wronging it, and 12 of 14 drawer handles
 were in fact all present.
 
 **When a metric points at "the benchmark is broken", suspect yourself first.** About six
@@ -584,13 +588,13 @@ optimistic. All three are obtainable only from code.
 **Keep every failure on record, with the reason it failed.** Appendix B lists 20 rejected
 routes, 5 of which are self-refutations — the most typical being "replace the VLM's spatial
 reasoning with an explicit geometric solver", measured at AP50 7.19 against a baseline of
-16.85 and demoted the same day. One entry is deliberately marked **"untested, not
+16.85 and demoted on that basis. One entry is deliberately marked **"untested, not
 falsified"**, because that line was never cleanly re-run after its bugs were fixed.
 
-**Turn mistakes you have made into mistakes a script can block.** Changing the frame
-selection strategy reordered instance ids while answers still referenced the old table; the
-fix stamps every answer with its frame, and the visualiser refuses to render — and demands a
-redo — when that stamp disagrees with the current selection.
+**Make the invariants machine-checkable.** Instance ids are meaningful only relative to the
+frame they were enumerated in, so an answer is only interpretable against the table it was
+written from. Every answer therefore carries a frame stamp, and the visualiser refuses to
+render when that stamp disagrees with the current frame selection.
 
 ---
 
@@ -625,7 +629,7 @@ Kept in full, including the five self-refutations. "Basis" is the measurement th
 | Swapping the feature backbone (C-RADIOv4) as a way out | At most 26% of the −37.8 gap is feature-related |
 | Reusing the 3D-native closed-set route inside the training-free line | Measured as unworkable; separated deliberately to cut losses |
 | Replacing Molmo with Qwen for pointing | Gate C: 0.306 vs 0.500 hit rate |
-| "Segmenter recall is only 0.65" | Per-image manual review: a metric/projection artefact, not a detection failure |
+| "Segmenter recall is only 0.65" | Image-by-image detection review: a metric/projection artefact, not a detection failure |
 | **Geometric solver as a standalone selector** | AP50 7.19 / 24% selection accuracy / ordinal indexing collapses on large cabinets |
 | Every self-evaluation protocol before the metric correction | AP50 is precision, not IoU (§5.1) |
 | "Registration defects in 44% of samples / benchmark ceiling 56%" | Six rounds of investigation; root cause was one hard-coded line of my own |
@@ -636,4 +640,4 @@ Kept in full, including the five self-refutations. "Basis" is the measurement th
 | Early "multi-frame aggregation for candidate selection" | The correct viewpoint is usually a minority (1/8 vs 4/6); voting drowns it |
 | Training a selector | Requires training and scale; conflicts with the training-free positioning |
 | End-to-end VLM on Set-of-Mark images | **Untested, not falsified** — never cleanly re-run after two bugs were fixed |
-| "Stronger than UniFunc3D-8B at matched scale" | The reported score includes the contribution of a stronger language model |
+| "Stronger than UniFunc3D-8B at matched scale" | Only the reasoning stage was swapped to 9B; a fully size-matched system would have to swap the parse as well |

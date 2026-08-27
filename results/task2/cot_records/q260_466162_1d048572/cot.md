@@ -16,14 +16,13 @@ is not a signal that it may instead be applied to the handles.
 
 So rule 3 applies: emit everything `drawer#0` contains -> **#0, #1**.
 
-## Where the previous version went wrong
+## Why `bottom` may not be pushed down to the handles
 
-I compared `bottom` against the two handles' cy (902 vs 981) and chose the lower one. **This is
-the same trap as an earlier question -- pushing select down to the target layer** -- committed
-again two batches later.
+Comparing `bottom` against the two handles' cy (902 vs 981) and taking the lower one is **the
+same trap as pushing select down to the target layer**.
 
-My justification at the time was that "drawer#0 is 217 px tall and holds two handles 79 px
-apart, so it is two merged layers". But "the host is a merged detection" only licenses applying
+The tempting justification is that "drawer#0 is 217 px tall and holds two handles 79 px apart,
+so it is two merged layers". But "the host is a merged detection" only licenses applying
 select at the target layer when the instruction **explicitly acknowledges the subdivision**
 (as in questions that say "window **part**"); here the instruction says "the bottom drawer",
 which selects among several drawers, and only one was detected.

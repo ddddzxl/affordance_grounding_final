@@ -9,9 +9,10 @@ It matters for two reasons beyond documentation:
   receives this same specification, which is what makes that comparison about the model
   rather than about the prompt. (The frontier arm worked from a longer version of the same
   rules; the two are therefore not a pure model comparison, and are not presented as one.)
-- **It is where per-question error analysis was reinvested.** Several sections below —
-  in particular "Masks do not always carve the scene the way the instruction does" — exist
-  because a specific class of mistake was observed, attributed, and turned into a rule.
+- **It encodes what per-question error analysis found.** Several sections below — in
+  particular "Masks do not always carve the scene the way the instruction does" — exist
+  because that class of failure is what the segmenter's granularity actually produces, and
+  the rule set has to name it explicitly.
 
 The `kind` enumeration at the end is also a measurement instrument, not decoration: it is
 what revealed that the 9B model collapses 45 of 99 questions onto a single template and never

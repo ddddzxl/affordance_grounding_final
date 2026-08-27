@@ -6,7 +6,7 @@
 
 ## Reasoning
 
-**Step 1 - fix the cabinet** (this is where the previous attempt went wrong)
+**Step 1 - fix the cabinet**
 
     cabinet 0: x 692-1439, cx 1057.1, 23.2% of the image
     cabinet 1: x 282- 819, cx  513.4, 10.8%
@@ -17,7 +17,7 @@ centres differ by only 66 px, so it is **the cabinet underneath the TV**, not th
 left. cabinet 1 is what satisfies left_of(cabinet, TV).
 
 **The criterion has to be overlap *and* centre, not centre alone** -- comparing cx by itself
-selects cabinet 0, which is exactly how the previous attempt failed.
+would pick cabinet 0.
 
 **Step 2 - the handles inside cabinet 1** (x 282-819, y 742-1728): 13 of them, forming two
 columns by cx.
@@ -37,5 +37,3 @@ topmost drawer of cabinet 1.
 ## FINAL
 
 `FINAL: #12`   confidence **high**
-
-> Previous failure: comparing cx without checking overlap selected cabinet 0, under the TV.

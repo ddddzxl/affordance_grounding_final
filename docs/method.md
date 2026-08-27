@@ -191,9 +191,9 @@ the 9B model used 7 and forced 45 of 99 questions into a single "ordering constr
 template, never once using the `merged_host` label. The confidence tier is what made the
 stratified multi-frame analysis in §6.2 possible.
 
-**How the reported results were produced** is stated in
-[`../REPORT.md`](../REPORT.md) §3 and in the repository README: interactively, one instruction
-at a time, across 14 batches. The scripted arm exists to price that choice, not to reproduce it.
+**What the reasoning stage is given** — the candidate table and nothing else — is stated in
+[`../REPORT.md`](../REPORT.md) §3. The scripted open-model arm runs over the same tables with
+the same rules.
 
 ---
 
@@ -333,13 +333,13 @@ covers at least 5% of the projected GT points counts as a hit.
 
 ```
 correct     at least one selected candidate is a hit      <- main metric
-pool_ok     some candidate in the pool is a hit           <- ceiling (64.3%)
+pool_ok     some candidate in the pool is a hit           <- ceiling (64.5%)
 miss_pick   pool_ok but the wrong one was selected        <- purely a disambiguation error
 miss_pool   no candidate in the pool hits                 <- failed at generation, not reasoning
 ```
 
 Separating `miss_pick` from `miss_pool` is what makes the reasoning stage's own accuracy
-(89.1% in-pool disambiguation) separable from candidate-generation coverage, and is why the
+(90.2% in-pool disambiguation) separable from candidate-generation coverage, and is why the
 model-scale ablation can attribute its loss correctly.
 
 The per-question figure draws all candidates as thin coloured boxes, the **selected** one as a

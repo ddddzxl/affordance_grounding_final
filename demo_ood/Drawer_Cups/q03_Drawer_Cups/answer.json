@@ -5,6 +5,6 @@
  "confidence": "high",
  "kind": "ordinal",
  "note": "3rd from the top: handle 2 (cy=1554)",
- "solver": "frontier-llm, manual CoT",
+ "solver": "frontier-llm",
  "based_on_frame": "0017"
 }

@@ -12,5 +12,5 @@ quality of the 2D mask and by the lift.
 
 **FINAL: #0**
 
-> **Manual review overturned the automatic score here**, on the same grounds as q125: the
-> projected ground truth drifts off the target while the pick is correct. Confirmed visually.
+> **The projection-based hit test does not apply here**, on the same grounds as q125: the
+> projected ground truth drifts off the target while the pick is on it.

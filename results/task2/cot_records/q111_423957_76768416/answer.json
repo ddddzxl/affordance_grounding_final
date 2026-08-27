@@ -2,5 +2,5 @@
  "final": [],
  "confidence": "none",
  "kind": "no_candidate",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }

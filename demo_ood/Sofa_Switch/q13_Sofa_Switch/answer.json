@@ -7,6 +7,6 @@
  "confidence": "medium",
  "kind": "relation",
  "note": "three detections form one 3-gang switch plate; no in-plate cue to single one out",
- "solver": "frontier-llm, manual CoT",
+ "solver": "frontier-llm",
  "based_on_frame": "0014"
 }

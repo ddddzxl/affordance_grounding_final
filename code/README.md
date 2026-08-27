@@ -30,18 +30,20 @@ no-dependency entry point work:
 python code/task2/eval/mf_agg.py       # reproduces the main results table from shipped .jsonl
 ```
 
-There is also one executable self-test, requiring only numpy and scipy:
+Two more things run with nothing but numpy (and scipy for the first):
 
 ```bash
-python code/task2/s1_perception/framesel.py    # 21 assertions on synthetic data
+python code/task2/s1_perception/framesel.py    # self-test: 21 assertions on synthetic data
+python code/demo/task2_index.py                # regenerates demo_ood/README.md from the
+                                               # shipped records; the file should not change
 ```
 
-**There is no script here that reproduces the headline reasoning results.** They were
-produced by a frontier LLM working from [`../docs/reasoning_rules.md`](../docs/reasoning_rules.md),
-interactively, one instruction at a time. The fully scripted counterpart is the open-model
-arm, [`task2/s3_reasoning/qwen_cot.py`](task2/s3_reasoning/qwen_cot.py), which is the
-ablation in [`../REPORT.md`](../REPORT.md) §7. This is discussed in the report rather than
-left to be discovered.
+**The driver for the frontier reasoning arm is not shipped here.** Those results were
+produced by a frontier LLM working from
+[`../docs/reasoning_rules.md`](../docs/reasoning_rules.md), with the candidate table as its
+only input. The fully scripted counterpart is the open-model arm,
+[`task2/s3_reasoning/qwen_cot.py`](task2/s3_reasoning/qwen_cot.py), which is the ablation in
+[`../REPORT.md`](../REPORT.md) §7.
 
 ---
 

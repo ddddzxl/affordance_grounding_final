@@ -4,11 +4,11 @@
 
 **target**: `drawer handle`   **host**: `drawer`
 
-## Reasoning (revised)
+## Reasoning
 
 cabinet 1 (x 81-663, cx 392.4) is left of the TV (cx 1018.2) -> that is the target container.
 
-**First resolve the drawer layer structure** (the previous version skipped this step):
+**First resolve the drawer layer structure**:
 
     layer 1  drawer 5 (x  80-295, cy 186)  holds handle #13      <- left
              drawer 9 (x 278-564, cy 231)  holds handle #5       <- right   two narrow drawers
@@ -25,12 +25,12 @@ establish the structure.**
 fourth -> the fourth **layer** from the top -> drawer 7 -> it covers #15 and #19 -> **give
 both**.
 
-The previous version answered #15 only. The error was treating the two columns of handles as
-two columns of independent drawers, which turns "the fourth" into "fourth in the left column"
-and then requires deciding which column to use. In fact **the lower layers have no left/right
-division at all**: one layer is one drawer.
+Ordering the handles directly would treat the two columns of handles as two columns of
+independent drawers, which turns "the fourth" into "fourth in the left column" and then
+requires deciding which column to use. In fact **the lower layers have no left/right division
+at all**: one layer is one drawer.
 
-## The uniform rule for cabinet reasoning (fixed from this question onward)
+## The uniform rule for cabinet reasoning
 
     1. `select` always applies to the **host (drawer)**, never directly to the handles
     2. having chosen the target drawer, take its **hole-filled mask**
@@ -42,12 +42,10 @@ advance which layer splits left/right:
     narrow drawer (common in the top row)  -> covers 1 handle  -> emit 1
     wide drawer (the lower layers)         -> covers 2 handles -> emit 2
 
-Whether left/right matters is decided by the drawer's actual width, not by my judgement. The
-first version failed precisely by **skipping the host and ordering handles directly**, which
-mistook one wide drawer's two handles for two columns of independent drawers.
+Whether left/right matters is decided by the drawer's actual width, not by a prior guess.
+**Skipping the host and ordering handles directly** is exactly what mistakes one wide drawer's
+two handles for two columns of independent drawers.
 
 ## FINAL
 
 `FINAL: #15, #19`   confidence **high**
-
-> Revision: the first version answered [15] and missed the paired second handle.

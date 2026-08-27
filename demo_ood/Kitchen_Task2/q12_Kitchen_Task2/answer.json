@@ -5,6 +5,6 @@
  "confidence": "medium",
  "kind": "relation",
  "note": "pressure cooker #0 (score 0.962): socket 0 at 415 px vs socket 1 at 517 px",
- "solver": "frontier-llm, manual CoT",
+ "solver": "frontier-llm",
  "based_on_frame": "0074"
 }

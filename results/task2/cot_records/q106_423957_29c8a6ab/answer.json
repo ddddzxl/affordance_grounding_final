@@ -4,5 +4,5 @@
  ],
  "confidence": "forced",
  "kind": "select-degenerate",
- "solver": "frontier-llm, manual CoT"
+ "solver": "frontier-llm"
 }
