@@ -5,13 +5,6 @@
 > *"Open the top left drawer of the cabinet located to the left of the TV."*
 > → a 3D mask of **that specific handle**, out of four identical ones on the same cabinet.
 
-![One frame, four instructions, four handles](demo_ood/four_instructions_one_frame.png)
-
-*A self-scanned kitchen, fully out of distribution. The four instructions share one frame and
-one set of detections — only the parsed ordering constraint differs, and the selected ids
-(1 / 0 / 2 / 3) are not in spatial order. Full reasoning chain for each in*
-[`demo_ood/`](demo_ood/).
-
 Independent research project, single GPU. Benchmark: **SceneFun3D**
 (30 rooms / 445 instructions, val split0).
 
@@ -37,7 +30,15 @@ All 442 val instructions. Timings measured on the same machine. **AP25 is worse 
 
 The structural property matters more than the score: **perception is cached by
 (scene, concept), not by instruction**, so asking a room ten questions costs almost the same
-vision compute as asking it one.
+vision compute as asking it one. That is what the figure below shows — a *different* scene
+from the example above, scanned with a phone and fully out of distribution:
+
+![Four instructions on one kitchen frame, each selecting a different drawer handle](demo_ood/four_instructions_one_frame.png)
+
+*"Open the **top** / **second** / **third** / **bottom** drawer of the cabinet with cups
+directly on top" — four instructions, one frame, one set of detections. Only the parsed
+ordering constraint differs, and the selected ids (1 / 0 / 2 / 3) are not in spatial order.
+Reasoning chain for each in* [`demo_ood/`](demo_ood/).
 
 ---
 

@@ -87,14 +87,6 @@
     and disambiguation becomes <b>a single inference that never sees an image</b>.
   </div>
 
-  <figure class="shot">
-    <img src="demo_ood/four_instructions_one_frame.png"
-         alt="One self-scanned kitchen frame repeated four times; each of four instructions selects a different drawer handle, boxed in red">
-    <figcaption><b>A self-scanned kitchen, fully out of distribution.</b> The four instructions share one frame and one
-      set of detections &mdash; only the parsed ordering constraint differs, and the selected ids (1 / 0 / 2 / 3) are not
-      in spatial order. Reasoning chain for each in <code>demo_ood/</code>.</figcaption>
-  </figure>
-
   <div class="tip">
     <div class="h">What this project claims &mdash; and what it does not</div>
     The claim is <b>a structurally cheaper pipeline plus two diagnoses the literature had not stated clearly</b>,
@@ -136,6 +128,16 @@
     Fifty 7B-VLM image reads become one text inference, and the vision side reduces to a single 860 M open-vocabulary segmenter.
     <b>The side effect is worth more than the main effect: detections are cached by (scene, concept), so asking a room ten questions costs almost what asking it one does.</b></div>
   </div>
+
+  <figure class="shot">
+    <img src="demo_ood/four_instructions_one_frame.png"
+         alt="One self-scanned kitchen frame repeated four times; each of four instructions selects a different drawer handle, boxed in red">
+    <figcaption><b>The cache, in one picture &mdash; a different scene from the example at the top of this page.</b>
+      A kitchen scanned with a phone, fully out of distribution: <i>"open the top / second / third / bottom drawer of the
+      cabinet with cups directly on top"</i>. The four instructions share one frame and one set of detections; only the
+      parsed ordering constraint differs, and the selected ids (1 / 0 / 2 / 3) are not in spatial order.
+      Reasoning chain for each in <code>demo_ood/</code>.</figcaption>
+  </figure>
 
   <div class="stages">
     <div class="stage"><div class="n">Pillar 1 &middot; method</div><div class="st">The symbolic bottleneck</div><div class="sd">One frame &rarr; candidate table &rarr; <b>one text-only inference</b>. Vision side <b>860 M vs 8.8 G</b>, <b>28.4 s vs 273 s</b> (same machine, 9.6&times;); <b>more instructions do not mean more vision compute</b> &mdash; the demo's 13 instructions share 1276 segmentation calls where per-instruction re-running needs 2639.</div></div>

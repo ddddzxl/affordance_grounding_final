@@ -22,7 +22,9 @@ from paths import DEMO_TASK2  # noqa: E402
 SCAN = "Drawer_Cups"
 QS = [("q01", "top drawer"), ("q02", "second from top"),
       ("q03", "third from top"), ("q04", "bottom drawer")]
-PAD, GAP, CAP, HEAD = 26, 18, 76, 104
+SHARED = ("Self-scanned kitchen, out of distribution.  "
+          '"Open the [ top | second | third | bottom ] drawer of the cabinet with cups directly on top."')
+PAD, GAP, CAP, HEAD = 26, 18, 76, 148
 
 
 def font(size, bold=False):
@@ -85,18 +87,19 @@ def main():
     out = Image.new("RGB", (W, H), "white")
     dr = ImageDraw.Draw(out)
 
-    f_head, f_sub, f_cap, f_pick = font(42, True), font(26), font(30, True), font(28, True)
+    f_head, f_sub, f_cap, f_pick = font(42, True), font(25), font(30, True), font(28, True)
     dr.text((PAD, PAD), "One room, one frame, one set of detections - four instructions",
             font=f_head, fill=(17, 17, 17))
-    dr.text((PAD, PAD + 55),
-            "Each answer is a single text-only inference over the same candidate table. "
-            "No vision model re-reads the image.",
-            font=f_sub, fill=(90, 90, 90))
+    dr.text((PAD, PAD + 56), SHARED, font=f_sub, fill=(60, 60, 60))
+    dr.text((PAD, PAD + 92),
+            "Each answer is a single text-only inference over the same candidate table; "
+            "no vision model re-reads the image.",
+            font=f_sub, fill=(120, 120, 120))
 
     for i, (p, (qid, phrase)) in enumerate(zip(panels, QS)):
         x = PAD + i * (w + GAP)
         y = PAD + HEAD
-        dr.text((x, y), f'"Open the {phrase} ..."', font=f_cap, fill=(17, 17, 17))
+        dr.text((x, y), f'"{phrase}"', font=f_cap, fill=(17, 17, 17))
         dr.text((x, y + 40), f"-> drawer handle {picks[i]}", font=f_pick, fill=(198, 40, 40))
         out.paste(p, (x, y + CAP))
 
